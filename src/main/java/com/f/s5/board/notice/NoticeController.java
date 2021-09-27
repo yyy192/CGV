@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -18,7 +19,13 @@ public class NoticeController {
 	
 
 
-	@RequestMapping("noticeList")
+	@RequestMapping("list")
+	@ModelAttribute("board")
+	public String getBoard() {
+		return "notice";
+	}
+	
+	@RequestMapping("list")
 	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
 		ModelAndView mv = new ModelAndView();
 		List<BoardDTO> ar = noticeService.getList(boardDTO);
@@ -30,7 +37,7 @@ public class NoticeController {
 	}
 	
 
-	@RequestMapping("noticeSelect")
+	@RequestMapping("select")
 	public ModelAndView getSelect(BoardDTO boardDTO)throws Exception{
 		
 		ModelAndView mv = new ModelAndView();
