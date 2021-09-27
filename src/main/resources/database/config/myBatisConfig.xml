@@ -6,6 +6,8 @@
  <configuration>
  
  	<typeAliases>
+ 		<typeAlias type="com.f.s5.board.BoardDTO" alias="BoardDTO"/>
+ 		<typeAlias type="com.f.s5.member.MemberDTO" alias="MemberDTO"/>
  	
  	</typeAliases>
  
