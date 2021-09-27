@@ -34,10 +34,10 @@
 	          <a class="nav-link" href="${pageContext.request.contextPath}/qna/list">THEATER</a>
 	        </li>
 	       <li class="nav-item">
-	          <a class="nav-link" href="${pageContext.request.contextPath}/qna/list">NOTICE</a>
+	          <a class="nav-link" href="${pageContext.request.contextPath}/notice/list">NOTICE</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="${pageContext.request.contextPath}/qna/list">QUESTION</a>
+	          <a class="nav-link" href="${pageContext.request.contextPath}/question/list">QUESTION</a>
 	        </li>
 	        <c:choose>
 	        	
@@ -55,7 +55,7 @@
 	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/check">CHECK</a>
 	        		</li>	        	
 	        		<li class="nav-item">
-	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/login">LOGIN</a>
+	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/memberLogin">LOGIN</a>
 	        		</li>
 	        	</c:otherwise>
 	        	

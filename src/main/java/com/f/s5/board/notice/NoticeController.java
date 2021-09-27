@@ -18,8 +18,7 @@ public class NoticeController {
 	private NoticeService noticeService;
 	
 
-
-	@RequestMapping("list")
+	
 	@ModelAttribute("board")
 	public String getBoard() {
 		return "notice";
