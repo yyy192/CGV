@@ -18,6 +18,6 @@
 	</delete>
 	
 	<update id="setUpdate" parameterType="MemberDTO">
-		UPDATE MEMBER SET PW=#{pw}, PHONE=#{phone}, EMAIL=#{email}
+		UPDATE CGVMEMBER SET PW=#{pw}, PHONE=#{phone}, EMAIL=#{email}
 	</update>
   </mapper>
