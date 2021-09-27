@@ -4,17 +4,19 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.board.BoardDTO;
 
 @Controller
+@RequestMapping("/quesiton/**")
 public class QuestionController {
 	
 	@Autowired
 	private QuestionService questionService;
 	
-	
+	@RequestMapping("questionList")
 	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
 		ModelAndView mv = new ModelAndView();
 		List<BoardDTO> ar = questionService.getList(boardDTO);
@@ -25,6 +27,7 @@ public class QuestionController {
 		return mv;
 	}
 	
+	@RequestMapping("questionSelect")
 	public ModelAndView getSelect(BoardDTO boardDTO)throws Exception{
 		
 		ModelAndView mv = new ModelAndView();
