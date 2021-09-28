@@ -30,18 +30,18 @@ public class MemberController {
 		
 		memberDTO = memberService.getLogin(memberDTO);
 		
-		String msg="로그인에 실패했습니다.";
+		String msg="로그인에 실패했습니다."; 
 		String url="./memberLogin";
-		
-		if(memberDTO != null) {
-			msg="로그인에 성공했습니다.";
-			url="../";
-			
-			session.setAttribute("member", memberDTO);
+		  
+		if(memberDTO != null) { 
+			msg="로그인에 성공했습니다."; 
+			url="redirect: ../";
+			session.setAttribute("member", memberDTO); 
 		}
-		
-		mv.addObject("msg", msg);
+		  
+		mv.addObject("msg", msg); 
 		mv.setViewName(url);
+		 
 		return mv;
 	}
 	
@@ -89,6 +89,13 @@ public class MemberController {
 	
 	//예매 내역
 	
+	@GetMapping("check")
+	public ModelAndView check() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("member/check");
+		return mv;
+	}
 	
 	@GetMapping("memberJoin")
 	public ModelAndView setJoin() throws Exception {
@@ -101,8 +108,9 @@ public class MemberController {
 	@PostMapping("memberJoin")
 	public ModelAndView setJoin(MemberDTO memberDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		
+	
 		int result = memberService.setJoin(memberDTO);
+		System.out.println(memberDTO.getId());
 		String msg = "회원가입에 실패했습니다.";
 		
 		if(result>0) {
@@ -110,7 +118,8 @@ public class MemberController {
 		}
 		
 		mv.addObject("msg", msg);
-		mv.setViewName("../");
+		mv.addObject("url", "../");
+		mv.setViewName("common/result");
 		
 		return mv;
 	}

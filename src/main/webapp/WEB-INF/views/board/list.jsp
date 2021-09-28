@@ -11,7 +11,7 @@
 <body>
 	<c:import url="../temp/boot_nav.jsp"></c:import>
 	<h1><%-- ${board} --%> Board List Page</h1>
-	
+	<form action="./list" method="get">
 	<table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>NUM</th><th>CODE</th><th>TITLE</th><th>HITS</th>						
@@ -26,6 +26,6 @@
 			
 		</c:forEach>
 	</table>
-	
+	</form>
 </body>
 </html>

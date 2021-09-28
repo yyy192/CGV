@@ -19,6 +19,8 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+
+	
 	@ModelAttribute("board")
 	public String getBoard() {
 		return "notice";
@@ -35,6 +37,7 @@ public class NoticeController {
 		return mv;
 	}
 	
+
 	@RequestMapping("select")
 	public ModelAndView getSelect(BoardDTO boardDTO)throws Exception{
 		
