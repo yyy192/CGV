@@ -43,7 +43,7 @@
 	        	
 	        	<c:when test="${not empty member}">
 	        		<li class="nav-item">
-	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/mypage">MYPAGE</a>
+	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/mypage">MY CGV</a>	          			
 	        		</li>	        	
 	        		<li class="nav-item">
 	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/memberLogout">LOGOUT</a>

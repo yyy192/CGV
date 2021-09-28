@@ -13,7 +13,7 @@
 	<h1>Join Page</h1>
 	
 	<div class="container-fluid">
-		<form id="frm" class="col-md-5 mx-auto" action="./memberJoin" method="post" enctype="multipart/form-data">
+		<form id="frm" class="col-md-5 mx-auto" action="./memberJoin" method="post">
 		
 		<div class="mb-3">
 		  <label for="id" class="form-label">아이디</label>
@@ -50,7 +50,7 @@
 		
 		<div class="mb-3">
 		  <label for="birth" class="form-label">생년월일</label>
-		  <input type="number" class="form-control c1" name="birth" id="birth">
+		  <input type="number" class="form-control c1"placeholder="20210928" name="birth" id="birth">
 		</div>
 		
 		<div class="mb-3 my-4" align=center>
