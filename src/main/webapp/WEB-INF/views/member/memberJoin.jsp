@@ -13,7 +13,7 @@
 	<h1>Join Page</h1>
 	
 	<div class="container-fluid">
-		<form id="frm" class="col-md-5 mx-auto" action="./memberJoin" method="post" enctype="multipart/form-data">
+		<form id="frm" class="col-md-5 mx-auto" action="./memberJoin" method="post">
 		
 		<div class="mb-3">
 		  <label for="id" class="form-label">아이디</label>
