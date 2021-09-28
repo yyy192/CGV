@@ -9,7 +9,7 @@ public class MemberDAO {
 	
 	@Autowired
 	private SqlSession sqlSession;
-	private final String NAMESPACE = "com.s.f5.member.MemberDAO.";
+	private final String NAMESPACE = "com.f.s5.member.MemberDAO.";
 	
 	public MemberDTO getLogin(MemberDTO memberDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE+"getLogin", memberDTO);

@@ -24,5 +24,12 @@
 		${dto.contents}
 	</div>
 	
+	<%-- <c:if test="${member.id eq dto.writer}">
+			<a href="./delete?num=${dto.num}">Delete</a>
+			<a href="./update?num=${dto.num}">Update</a>
+	</c:if>
+	 --%>
+	
+	
 </body>
 </html>
