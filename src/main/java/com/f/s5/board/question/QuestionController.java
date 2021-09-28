@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.f.s5.board.BoardDTO;
 
 @Controller
-@RequestMapping("/quesiton/**")
+@RequestMapping("/question/**")
 public class QuestionController {
 	
 	@Autowired

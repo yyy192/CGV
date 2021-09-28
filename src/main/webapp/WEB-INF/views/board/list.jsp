@@ -19,8 +19,8 @@
 		<c:forEach items="${list}" var="dto">
 			<tr align=center>
 				<td>${dto.num}</td>
-				<td>${dto.code}</td>
-				<td><a href="./select?num=${num}"> ${dto.title} </a></td>
+				<td>${dto.cord}</td>
+				<td><a href="./select?num=${dto.num}"> ${dto.title} </a></td>
 				<td>${dto.hits}</td>						
 			</tr>
 			
