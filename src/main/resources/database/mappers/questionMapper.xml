@@ -10,7 +10,22 @@
   </select>
   
   <select id="getList" resultType="BoardDTO">
-  	SELECT * FROM CGVQUESTION
+  	SELECT * FROM CGVQUESTION ORDER BY NUM DESC
   </select>
-  	
+  
+  <insert id="setInsert" parameterType="BoardDTO">
+  	INSERT INTO CGVQUESTION VALUES(CGVQUESTION_SEQ.NEXTVAL, #{title}, #{cord}, #{contents}, SYSDATE, 0)
+  </insert>
+  
+  <delete id="setDelete" parameterType="BoardDTO">
+  	DELETE CGVQUESTION WHERE NUM=#{num}
+  </delete>	
+  
+  <update id="setUpdate" parameterType="BoardDTO">
+  	UPDATE CGVQUESTION SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  </update>
+  
+  <update id="hitsUpdate" parameterType="BoardDTO">
+  	UPDATE CGVQUESTION SET HITS=HITS+1 WHERE NUM=#{num}
+  </update>
   </mapper>

@@ -23,9 +23,27 @@ public class QuestionService implements BoardService{
 	@Override
 	public BoardDTO getSelect(BoardDTO boardDTO) throws Exception {
 		
+		int result = questionDAO.hitsUpdate(boardDTO);
+		
 		return questionDAO.getSelect(boardDTO);
 	}
 	
+	@Override
+	public int setInsert(BoardDTO boardDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return questionDAO.setInsert(boardDTO);
+	}
 	
+	@Override
+	public int setDelete(BoardDTO boardDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return questionDAO.setDelete(boardDTO);
+	}
+
+	@Override
+	public int setUpdate(BoardDTO boardDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return questionDAO.setUpdate(boardDTO);
+	}
 
 }

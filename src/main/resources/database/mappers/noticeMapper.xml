@@ -10,8 +10,22 @@
   </select>
   
   <select id="getList" resultType="BoardDTO">
-  	SELECT * FROM CGVNOTICE
+  	SELECT * FROM CGVNOTICE ORDER BY NUM DESC
   </select>
   
+  <insert id="setInsert" parameterType="BoardDTO">
+  	INSERT INTO CGVNOTICE VALUES(CGVNOTICE_SEQ.NEXTVAL, #{title}, #{cord}, #{contents}, SYSDATE, 0)
+  </insert>
   
+  <delete id="setDelete" parameterType="BoardDTO">
+  	DELETE CGVNOTICE WHERE NUM=#{num}
+  </delete>
+  
+  <update id="setUpdate" parameterType="BoardDTO">
+  	UPDATE CGVNOTICE SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  </update>
+  
+  <update id="hitsUpdate" parameterType="BoardDTO">
+  	UPDATE CGVNOTICE SET HITS=HITS+1 WHERE NUM=#{num}
+  </update>
   </mapper>

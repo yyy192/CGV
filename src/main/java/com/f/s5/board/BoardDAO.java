@@ -10,6 +10,17 @@ public interface BoardDAO {
 	//상세
 	public abstract BoardDTO getSelect(BoardDTO boardDTO)throws Exception;
 	
+	//글 등록
+	public abstract int setInsert(BoardDTO boardDTO) throws Exception;
+	
+	//글 삭제
+	public abstract int setDelete(BoardDTO boardDTO) throws Exception;
+	
+	//글 수정
+	public abstract int setUpdate(BoardDTO boardDTO) throws Exception;
+	
+	//조회수 +1
+	public abstract int hitsUpdate(BoardDTO boardDTO) throws Exception;
 	
 
 }

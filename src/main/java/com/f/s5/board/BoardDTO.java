@@ -6,6 +6,7 @@ public class BoardDTO {
 	
 	private Long num;
 	private String title;
+	private String cord;
 	private String contents;
 	private Date regDate;
 	private Long hits;
@@ -39,6 +40,12 @@ public class BoardDTO {
 	}
 	public void setHits(Long hits) {
 		this.hits = hits;
+	}
+	public String getCord() {
+		return cord;
+	}
+	public void setCord(String cord) {
+		this.cord = cord;
 	}
 	
 	
