@@ -2,12 +2,12 @@ package com.f.s5.member;
 
 public class MemberDTO {
 	
-	String id;
-	String pw;
-	String name;
-	String phone;
-	String email;
-	int birth;
+	private String id;
+	private String pw;
+	private String name;
+	private String phone;
+	private String email;
+	private int birth;
 	
 	//--------setter, getter
 	
@@ -47,6 +47,7 @@ public class MemberDTO {
 	public void setBirth(int birth) {
 		this.birth = birth;
 	}
+	
 	
 	
 

@@ -46,7 +46,7 @@
 	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/mypage">MYPAGE</a>
 	        		</li>	        	
 	        		<li class="nav-item">
-	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/logout">LOGOUT</a>
+	          			<a class="nav-link" href="${pageContext.request.contextPath}/member/memberLogout">LOGOUT</a>
 	        		</li>
 	        	</c:when>
 	        	
