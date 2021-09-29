@@ -8,7 +8,10 @@
  	<typeAliases>
  		<typeAlias type="com.f.s5.board.BoardDTO" alias="BoardDTO"/>
  		<typeAlias type="com.f.s5.member.MemberDTO" alias="MemberDTO"/>
+ 		<typeAlias type="com.f.s5.util.Pager" alias="Pager"/>
  	
+ 		<typeAlias type="java.util.List" alias="List"/>
+ 		<typeAlias type="java.lang.Long" alias="Long"/>
  	</typeAliases>
  
  </configuration>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.board.BoardDTO;
+import com.f.s5.util.Pager;
 
 @Controller
 @RequestMapping("/notice/**")
@@ -27,11 +28,11 @@ public class NoticeController {
 	}
 	
 	@RequestMapping("list")
-	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
+	public ModelAndView getList(Pager pager)throws Exception{
 		ModelAndView mv = new ModelAndView();
-		List<BoardDTO> ar = noticeService.getList(boardDTO);
+		List<BoardDTO> ar = noticeService.getList(pager);
 		mv.addObject("list", ar);
-		
+		mv.addObject("pager", pager);
 		mv.setViewName("board/list");
 		
 		return mv;
@@ -65,7 +66,7 @@ public class NoticeController {
 		
 		int result = noticeService.setInsert(boardDTO);
 		
-		mv.setViewName("rediect:./list");
+		mv.setViewName("redirect:./list");
 		return mv;
 	}
 	

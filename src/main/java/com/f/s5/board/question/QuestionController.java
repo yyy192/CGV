@@ -62,7 +62,7 @@ public class QuestionController {
 		
 		int result = questionService.setInsert(boardDTO);
 		
-		mv.setViewName("rediect:./list");
+		mv.setViewName("redirect:./list");
 		return mv;
 	}
 	

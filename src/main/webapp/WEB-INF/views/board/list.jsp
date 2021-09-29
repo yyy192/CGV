@@ -9,9 +9,11 @@
 <c:import url="../temp/boot_head.jsp"></c:import>
 </head>
 <body>
-	<c:import url="../temp/boot_nav.jsp"></c:import>
+	
 	<h1><%-- ${board} --%> Board List Page</h1>
+	
 	<form action="./list" method="get">
+
 	<table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>NUM</th><th>CODE</th><th>TITLE</th><th>HITS</th>						
@@ -27,5 +29,38 @@
 		</c:forEach>
 	</table>
 	</form>
+
+	<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<li class="page-item"><a class="page-link"
+					href="./list?keyword=${pager.keyword}&search=${pager.search}"
+					aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+				</a></li>
+
+				<li class="page-item"><a class="page-link"
+					href="./list?pn=${pager.startNum-1}&keyword=${pager.keyword}&search=${pager.search}"
+					aria-label="Previous"> <span aria-hidden="true">&lt;</span>
+				</a></li>
+
+				<c:forEach begin="${pager.startNum}" end="${pager.endNum}" var="n">
+					<li class="page-item"><a class="page-link"
+						href="./list?pn=${n}&keyword=${pager.keyword}&search=${pager.search}">${n}
+					</a></li>
+				</c:forEach>
+
+				<li class="page-item"><a class="page-link"
+					href="./list?pn=${pager.endNum+1}&keyword=${pager.keyword}&search=${pager.search}"
+					aria-label="Next"> <span aria-hidden="true">&gt;</span>
+				</a></li>
+
+				<li class="page-item"><a class="page-link"
+					href="./list?pn=${pager.totalPage}&kkeyword=${pager.keyword}&search=${pager.search}"
+					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+				</a></li>
+			</ul>
+		</nav>
+	
+	<a href="./insert" class="btn btn-danger">ADD</a>
+
 </body>
 </html>

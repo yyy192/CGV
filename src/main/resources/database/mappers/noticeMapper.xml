@@ -9,8 +9,36 @@
   	SELECT * FROM CGVNOTICE WHERE NUM=#{num}
   </select>
   
-  <select id="getList" resultType="BoardDTO">
-  	SELECT * FROM CGVNOTICE ORDER BY NUM DESC
+  <select id="getCount" resultType="Long" parameterType="Pager">
+  	SELECT COUNT(NUM) FROM CGVNOTICE
+  	 
+		<if test="keyword == '제목'">WHERE title LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
+		<if test="keyword == '내용'">WHERE contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
+		
+  </select>
+  
+  <select id="getList" parameterType="Pager" resultType="BoardDTO">
+  	SELECT * FROM
+		    (SELECT ROWNUM R, CN.* FROM 
+		            (SELECT * 
+		            FROM CGVNOTICE
+		            WHERE 
+					
+					<choose>
+						<when test="keyword == '제목'">
+							title
+						</when>
+						<otherwise>
+							contents
+						</otherwise>
+					</choose>
+
+					LIKE '%' || #{search} || '%' 
+		            ORDER BY NUM DESC
+		            ) 
+		        CN
+		    )
+		WHERE R BETWEEN #{startRow} AND #{endRow}
   </select>
   
   <insert id="setInsert" parameterType="BoardDTO">
