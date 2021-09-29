@@ -9,8 +9,24 @@
   	SELECT * FROM CGVQUESTION WHERE NUM=#{num}
   </select>
   
-  <select id="getList" resultType="BoardDTO">
-  	SELECT * FROM CGVQUESTION ORDER BY NUM DESC
+  <select id="getCount" parameterType="Pager" resultType="Long">
+  	SELECT COUNT(NUM) FROM CGVQUESTION
+  		WHERE title LIKE '%' || #{search} || '%'
+		OR contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC
+  </select>
+  
+  <select id="getList" parameterType="Pager" resultType="BoardDTO">
+  	SELECT * FROM
+		    (SELECT ROWNUM R, CQ.* FROM 
+		            (SELECT * 
+		            FROM CGVQUESTION
+		            WHERE title LIKE '%' || #{search} || '%'
+					OR contents LIKE '%' || #{search} || '%' 
+					ORDER BY NUM DESC
+		            ) 
+		        CQ
+		    )
+		WHERE R BETWEEN #{startRow} AND #{endRow}
   </select>
   
   <insert id="setInsert" parameterType="BoardDTO">

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.f.s5.board.BoardDAO;
 import com.f.s5.board.BoardDTO;
+import com.f.s5.util.Pager;
 
 @Repository
 public class QuestionDAO implements BoardDAO{
@@ -16,10 +17,13 @@ public class QuestionDAO implements BoardDAO{
 	private SqlSession sqlSession;
 	private final String NAMESPACE="com.f.s5.board.question.QuestionDAO.";
 
+	public Long getCount(Pager pager) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"getCount", pager);
+	}
 	@Override
-	public List<BoardDTO> getList(BoardDTO boardDTO) throws Exception {
+	public List<BoardDTO> getList(Pager pager) throws Exception {
 		// TODO Auto-generated method stub
-		return sqlSession.selectList(NAMESPACE+"getList", boardDTO);
+		return sqlSession.selectList(NAMESPACE+"getList", pager);
 	}
 
 	@Override

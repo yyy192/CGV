@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.board.BoardDTO;
+import com.f.s5.util.Pager;
 
 @Controller
 @RequestMapping("/question/**")
@@ -25,11 +26,11 @@ public class QuestionController {
 	}
 	
 	@RequestMapping("list")
-	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
+	public ModelAndView getList(Pager pager)throws Exception{
 		ModelAndView mv = new ModelAndView();
-		List<BoardDTO> ar = questionService.getList(boardDTO);
+		List<BoardDTO> ar = questionService.getList(pager);
 		mv.addObject("list", ar);
-		
+		mv.addObject("pager", pager);
 		mv.setViewName("board/list");
 		
 		return mv;
