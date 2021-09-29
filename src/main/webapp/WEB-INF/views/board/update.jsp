@@ -1,33 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>${board}Update title here</title>
 <c:import url="../temp/boot_head.jsp"></c:import>
-
-</style>
-
 </head>
-
 <body>
-	<h1>${board}InsertPage</h1>
 
-	<div class="container-fluid">
-		<form class="col-md-5 mx-auto" action="./insert" method="post">
-					
-			<div class="mb-3">
-				<label for="title" class="form-label">Title</label> <input
-					type="text" class="form-control" name="title" id="title"
-					placeholder="Enter Title">
-			</div>
-			<div class="mb-3">
-				<label for="contents" class="form-label">Contents</label>
-				<textarea class="form-control" cols="" name="contents"
-					id="contents" rows="6"></textarea>
-			</div>
-			
-			<c:if test="${board eq 'question'}">
+   <h1>${board}Update Page</h1>
+
+   <div class="container-fluid">
+      <form class="col-md-5 mx-auto" action="./update" method="post">
+
+         <div class="mb-3">
+            <label for="title" class="form-label">Title</label> <input
+               type="text" class="form-control" name="title" id="title"
+               value="${dto.title}">
+         </div>
+
+
+         <div class="mb-3">
+            <label for="contents" class="form-label">Contents</label>
+            <textarea class="form-control" placeholder="Input Contents"
+               name="contents" id="contents" rows="6">${dto.contents}</textarea>
+         </div>
+         
+         <div class="mb-3">
+            <label for="num" class="form-label"></label> <input
+               type="text" class="form-control" name="num" id="num"
+               value="${dto.num}">
+         </div>
+         
+         <c:if test="${board eq 'question'}">
             <div class="mb-3">
             
          
@@ -61,17 +69,18 @@
               <label for="other">기타</label>
             </div>
          </c:if>
-			
 
-			<!-- button 추가 -->
-
-			<div class="mt-3 ml-0">
-				<button type="submit" class="btn btn-success">ADD</button>
-			</div>
-		</form>
-		
-		</div>
+         <!-- button 추가 -->
+         <div class="mb-3 ml-0">
+            <button type="button" class="btn btn-success del">Delete</button>
+         </div>
 
 
+         <div class="mb-3 ml-0">
+            <button type="submit" class="btn btn-success">Update</button>
+         </div>
+
+      </form>
+   </div>
 </body>
 </html>

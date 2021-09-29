@@ -62,7 +62,7 @@ public class NoticeController {
 		
 		int result = noticeService.setInsert(boardDTO);
 		
-		mv.setViewName("rediect:./list");
+		mv.setViewName("redirect:./list");
 		return mv;
 	}
 	

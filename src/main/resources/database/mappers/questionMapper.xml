@@ -22,7 +22,7 @@
   </delete>	
   
   <update id="setUpdate" parameterType="BoardDTO">
-  	UPDATE CGVQUESTION SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  	UPDATE CGVQUESTION SET TITLE=#{title}, CONTENTS=#{contents}, CORD=#{cord} WHERE NUM=#{num}
   </update>
   
   <update id="hitsUpdate" parameterType="BoardDTO">

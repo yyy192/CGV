@@ -9,7 +9,7 @@
 <c:import url="../temp/boot_head.jsp"></c:import>
 </head>
 <body>
-	<c:import url="../temp/boot_nav.jsp"></c:import>
+	
 	<h1><%-- ${board} --%> Select Page</h1>
 	
 	<h1>자주찾는 질문</h1>
