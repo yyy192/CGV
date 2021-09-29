@@ -2,17 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
- <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark justify-content-center">
 	  <div class="container-fluid" align="center">
-	    <a class="navbar-brand" href="#">Navbar</a>
+	    <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img
+		src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	      <ul class="navbar-nav">
-	        <li class="nav-item">
-	          <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/">Home</a>
-	        </li>
+	      <ul class="navbar-nav">	        
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 	            MOVIE
