@@ -15,6 +15,12 @@
 		margin-right: 20px;
 	}
 	
+	.navmain{
+		background-image: url("");		
+		background-repeat: repeat-x;
+		background-size: 6.5px, 6.5px;		
+		
+	}
 	
 	
 </style>
@@ -25,9 +31,10 @@
 </div>
 <div class="join">
 	<h6><a href="./member/check">회원가입</a></h6>
-</div> -->	
-	<c:import url="./temp/boot_nav_top.jsp"></c:import>
+</div>	 -->
+	<%-- <c:import url="./temp/boot_nav_top.jsp"></c:import>	 --%>
 	<c:import url="./temp/boot_nav.jsp"></c:import>
+
 	
 <h1>
 	CGV

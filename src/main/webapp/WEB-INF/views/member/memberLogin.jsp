@@ -14,7 +14,6 @@
 </style>
 </head>
 <body>
-	<c:import url="../temp/boot_nav_top.jsp"></c:import>
 	<c:import url="../temp/boot_nav.jsp"></c:import>
 	<h1>Login Page</h1>
 	

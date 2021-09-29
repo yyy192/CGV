@@ -9,7 +9,7 @@
 <c:import url="../temp/boot_head.jsp"></c:import>
 </head>
 <body>
-	<c:import url="../temp/boot_nav_top.jsp"></c:import>
+	
 	<c:import url="../temp/boot_nav.jsp"></c:import>
 	
 	<h1>My CGV</h1>
