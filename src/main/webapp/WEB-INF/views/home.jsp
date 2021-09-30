@@ -13,14 +13,7 @@
 	.join{	
 		float: right;
 		margin-right: 20px;
-	}
-	
-	.navmain{
-		background-image: url("");		
-		background-repeat: repeat-x;
-		background-size: 6.5px, 6.5px;		
-		
-	}
+	}	
 	
 	
 </style>

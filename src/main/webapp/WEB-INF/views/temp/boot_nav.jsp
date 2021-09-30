@@ -4,19 +4,19 @@
 
 <style type="text/css">
 .navmain {
-	background-image : url("./images/bgImage.png");
+	background: url("/s5/resources/images/bgImage.png");
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
 	padding-bottom: 100px;
 	height: 149px;
 }
 
-/* .navtop {
-	background-image:
-		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
-	background-size: 150px, 6.5px;	
-	padding-bottom: -10px;
-} */
+.navtop {
+	background-color: #fdfcf0;
+	/* margin-bottom: -11.2px; */
+	color: black;
+}
+
 .text {
 	font-size: 17.6px;
 	line-height: 1.2;
@@ -36,7 +36,7 @@
 	left: 0;
 	width: 223px;
 	height: 85px;
-	margin: 134px 0 0 108.5px;
+	margin: 75px 0 0 108.5px;
 	z-index: 110;
 }
 
@@ -45,41 +45,45 @@
 	left: 0;
 	width: 223px;
 	height: 85px;
-	margin: 150px 0 0 150px;
+	margin: 100px 0 0 150px;
 	z-index: 1;
 }
 
 .cultureimage {
 	position: absolute;
-	top: 58px;
-	left: 50%;
+	top: 28px;
+	left: 49.6%;
 	width: 428px;
 	height: 31px;
 	margin-left: -214px;
 	text-align: center;
-	
-}
-
-.a{
-	marg
-}
-
-.login{
-	
 }
 </style>
-
 <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="./member/memberLogin">로그인</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./member/check">회원가입</a>
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+<ul class="nav justify-content-center navtop">
+	<li class="nav-item"><a class="nav-link text"
+		aria-current="page" href="#">Active</a></li>
+	<li class="nav-item"><a class="nav-link text"
+		href="${pageContext.request.contextPath}/member/check">회원가입</a></li>
+	<li class="nav-item"><a class="nav-link text"
+		href="${pageContext.request.contextPath}/member/check">회원가입</a></li>
 </ul>
 
 <nav class="navbar navbar-expand-lg justify-content-center navmain">
-		<div class="container-fluid" align="center">
+	<div class="container-fluid" align="center">
 		<a class="navbar-brand cgvimage"
 			href="${pageContext.request.contextPath}/"><img
 			src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a>
@@ -112,7 +116,7 @@
 					</ul></li>
 				<li class="nav-item"><a class="nav-link text"
 					href="${pageContext.request.contextPath}/qna/list">극장</a></li>
-					<li class="nav-item dropdown"><a
+				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle text" href="#"
 					id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
 					aria-expanded="false"> 고객센터 </a>
@@ -127,16 +131,15 @@
 							href="${pageContext.request.contextPath}/member/mypage">MY
 								CGV</a></li>
 						<li class="nav-item"><a class="nav-link text"
-							href="${pageContext.request.contextPath}/member/memberLogout">LOGOUT</a>
+							href="${pageContext.request.contextPath}/member/memberLogout">로그아웃</a>
 						</li>
 					</c:when>
 
 					<c:otherwise>
 						<li class="nav-item"><a class="nav-link text"
-							href="${pageContext.request.contextPath}/member/check">CHECK</a>
-						</li>
+							href="${pageContext.request.contextPath}/member/check">회원가입</a></li>
 						<li class="nav-item"><a class="nav-link text"
-							href="${pageContext.request.contextPath}/member/memberLogin">LOGIN</a>
+							href="${pageContext.request.contextPath}/member/memberLogin">로그인</a>
 						</li>
 					</c:otherwise>
 
