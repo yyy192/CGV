@@ -13,7 +13,13 @@
 	SELECT DISTINCT THEATER FROM MOTH WHERE MOVIENAME=#{movieName}
 </select>
 
+<select id="getTheaterSelect" parameterType="MothDTO" resultType="MothDTO">
+	SELECT WATCHDATE, THEATER FROM MOTH WHERE THEATER=#{theater}
+</select>
 
+<select id="getWatchDateSelect" parameterType="MothDTO" resultType="TheatersDTO">
+	SELECT * FROM THEATERS WHERE THEATER=#{theater}
+</select>
 
 
 

@@ -1,24 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<table class="table table-dark table-striped">
-	<c:forEach items="${theater}" var="dto">
-		
-		<tr align=center>
-			<td class="">${dto.movieName}</td>
-			<td><a href="#">${dto.theater}</a></td>
+<h1>극장을 선택해주세요</h1>
 
-		</tr>
-	</c:forEach>
-</table>
+<c:forEach items="${theater}" var="dto">
 
-
-</body>
-</html>
+	<tr align=center>
+		<td><button class="theater" type="button" data-board-theater="${dto.theater}">${dto.theater}</button></td>
+	</tr>
+</c:forEach>

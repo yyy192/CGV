@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.movies.MoviesDTO;
+import com.f.s5.theaters.TheatersDTO;
 
 @Controller
 @RequestMapping("/ticket/**")
@@ -36,6 +37,28 @@ public class TicketController {
 	   mv.addObject("theater", ar);
 	  
 	   mv.setViewName("common/ajaxList");
+	   
+	   return mv;
+   }
+   
+   @GetMapping("select2")
+   public ModelAndView getTheaterSelect(MothDTO mothDTO) throws Exception {
+	   ModelAndView mv = new ModelAndView();
+	   List<MothDTO> ar = ticketService.getTheaterSelect(mothDTO);
+	   mv.addObject("watchDate", ar);
+
+	   mv.setViewName("common/ajaxList2");
+	   
+	   return mv;
+   }
+   
+   @GetMapping("select3")
+   public ModelAndView getWatchDateSelect(MothDTO mothDTO) throws Exception {
+	   ModelAndView mv = new ModelAndView();
+	   List<TheatersDTO> ar = ticketService.getWatchDateSelect(mothDTO);
+	   mv.addObject("timeTable", ar);
+
+	   mv.setViewName("common/ajaxList3");
 	   
 	   return mv;
    }

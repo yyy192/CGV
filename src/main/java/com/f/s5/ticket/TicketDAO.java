@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.f.s5.movies.MoviesDTO;
+import com.f.s5.theaters.TheatersDTO;
 
 @Repository
 public class TicketDAO {
@@ -25,6 +26,10 @@ public class TicketDAO {
 	
 	public List<MothDTO> getTheaterSelect(MothDTO mothDTO) throws Exception {
 		return sqlSession.selectList(NAMESPACE + "getTheaterSelect", mothDTO);
+	}
+	
+	public List<TheatersDTO> getWatchDateSelect(MothDTO mothDTO) throws Exception {
+		return sqlSession.selectList(NAMESPACE + "getWatchDateSelect", mothDTO);
 	}
 
 }

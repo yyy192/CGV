@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.f.s5.movies.MoviesDTO;
+import com.f.s5.theaters.TheatersDTO;
 
 @Service
 public class TicketService {
@@ -24,5 +25,9 @@ public class TicketService {
    public List<MothDTO> getTheaterSelect(MothDTO mothDTO) throws Exception {
 	   return ticketDAO.getTheaterSelect(mothDTO);
    }
+   
+   public List<TheatersDTO> getWatchDateSelect(MothDTO mothDTO) throws Exception {
+		return ticketDAO.getWatchDateSelect(mothDTO);
+	}
 
 }
