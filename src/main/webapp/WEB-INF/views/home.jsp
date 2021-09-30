@@ -6,40 +6,22 @@
 	<title>CGV</title>
 	<c:import url="./temp/boot_head.jsp"></c:import>
 <style type="text/css">
-	.login{		
-		float: right;
-	}
-	
-	.join{	
-		float: right;
-		margin-right: 20px;
-	}
-	
-	.navmain{
-		background-image: url("");		
-		background-repeat: repeat-x;
-		background-size: 6.5px, 6.5px;		
-		
-	}
-	
-	
+#container{
+	background-image: url("https://img.cgv.co.kr/r2014/images/common/bg/bg_c_bricks.png");
+	background-repeat: repeat-x;
+	background-size: 149px, 450px;
+	margin-top: 0px;
+	height: 500px;
+}
 </style>
 </head>
 <body>
-<!-- <div class="login">
-	<h6><a href="./member/memberLogin">로그인</a></h6>	
-</div>
-<div class="join">
-	<h6><a href="./member/check">회원가입</a></h6>
-</div>	 -->
-	<%-- <c:import url="./temp/boot_nav_top.jsp"></c:import>	 --%>
-	<c:import url="./temp/boot_nav.jsp"></c:import>
+<c:import url="./temp/boot_nav.jsp"></c:import>
 
+
+<div id="container">
 	
-<h1>
-	CGV
-</h1>
-
+</div>
 
 </body>
 </html>

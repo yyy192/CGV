@@ -14,12 +14,12 @@
 	<form action="./list" method="get">
 	<table class="table-secondary table table-striped">
 		<tr align=center>
-				<th>NUM</th><th>CODE</th><th>TITLE</th><th>HITS</th>						
+				<th>NUM</th><th>CORD</th><th>TITLE</th><th>HITS</th>						
 		</tr>
 		<c:forEach items="${list}" var="dto">
 			<tr align=center>
 				<td>${dto.num}</td>
-				<td>${dto.code}</td>
+				<td>${dto.cord}</td>
 				<td><a href="./select?num=${dto.num}"> ${dto.title} </a></td>
 				<td>${dto.hits}</td>						
 			</tr>

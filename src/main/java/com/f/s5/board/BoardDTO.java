@@ -7,6 +7,7 @@ public class BoardDTO {
 	private Long num;
 	private String title;
 	private String contents;
+	private String cord;
 	private Date regDate;
 	private Long hits;
 	
@@ -27,6 +28,13 @@ public class BoardDTO {
 	}
 	public void setContents(String contents) {
 		this.contents = contents;
+	}
+	
+	public String getCord() {
+		return cord;
+	}
+	public void setCord(String cord) {
+		this.cord = cord;
 	}
 	public Date getRegDate() {
 		return regDate;
