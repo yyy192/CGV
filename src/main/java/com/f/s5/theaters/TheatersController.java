@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.ticket.MothDTO;
+import com.f.s5.ticket.TicketDTO;
 
 @Controller
 @RequestMapping("/theaters/**")
@@ -46,5 +47,15 @@ public class TheatersController {
 		}
 		return mv;
 	}
+	
+	//정보 받아오기
+	
+	 @GetMapping("ticketInfo") 
+	 public ModelAndView getTicketInfo(TicketDTO ticketDTO) throws Exception { 
+		 ModelAndView mv = new ModelAndView();
+	  
+		return mv; 
+	  }
+	 
 
 }

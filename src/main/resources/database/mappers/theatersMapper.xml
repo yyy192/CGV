@@ -26,5 +26,9 @@
 	  		select * from theaters t inner join moth m
 			using(theater) where theater=#{theater}
   	</select>
-		
+	
+	<insert id="">
+		INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES
+		(TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate}, #{timeTable})
+	</insert>	
   </mapper>

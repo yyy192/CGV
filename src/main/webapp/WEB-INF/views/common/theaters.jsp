@@ -11,10 +11,23 @@
 				
 			</tr>
 			<tr>
-				<td data-th-table="${dto.timeTable1}" class="time"><button>오전 9시 _구분[${dto.timeTable1}]</button></td>
-				<td data-th-table="${dto.timeTable2}" class="time"><button>오후 1시 _구분[${dto.timeTable2}]</button></td>
-				<td data-th-table="${dto.timeTable3}" class="time"><button>오후 4시 _구분[${dto.timeTable3}]</button></td>
-				<td data-th-table="${dto.timeTable4}" class="time"><button>오후 7시 _구분[${dto.timeTable4}]</button></td>
+				<c:if test="${dto.timeTable1==1}">
+						<td class="time" data-th-table='09:00~12:00'><a href="#">09:00~12:00</a></td>
+				</c:if>
+				
+				<c:if test="${dto.timeTable2==1}">
+					<td class="time" data-th-table='12:00~15:00'><a href="#">12:00~15:00</a></td>
+				</c:if>
+				
+				<c:if test="${dto.timeTable3==1}">
+					<td class="time" data-th-table='15:00~18:00'><a href="#">15:00~18:00</a></td>
+				</c:if>
+				
+				<c:if test="${dto.timeTable4==1}">
+				<td class="time" data-th-table='18:00~21:00'><a href="#">18:00~21:00</a></td>
+				</c:if>
+			
+				
 			</tr>
 		</c:forEach>
 	

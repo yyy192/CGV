@@ -84,12 +84,12 @@
 			if(alert){
 				$.ajax({
 					type:"GET",
-					url:"../ticket/*",
+					url:"./ticketInfo",
 					data:{
 						theater:theater,
 						watchDate:watchDate,
 						movieName:movieName,
-						/* timeTable: */
+						timeTable:timeTable
 						
 					}
 					,success:function(){
