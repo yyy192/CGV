@@ -36,11 +36,14 @@ public class TheatersController {
 	//극장 눌렀을 경우 극장 상영 중인 영화 출력 - ajax활용
 	@GetMapping("info")
 	public ModelAndView getInfo(TheatersDTO theatersDTO) throws Exception {
+		//System.out.println("test");
 		ModelAndView mv = new ModelAndView();
 		theatersDTO = theatersService.getInfo(theatersDTO); 
-		
-		mv.addObject("dto", theatersDTO);
-		
+		//System.out.println(theatersDTO.getTheater());
+		if(theatersDTO!=null) {
+			mv.addObject("dto", theatersDTO);
+			mv.setViewName("common/theaters");
+		}
 		return mv;
 	}
 
