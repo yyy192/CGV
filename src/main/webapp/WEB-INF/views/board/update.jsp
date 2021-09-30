@@ -9,6 +9,7 @@
 <title>${board}Update title here</title>
 <c:import url="../temp/boot_head.jsp"></c:import>
 </head>
+<c:import url="../temp/boot_nav.jsp"></c:import>
 <body>
 
    <h1>${board}Update Page</h1>

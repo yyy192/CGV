@@ -9,6 +9,7 @@
 </style>
 
 </head>
+<c:import url="../temp/boot_nav.jsp"></c:import>
 
 <body>
 	<h1>${board}InsertPage</h1>
