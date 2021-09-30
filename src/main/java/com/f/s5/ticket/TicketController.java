@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,16 +29,13 @@ public class TicketController {
       return mv;
    }
    
-   @RequestMapping("select")
+   @GetMapping("select")
    public ModelAndView getMovieSelect(MothDTO mothDTO) throws Exception {
 	   ModelAndView mv = new ModelAndView();
 	   List<MothDTO> ar = ticketService.getMovieSelect(mothDTO);
-	   mv.addObject("text", ar);
-	   
-	   List<MothDTO> ar1 = ticketService.getTheaterSelect(mothDTO);
-	   mv.addObject("text2", ar1); 
-	   
-	   mv.setViewName("ticket/mothlist");
+	   mv.addObject("theater", ar);
+	  
+	   mv.setViewName("common/ajaxList");
 	   
 	   return mv;
    }
