@@ -118,6 +118,15 @@ public class MemberController {
 	}
 	
 	//ID 중복 체크
+	@GetMapping("idCheck")
+	public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		memberDTO = memberService.getIdCheck(memberDTO);
+		
+		mv.addObject("dto", memberDTO);
+		mv.setViewName("member/idCheck");
+		return mv;
+	}
 	
 	@GetMapping("memberDelete")
 	public ModelAndView setDelete(HttpSession session) throws Exception{
