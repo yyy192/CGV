@@ -6,14 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<c:import url="../temp/boot_head.jsp"></c:import>
+
 </head>
 <body>
 	
-	<h1><%-- ${board} --%> Board List Page</h1>
+	<h2>공지/뉴스</h2>
+	<h3>CGV의 주요한 이슈 및 여러가지 소식들을 확인하실 수 있습니다.</h3>
 	
 	<form action="./list" method="get">
-
+	
+	<div>
+	<h4>공지/뉴스</h4>
+	<h3></h3>
+	</div>
+	
 	<table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>NUM</th><th>CODE</th><th>TITLE</th><th>HITS</th>						

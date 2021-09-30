@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <c:import url="../temp/boot_head.jsp"></c:import>
 </head>
+<c:import url="../temp/boot_nav.jsp"></c:import>
 <body>
 	
 	<h1><%-- ${board} --%> Select Page</h1>

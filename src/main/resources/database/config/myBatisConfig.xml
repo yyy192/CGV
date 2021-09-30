@@ -8,12 +8,15 @@
  	<typeAliases>
  		<typeAlias type="com.f.s5.board.BoardDTO" alias="BoardDTO"/>
  		<typeAlias type="com.f.s5.member.MemberDTO" alias="MemberDTO"/>
+ 		<typeAlias type="com.f.s5.movies.MoviesDTO" alias="MoviesDTO"/>
  		<typeAlias type="com.f.s5.theaters.TheatersDTO" alias="TheatersDTO"/>
  		<typeAlias type="com.f.s5.ticket.MothDTO" alias="MothDTO"/>
+ 		<typeAlias type="com.f.s5.ticket.TicketDTO" alias="TicketDTO"/>
  		<typeAlias type="com.f.s5.util.Pager" alias="Pager"/>
  	
  		<typeAlias type="java.util.List" alias="List"/>
  		<typeAlias type="java.lang.Long" alias="Long"/>
+ 		<typeAlias type="java.lang.String" alias="String"/>
  	</typeAliases>
  
  </configuration>

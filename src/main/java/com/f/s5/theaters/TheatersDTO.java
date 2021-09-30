@@ -11,6 +11,7 @@ public class TheatersDTO {
    private String timeTable2;
    private String timeTable3;
    private String timeTable4;
+
    private List<MothDTO> moths;
 
    
