@@ -11,7 +11,7 @@
 </head>
 <body>
 	
-	<c:import url="../temp/boot_nav.jsp"></c:import>
+	<c:import url="../temp/mainHome.jsp"></c:import>
 	<h1>Member Update Page</h1>
 	
 	<div class="container-fluid">

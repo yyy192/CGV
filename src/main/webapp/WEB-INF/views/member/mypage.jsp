@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-	<c:import url="../temp/boot_nav.jsp"></c:import>
+	<c:import url="../temp/mainHome.jsp"></c:import>
 	
 	<h1>My CGV</h1>
 	<div align=center>
