@@ -14,7 +14,7 @@
 	<h1>List Page</h1>
 	<div id="clickEvent">
 		<c:forEach items="${list}" var="dto">
-			<a href="#" class="tClick" onclick="event()" data-th-theater="${dto.theater}">${dto.theater}</a>
+			<button class="tClick" data-th-theater="${dto.theater}">${dto.theater}</button>
 		</c:forEach>
 	</div>
 	

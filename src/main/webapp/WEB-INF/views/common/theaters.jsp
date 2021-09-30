@@ -12,22 +12,28 @@
 			</tr>
 			<tr>
 				<c:if test="${dto.timeTable1==1}">
-						<td class="time" data-th-table='09:00~12:00'><a href="#">09:00~12:00</a></td>
+						<td class="time" data-th-table='09:00~12:00'>
+							<button type="button">09:00~12:00</button>
+						</td>
 				</c:if>
 				
 				<c:if test="${dto.timeTable2==1}">
-					<td class="time" data-th-table='12:00~15:00'><a href="#">12:00~15:00</a></td>
+					<td class="time" data-th-table='12:00~15:00'>
+						<button type="button">12:00~15:00</button>
+					</td>
 				</c:if>
 				
 				<c:if test="${dto.timeTable3==1}">
-					<td class="time" data-th-table='15:00~18:00'><a href="#">15:00~18:00</a></td>
+					<td class="time" data-th-table='15:00~18:00'>
+						<button type="button">15:00~18:00</button>
+					</td>
 				</c:if>
 				
 				<c:if test="${dto.timeTable4==1}">
-				<td class="time" data-th-table='18:00~21:00'><a href="#">18:00~21:00</a></td>
+					<td class="time" data-th-table='18:00~21:00'>
+						<button type="button">18:00~21:00</button>
+					</td>
 				</c:if>
-			
-				
 			</tr>
 		</c:forEach>
 	
