@@ -49,6 +49,7 @@ a {
 }
 
 .cgvLogo {
+	position: static;
 	float: left;
 	padding: 15px;
 }
@@ -63,6 +64,7 @@ a {
 }
 
 .menu{
+	position: static;
 	width:400px;
 	height:30px;	
 	margin: 0 auto;
