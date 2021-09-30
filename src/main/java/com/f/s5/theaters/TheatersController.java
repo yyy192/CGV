@@ -1,6 +1,10 @@
 package com.f.s5.theaters;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.f.s5.ticket.MothDTO;
 import com.f.s5.ticket.TicketDTO;
 
 @Controller
@@ -51,11 +54,21 @@ public class TheatersController {
 	//정보 받아오기
 	
 	 @GetMapping("ticketInfo") 
-	 public ModelAndView getTicketInfo(TicketDTO ticketDTO) throws Exception { 
-		 ModelAndView mv = new ModelAndView();
-	  
+	 public ModelAndView getTicketInfo(HttpServletRequest request) throws Exception { 
+		ModelAndView mv = new ModelAndView();
+		String watchDate = request.getParameter("watchDate");
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = (Date) df.parse(watchDate);
+		
+		TicketDTO ticketDTO = new TicketDTO();
+		ticketDTO.setMovieName(request.getParameter("movieName"));
+		ticketDTO.setTheater(request.getParameter("theater"));
+		ticketDTO.setWatchDate(date);
+		ticketDTO.setTimeTable(request.getParameter("timeTable"));
+		
+		
 		return mv; 
-	  }
+	 }
 	 
 
 }

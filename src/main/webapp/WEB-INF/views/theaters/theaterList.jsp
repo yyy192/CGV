@@ -82,22 +82,7 @@
 			
 			alert('예매창으로 넘어갈거임?');
 			if(alert){
-				$.ajax({
-					type:"GET",
-					url:"./ticketInfo",
-					data:{
-						theater:theater,
-						watchDate:watchDate,
-						movieName:movieName,
-						timeTable:timeTable
-						
-					}
-					,success:function(){
-						location.replace("../");
-					},error:function(){
-						console.log('error');
-					}
-				});
+				location.href="./ticketInfo?movieName="+movieName+"&theater="+theater+"&watchDate="+watchDate+"&timeTable="+timeTable;
 			}
 		});
 	</script>

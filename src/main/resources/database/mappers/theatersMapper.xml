@@ -27,7 +27,7 @@
 			using(theater) where theater=#{theater}
   	</select>
 	
-	<insert id="">
+	<insert id="getTicketInfo" parameterType="TicketDTO">
 		INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES
 		(TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate}, #{timeTable})
 	</insert>	
