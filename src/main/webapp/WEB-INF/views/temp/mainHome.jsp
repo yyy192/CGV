@@ -26,7 +26,7 @@ a {
 
 #wrap {
 	width: 100%;
-	height:150px;
+	height: 150px;
 	min-width: 1024px;
 	text-align: center;
 	margin: 0px auto;
@@ -37,17 +37,81 @@ a {
 	text-align: center; */
 }
 
-#header {
+.m_top {
+	width: 100%;
+	height: 30px;
+}
+
+.m_bottom {
+	width: 100%;
+	height: 119px;
+}
+
+.cgvLogo {
+	float: left;
+	padding: 15px;
+}
+
+.cultureLogo {
+	width: 240px;
+	height: 20px;
+	padding: 15px;
+	margin: 0 auto;
+	padding-top: 29.5px;
+	
+}
+
+.menu{
+	width:400px;
+	height:30px;	
+	margin: 0 auto;
+}
+.left {
+	width: 10%;
+	height: 149px;
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
-	padding-bottom: 200px;
+	float: left;
+	background-repeat: repeat-x;
+	background-size: 11px, 149px;
+}
+
+.middle {
+	width: 80%;
+	height: 149px;
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	background-repeat: repeat-x;
+	background-size: 11px, 149px;
+	float: left;
+	background-size: 11px, 149px;
+}
+
+.right {
+	width: 10%;
+	height: 149px;
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	background-repeat: repeat-x;
+	background-size: 11px, 149px;
+	float: left;
+	background-repeat: repeat-x;
+	background-size: 11px, 149px;
+}
+
+/* #header {
+	width:60%
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	background-repeat: repeat-x;
+	background-size: 11px, 149px;
+	padding-bottom: 100px;
 	height: 50px;
 	min-width: 980px;
 	position: relative;
-}
-
+} */
 #nav {
 	width: auto;
 	height: 100px;
@@ -89,14 +153,14 @@ a {
 	position: absolute;
 }
 
-.menu {
+/* .menu {
 	position: absolute;
 	margin: 0 400px;
 	width: 376px;
 	height: 35px;
 	width: 376px;
 }
-
+ */
 #header>.headerCenter h1 {
 	top: 19px;
 	left: 77px;
@@ -118,14 +182,13 @@ a {
 }
 
 .nav1 {
-	float: right;
-	margin-right: 20px;
+	float: right;	
 }
 
-.nav2 {
+/* .nav2 {
 	width: 500px;
 	padding: 20px 0 0 0px;
-}
+} */
 
 ul li {
 	list-style-type: none;
@@ -137,11 +200,11 @@ ul li {
 </head>
 <body>
 	<div id="wrap">
-		<div id="header">
-			<div class="headerService">
+		<div class="left"></div>
+		<div class="middle">
+			<div class="m_top">
 				<ul class="nav1">
 					<c:choose>
-
 						<c:when test="${not empty member}">
 							<li class="nav-item"><a class="nav-link text"
 								href="${pageContext.request.contextPath}/member/mypage">MY
@@ -159,23 +222,23 @@ ul li {
 								href="${pageContext.request.contextPath}/member/check">회원가입</a>
 							</li>
 						</c:otherwise>
-
 					</c:choose>
 				</ul>
 			</div>
-			<div class="headerCenter">
-				<h1>
-					<a href="${pageContext.request.contextPath}/"> <img
-						src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png"
-						alt="CGV"></a>
-				</h1>
-				<h2>
-					<a href="./"> <img
+			<div class="m_bottom">
+				<div class="cgvLogo">
+					<a href="${pageContext.request.contextPath}/" class="cgvLogo">
+						<img src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png"
+						alt="CGV">
+					</a>
+				</div>
+				<div class="cultureLogo">
+					<a href="#"> <img
 						src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png"
 						alt="CGV"></a>
-				</h2>
+				</div>
 				<div class="menu">
-					<ul class="nav2">
+					<ul>
 						<li><a class="text" href="#">영화</a></li>
 						<li><a class="text" href="#">예매</a></li>
 						<li><a class="text" href="#">극장</a></li>
@@ -184,11 +247,51 @@ ul li {
 				</div>
 			</div>
 		</div>
-		<!-- <div id="nav">nav(메뉴)</div>
-
-		<div id="section">section(실제 출력부분)</div>
-		<div id="footer">footer(회사정보,개인정보방침)</div> -->
+		<div class="right"></div>
 	</div>
-
 </body>
 </html>
+<%-- <div id="header">
+	<div class="headerService">
+		<ul class="nav1">
+			<c:choose>
+
+				<c:when test="${not empty member}">
+					<li class="nav-item"><a class="nav-link text"
+						href="${pageContext.request.contextPath}/member/mypage">MY CGV</a></li>
+					<li class="nav-item"><a class="nav-link text"
+						href="${pageContext.request.contextPath}/member/memberLogout">로그아웃</a>
+					</li>
+				</c:when>
+
+				<c:otherwise>
+					<li class="nav-item"><a class="nav-link text"
+						href="${pageContext.request.contextPath}/member/memberLogin">로그인</a>
+					</li>
+					<li class="nav-item"><a class="nav-link text"
+						href="${pageContext.request.contextPath}/member/check">회원가입</a></li>
+				</c:otherwise>
+
+			</c:choose>
+		</ul>
+	</div>
+	<div class="headerCenter">
+		<h1>
+			<a href="${pageContext.request.contextPath}/"> <img
+				src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a>
+		</h1>
+		<h2>
+			<a href="./"> <img
+				src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png"
+				alt="CGV"></a>
+		</h2>
+		<div class="menu">
+			<ul class="nav2">
+				<li><a class="text" href="#">영화</a></li>
+				<li><a class="text" href="#">예매</a></li>
+				<li><a class="text" href="#">극장</a></li>
+				<li><a class="text" href="#">고객센터</a></li>
+			</ul>
+		</div>
+	</div>
+</div> --%>

@@ -27,20 +27,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	width: 100%;
 }
 
-.a {
-	height: 150px;
-}
-
 #frm {
-	height: 200px;
-	padding-top: 0px;
+	margin-top: 200px;
 }
 </style>
 </head>
 <body>
-	<div class="a">
-		<c:import url="../temp/mainHome.jsp"></c:import>
-	</div>
+
+	<c:import url="../temp/mainHome.jsp"></c:import>
+
 
 
 	<form id="frm" class="col-md-5 mx-auto" action="./memberLogin"
