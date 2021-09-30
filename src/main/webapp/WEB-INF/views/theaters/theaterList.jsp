@@ -16,9 +16,9 @@
 		</c:forEach>
 	</div>
 	
-	<!-- 극장 클릭했을 경우 -->
-	<div>
-		<h3>${dto.theater}</h3>
+	<!-- 극장 클릭했을 경우 ajax -->
+	<div id="theater">
+		<%-- <h3>${dto.theater}</h3>
 		<c:forEach items="${dto.moths}" var="info">
 			${info.movieName}
 			${info.watchDate}
@@ -30,26 +30,25 @@
 			<br>
 		</c:forEach>
 	
-	
+	 --%>
 	</div>
 	
 	
 	<script type="text/javascript">
-		$("#clickEvent").on('click', '.tClick', function(){
+		/* $(".tClick").click(function(){
 			let tClick = $(this).attr('data-th-theater');
 			console.log(tClick);
 			$.ajax({
-				
 				type:"GET",
-				url:"",
+				URL:"./info",
 				data:{
-					theater = tClick
-				},
-				success{
-					
+					theater:tClick
+				}
+				,success:function(result){
+					result=result.trim();
 				}
 			});
-		});
+		}); */
 	</script>
 </body>
 </html>
