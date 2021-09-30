@@ -1,12 +1,15 @@
 package com.f.s5.ticket;
 
+import java.sql.Date;
+
 public class TicketDTO {
 
    private String id;
    private String ticketNum;
    private String movieName;
    private String theater;
-   private String timeTableSelete;
+   private Date watchDate;
+   private String timeTable;
    private String seat;
    private String price;
 
@@ -42,12 +45,20 @@ public class TicketDTO {
       this.theater = theater;
    }
 
-   public String getTimeTableSelete() {
-      return timeTableSelete;
+   public Date getWatchDate() {
+      return watchDate;
    }
 
-   public void setTimeTableSelete(String timeTableSelete) {
-      this.timeTableSelete = timeTableSelete;
+   public void setWatchDate(Date watchDate) {
+      this.watchDate = watchDate;
+   }
+
+   public String getTimeTable() {
+      return timeTable;
+   }
+
+   public void setTimeTable(String timeTable) {
+      this.timeTable = timeTable;
    }
 
    public String getSeat() {
