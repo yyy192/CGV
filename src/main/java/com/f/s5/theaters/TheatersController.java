@@ -20,14 +20,14 @@ public class TheatersController {
 	@GetMapping("list")
 	public ModelAndView getList() throws Exception{
 		ModelAndView mv = new ModelAndView();
-		TheatersDTO theatersDTO = new TheatersDTO();
-		theatersDTO.setTheater("구로CGV");
+		//TheatersDTO theatersDTO = new TheatersDTO();
+		//theatersDTO.setTheater("구로CGV");
 		
-		theatersDTO = theatersService.getInfo(theatersDTO); 
+		//theatersDTO = theatersService.getInfo(theatersDTO); 
 		List<TheatersDTO> ar = theatersService.getList();
 		
 		
-		mv.addObject("dto", theatersDTO);
+		//mv.addObject("dto", theatersDTO);
 		mv.addObject("list", ar);
 		mv.setViewName("theaters/theaterList");
 		return mv;

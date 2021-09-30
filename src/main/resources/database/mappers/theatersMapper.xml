@@ -23,8 +23,8 @@
   	</resultMap>
   	
   	<select id="getInfo" parameterType="TheatersDTO" resultMap="getInfoResult">
-	  		select * from theaters t left join moth m
+	  		select * from theaters t inner join moth m
 			using(theater) where theater=#{theater}
   	</select>
-	
+		
   </mapper>

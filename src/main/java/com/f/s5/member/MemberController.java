@@ -55,12 +55,13 @@ public class MemberController {
 		return mv;
 	}
 	
-	@GetMapping("myPage")
+	@GetMapping("mypage")
 	public ModelAndView getMyPage(HttpSession session) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
 		MemberDTO memberDTO =  (MemberDTO) session.getAttribute("member");
 		
+		mv.setViewName("member/myPage");
 		return mv;
 	}
 	
