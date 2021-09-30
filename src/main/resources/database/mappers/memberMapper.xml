@@ -5,6 +5,10 @@
   
   <mapper namespace="com.f.s5.member.MemberDAO">
 	
+	<select id="getIdCheck" parameterType="MemberDTO" resultType="MemberDTO">
+		SELECT ID FROM CGVMEMBER WHERE ID=#{id}
+	</select>
+	
 	<select id="getLogin" parameterType="MemberDTO" resultType="MemberDTO">
 		SELECT * FROM CGVMEMBER WHERE ID=#{id} AND PW=#{pw}
 	</select>

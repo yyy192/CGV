@@ -14,6 +14,7 @@
 </style>
 </head>
 <body>
+	
 	<c:import url="../temp/boot_nav.jsp"></c:import>
 	
 	<div align=center>

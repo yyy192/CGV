@@ -30,8 +30,8 @@ public class MemberController {
 		
 		memberDTO = memberService.getLogin(memberDTO);
 		
-		String msg="로그인에 실패했습니다."; 
-		String url="./memberLogin";
+		String msg="아이디 또는 패스워드가 맞지 않습니다. 확인 후 입력해주세요."; 
+		String url="common/result";
 		  
 		if(memberDTO != null) { 
 			msg="로그인에 성공했습니다."; 
@@ -39,7 +39,7 @@ public class MemberController {
 			session.setAttribute("member", memberDTO); 
 		}
 		  
-		mv.addObject("msg", msg); 
+		mv.addObject("msg", msg);		
 		mv.setViewName(url);
 		 
 		return mv;
@@ -56,12 +56,10 @@ public class MemberController {
 	}
 	
 	@GetMapping("mypage")
-	public ModelAndView getMyPage(HttpSession session) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		
+	public ModelAndView myPage(HttpSession session) throws Exception {			
 		MemberDTO memberDTO =  (MemberDTO) session.getAttribute("member");
-		
-		mv.setViewName("member/myPage");
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("member/mypage");
 		return mv;
 	}
 	
@@ -69,22 +67,16 @@ public class MemberController {
 	@GetMapping("memberUpdate")
 	public ModelAndView setUpdate(HttpSession session, MemberDTO memberDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		MemberDTO sessionDTO = (MemberDTO) session.getAttribute("member");
-		memberDTO.setId(sessionDTO.getId());
-		memberDTO.setName(sessionDTO.getName());
-		
+		mv.setViewName("member/memberUpdate");
+		mv.addObject("member", memberDTO);
+		return mv;
+	}
+	
+	@PostMapping("memberUpdate")
+	public ModelAndView setUpdate(MemberDTO memberDTO, ModelAndView mv, HttpSession session) throws Exception {
 		int result = memberService.setUpdate(memberDTO);
-		
-		String msg="회원정보 수정에 실패했습니다.";
-		String url="./myPage";
-		
-		if(result>0) {
-			msg="회원정보 수정에 성공했습니다.";
-			url="../";
-		}
-		
-		mv.addObject("msg", msg);
-		mv.setViewName(url);
+		session.setAttribute("member", memberDTO);
+		mv.setViewName("redirect: ../");
 		return mv;
 	}
 	
@@ -126,6 +118,15 @@ public class MemberController {
 	}
 	
 	//ID 중복 체크
+	@GetMapping("idCheck")
+	public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		memberDTO = memberService.getIdCheck(memberDTO);
+		
+		mv.addObject("dto", memberDTO);
+		mv.setViewName("member/idCheck");
+		return mv;
+	}
 	
 	@GetMapping("memberDelete")
 	public ModelAndView setDelete(HttpSession session) throws Exception{
@@ -135,12 +136,12 @@ public class MemberController {
 		int result = memberService.setDelete(memberDTO);
 		
 		String msg = "회원탈퇴에 실패했습니다.";
-		String url = "./myPage";
+		String url = "common/result";
 		
 		if(result>0) {
-			session.invalidate();
 			msg = "회원탈퇴에 성공했습니다.";
-			url = "../";
+			url = "redirect: ../";
+			session.invalidate();
 		}
 		
 		mv.addObject("msg", msg);
