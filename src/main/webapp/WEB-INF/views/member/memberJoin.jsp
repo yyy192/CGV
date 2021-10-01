@@ -19,7 +19,6 @@
 		<div class="mb-3">
 		  <label for="id" class="form-label">아이디</label>
 		  <input type="text" class="form-control c1" name="id" id="id">
-		  <button id="idCheck" type="button">ID중복확인</button>
 		  <div id="idResult"></div>
 		</div>
 		
@@ -62,5 +61,27 @@
 		</form>
 		</div>
 		<!-- <script type="text/javascript" src="../resources/js/join.js"></script> -->
+		
+<script type="text/javascript">
+	$('#id').blur(function(){
+		let id = $('#id').val();
+		console.log(id);
+		$.ajax({
+			type:"GET",
+			url:"./idCheck",
+			data:{
+				id:id
+			},
+			success:function(result){
+				result=result.trim();
+				if(result=='1'){
+					$('#idResult').html('<font color=blue>사용 가능한 ID 입니다.</font>');
+				}else{
+					$('#idResult').html('<font color=red>사용 불가능한 ID 입니다.</font>');
+				}
+			}
+		});
+	});
+</script>
 </body>
 </html>

@@ -121,10 +121,18 @@ public class MemberController {
 	@GetMapping("idCheck")
 	public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		memberDTO = memberService.getIdCheck(memberDTO);
 		
-		mv.addObject("dto", memberDTO);
-		mv.setViewName("member/idCheck");
+		memberDTO = memberService.getIdCheck(memberDTO);
+		System.out.println(memberDTO);
+		
+		int result=0;
+		
+		if(memberDTO == null) {
+			result =1;
+		}
+		System.out.println(result);
+		mv.addObject("result", result);
+		mv.setViewName("common/idCheckAjax");
 		return mv;
 	}
 	
