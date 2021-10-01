@@ -1,6 +1,9 @@
 package com.f.s5.theaters;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +25,18 @@ public class TheatersService {
 		return theatersDAO.getInfo(theatersDTO);
 	}
 	
-	public int setTicketInfo(TicketDTO ticketDTO) throws Exception {
+	public int setTicketInfo(HttpServletRequest request, TicketDTO ticketDTO) throws Exception {
+		String watchDate = request.getParameter("watchDate");
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		java.util.Date date = df.parse(watchDate);         
+		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+		
+		
+		//TicketDTO ticketDTO = new TicketDTO();
+		ticketDTO.setMovieName(request.getParameter("movieName"));
+		ticketDTO.setTheater(request.getParameter("theater"));
+		ticketDTO.setWatchDate(sqlDate);
+		ticketDTO.setTimeTable(request.getParameter("timeTable"));
 		return theatersDAO.setTicketInfo(ticketDTO);
 	}
 

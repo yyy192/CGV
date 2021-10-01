@@ -54,22 +54,12 @@ public class TheatersController {
 	//정보 받아오기
 	
 	 @GetMapping("ticketInfo") 
-	 public ModelAndView getTicketInfo(HttpServletRequest request) throws Exception { 
+	 public ModelAndView getTicketInfo(HttpServletRequest request, TicketDTO ticketDTO) throws Exception { 
 		ModelAndView mv = new ModelAndView();
 		
-		String watchDate = request.getParameter("watchDate");
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		java.util.Date date = df.parse(watchDate);         
-		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 		
 		
-		TicketDTO ticketDTO = new TicketDTO();
-		ticketDTO.setMovieName(request.getParameter("movieName"));
-		ticketDTO.setTheater(request.getParameter("theater"));
-		ticketDTO.setWatchDate(sqlDate);
-		ticketDTO.setTimeTable(request.getParameter("timeTable"));
-		
-		int result = theatersService.setTicketInfo(ticketDTO);
+		int result = theatersService.setTicketInfo(request, ticketDTO);
 		
 		if(result > 0) {
 			System.out.println("ticket Insert 성공");
