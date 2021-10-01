@@ -35,7 +35,7 @@ public class MemberController {
 		
 		if(memberDTO != null) {
 			msg="로그인에 성공했습니다.";
-			url="../";
+			url="redirect:../";
 			
 			session.setAttribute("member", memberDTO);
 		}
@@ -55,12 +55,12 @@ public class MemberController {
 		return mv;
 	}
 	
-	@GetMapping("myPage")
+	@GetMapping("mypage")
 	public ModelAndView getMyPage(HttpSession session) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
 		MemberDTO memberDTO =  (MemberDTO) session.getAttribute("member");
-		
+		mv.setViewName("member/mypage");
 		return mv;
 	}
 	
@@ -110,12 +110,29 @@ public class MemberController {
 		}
 		
 		mv.addObject("msg", msg);
-		mv.setViewName("../");
+		mv.setViewName("redirect:../");
 		
 		return mv;
 	}
 	
 	//ID 중복 체크
+	   @GetMapping("idCheck")
+	   public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
+	      ModelAndView mv = new ModelAndView();
+	      
+	      memberDTO = memberService.getIdCheck(memberDTO);
+	      System.out.println(memberDTO);
+	      
+	      int result=0;
+	      
+	      if(memberDTO == null) {
+	         result =1;
+	      }
+	      System.out.println(result);
+	      mv.addObject("result", result);
+	      mv.setViewName("common/idCheckAjax");
+	      return mv;
+	   }
 	
 	@GetMapping("memberDelete")
 	public ModelAndView setDelete(HttpSession session) throws Exception{

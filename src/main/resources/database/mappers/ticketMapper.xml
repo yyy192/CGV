@@ -5,21 +5,37 @@
 
 <mapper namespace="com.f.s5.ticket.TicketDAO">
 
-<select id="getMovieList" resultType="MoviesDTO">
-	SELECT MOVIENAME FROM MOVIES
-</select>
+	<select id="getMovieList" resultType="MoviesDTO">
+      SELECT MOVIENAME FROM MOVIES
+  	</select>
 
-<select id="getMovieSelect" parameterType="MothDTO" resultType="MothDTO">
-	SELECT DISTINCT THEATER FROM MOTH WHERE MOVIENAME=#{movieName}
-</select>
+   	<select id="getMovieSelect" parameterType="MothDTO"
+      resultType="MothDTO">
+      SELECT DISTINCT THEATER, MOVIENAME FROM MOTH WHERE MOVIENAME=#{movieName}
+  	</select>
 
-<select id="getTheaterSelect" parameterType="MothDTO" resultType="MothDTO">
-	SELECT WATCHDATE, THEATER FROM MOTH WHERE THEATER=#{theater}
-</select>
+   	<select id="getTheaterSelect" parameterType="MothDTO"
+      resultType="MothDTO">
+      SELECT WATCHDATE, THEATER, MOVIENAME FROM MOTH WHERE THEATER=#{theater} AND
+      MOVIENAME=#{movieName}
+   	</select>
 
-<select id="getWatchDateSelect" parameterType="MothDTO" resultType="TheatersDTO">
-	SELECT * FROM THEATERS WHERE THEATER=#{theater}
-</select>
+   	<select id="getWatchDateSelect" parameterType="MothDTO"
+      resultType="TheatersDTO">
+      SELECT * FROM THEATERS WHERE THEATER=#{theater}
+   	</select>
+
+   	<select id="getMothSelect" parameterType="MothDTO"
+      resultType="MothDTO">
+      SELECT * FROM MOTH WHERE MOVIENAME=#{movieName} AND THEATER=#{theater} AND
+      WATCHDATE=#{watchDate}
+   	</select>
+
+   <insert id="setTicket" parameterType="TicketDTO">
+      INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE)
+      VALUES (TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate},
+      #{timeTable})
+   </insert>
 
 
 

@@ -28,6 +28,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 #frm {
 	margin-top: 200px;
 }
+
+
 </style>
 </head>
 <body>
@@ -58,6 +60,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 		<div class="mb-3 my-4" align=center>
 			<label class="form-label"></label>
 			<button id="btn" type="submit" class="btn btn-danger">로그인</button>
+		</div>
+		
+		<div id="section1">
+			<h1>dd</h1>
 		</div>
 
 	</form>

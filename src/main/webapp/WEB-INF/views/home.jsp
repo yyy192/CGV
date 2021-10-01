@@ -7,6 +7,6 @@
 </head>
 <body>
 	<c:import url="./temp/mainHome.jsp"></c:import>
-	
+	<c:import url="./temp/mainBricks.jsp"></c:import>
 </body>
 </html>

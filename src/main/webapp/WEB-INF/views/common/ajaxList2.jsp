@@ -7,6 +7,9 @@
 <c:forEach items="${watchDate}" var="dto">
 
 	<tr align=center>
-		<td><button class="watchDate" type="button" data-board-theater="${dto.theater}">${dto.watchDate}</button></td>
+		<td><button class="watchDate" type="button"
+            data-board-theater="${dto.theater}"
+            data-board-watchDate="${dto.watchDate}"
+            data-board-movieName="${dto.movieName}">${dto.watchDate}</button></td>
 	</tr>
 </c:forEach>
