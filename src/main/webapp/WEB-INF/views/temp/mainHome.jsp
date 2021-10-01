@@ -221,7 +221,7 @@ ul li {
 				<div class="menu">
 					<ul>
 						<li><a class="text" href="#">영화</a></li>
-						<li><a class="text" href="#">예매</a></li>
+						<li><a class="text" href="./ticket/list">예매</a></li>
 						<li><a class="text" href="#">극장</a></li>
 						<li><a class="text" href="#">고객센터</a></li>
 					</ul>

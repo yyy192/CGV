@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-   
-<h1>날짜를 선택해주세요</h1>
-
+<style type="text/css">
+.watchDate {
+	margin: 10px 0 10px 0;
+}
+</style>
 <c:forEach items="${watchDate}" var="dto">
 
 	<tr align=center>
