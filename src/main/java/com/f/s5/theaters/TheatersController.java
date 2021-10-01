@@ -72,10 +72,14 @@ public class TheatersController {
 		int result = theatersService.setTicketInfo(ticketDTO);
 		
 		if(result > 0) {
-			System.out.println("성공");
+			System.out.println("ticket Insert 성공");
 			mv.setViewName("redirect:../");
+			
+		}else {
+			System.out.println("오류");
 		}
-		return mv; 
+		
+		return mv;
 	 }
 	 
 
