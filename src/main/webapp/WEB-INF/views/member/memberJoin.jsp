@@ -82,6 +82,20 @@
 			}
 		});
 	});
+	
+	$('#passwordcheck').blur(function(){
+		let pw = $('#pw').val();
+		let passwordcheck = $('#passwordcheck').val();
+		
+		console.log(pw);
+		console.log(passwordcheck);
+
+		if(pw == passwordcheck){
+			$('#pwResult').html('<font color=blue>비밀번호가 일치합니다.</font>');
+		}else{
+			$('#pwResult').html('<font color=red>비밀번호가 일치하지 않습니다.</font>');
+		}
+	});
 </script>
 </body>
 </html>
