@@ -35,7 +35,7 @@ public class MemberController {
 		
 		if(memberDTO != null) {
 			msg="로그인에 성공했습니다.";
-			url="../";
+			url="redirect: ../";
 			
 			session.setAttribute("member", memberDTO);
 		}
@@ -110,7 +110,7 @@ public class MemberController {
 		}
 		
 		mv.addObject("msg", msg);
-		mv.setViewName("../");
+		mv.setViewName("redirect: ../");
 		
 		return mv;
 	}

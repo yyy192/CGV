@@ -151,7 +151,7 @@ ul li {
 								href="${pageContext.request.contextPath}/member/memberLogin">로그인</a>
 							</li>
 							<li class="nav-item"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/check">회원가입</a>
+								href="${pageContext.request.contextPath}/member/memberJoin">회원가입</a>
 							</li>
 						</c:otherwise>
 					</c:choose>

@@ -111,11 +111,38 @@
 	float: left;
 }
 
-.bottombar{
+.bottombar {
 	width: 100%;
 	height: 128px;
 	background-color: #1D1D1C;
 	text-align: center;
+}
+
+.bottombar_1 {
+	width: 996px;
+	height: 128px;
+	background-color: #1D1D1C;
+	margin: 0 14px;
+}
+
+.info_1 {
+	width: 212px;
+	height: 108px;
+	float: left;
+	font-size: 32px;
+	color: #cccccc;
+}
+
+.info_2 {
+	width: 187px;
+	height: 108px;
+	float:left;
+	font-size: 32px;
+	color: #cccccc;
+}
+
+.info_3 {
+	
 }
 
 ul li {
@@ -162,10 +189,14 @@ ul li {
 		<div class="wrapright"></div>
 	</div>
 	<div class="bottombar">
-		
+		<div class="bottombar_1">
+			<div class="info_1">영화선택</div>
+			<div class="info_2">극장선택</div>
+			<div class="info_3"></div>
+		</div>
 	</div>
-	
-	
+
+
 	<!-------------------------------------------------------------------------------------------->
 	<script type="text/javascript">
 		$(".movie").click(function() {
