@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.f.s5.ticket.MothDTO;
+import com.f.s5.ticket.TicketDTO;
 
 @Service
 public class TheatersService {
@@ -19,6 +20,10 @@ public class TheatersService {
 	
 	public TheatersDTO getInfo(TheatersDTO theatersDTO) throws Exception {
 		return theatersDAO.getInfo(theatersDTO);
+	}
+	
+	public int setTicketInfo(TicketDTO ticketDTO) throws Exception {
+		return theatersDAO.setTicketInfo(ticketDTO);
 	}
 
 }

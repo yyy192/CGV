@@ -56,17 +56,25 @@ public class TheatersController {
 	 @GetMapping("ticketInfo") 
 	 public ModelAndView getTicketInfo(HttpServletRequest request) throws Exception { 
 		ModelAndView mv = new ModelAndView();
+		
 		String watchDate = request.getParameter("watchDate");
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		Date date = (Date) df.parse(watchDate);
+		java.util.Date date = df.parse(watchDate);         
+		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+		
 		
 		TicketDTO ticketDTO = new TicketDTO();
 		ticketDTO.setMovieName(request.getParameter("movieName"));
 		ticketDTO.setTheater(request.getParameter("theater"));
-		ticketDTO.setWatchDate(date);
+		ticketDTO.setWatchDate(sqlDate);
 		ticketDTO.setTimeTable(request.getParameter("timeTable"));
 		
+		int result = theatersService.setTicketInfo(ticketDTO);
 		
+		if(result > 0) {
+			System.out.println("성공");
+			mv.setViewName("redirect:../");
+		}
 		return mv; 
 	 }
 	 
