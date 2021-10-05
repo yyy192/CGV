@@ -25,7 +25,7 @@
 	<br>
 	<br>
 	<hr>
-	<div align=center><h3>${dto.title}</h3></div> 
+	<div align=center><h3>${dto.cord} ${dto.title}</h3></div> 
 	<h3>등록일 ${dto.regDate}</h3>
 	<h3>조회수 ${dto.hits}</h3>
 	<div>

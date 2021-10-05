@@ -42,7 +42,9 @@ public class NoticeController {
 	@RequestMapping("list")
 	public ModelAndView getList(Pager pager)throws Exception{
 		ModelAndView mv = new ModelAndView();
+		
 		List<BoardDTO> ar = noticeService.getList(pager);
+		
 		mv.addObject("list", ar);
 		mv.addObject("pager", pager);
 		mv.setViewName("board/list");

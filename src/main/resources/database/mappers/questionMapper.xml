@@ -11,26 +11,31 @@
   
   <select id="getCordCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVQUESTION
-  	WHERE CORD=#{cord}
+  	WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
+	OR contents LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
+	ORDER BY NUM DESC
   </select>
   
   <select id="getCordList" parameterType="Pager" resultType="BoardDTO">
   	SELECT * FROM
-		    (SELECT ROWNUM R, CN.* FROM 
+		    (SELECT ROWNUM R, CQ.* FROM 
 		            (SELECT * 
 		            FROM CGVQUESTION
-		            WHERE CORD LIKE '%' || #{cord} || '%'
-		            ORDER BY NUM DESC
+		            WHERE title LIKE '%' || #{search} || '%'
+		            AND CORD LIKE '%' || #{cord} || '%'
+					OR contents LIKE '%' || #{search} || '%'
+					AND CORD LIKE '%' || #{cord} || '%'
+					ORDER BY NUM DESC
 		            ) 
-		        CN
+		        CQ
 		    )
 		WHERE R BETWEEN #{startRow} AND #{endRow}
   </select>
   
   <select id="getCount" parameterType="Pager" resultType="Long">
   	SELECT COUNT(NUM) FROM CGVQUESTION
-  		WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
-		OR contents LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
+  		WHERE title LIKE '%' || #{search} || '%'
+		OR contents LIKE '%' || #{search} || '%'
 		ORDER BY NUM DESC
   </select>
   
@@ -39,8 +44,8 @@
 		    (SELECT ROWNUM R, CQ.* FROM 
 		            (SELECT * 
 		            FROM CGVQUESTION
-		            WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
-					OR contents LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
+		            WHERE title LIKE '%' || #{search} || '%'
+					OR contents LIKE '%' || #{search} || '%'
 					ORDER BY NUM DESC
 		            ) 
 		        CQ

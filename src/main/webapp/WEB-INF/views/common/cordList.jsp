@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>번호</th><th>구분</th><th>제목</th>
@@ -18,8 +19,7 @@
 			</tr>
 			
 		</c:forEach>
-	</table>
-	</form>
+</table>
 
 	<!-- Paging -->
 			<nav aria-label="Page navigation example">

@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
 	
@@ -26,13 +27,21 @@
 				<form action="./list" method="get">
 		
 					<div class="input-group mb-3">
-					 
-					 <select name="keyword" class="form-select" aria-label="Default select example">
-						 <option value="title">제목</option>
+					
+					<c:if test="${empty pager.keyword or pager.keyword eq 'title'}">
+						<select data-board-keyword="${pager.keyword}" id="keyword" name="keyword" class="form-select" aria-label="Default select example">
+						 <option selected="selected" value="title">제목</option>
 						 <option value="contents">내용</option>
-					 </select>
+					 	</select>
+					</c:if>
+					<c:if test="${pager.keyword eq 'contents'}">
+						<select data-board-keyword="${pager.keyword}" id="keyword" name="keyword" class="form-select" aria-label="Default select example">
+						 <option value="title">제목</option>
+						 <option selected="selected" value="contents">내용</option>
+					 	</select>
+					</c:if>
 					  
-					 <input type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
+					 <input value="${pager.search}" id="search" type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
 					 <button type="submit" class="btn btn-outline-secondary">검색하기</button>
 					</div>
 					
@@ -42,17 +51,14 @@
 				<form action="./list" method="get">
 		
 					<div class="input-group mb-3">
-					 <input type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
-					 <button type="submit" class="btn btn-outline-secondary">Search</button>
+					 <input value="${pager.search}" id="search" type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
+					 <button type="submit" class="btn btn-outline-secondary">검색하기</button>
 					</div>
 					
 				</form>
 			</c:if>
 			
 	<!-- Search Form Finish -->
-	
-	
-	<form action="./list" method="get">
 	
 	<div>
 	<h4>공지/뉴스</h4>
@@ -70,23 +76,22 @@
 	</c:if>
 	<c:if test="${board eq 'question'}">
 		<button id="total">전체</button>
-		<button class="a" type="button" data-board-cord="예매/예표">예매/예표</button>
+		<button class="a" type="button" data-board-cord="예매/매표">예매/매표</button>
 		<button class="a" type="button" data-board-cord="관람권/결제수단">관람권/결제수단</button>
 		<button class="a" type="button" data-board-cord="멤버쉽/클럽서비스">멤버쉽/클럽서비스</button>
 		<button class="a" type="button" data-board-cord="VIP관련">VIP관련</button>
 		<button class="a" type="button" data-board-cord="할인혜택">할인혜택</button>
 		<button class="a" type="button" data-board-cord="영화관이용">영화관이용</button>
-		<button class="a" type="button" data-board-cord="특별관">특별관</button>
 		<button class="a" type="button" data-board-cord="기프티콘">기프티콘</button>
 		<button class="a" type="button" data-board-cord="홈페이지/모바일">홈페이지/모바일</button>
 	</c:if>
 	
 	</div>
 	<br>
-	
+	<br>
 	
 	<div id="cordList">
-	<table class="table-secondary table table-striped">
+		<table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>번호</th><th>구분</th><th>제목</th>
 				<c:if test="${board eq 'notice'}"><th>등록일</th></c:if>
@@ -102,8 +107,7 @@
 			</tr>
 			
 		</c:forEach>
-	</table>
-	</form>
+		</table>
 
 	<!-- Paging -->
 			<nav aria-label="Page navigation example">
@@ -143,11 +147,22 @@
 			</nav>
 	</div>
 	
+	<!-- 관리자만 들어갈 수 있게 관리자 아이디 생성 -->
+	<c:if test="${not empty member and member.id eq 'admin'}">
+		<a href="./insert" class="btn btn-danger">ADD</a>
+	</c:if>
 	
-	<a href="./insert" class="btn btn-danger">ADD</a>
 
 <script type="text/javascript">
-
+	
+	/* var keyword='';
+	
+	$("select[name=keyword]").change(function(){
+	  	keyword=$(this).val();
+	  	console.log(keyword); //value값 가져오기
+	});
+	 */
+	
 	$("#total").click(function(){
 		location.href="./list";
 	});
@@ -156,19 +171,27 @@
 		
 		let cord = $(this).attr('data-board-cord');
 		console.log(cord);
-		location.href="./list?cord="+cord;
-		/* $.ajax({
+		let keyword = $("#keyword").attr('data-board-keyword');
+		console.log(keyword);
+		let search = $("#search").val();
+		console.log(search);
+		
+		
+		/* location.href="./list?cord="+cord; */
+		$.ajax({
 			type:"GET",
-			url:"./list",
+			url:"./cordList",
 			data:{
-				cord:cord
+				cord:cord,
+				search:search,
+				keyword:keyword
 			},
 			success:function(result){
 				result=result.trim();	
 				$('#cordList').html(result);
 			}
 			
-		}); */
+		});
 	});
 
 </script>

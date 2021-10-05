@@ -11,7 +11,8 @@
   
   <select id="getCordCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVNOTICE
-  	WHERE CORD=#{cord}
+  	<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
+	<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
   </select>
   
   <select id="getCordList" parameterType="Pager" resultType="BoardDTO">
@@ -19,7 +20,19 @@
 		    (SELECT ROWNUM R, CN.* FROM 
 		            (SELECT * 
 		            FROM CGVNOTICE
-		            WHERE CORD LIKE '%' || #{cord} || '%'
+		            WHERE
+		            
+		            <choose>
+						<when test="keyword == 'title'">
+							title
+						</when>
+						<otherwise>
+							contents
+						</otherwise>
+					</choose>
+
+					LIKE '%' || #{search} || '%'
+		            AND CORD LIKE '%' || #{cord} || '%'
 		            ORDER BY NUM DESC
 		            ) 
 		        CN
@@ -30,8 +43,8 @@
   <select id="getCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVNOTICE
   	 
-		<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' and cord LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
-		<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' and cord LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
+		<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
+		<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
 		
   </select>
   
@@ -52,7 +65,6 @@
 					</choose>
 
 					LIKE '%' || #{search} || '%' 
-					AND CORD LIKE '%' || #{cord} || '%' 
 		            ORDER BY NUM DESC
 		            ) 
 		        CN

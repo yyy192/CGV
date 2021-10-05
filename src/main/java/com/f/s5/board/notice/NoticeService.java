@@ -19,7 +19,10 @@ public class NoticeService implements BoardService{
 	@Override
 	public List<BoardDTO> getCordList(Pager pager) throws Exception {
 		Long totalCount = noticeDAO.getCordCount(pager);
-		
+		System.out.println(pager.getCord());
+		System.out.println(pager.getSearch());
+		System.out.println(pager.getKeyword());
+		System.out.println(totalCount);
 		pager.num(totalCount);
 		pager.row();
 		

@@ -38,7 +38,7 @@
               <label for="reservation">예매/매표</label><br>
               <input type="radio" id="ticket" name="cord" value="[관람권/결제수단]">
               <label for="ticket">관람권/결제수단</label><br>
-              <input type="radio" id="membership" name="cord" value="[멤버쉽/클럽서비]">
+              <input type="radio" id="membership" name="cord" value="[멤버쉽/클럽서비스]">
               <label for="membership">멤버쉽/클럽서비스</label><br>
               <input type="radio" id="vip" name="cord" value="[VIP관련]">
               <label for="vip">VIP관련</label><br>
@@ -48,7 +48,7 @@
               <label for="use">영화관이용</label><br>
               <input type="radio" id="gift" name="cord" value="[기프트샵]">
               <label for="other">기프트샵</label><br>
-              <input type="radio" id="home" name="cord" value="[홈페이지]">
+              <input type="radio" id="home" name="cord" value="[홈페이지/모바일]">
               <label for="home">홈페이지/모바일</label>
             </div>
          </c:if>
