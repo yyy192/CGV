@@ -6,11 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<style type="text/css">
+	.img{
+		width:300px;
+		height:300px;
+		background-image: url("src/main/resources/images/007.jpg");
+	}
+</style>
 </head>
 <body>
-
-   
    <h1>My CGV</h1>
    <div align=center>
    <div class="name"><h1>${member.name} 님</h1></div>
@@ -24,7 +28,7 @@
    <h6>E-mail : ${member.email}</h6>
    <h6>Birth : ${member.birth}</h6>
    </div>
-   
+   <div class="img">123</div>
    <br>
    <br>
    <br>
