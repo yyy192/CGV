@@ -6,6 +6,9 @@ public class Pager {
 	private String keyword;
 	private String search;
 	
+	//코드 구분
+	private String cord;
+	
 	//페이지 번호
 	private Long pn;
 	//한 페이지 당 출력할 리스트 개수 - 20개
@@ -57,6 +60,18 @@ public class Pager {
 	
 	
 	//-------------- Setter, Getter -------------
+	
+	public String getCord() {
+		if(this.cord==null) {
+			this.cord="";
+		}
+		return cord;
+	}
+
+	public void setCord(String cord) {
+		this.cord = cord;
+	}
+	
 	public String getKeyword() {
 		return keyword;
 	}

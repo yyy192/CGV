@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.f.s5.board.BoardDTO;
 import com.f.s5.board.BoardService;
+import com.f.s5.util.Pager;
 
 @Service
 public class NoticeService implements BoardService{
@@ -14,10 +15,25 @@ public class NoticeService implements BoardService{
 	@Autowired
 	private NoticeDAO noticeDAO;
 
+	
 	@Override
-	public List<BoardDTO> getList(BoardDTO boardDTO) throws Exception {
+	public List<BoardDTO> getCordList(Pager pager) throws Exception {
+		Long totalCount = noticeDAO.getCordCount(pager);
 		
-		return noticeDAO.getList(boardDTO);
+		pager.num(totalCount);
+		pager.row();
+		
+		return noticeDAO.getCordList(pager);
+	}
+	
+	@Override
+	public List<BoardDTO> getList(Pager pager) throws Exception {
+		Long totalCount = noticeDAO.getCount(pager);
+
+		
+		pager.num(totalCount);
+		pager.row();
+		return noticeDAO.getList(pager);
 	}
 
 	@Override

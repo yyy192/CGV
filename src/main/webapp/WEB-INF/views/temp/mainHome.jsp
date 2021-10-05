@@ -177,6 +177,10 @@ ul li {
 	margin-top: 5px;
 	margin-left: 50px;
 }
+body
+{
+  background-color: #F7F6EF;
+}
 </style>
 </head>
 <body>

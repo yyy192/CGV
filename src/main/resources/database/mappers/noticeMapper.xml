@@ -9,8 +9,55 @@
   	SELECT * FROM CGVNOTICE WHERE NUM=#{num}
   </select>
   
-  <select id="getList" resultType="BoardDTO">
-  	SELECT * FROM CGVNOTICE ORDER BY NUM DESC
+  <select id="getCordCount" resultType="Long" parameterType="Pager">
+  	SELECT COUNT(NUM) FROM CGVNOTICE
+  	WHERE CORD=#{cord}
+  </select>
+  
+  <select id="getCordList" parameterType="Pager" resultType="BoardDTO">
+  	SELECT * FROM
+		    (SELECT ROWNUM R, CN.* FROM 
+		            (SELECT * 
+		            FROM CGVNOTICE
+		            WHERE CORD LIKE '%' || #{cord} || '%'
+		            ORDER BY NUM DESC
+		            ) 
+		        CN
+		    )
+		WHERE R BETWEEN #{startRow} AND #{endRow}
+  </select>
+  
+  <select id="getCount" resultType="Long" parameterType="Pager">
+  	SELECT COUNT(NUM) FROM CGVNOTICE
+  	 
+		<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' and cord LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
+		<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' and cord LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
+		
+  </select>
+  
+  <select id="getList" parameterType="Pager" resultType="BoardDTO">
+  	SELECT * FROM
+		    (SELECT ROWNUM R, CN.* FROM 
+		            (SELECT * 
+		            FROM CGVNOTICE
+		            WHERE 
+					
+					<choose>
+						<when test="keyword == 'title'">
+							title
+						</when>
+						<otherwise>
+							contents
+						</otherwise>
+					</choose>
+
+					LIKE '%' || #{search} || '%' 
+					AND CORD LIKE '%' || #{cord} || '%' 
+		            ORDER BY NUM DESC
+		            ) 
+		        CN
+		    )
+		WHERE R BETWEEN #{startRow} AND #{endRow}
   </select>
   
   <insert id="setInsert" parameterType="BoardDTO">

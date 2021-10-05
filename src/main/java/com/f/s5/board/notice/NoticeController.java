@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.board.BoardDTO;
+import com.f.s5.util.Pager;
 
 @Controller
 @RequestMapping("/notice/**")
@@ -19,22 +20,37 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+
+	
 	@ModelAttribute("board")
 	public String getBoard() {
 		return "notice";
 	}
 	
-	@RequestMapping("list")
-	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
+	@GetMapping("cordList")
+	public ModelAndView getCordList(Pager pager) throws Exception{
 		ModelAndView mv = new ModelAndView();
-		List<BoardDTO> ar = noticeService.getList(boardDTO);
-		mv.addObject("list", ar);
+		List<BoardDTO> ar = noticeService.getCordList(pager);
 		
+		mv.addObject("list", ar);
+		mv.addObject("pager", pager);
+		
+		mv.setViewName("common/cordList");
+		return mv;
+	}
+	
+	@RequestMapping("list")
+	public ModelAndView getList(Pager pager)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		List<BoardDTO> ar = noticeService.getList(pager);
+		mv.addObject("list", ar);
+		mv.addObject("pager", pager);
 		mv.setViewName("board/list");
 		
 		return mv;
 	}
 	
+
 	@RequestMapping("select")
 	public ModelAndView getSelect(BoardDTO boardDTO)throws Exception{
 		

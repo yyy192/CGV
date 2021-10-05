@@ -31,7 +31,7 @@ public class MemberController {
 		memberDTO = memberService.getLogin(memberDTO);
 		
 		String msg="로그인에 실패했습니다.";
-		String url="./memberLogin";
+		String url="redirect:./memberLogin";
 		
 		if(memberDTO != null) {
 			msg="로그인에 성공했습니다.";
@@ -66,20 +66,30 @@ public class MemberController {
 	
 	//회원정보 수정
 	@GetMapping("memberUpdate")
+	public ModelAndView update() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("member/memberUpdate");
+		return mv;
+	}
+	
+	@PostMapping("memberUpdate")
 	public ModelAndView setUpdate(HttpSession session, MemberDTO memberDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		MemberDTO sessionDTO = (MemberDTO) session.getAttribute("member");
+		
 		memberDTO.setId(sessionDTO.getId());
+		int result = memberService.setUpdate(memberDTO);
 		memberDTO.setName(sessionDTO.getName());
 		
-		int result = memberService.setUpdate(memberDTO);
+		session.setAttribute("member", memberDTO);
+		
 		
 		String msg="회원정보 수정에 실패했습니다.";
-		String url="./myPage";
+		String url="redirect:./myPage";
 		
 		if(result>0) {
 			msg="회원정보 수정에 성공했습니다.";
-			url="../";
+			url="redirect:../";
 		}
 		
 		mv.addObject("msg", msg);
@@ -142,12 +152,12 @@ public class MemberController {
 		int result = memberService.setDelete(memberDTO);
 		
 		String msg = "회원탈퇴에 실패했습니다.";
-		String url = "./myPage";
+		String url = "redirect:./mypage";
 		
 		if(result>0) {
 			session.invalidate();
 			msg = "회원탈퇴에 성공했습니다.";
-			url = "../";
+			url = "redirect:../";
 		}
 		
 		mv.addObject("msg", msg);

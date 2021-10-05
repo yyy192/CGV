@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.f.s5.board.BoardDTO;
+import com.f.s5.util.Pager;
 
 @Controller
 @RequestMapping("/question/**")
@@ -24,17 +25,30 @@ public class QuestionController {
 		return "question";
 	}
 	
-	@RequestMapping("list")
-	public ModelAndView getList(BoardDTO boardDTO)throws Exception{
+	@GetMapping("cordList")
+	public ModelAndView getCordList(Pager pager) throws Exception{
 		ModelAndView mv = new ModelAndView();
-		List<BoardDTO> ar = questionService.getList(boardDTO);
-		mv.addObject("list", ar);
+		List<BoardDTO> ar = questionService.getCordList(pager);
 		
+		mv.addObject("list", ar);
+		mv.addObject("pager", pager);
+		
+		mv.setViewName("common/cordList");
+		return mv;
+	}
+	
+	@RequestMapping("list")
+	public ModelAndView getList(Pager pager)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		List<BoardDTO> ar = questionService.getList(pager);
+		mv.addObject("list", ar);
+		mv.addObject("pager", pager);
 		mv.setViewName("board/list");
 		
 		return mv;
 	}
 	
+
 	@RequestMapping("select")
 	public ModelAndView getSelect(BoardDTO boardDTO)throws Exception{
 		

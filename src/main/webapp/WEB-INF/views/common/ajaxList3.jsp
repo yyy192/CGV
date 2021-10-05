@@ -25,4 +25,24 @@
       </tr>
    </c:if>
 
+   <c:if test="${dto.timeTable3==1}">
+      <tr align=center>
+         <td><button class="timeTable" type="button"
+               data-board-theater="${mothDTO2.theater}"
+               data-board-watchDate="${mothDTO2.watchDate}"
+               data-board-movieName="${mothDTO2.movieName}"
+               data-board-timeTable="15:00~18:00">15:00~18:00</button></td>
+      </tr>
+   </c:if>
+
+   <c:if test="${dto.timeTable4==1}">
+      <tr align=center>
+         <td><button class="timeTable" type="button"
+               data-board-theater="${mothDTO2.theater}"
+               data-board-watchDate="${mothDTO2.watchDate}"
+               data-board-movieName="${mothDTO2.movieName}"
+               data-board-timeTable="18:00~21:00">18:00~21:00</button></td>
+      </tr>
+   </c:if>
+
 </c:forEach>

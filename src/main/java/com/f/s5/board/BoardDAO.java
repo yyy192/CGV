@@ -2,10 +2,12 @@ package com.f.s5.board;
 
 import java.util.List;
 
+import com.f.s5.util.Pager;
+
 public interface BoardDAO {
 	
 	//List
-	public abstract List<BoardDTO> getList(BoardDTO boardDTO)throws Exception;
+	public abstract List<BoardDTO> getList(Pager pager)throws Exception;
 	
 	//상세
 	public abstract BoardDTO getSelect(BoardDTO boardDTO)throws Exception;
@@ -22,5 +24,13 @@ public interface BoardDAO {
 	//조회수 +1
 	public abstract int hitsUpdate(BoardDTO boardDTO) throws Exception;
 	
+	//글 count
+	public abstract Long getCount(Pager pager) throws Exception;
+	
+	//cord count
+	public abstract Long getCordCount(Pager pager) throws Exception;
+	
+	//cord list
+	public abstract List<BoardDTO> getCordList(Pager pager) throws Exception;
 
 }
