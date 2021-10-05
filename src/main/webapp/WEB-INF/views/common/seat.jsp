@@ -435,6 +435,7 @@ button:focus{
 							<button class="btn" name="E8">8</button>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 			<div class="noticeInfo">
@@ -499,6 +500,9 @@ button:focus{
 				</div>
 				<div class="placeholder" title="좌석선택"></div>
 			</div>
+			<div class="info price">
+				
+			</div>
 
 
 
@@ -511,7 +515,14 @@ button:focus{
 	</div>
 
 	<script type="text/javascript">
+		let data = "A2"
+		
+		
+		
 		$('.btn').click(function () {
+			if($(this).prop('name') == data){
+				alert('success');			
+			}
 			console.log($(this).prop("name"));
 			$('.qqq').html($(this).prop("name"));
 		});
