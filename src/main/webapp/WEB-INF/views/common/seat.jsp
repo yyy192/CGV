@@ -303,7 +303,7 @@ button:focus{
 					<div class="label_seat">
 						<div class="label_first">A</div>
 						<div class="label">
-							<button class="btn" name="A1">1</button>
+							<button class="btn bt1" name="A1">1</button>
 						</div>
 						<div class="label">
 							<button class="btn" name="A2">2</button>
@@ -499,10 +499,7 @@ button:focus{
 						title=""></span>
 				</div>
 				<div class="placeholder" title="좌석선택"></div>
-			</div>
-			<div class="info price">
-				
-			</div>
+			</div>			
 
 
 
@@ -516,8 +513,15 @@ button:focus{
 
 	<script type="text/javascript">
 		let data = "A2"
+			
 		
-		
+		/* $('.bt1').click(function () {
+			for(int i=0; i<40; i++){
+				if("seat"+i == prop("name")){
+					console.log('예매완료된 좌석입니다.')		
+				}
+			}
+		}); */
 		
 		$('.btn').click(function () {
 			if($(this).prop('name') == data){
@@ -526,6 +530,9 @@ button:focus{
 			console.log($(this).prop("name"));
 			$('.qqq').html($(this).prop("name"));
 		});
+		
+		
+		
 	</script>
 	
 

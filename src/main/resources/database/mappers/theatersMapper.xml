@@ -31,4 +31,8 @@
       INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES
       (TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate}, #{timeTable})
    </insert>   
+   
+   <select id="checkTicket" resultType="TicketDTO" parameterType="TicketDTO">
+   		SELECT SEAT FROM TICKET WHERE MOVIENAME=#{movieName} AND THEATER=#{theater} AND WATCHDATE=#{watchDate} AND TIMETABLE=#{timeTable}
+   </select>
   </mapper>
