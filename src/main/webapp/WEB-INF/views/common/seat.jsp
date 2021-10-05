@@ -4,27 +4,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="UTF-8">
-
 <style type="text/css">
-
-
-a {
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	text-decoration: none
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-a:active {
+button {
+	width:15px;
+	height:15px;
+	background-color: #00AEBD;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	padding: 0;
+}
+
+button:hover{
+	background-color: red;
+	color: white;
+}
+
+button:focus{
+	background-color: red;
+	color: white;
+}
+
+
+.at:active {
 	color: white;
 	background-color: red;
 }
 
-a:hover {
+.at:hover {
 	color: white;
 	background-color: red;
-}
+} 
 
 .col-head {
 	width: 992px;
@@ -248,14 +276,17 @@ a:hover {
 	color: white;
 	font-size: 11px;
 }
-</style>
 
+
+.btn{
+	width: 15px;
+	height: 15px;
+}
+</style>
+<c:import url="../temp/mainHome.jsp"></c:import>
 
 </head>
-<body>
-	<c:import url="../temp/mainHome.jsp"></c:import>
-	<br>
-	<br>
+<body>	
 	<div class="col-head">
 		<h1>인원/좌석</h1>
 	</div>
@@ -272,136 +303,136 @@ a:hover {
 					<div class="label_seat">
 						<div class="label_first">A</div>
 						<div class="label">
-							<a href="#" onclick="return false">1</a>
+							<button class="btn" name="A1">1</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">2</a>
+							<button class="btn" name="A2">2</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">3</a>
+							<button class="btn" name="A3">3</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">4</a>
+							<button class="btn" name="A4">4</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">5</a>
+							<button class="btn" name="A5">5</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">6</a>
+							<button class="btn" name="A6">6</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">7</a>
+							<button class="btn" name="A7">7</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">8</a>
+							<button class="btn" name="A8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">B</div>
 						<div class="label">
-							<a href="#" onclick="return false">1</a>
+							<button class="btn" name="B1">1</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">2</a>
+							<button class="btn" name="B2">2</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">3</a>
+							<button class="btn" name="B3">3</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">4</a>
+							<button class="btn" name="B4">4</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">5</a>
+							<button class="btn" name="B5">5</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">6</a>
+							<button class="btn" name="B6">6</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">7</a>
+							<button class="btn" name="B7">7</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">8</a>
+							<button class="btn" name="B8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">C</div>
 						<div class="label">
-							<a href="#" onclick="return false">1</a>
+							<button class="btn" name="C1">1</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">2</a>
+							<button class="btn" name="C2">2</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">3</a>
+							<button class="btn" name="C3">3</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">4</a>
+							<button class="btn" name="C4">4</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">5</a>
+							<button class="btn" name="C5">5</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">6</a>
+							<button class="btn" name="C6">6</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">7</a>
+							<button class="btn" name="C7">7</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">8</a>
+							<button class="btn" name="C8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">D</div>
 						<div class="label">
-							<a href="#" onclick="return false">1</a>
+							<button class="btn" name="D1">1</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">2</a>
+							<button class="btn" name="D2">2</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">3</a>
+							<button class="btn" name="D3">3</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">4</a>
+							<button class="btn" name="D4">4</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">5</a>
+							<button class="btn" name="D5">5</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">6</a>
+							<button class="btn" name="D6">6</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">7</a>
+							<button class="btn" name="D7">7</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">8</a>
+							<button class="btn" name="D8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">E</div>
 						<div class="label">
-							<a href="#" onclick="return false">1</a>
+							<button class="btn" name="E1">1</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">2</a>
+							<button class="btn" name="E2">2</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">3</a>
+							<button class="btn" name="E3">3</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">4</a>
+							<button class="btn" name="E4">4</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">5</a>
+							<button class="btn" name="E5">5</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">6</a>
+							<button class="btn" name="E6">6</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">7</a>
+							<button class="btn" name="E7">7</button>
 						</div>
 						<div class="label">
-							<a href="#" onclick="return false">8</a>
+							<button class="btn" name="E8">8</button>
 						</div>
 					</div>
 				</div>
@@ -460,10 +491,10 @@ a:hover {
 
 			<div class="info seat">
 				<div class="row seat_name" style="height: 0px;">
-					<span class="header">좌석명</span> <span class="data" title=""></span>
+					<span class="header">좌석번호</span> <span class="data" title=""></span>
 				</div>
 				<div class="row seat_no colspan3">
-					<span class="header">좌석번호</span> <span class="data ellipsis-line3"
+					<span class="header qqq"></span><span class="data ellipsis-line3"
 						title=""></span>
 				</div>
 				<div class="placeholder" title="좌석선택"></div>
@@ -479,8 +510,13 @@ a:hover {
 		</div>
 	</div>
 
-
-	</div>
+	<script type="text/javascript">
+		$('.btn').click(function () {
+			console.log($(this).prop("name"));
+			$('.qqq').html($(this).prop("name"));
+		});
+	</script>
+	
 
 </body>
 </html>
