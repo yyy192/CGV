@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style type="text/css">
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
@@ -20,22 +22,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	vertical-align: baseline;
 }
 
-.bricks {
-	width: auto;
-	height: 450px;
-	background-image:
-		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_c_bricks.png");
-	background-repeat: repeat-x;
-}
-
-.content {
-	width: auto;
-	height: 500px;
+.footer {
+	width: 100%;
+	height: 330px;
+	background-color: yellow;
+	position: absolute;
+	text-align: center;	
 }
 </style>
 </head>
 <body>
-	<div class="bricks"></div>
-	<div class="content"></div>
+	<div class="footer"></div>
 </body>
 </html>

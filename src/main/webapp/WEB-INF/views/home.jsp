@@ -4,9 +4,17 @@
 <html>
 <head>
 <title>CGV</title>
+<style type="text/css">
+	.home{
+		height: 1430px;
+	}
+</style>
 </head>
 <body>
+	<div class="home">
 	<c:import url="./temp/mainHome.jsp"></c:import>
-	<c:import url="./temp/mainBricks.jsp"></c:import>
+	<c:import url="./temp/mainBricks.jsp"></c:import>		
+	<c:import url="./temp/foot.jsp"></c:import>
+	</div>	
 </body>
 </html>

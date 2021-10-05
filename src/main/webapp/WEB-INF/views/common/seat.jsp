@@ -1,11 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 
 <style type="text/css">
+
+
+a {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	text-decoration: none
+}
+
+a:active {
+	color: white;
+	background-color: red;
+}
+
+a:hover {
+	color: white;
+	background-color: red;
+}
+
 .col-head {
 	width: 992px;
 	height: 33px;
@@ -159,7 +179,7 @@
 
 .theater_content {
 	width: 826px;
-	height: 365px;
+	height: 330px;
 	margin: 0 auto;
 }
 
@@ -189,27 +209,27 @@
 .seats {
 	width: 190px;
 	height: 200px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
-.label_seat{
-	margin-top:10px;
-	margin-bottom:10px;
+.label_seat {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	width: 190px;
 	height: 15px;
 }
 
-.label_first{
+.label_first {
 	width: 15px;
 	height: 15px;
 	float: left;
-	margin-right: 10px;		
+	margin-right: 10px;
 	font-size: 12px;
 	font-weight: bolder;
 	text-align: center;
 }
 
-.label{
+.label {
 	width: 15px;
 	height: 15px;
 	float: left;
@@ -219,13 +239,23 @@
 	text-align: center;
 }
 
-
+.noticeInfo {
+	width: 530px;
+	height: 25px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background-color: #858585;
+	color: white;
+	font-size: 11px;
+}
 </style>
 
 
 </head>
 <body>
-	<h1>${ticketDTO.movieName}</h1>
+	<c:import url="../temp/mainHome.jsp"></c:import>
+	<br>
+	<br>
 	<div class="col-head">
 		<h1>인원/좌석</h1>
 	</div>
@@ -241,62 +271,144 @@
 				<div class="seats">
 					<div class="label_seat">
 						<div class="label_first">A</div>
-						<div class="label">1</div>
-						<div class="label">2</div>
-						<div class="label">3</div>
-						<div class="label">4</div>
-						<div class="label">5</div>
-						<div class="label">6</div>
-						<div class="label">7</div>
-						<div class="label">8</div>						
+						<div class="label">
+							<a href="#" onclick="return false">1</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">2</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">3</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">4</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">5</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">6</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">7</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">8</a>
+						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">B</div>
-						<div class="label">1</div>
-						<div class="label">2</div>
-						<div class="label">3</div>
-						<div class="label">4</div>
-						<div class="label">5</div>
-						<div class="label">6</div>
-						<div class="label">7</div>
-						<div class="label">8</div>	
+						<div class="label">
+							<a href="#" onclick="return false">1</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">2</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">3</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">4</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">5</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">6</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">7</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">8</a>
+						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">C</div>
-						<div class="label">1</div>
-						<div class="label">2</div>
-						<div class="label">3</div>
-						<div class="label">4</div>
-						<div class="label">5</div>
-						<div class="label">6</div>
-						<div class="label">7</div>
-						<div class="label">8</div>	
+						<div class="label">
+							<a href="#" onclick="return false">1</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">2</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">3</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">4</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">5</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">6</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">7</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">8</a>
+						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">D</div>
-						<div class="label">1</div>
-						<div class="label">2</div>
-						<div class="label">3</div>
-						<div class="label">4</div>
-						<div class="label">5</div>
-						<div class="label">6</div>
-						<div class="label">7</div>
-						<div class="label">8</div>	
+						<div class="label">
+							<a href="#" onclick="return false">1</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">2</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">3</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">4</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">5</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">6</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">7</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">8</a>
+						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">E</div>
-						<div class="label">1</div>
-						<div class="label">2</div>
-						<div class="label">3</div>
-						<div class="label">4</div>
-						<div class="label">5</div>
-						<div class="label">6</div>
-						<div class="label">7</div>
-						<div class="label">8</div>	
+						<div class="label">
+							<a href="#" onclick="return false">1</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">2</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">3</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">4</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">5</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">6</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">7</a>
+						</div>
+						<div class="label">
+							<a href="#" onclick="return false">8</a>
+						</div>
 					</div>
-									
-					
 				</div>
+			</div>
+			<div class="noticeInfo">
+				<MARQUEE scrolldelay="80" hspace="5" vspace="5">[안내] 극장
+					이용시 마스크 착용은 필수 입니다. (미착용시 입장 제한)</MARQUEE>
 			</div>
 		</div>
 	</div>
