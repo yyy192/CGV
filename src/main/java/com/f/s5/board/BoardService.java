@@ -23,6 +23,12 @@ public interface BoardService {
 	//글 수정
 	public abstract int setUpdate(BoardDTO boardDTO) throws Exception;
 	
+	//글 count
+	public abstract Long getCount(Pager pager) throws Exception;
+	
 	//cord list
 	public abstract List<BoardDTO> getCordList(Pager pager) throws Exception;
+	
+	//cord count
+	public abstract Long getCordCount(Pager pager) throws Exception;
 }

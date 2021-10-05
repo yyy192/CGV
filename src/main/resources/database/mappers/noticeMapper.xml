@@ -11,8 +11,10 @@
   
   <select id="getCordCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVNOTICE
-  	<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%' ORDER BY NUM DESC</if>
-	<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
+  	WHERE 
+  	<if test="keyword == 'title'">title LIKE '%' || #{search} || '%' AND</if>
+	<if test="keyword == 'contents'">contents LIKE '%' || #{search} || '%' AND</if>
+	CORD LIKE '%' || #{cord} || '%' ORDER BY NUM DESC
   </select>
   
   <select id="getCordList" parameterType="Pager" resultType="BoardDTO">

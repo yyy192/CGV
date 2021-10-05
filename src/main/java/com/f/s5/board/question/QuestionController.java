@@ -28,8 +28,11 @@ public class QuestionController {
 	@GetMapping("cordList")
 	public ModelAndView getCordList(Pager pager) throws Exception{
 		ModelAndView mv = new ModelAndView();
+		
+		Long totalCount = questionService.getCordCount(pager);
 		List<BoardDTO> ar = questionService.getCordList(pager);
 		
+		mv.addObject("count", totalCount);
 		mv.addObject("list", ar);
 		mv.addObject("pager", pager);
 		
@@ -40,7 +43,11 @@ public class QuestionController {
 	@RequestMapping("list")
 	public ModelAndView getList(Pager pager)throws Exception{
 		ModelAndView mv = new ModelAndView();
+		
+		Long totalCount = questionService.getCount(pager);
 		List<BoardDTO> ar = questionService.getList(pager);
+		
+		mv.addObject("count", totalCount);
 		mv.addObject("list", ar);
 		mv.addObject("pager", pager);
 		mv.setViewName("board/list");

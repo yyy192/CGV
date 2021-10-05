@@ -14,15 +14,17 @@ public class NoticeService implements BoardService{
 	
 	@Autowired
 	private NoticeDAO noticeDAO;
-
+	
+	@Override
+	public Long getCordCount(Pager pager) throws Exception {
+		// TODO Auto-generated method stub
+		return noticeDAO.getCordCount(pager);
+	}
 	
 	@Override
 	public List<BoardDTO> getCordList(Pager pager) throws Exception {
 		Long totalCount = noticeDAO.getCordCount(pager);
-		System.out.println(pager.getCord());
-		System.out.println(pager.getSearch());
-		System.out.println(pager.getKeyword());
-		System.out.println(totalCount);
+		
 		pager.num(totalCount);
 		pager.row();
 		
@@ -30,9 +32,14 @@ public class NoticeService implements BoardService{
 	}
 	
 	@Override
+	public Long getCount(Pager pager) throws Exception {
+		return noticeDAO.getCount(pager);
+	}
+	
+	@Override
 	public List<BoardDTO> getList(Pager pager) throws Exception {
 		Long totalCount = noticeDAO.getCount(pager);
-
+		//System.out.println(totalCount);
 		
 		pager.num(totalCount);
 		pager.row();

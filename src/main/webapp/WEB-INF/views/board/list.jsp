@@ -60,11 +60,8 @@
 			
 	<!-- Search Form Finish -->
 	
-	<div>
-	<h4>공지/뉴스</h4>
-	<h3></h3>
-	</div>
-	
+	<br>
+	<br>
 	
 	<div id="cordBtn">
 	
@@ -87,10 +84,19 @@
 	</c:if>
 	
 	</div>
-	<br>
-	<br>
 	
+	
+	</div>
 	<div id="cordList">
+	<!-- 몇 개 검색되었는지 -->
+	<div>
+	<c:if test="${not empty pager.search}">
+		<h4>"${pager.search}"가 총 ${count}건이검색되었습니다.</h4>
+	</c:if>
+	<c:if test="${empty pager.search}">
+		<h4>총 ${count}건이 검색되었습니다.</h4>
+	</c:if>
+	
 		<table class="table-secondary table table-striped">
 		<tr align=center>
 				<th>번호</th><th>구분</th><th>제목</th>

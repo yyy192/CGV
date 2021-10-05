@@ -17,6 +17,12 @@ public class QuestionService implements BoardService{
 
 	
 	@Override
+	public Long getCordCount(Pager pager) throws Exception {
+		// TODO Auto-generated method stub
+		return questionDAO.getCordCount(pager);
+	}
+	
+	@Override
 	public List<BoardDTO> getCordList(Pager pager) throws Exception {
 		Long totalCount = questionDAO.getCordCount(pager);
 		
@@ -24,6 +30,12 @@ public class QuestionService implements BoardService{
 		pager.row();
 		
 		return questionDAO.getCordList(pager);
+	}
+	
+	@Override
+	public Long getCount(Pager pager) throws Exception {
+		// TODO Auto-generated method stub
+		return questionDAO.getCount(pager);
 	}
 	
 	@Override

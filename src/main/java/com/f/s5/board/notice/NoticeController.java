@@ -30,11 +30,15 @@ public class NoticeController {
 	@GetMapping("cordList")
 	public ModelAndView getCordList(Pager pager) throws Exception{
 		ModelAndView mv = new ModelAndView();
+		
+		Long totalCount = noticeService.getCordCount(pager);
+		System.out.println(totalCount);
 		List<BoardDTO> ar = noticeService.getCordList(pager);
 		
+		mv.addObject("count", totalCount);
 		mv.addObject("list", ar);
 		mv.addObject("pager", pager);
-		
+				
 		mv.setViewName("common/cordList");
 		return mv;
 	}
@@ -42,9 +46,11 @@ public class NoticeController {
 	@RequestMapping("list")
 	public ModelAndView getList(Pager pager)throws Exception{
 		ModelAndView mv = new ModelAndView();
+		Long totalCount = noticeService.getCount(pager);
 		
 		List<BoardDTO> ar = noticeService.getList(pager);
 		
+		mv.addObject("count", totalCount);
 		mv.addObject("list", ar);
 		mv.addObject("pager", pager);
 		mv.setViewName("board/list");
