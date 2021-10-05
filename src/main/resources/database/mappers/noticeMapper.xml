@@ -12,8 +12,8 @@
   <select id="getCordCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVNOTICE
   	WHERE 
-  	<if test="keyword == 'title'">title LIKE '%' || #{search} || '%' AND</if>
-	<if test="keyword == 'contents'">contents LIKE '%' || #{search} || '%' AND</if>
+  	<if test="keyword == 'title'">UPPER(title) LIKE UPPER('%' || #{search} || '%') AND</if>
+	<if test="keyword == 'contents'">UPPER(contents) LIKE UPPER('%' || #{search} || '%') AND</if>
 	CORD LIKE '%' || #{cord} || '%' ORDER BY NUM DESC
   </select>
   
@@ -26,14 +26,14 @@
 		            
 		            <choose>
 						<when test="keyword == 'title'">
-							title
+							UPPER(title)
 						</when>
 						<otherwise>
-							contents
+							UPPER(contents)
 						</otherwise>
 					</choose>
 
-					LIKE '%' || #{search} || '%'
+					LIKE UPPER('%' || #{search} || '%')
 		            AND CORD LIKE '%' || #{cord} || '%'
 		            ORDER BY NUM DESC
 		            ) 
@@ -45,8 +45,8 @@
   <select id="getCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVNOTICE
   	 
-		<if test="keyword == 'title'">WHERE title LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
-		<if test="keyword == 'contents'">WHERE contents LIKE '%' || #{search} || '%' ORDER BY NUM DESC</if>
+		<if test="keyword == 'title'">WHERE UPPER(title) LIKE UPPER('%' || #{search} || '%') ORDER BY NUM DESC</if>
+		<if test="keyword == 'contents'">WHERE UPPER(contents) LIKE UPPER('%' || #{search} || '%') ORDER BY NUM DESC</if>
 		
   </select>
   
@@ -59,14 +59,14 @@
 					
 					<choose>
 						<when test="keyword == 'title'">
-							title
+							UPPER(title)
 						</when>
 						<otherwise>
-							contents
+							UPPER(contents)
 						</otherwise>
 					</choose>
 
-					LIKE '%' || #{search} || '%' 
+					LIKE UPPER('%' || #{search} || '%') 
 		            ORDER BY NUM DESC
 		            ) 
 		        CN
