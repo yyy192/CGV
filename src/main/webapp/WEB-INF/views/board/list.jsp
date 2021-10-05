@@ -66,13 +66,13 @@
 	<div id="cordBtn">
 	
 	<c:if test="${board eq 'notice'}">
-		<button id="total" type="button">전체</button>
+		<button class="a" type="button" data-board-cord="">전체</button>
 		<button class="a" type="button" data-board-cord="시스템점검">시스템점검</button>
 		<button class="a" type="button" data-board-cord="극장">극장</button>
 		<button class="a" type="button" data-board-cord="기타">기타</button>
 	</c:if>
 	<c:if test="${board eq 'question'}">
-		<button id="total">전체</button>
+		<button class="a" type="button" data-board-cord="">전체</button>
 		<button class="a" type="button" data-board-cord="예매/매표">예매/매표</button>
 		<button class="a" type="button" data-board-cord="관람권/결제수단">관람권/결제수단</button>
 		<button class="a" type="button" data-board-cord="멤버쉽/클럽서비스">멤버쉽/클럽서비스</button>
@@ -160,18 +160,6 @@
 	
 
 <script type="text/javascript">
-	
-	/* var keyword='';
-	
-	$("select[name=keyword]").change(function(){
-	  	keyword=$(this).val();
-	  	console.log(keyword); //value값 가져오기
-	});
-	 */
-	
-	$("#total").click(function(){
-		location.href="./list";
-	});
 	
 	$("#cordBtn").on('click', '.a', function(){
 		
