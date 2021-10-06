@@ -39,15 +39,14 @@ public class TheatersController {
 	
 	@PostMapping("updateInfo")
 	public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception{
-		ModelAndView mv = new ModelAndView();		
-		System.out.println(ticketDTO.getSeat());
+		ModelAndView mv = new ModelAndView();				
 		int result = theatersService.updateInfo(ticketDTO);		
 		String msg = "업데이트 실패했습니다";
 		if(result>0) {
 			msg = "업데이트 완료";			
 		}				
 		mv.addObject("msg", msg);
-		mv.addObject("url", "redirect: ../");
+		mv.addObject("url", "redirect ../");
 		mv.setViewName("common/ajaxResult");
 		return mv;
 	}
@@ -73,28 +72,24 @@ public class TheatersController {
 		ModelAndView mv = new ModelAndView();
 
 		List<TicketDTO> ar = theatersService.checkTicket(ticketDTO);
-		int result = theatersService.setTicketInfo(request, ticketDTO);
+		//int result = theatersService.setTicketInfo(request, ticketDTO);	
 
-		System.out.println(ar.get(0).getSeat());
-
-		for (int i = 0; i < ar.size(); i++) {
-			String x = ar.get(i).getSeat();
-			mv.addObject("seat" + i, x);
-		}
-
-		mv.addObject("size", ar.size());
+		/*
+		 * for (int i = 0; i < ar.size(); i++) { String x = ar.get(i).getSeat();
+		 * mv.addObject("seat" + i, x); System.out.println(ar.get(i).getSeat()); }
+		 */
+		mv.addObject("seat", ar);
+		mv.addObject("size", ar.size());		
 		mv.setViewName("common/seat");
-
-		if (result > 0) {
-			System.out.println("ticket Insert 성공");
-			mv.addObject("ticketDTO", ticketDTO);
-			mv.setViewName("common/seat");
-
-		} else {
-			System.out.println("오류");
-		}
-
+		
+		/*
+		 * if (result > 0) { System.out.println("ticket Insert 성공");
+		 * mv.addObject("ticketDTO", ticketDTO); mv.setViewName("common/seat");
+		 * 
+		 * } else { System.out.println("오류"); }
+		 */
 		return mv;
 	}
-
+	
+	
 }

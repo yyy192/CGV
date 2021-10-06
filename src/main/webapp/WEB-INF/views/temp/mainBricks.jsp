@@ -21,7 +21,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 }
 
 .bricks {
-	width: auto;
+	width: 100%;
 	height: 450px;
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_c_bricks.png");

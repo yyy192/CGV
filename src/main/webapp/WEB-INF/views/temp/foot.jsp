@@ -24,14 +24,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 
 .footer {
 	width: 100%;
-	height: 330px;
-	background-color: yellow;
+	height: 530px;
 	position: absolute;
-	text-align: center;	
+	text-align: center;
+}
+
+.smuse{
+	width: 1024px;
+	height: 66px;
+	background-color: yellow;	
 }
 </style>
 </head>
 <body>
 	<div class="footer"></div>
 </body>
+<div
+	style="background-color: #dbeaff; background-image: url(https://img.cgv.co.kr/newmain/temp/bg_temp_foot_banner.gif); background-repeat: repeat-x; margin: 0 auto">
+	<div class="img" style="width: 980px; margin: 0 auto">
+		<img alt=""
+			src="https://adimg.cgv.co.kr/images/202003/house/A_980x240.png">
+	</div>
+</div>
+<div class="smuse">
+	
+</div>
 </html>

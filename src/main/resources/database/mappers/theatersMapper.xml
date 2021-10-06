@@ -37,10 +37,9 @@
 
 	<insert id="setTicketInfo" parameterType="TicketDTO">
 		INSERT INTO TICKET
-		(TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE,
-		SEAT) VALUES
+		(TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES
 		(TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate},
-		#{timeTable}, '1')
+		#{timeTable})
 	</insert>
 
 	<select id="checkTicket" resultType="TicketDTO"

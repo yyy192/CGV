@@ -31,6 +31,7 @@ button {
 	outline: 0;
 	text-align: center;
 	padding: 0;
+	margin-bottom: 3px;
 }
 
 button:hover {
@@ -261,7 +262,7 @@ button:focus {
 	height: 15px;
 	float: left;
 	font-size: 12px;
-	background-color: #00AEBD;
+
 	margin-right: 5px;
 	text-align: center;
 }
@@ -284,6 +285,11 @@ button:focus {
 <c:import url="../temp/mainHome.jsp"></c:import>
 </head>
 <body>
+	<div class="size" style="display: none">${size + 1}</div>
+
+	<c:forEach items="${seat}" var="dto" varStatus="loop">
+		<div class="${loop.count}" style="display: none">${dto.seat}</div>
+	</c:forEach>
 	<div class="col-head">
 		<h1>인원/좌석</h1>
 	</div>
@@ -299,137 +305,137 @@ button:focus {
 				<div class="seats">
 					<div class="label_seat">
 						<div class="label_first">A</div>
-						<div class="label">
-							<button class="btn bt1" name="A1">1</button>
+						<div class="label">							
+							<button class="btn A1" name="A1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A2">2</button>
+							<button class="btn A2" name="A2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A3">3</button>
+							<button class="btn A3" name="A3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A4">4</button>
+							<button class="btn A4" name="A4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A5">5</button>
+							<button class="btn A5" name="A5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A6">6</button>
+							<button class="btn A6" name="A6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A7">7</button>
+							<button class="btn A7" name="A7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A8">8</button>
+							<button class="btn A8" name="A8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">B</div>
 						<div class="label">
-							<button class="btn" name="B1">1</button>
+							<button class="btn B1" name="B1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B2">2</button>
+							<button class="btn B2" name="B2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B3">3</button>
+							<button class="btn B3" name="B3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B4">4</button>
+							<button class="btn B4" name="B4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B5">5</button>
+							<button class="btn B5" name="B5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B6">6</button>
+							<button class="btn B6" name="B6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B7">7</button>
+							<button class="btn B7" name="B7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B8">8</button>
+							<button class="btn B8" name="B8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">C</div>
 						<div class="label">
-							<button class="btn" name="C1">1</button>
+							<button class="btn C1" name="C1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C2">2</button>
+							<button class="btn C2" name="C2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C3">3</button>
+							<button class="btn C3" name="C3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C4">4</button>
+							<button class="btn C4" name="C4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C5">5</button>
+							<button class="btn C5" name="C5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C6">6</button>
+							<button class="btn C6" name="C6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C7">7</button>
+							<button class="btn C7" name="C7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="C8">8</button>
+							<button class="btn C8" name="C8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">D</div>
 						<div class="label">
-							<button class="btn" name="D1">1</button>
+							<button class="btn D1" name="D1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D2">2</button>
+							<button class="btn D2" name="D2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D3">3</button>
+							<button class="btn D3" name="D3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D4">4</button>
+							<button class="btn D4" name="D4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D5">5</button>
+							<button class="btn D5" name="D5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D6">6</button>
+							<button class="btn D6" name="D6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D7">7</button>
+							<button class="btn D7" name="D7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="D8">8</button>
+							<button class="btn D8" name="D8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">E</div>
 						<div class="label">
-							<button class="btn" name="E1">1</button>
+							<button class="btn E1" name="E1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E2">2</button>
+							<button class="btn E2" name="E2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E3">3</button>
+							<button class="btn E3" name="E3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E4">4</button>
+							<button class="btn E4" name="E4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E5">5</button>
+							<button class="btn E5" name="E5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E6">6</button>
+							<button class="btn E6" name="E6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E7">7</button>
+							<button class="btn E7" name="E7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="E8">8</button>
+							<button class="btn E8" name="E8">8</button>
 						</div>
 					</div>
 
@@ -499,26 +505,29 @@ button:focus {
 
 			<!-- btn-right -->
 			<div class="tnb_step_btn_right_before" id="tnb_step_btn_right_before"></div>
-			<a class="btn-right" id="tnb_step_btn_right" href="#" title="결제선택">다음단계로
-				이동 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
+			<a class="btn-right" id="tnb_step_btn_right" title="결제선택"></a>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		let data = "A2"
+		x();
+		
+		function x() {
 
-		/* $('.bt1').click(function () {
-			for(int i=0; i<40; i++){
-				if("seat"+i == prop("name")){
-					console.log('예매완료된 좌석입니다.')		
-				}
+			var p = $('.size').html();
+			console.log(p);
+
+			for (var i = 1; i < p; i++) {
+				let t = $('.' + i).html();
+				console.log(t);
+				$('.' + t).attr('disabled', true);
+				$('.' + t).css('pointer-events', 'none');
+				$('.' + t).css('background-color', 'gray');			
 			}
-		}); */
+
+		};
 
 		$('.btn').click(function() {
-			if ($(this).prop('name') == data) {
-				alert('success');
-			}
 			console.log($(this).prop("name"));
 			$('.qqq').html($(this).prop("name"));
 		});
@@ -528,18 +537,22 @@ button:focus {
 			let seat = $('.qqq').html();
 			console.log(seat);
 			$.ajax({
-	            type:"POST",
-	            url:"./updateInfo",
-	            data:{	            	
-	               seat:seat
-	            }
-	            ,success:function(result){	               
-	               alert('예매완료');
-	            }
-	            ,error:function(xhr, status, error){
-	               console.log('error');	               
-	            }
-	         });
+				type : "POST",
+				url : "./updateInfo",
+				data : {
+					seat : seat
+				},
+				success : function(result) {
+					alert('예매완료');
+					if (seat == $('.bt1').prop('name')) {
+						$('.bt1').css('background-color', 'gray');
+						$('.bt1').attr('disabled', true);
+					}
+				},
+				error : function(xhr, status, error) {
+					console.log('error');
+				}
+			});
 		});
 	</script>
 
