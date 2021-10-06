@@ -1,7 +1,11 @@
 package com.f.s5.member;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.f.s5.ticket.TicketDTO;
 
 @Service
 public class MemberService {
@@ -9,6 +13,10 @@ public class MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 
+	public List<TicketDTO> getTicket(MemberDTO memberDTO) throws Exception {
+		return memberDAO.getTicket(memberDTO);
+	}
+	
 	public MemberDTO getLogin(MemberDTO memberDTO) throws Exception {
 		return memberDAO.getLogin(memberDTO);
 	}

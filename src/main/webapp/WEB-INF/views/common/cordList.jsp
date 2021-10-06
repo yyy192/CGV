@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!-- 몇 개 검색되었는지 -->
-	<div>
 	<c:if test="${not empty pager.search}">
 		<h4>"${pager.search}"가 총 ${count}건이검색되었습니다.</h4>
 	</c:if>

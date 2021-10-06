@@ -1,5 +1,7 @@
 package com.f.s5.member;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.f.s5.ticket.TicketDTO;
 
 @Controller
 @RequestMapping("/member/**")
@@ -79,7 +83,6 @@ public class MemberController {
 		
 		memberDTO.setId(sessionDTO.getId());
 		int result = memberService.setUpdate(memberDTO);
-		memberDTO.setName(sessionDTO.getName());
 		
 		session.setAttribute("member", memberDTO);
 		
@@ -98,6 +101,18 @@ public class MemberController {
 	}
 	
 	//예매 내역
+	@GetMapping("ticketList")
+	public ModelAndView getTicket(HttpSession session) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
+		System.out.println(memberDTO.getId());
+		List<TicketDTO> ar = memberService.getTicket(memberDTO);
+		
+		mv.addObject("list", ar);
+		mv.setViewName("member/ticketList");
+		return mv;
+	}
 	
 	
 	@GetMapping("check")
@@ -133,23 +148,23 @@ public class MemberController {
 	}
 	
 	//ID 중복 체크
-	   @GetMapping("idCheck")
-	   public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
-	      ModelAndView mv = new ModelAndView();
+	@GetMapping("idCheck")
+	public ModelAndView getIdCheck(MemberDTO memberDTO) throws Exception {
+	    ModelAndView mv = new ModelAndView();
 	      
-	      memberDTO = memberService.getIdCheck(memberDTO);
-	      System.out.println(memberDTO);
+	    memberDTO = memberService.getIdCheck(memberDTO);
+	    System.out.println(memberDTO);
 	      
-	      int result=0;
+	    int result=0;
 	      
-	      if(memberDTO == null) {
+	    if(memberDTO == null) {
 	         result =1;
-	      }
-	      System.out.println(result);
-	      mv.addObject("result", result);
-	      mv.setViewName("common/idCheckAjax");
-	      return mv;
-	   }
+	    }
+	    System.out.println(result);
+	    mv.addObject("result", result);
+	    mv.setViewName("common/idCheckAjax");
+	    return mv;
+	}
 	
 	@GetMapping("memberDelete")
 	public ModelAndView setDelete(HttpSession session) throws Exception{

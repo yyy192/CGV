@@ -10,7 +10,7 @@
 </head>
 <body>
 
-   
+   <c:if test="${not empty member}">
    <h1>My CGV</h1>
    <div align=center>
    <div class="name"><h1>${member.name} 님</h1></div>
@@ -31,7 +31,12 @@
    <div align=center>
    <a href="./memberUpdate?id=${member.id}">정보수정</a>
    <a href="./memberDelete?id=${member.id}">회원탈퇴</a>
+   <a href="./ticketList?id=${member.id}">예매내역</a>
    </div>
+   </c:if>
+   <c:if test="${empty member}">
+   <h1>로그인 하세요.</h1>
+   </c:if>
    
 </body>
 </html>
