@@ -100,6 +100,13 @@ public class MemberController {
 	//예매 내역
 	
 	
+	@GetMapping("check")
+	public ModelAndView check() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("member/check");
+		return mv;
+	}
+	
 	@GetMapping("memberJoin")
 	public ModelAndView setJoin() throws Exception {
 		ModelAndView mv = new ModelAndView();
