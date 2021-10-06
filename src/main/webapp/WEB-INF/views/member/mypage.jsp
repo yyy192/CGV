@@ -29,9 +29,9 @@
    <br>
    <br>
    <div align=center>
-   <a href="./memberUpdate?id=${member.id}">정보수정</a>
+   <a href="./memberUpdate?id=${member.id}">개인정보 변경</a>
    <a href="./memberDelete?id=${member.id}">회원탈퇴</a>
-   <a href="./ticketList?id=${member.id}">예매내역</a>
+   <a href="./ticketList?id=${member.id}">나의 예매내역</a>
    </div>
    </c:if>
    <c:if test="${empty member}">
