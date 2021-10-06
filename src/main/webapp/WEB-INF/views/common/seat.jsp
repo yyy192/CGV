@@ -534,7 +534,7 @@ button:focus {
 	               seat:seat
 	            }
 	            ,success:function(result){	               
-	               console.log('예매완료')
+	               alert('예매완료');
 	            }
 	            ,error:function(xhr, status, error){
 	               console.log('error');	               

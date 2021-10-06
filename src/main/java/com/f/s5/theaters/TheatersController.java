@@ -39,15 +39,13 @@ public class TheatersController {
 	
 	@PostMapping("updateInfo")
 	public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception{
-		ModelAndView mv = new ModelAndView();
-		System.out.println("aa");
+		ModelAndView mv = new ModelAndView();		
 		System.out.println(ticketDTO.getSeat());
 		int result = theatersService.updateInfo(ticketDTO);		
 		String msg = "업데이트 실패했습니다";
 		if(result>0) {
 			msg = "업데이트 완료";			
-		}		
-		System.out.println("aaa");
+		}				
 		mv.addObject("msg", msg);
 		mv.addObject("url", "redirect: ../");
 		mv.setViewName("common/ajaxResult");
