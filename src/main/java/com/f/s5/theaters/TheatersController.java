@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.f.s5.member.MemberDTO;
 import com.f.s5.ticket.TicketDTO;
 
 @Controller
@@ -22,18 +24,24 @@ public class TheatersController {
    private TheatersService theatersService;
    
    @GetMapping("list")
-   public ModelAndView getList() throws Exception{
+   public ModelAndView getList(HttpSession session) throws Exception{
       ModelAndView mv = new ModelAndView();
       //TheatersDTO theatersDTO = new TheatersDTO();
       //theatersDTO.setTheater("구로CGV");
       
       //theatersDTO = theatersService.getInfo(theatersDTO); 
-      List<TheatersDTO> ar = theatersService.getList();
       
+      if(session.getAttribute("member") != null) {
+    	  List<TheatersDTO> ar = theatersService.getList();
+          
+          
+          //mv.addObject("dto", theatersDTO);
+          mv.addObject("list", ar);
+          mv.setViewName("theaters/theaterList");
+      }else {
+    	  mv.setViewName("redirect:../member/memberLogin");
+      }
       
-      //mv.addObject("dto", theatersDTO);
-      mv.addObject("list", ar);
-      mv.setViewName("theaters/theaterList");
       return mv;
    }
    
@@ -54,9 +62,10 @@ public class TheatersController {
    //정보 받아오기
    
     @GetMapping("ticketInfo") 
-    public ModelAndView getTicketInfo(HttpServletRequest request, TicketDTO ticketDTO) throws Exception { 
+    public ModelAndView getTicketInfo(HttpSession session, HttpServletRequest request, TicketDTO ticketDTO) throws Exception { 
       ModelAndView mv = new ModelAndView();
-      
+      MemberDTO m = (MemberDTO) session.getAttribute("member");
+      ticketDTO.setId(m.getId());
       
       
       int result = theatersService.setTicketInfo(request, ticketDTO);
