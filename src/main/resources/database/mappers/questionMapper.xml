@@ -11,8 +11,8 @@
   
   <select id="getCordCount" resultType="Long" parameterType="Pager">
   	SELECT COUNT(NUM) FROM CGVQUESTION
-  	WHERE title LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
-	OR contents LIKE '%' || #{search} || '%' AND CORD LIKE '%' || #{cord} || '%'
+  	WHERE UPPER(title) LIKE UPPER('%' || #{search} || '%') AND CORD LIKE '%' || #{cord} || '%'
+	OR UPPER(contents) LIKE UPPER('%' || #{search} || '%') AND CORD LIKE '%' || #{cord} || '%'
 	ORDER BY NUM DESC
   </select>
   
@@ -21,9 +21,9 @@
 		    (SELECT ROWNUM R, CQ.* FROM 
 		            (SELECT * 
 		            FROM CGVQUESTION
-		            WHERE title LIKE '%' || #{search} || '%'
+		            WHERE UPPER(title) LIKE UPPER('%' || #{search} || '%')
 		            AND CORD LIKE '%' || #{cord} || '%'
-					OR contents LIKE '%' || #{search} || '%'
+					OR UPPER(contents) LIKE UPPER('%' || #{search} || '%')
 					AND CORD LIKE '%' || #{cord} || '%'
 					ORDER BY NUM DESC
 		            ) 
@@ -34,8 +34,8 @@
   
   <select id="getCount" parameterType="Pager" resultType="Long">
   	SELECT COUNT(NUM) FROM CGVQUESTION
-  		WHERE title LIKE '%' || #{search} || '%'
-		OR contents LIKE '%' || #{search} || '%'
+  		WHERE UPPER(title) LIKE UPPER('%' || #{search} || '%')
+		OR UPPER(contents) LIKE UPPER('%' || #{search} || '%')
 		ORDER BY NUM DESC
   </select>
   
@@ -44,8 +44,8 @@
 		    (SELECT ROWNUM R, CQ.* FROM 
 		            (SELECT * 
 		            FROM CGVQUESTION
-		            WHERE title LIKE '%' || #{search} || '%'
-					OR contents LIKE '%' || #{search} || '%'
+		            WHERE UPPER(title) LIKE UPPER('%' || #{search} || '%')
+					OR UPPER(contents) LIKE UPPER('%' || #{search} || '%')
 					ORDER BY NUM DESC
 		            ) 
 		        CQ
