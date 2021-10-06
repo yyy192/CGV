@@ -53,6 +53,10 @@
 					<div class="input-group mb-3">
 					 <input value="${pager.search}" id="search" type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
 					 <button type="submit" class="btn btn-outline-secondary">검색하기</button>
+					추천검색어 : <a href="./list?search=관람권">관람권</a>
+					<a href="./list?search=홈페이지">홈페이지</a>
+					<a href="./list?search=예매">예매</a>
+					<a href="./list?search=환불">환불</a>
 					</div>
 					
 				</form>
@@ -88,7 +92,7 @@
 	<div id="cordList">
 	<!-- 몇 개 검색되었는지 -->
 	<c:if test="${not empty pager.search}">
-		<h4>"${pager.search}"가 총 ${count}건이검색되었습니다.</h4>
+		<h4>"${pager.search}"으로 총 ${count}건이검색되었습니다.</h4>
 	</c:if>
 	<c:if test="${empty pager.search}">
 		<h4>총 ${count}건이 검색되었습니다.</h4>
