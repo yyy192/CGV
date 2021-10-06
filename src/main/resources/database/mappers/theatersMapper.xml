@@ -2,37 +2,52 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-  <mapper namespace="com.f.s5.theaters.TheatersDAO">
-  
-     <select id="getList" resultType="TheatersDTO">
-           SELECT * FROM THEATERS
-     </select>
-     
-     <resultMap type="TheatersDTO" id="getInfoResult">
-        <id column="theater" property="theater"/>
-        <result column="timeTable1" property="timeTable1"/>
-        <result column="timeTable2" property="timeTable2"/>
-        <result column="timeTable3" property="timeTable3"/>
-        <result column="timeTable4" property="timeTable4"/>
-        
-        <collection property="moths" javaType="List" ofType="MothDTO">
-           <result column="movieName" property="movieName"/>
-           <result column="watchDate" property="watchDate"/>
-        </collection>
-     </resultMap>
-     
-     <select id="getInfo" parameterType="TheatersDTO" resultMap="getInfoResult">
-           select * from theaters t inner join moth m
-         using(theater) where theater=#{theater}
-     </select>
-   
-   <insert id="setTicketInfo" parameterType="TicketDTO">
-      INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES
-      (TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate}, #{timeTable})
-   </insert>   
-   
-   <select id="checkTicket" resultType="TicketDTO" parameterType="TicketDTO">
-   		SELECT SEAT FROM TICKET WHERE MOVIENAME=#{movieName} AND THEATER=#{theater} AND WATCHDATE=#{watchDate} AND TIMETABLE=#{timeTable}
-   </select>
-  </mapper>
+
+<mapper namespace="com.f.s5.theaters.TheatersDAO">
+
+	<select id="getList" resultType="TheatersDTO">
+		SELECT * FROM THEATERS
+	</select>
+
+	<resultMap type="TheatersDTO" id="getInfoResult">
+		<id column="theater" property="theater" />
+		<result column="timeTable1" property="timeTable1" />
+		<result column="timeTable2" property="timeTable2" />
+		<result column="timeTable3" property="timeTable3" />
+		<result column="timeTable4" property="timeTable4" />
+
+		<collection property="moths" javaType="List"
+			ofType="MothDTO">
+			<result column="movieName" property="movieName" />
+			<result column="watchDate" property="watchDate" />
+		</collection>
+	</resultMap>
+
+	<select id="getInfo" parameterType="TheatersDTO"
+		resultMap="getInfoResult">
+		select * from theaters t inner join moth m
+		using(theater)
+		where theater=#{theater}
+	</select>
+
+	<update id="updateInfo" parameterType="TicketDTO">
+		UPDATE TICKET SET SEAT =
+		#{seat} WHERE TICKETNUM = (SELECT MAX(TICKETNUM) FROM TICKET)
+	</update>
+
+	<insert id="setTicketInfo" parameterType="TicketDTO">
+		INSERT INTO TICKET
+		(TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE,
+		SEAT) VALUES
+		(TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate},
+		#{timeTable}, '1')
+	</insert>
+
+	<select id="checkTicket" resultType="TicketDTO"
+		parameterType="TicketDTO">
+		SELECT SEAT FROM TICKET WHERE MOVIENAME=#{movieName} AND
+		THEATER=#{theater}
+		AND WATCHDATE=#{watchDate} AND
+		TIMETABLE=#{timeTable}
+	</select>
+</mapper>

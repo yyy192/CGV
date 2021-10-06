@@ -17,6 +17,10 @@ public class TheatersDAO {
    private SqlSession sqlSession;
    private final String NAMESPACE="com.f.s5.theaters.TheatersDAO.";
    
+   public int updateInfo(TicketDTO ticketDTO)throws Exception{
+	   return sqlSession.update(NAMESPACE+"updateInfo", ticketDTO);	   
+   }
+   
    public List<TheatersDTO> getList() throws Exception {
       return sqlSession.selectList(NAMESPACE+"getList");
    }

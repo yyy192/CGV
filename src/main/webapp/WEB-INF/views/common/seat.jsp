@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +24,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 }
 
 button {
-	width:15px;
-	height:15px;
+	width: 15px;
+	height: 15px;
 	background-color: #00AEBD;
 	border: 0;
 	outline: 0;
@@ -33,16 +33,15 @@ button {
 	padding: 0;
 }
 
-button:hover{
+button:hover {
 	background-color: red;
 	color: white;
 }
 
-button:focus{
+button:focus {
 	background-color: red;
 	color: white;
 }
-
 
 .at:active {
 	color: white;
@@ -52,7 +51,7 @@ button:focus{
 .at:hover {
 	color: white;
 	background-color: red;
-} 
+}
 
 .col-head {
 	width: 992px;
@@ -277,16 +276,14 @@ button:focus{
 	font-size: 11px;
 }
 
-
-.btn{
+.btn {
 	width: 15px;
 	height: 15px;
 }
 </style>
 <c:import url="../temp/mainHome.jsp"></c:import>
-
 </head>
-<body>	
+<body>
 	<div class="col-head">
 		<h1>인원/좌석</h1>
 	</div>
@@ -435,7 +432,7 @@ button:focus{
 							<button class="btn" name="E8">8</button>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 			<div class="noticeInfo">
@@ -456,10 +453,7 @@ button:focus{
 					<span class="data letter-spacing-min ellipsis-line2"><a
 						href="http://www.cgv.co.kr/movies/detail-view/?midx=85006"
 						target="_blank"
-						onmousedown="javascript:logClick('SUMMARY/영화상세보기');" title="수색자">수색자</a></span>
-				</div>
-				<div class="row movie_type" style="display: block;">
-					<span class="data ellipsis-line1" title="2D">2D</span>
+						onmousedown="javascript:logClick('SUMMARY/영화상세보기');">${ticketDTO.movieName}</a></span>
 				</div>
 				<div class="row movie_rating" style="display: block;">
 					<span class="data" title="15세 관람가">15세 관람가</span>
@@ -473,12 +467,12 @@ button:focus{
 						class="data letter-spacing-min ellipsis-line1"><a
 						target="_blank"
 						onmousedown="javascript:logClick('SUMMARY/극장상세보기');"
-						href="http://www.cgv.co.kr/theaters/?theaterCode=0030"
-						title="CGV 불광">CGV 불광</a></span>
+						href="http://www.cgv.co.kr/theaters/?theaterCode=0030">${ticketDTO.theater}</a></span>
 				</div>
 				<div class="row date" style="display: block;">
 					<span class="header">일시</span> <span class="data"
-						title="2021.10.4(월) 10:25">2021.10.4(월) 10:25</span>
+						title="2021.10.4(월) 10:25">${ticketDTO.watchDate}
+						${ticketDTO.timeTable}</span>
 				</div>
 				<div class="row screen" style="display: block;">
 					<span class="header">상영관</span> <span class="data" title="2관 11층">2관
@@ -499,22 +493,20 @@ button:focus{
 						title=""></span>
 				</div>
 				<div class="placeholder" title="좌석선택"></div>
-			</div>			
+			</div>
 
 
 
 			<!-- btn-right -->
 			<div class="tnb_step_btn_right_before" id="tnb_step_btn_right_before"></div>
-			<a class="btn-right" id="tnb_step_btn_right" href="#"
-				onclick="OnTnbRightClick(); return false;" title="결제선택">다음단계로 이동
-				- 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
+			<a class="btn-right" id="tnb_step_btn_right" href="#" title="결제선택">다음단계로
+				이동 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
 		</div>
 	</div>
 
 	<script type="text/javascript">
 		let data = "A2"
-			
-		
+
 		/* $('.bt1').click(function () {
 			for(int i=0; i<40; i++){
 				if("seat"+i == prop("name")){
@@ -522,19 +514,35 @@ button:focus{
 				}
 			}
 		}); */
-		
-		$('.btn').click(function () {
-			if($(this).prop('name') == data){
-				alert('success');			
+
+		$('.btn').click(function() {
+			if ($(this).prop('name') == data) {
+				alert('success');
 			}
 			console.log($(this).prop("name"));
 			$('.qqq').html($(this).prop("name"));
 		});
-		
-		
-		
+
+		$('.btn-right').click(function() {
+			console.log('aa');
+			let seat = $('.qqq').html();
+			console.log(seat);
+			$.ajax({
+	            type:"POST",
+	            url:"./updateInfo",
+	            data:{	            	
+	               seat:seat
+	            }
+	            ,success:function(result){	               
+	               console.log('예매완료')
+	            }
+	            ,error:function(xhr, status, error){
+	               console.log('error');	               
+	            }
+	         });
+		});
 	</script>
-	
+
 
 </body>
 </html>

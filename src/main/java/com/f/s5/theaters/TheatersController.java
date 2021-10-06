@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -35,7 +36,24 @@ public class TheatersController {
 		mv.setViewName("theaters/theaterList");
 		return mv;
 	}
-
+	
+	@PostMapping("updateInfo")
+	public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception{
+		ModelAndView mv = new ModelAndView();
+		System.out.println("aa");
+		System.out.println(ticketDTO.getSeat());
+		int result = theatersService.updateInfo(ticketDTO);		
+		String msg = "업데이트 실패했습니다";
+		if(result>0) {
+			msg = "업데이트 완료";			
+		}		
+		System.out.println("aaa");
+		mv.addObject("msg", msg);
+		mv.addObject("url", "redirect: ../");
+		mv.setViewName("common/ajaxResult");
+		return mv;
+	}
+	
 	// 극장 눌렀을 경우 극장 상영 중인 영화 출력 - ajax활용
 	@GetMapping("info")
 	public ModelAndView getInfo(TheatersDTO theatersDTO) throws Exception {
@@ -55,10 +73,10 @@ public class TheatersController {
 	@GetMapping("ticketInfo")
 	public ModelAndView getTicketInfo(HttpServletRequest request, TicketDTO ticketDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		
+
 		List<TicketDTO> ar = theatersService.checkTicket(ticketDTO);
 		int result = theatersService.setTicketInfo(request, ticketDTO);
-		
+
 		System.out.println(ar.get(0).getSeat());
 
 		for (int i = 0; i < ar.size(); i++) {
@@ -67,6 +85,7 @@ public class TheatersController {
 		}
 
 		mv.addObject("size", ar.size());
+		mv.setViewName("common/seat");
 
 		if (result > 0) {
 			System.out.println("ticket Insert 성공");

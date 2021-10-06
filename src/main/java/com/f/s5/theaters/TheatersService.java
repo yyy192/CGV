@@ -17,6 +17,10 @@ public class TheatersService {
    @Autowired
    private TheatersDAO theatersDAO;
    
+   public int updateInfo(TicketDTO ticketDTO) throws Exception{
+	   return theatersDAO.updateInfo(ticketDTO);
+   }
+   
    public List<TheatersDTO> getList() throws Exception {
       return theatersDAO.getList();
    }
