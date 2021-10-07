@@ -10,6 +10,7 @@
 <style type="text/css">
 
 
+
 body, input, textarea, select, button, table {
     font-size: 13px;
     line-height: 1.2;
@@ -24,7 +25,7 @@ ol, ul {
 }
 
 .linemap-wrap {
-    width: 1062px;
+    width: 85%;
     
     height: 28px;
     margin : 0 auto;
