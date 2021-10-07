@@ -30,7 +30,7 @@ button {
 	border: 0;
 	outline: 0;
 	text-align: center;
-	padding: 0;
+	padding: 0px;
 }
 
 button:hover{
@@ -262,7 +262,6 @@ button:focus{
 	height: 15px;
 	float: left;
 	font-size: 12px;
-	background-color: #00AEBD;
 	margin-right: 5px;
 	text-align: center;
 }
@@ -287,6 +286,13 @@ button:focus{
 
 </head>
 <body>	
+
+	<div class="size" style="display:none">${size + 1}</div>
+	
+	<c:forEach items="${list}" var="dto" varStatus="loop">
+		<div class="${loop.count}" style="display:none">${dto.seat}</div>
+	</c:forEach>
+
 	<div class="col-head">
 		<h1>인원/좌석</h1>
 	</div>
@@ -303,55 +309,55 @@ button:focus{
 					<div class="label_seat">
 						<div class="label_first">A</div>
 						<div class="label">
-							<button class="btn bt1" name="A1">1</button>
+							<button class="btn A1" name="A1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A2">2</button>
+							<button class="btn A2" name="A2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A3">3</button>
+							<button class="btn A3" name="A3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A4">4</button>
+							<button class="btn A4" name="A4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A5">5</button>
+							<button class="btn A5" name="A5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A6">6</button>
+							<button class="btn A6" name="A6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A7">7</button>
+							<button class="btn A7" name="A7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="A8">8</button>
+							<button class="btn A8" name="A8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
 						<div class="label_first">B</div>
 						<div class="label">
-							<button class="btn" name="B1">1</button>
+							<button class="btn B1" name="B1">1</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B2">2</button>
+							<button class="btn B2" name="B2">2</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B3">3</button>
+							<button class="btn B3" name="B3">3</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B4">4</button>
+							<button class="btn B4" name="B4">4</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B5">5</button>
+							<button class="btn B5" name="B5">5</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B6">6</button>
+							<button class="btn B6" name="B6">6</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B7">7</button>
+							<button class="btn B7" name="B7">7</button>
 						</div>
 						<div class="label">
-							<button class="btn" name="B8">8</button>
+							<button class="btn B8" name="B8">8</button>
 						</div>
 					</div>
 					<div class="label_seat">
@@ -512,16 +518,24 @@ button:focus{
 	</div>
 
 	<script type="text/javascript">
-		let data = "A2"
-			
 		
-		/* $('.bt1').click(function () {
-			for(int i=0; i<40; i++){
-				if("seat"+i == prop("name")){
-					console.log('예매완료된 좌석입니다.')		
-				}
+		x();
+		
+		function x () {
+			
+			var p = $('.size').html();
+			console.log(p);
+			
+			for(var i=1; i<p; i++) {
+				let t = $('.'+i).html();
+				console.log(t);
+				$('.'+t).attr('disabled', true);
+				$('.'+t).css('pointer-events', 'none');
+				$('.'+t).css('background-color', 'gray');
+
 			}
-		}); */
+
+		};
 		
 		$('.btn').click(function () {
 			if($(this).prop('name') == data){
@@ -530,6 +544,10 @@ button:focus{
 			console.log($(this).prop("name"));
 			$('.qqq').html($(this).prop("name"));
 		});
+		
+		
+		
+		
 		
 		
 		

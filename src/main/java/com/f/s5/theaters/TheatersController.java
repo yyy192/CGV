@@ -59,13 +59,7 @@ public class TheatersController {
 		List<TicketDTO> ar = theatersService.checkTicket(ticketDTO);
 		int result = theatersService.setTicketInfo(request, ticketDTO);
 		
-		System.out.println(ar.get(0).getSeat());
-
-		for (int i = 0; i < ar.size(); i++) {
-			String x = ar.get(i).getSeat();
-			mv.addObject("seat" + i, x);
-		}
-
+		mv.addObject("list", ar);
 		mv.addObject("size", ar.size());
 
 		if (result > 0) {
