@@ -39,5 +39,13 @@ public class TheatersService {
       ticketDTO.setTimeTable(request.getParameter("timeTable"));
       return theatersDAO.setTicketInfo(ticketDTO);
    }
+   
+   public List<TicketDTO> checkTicket(TicketDTO ticketDTO) throws Exception{
+	   return theatersDAO.checkTicket(ticketDTO);
+   }
+   
+   public int updateInfo(TicketDTO ticketDTO) throws Exception{
+	   return theatersDAO.updateInfo(ticketDTO);
+   }
 
 }

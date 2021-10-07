@@ -28,4 +28,12 @@ public class TheatersDAO {
    public int setTicketInfo(TicketDTO ticketDTO) throws Exception {
       return sqlSession.insert(NAMESPACE+"setTicketInfo", ticketDTO);
    }
+   
+   public List<TicketDTO> checkTicket(TicketDTO ticketDTO) throws Exception{
+	   return sqlSession.selectList(NAMESPACE+"checkTicket", ticketDTO);	   
+   }
+   
+   public int updateInfo(TicketDTO ticketDTO)throws Exception{
+	   return sqlSession.update(NAMESPACE+"updateInfo", ticketDTO);	   
+   }
 }
