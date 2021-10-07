@@ -18,7 +18,7 @@ body {
 #footer .foot {padding:0 0 147px; width:100%; height:330px;}
 
 
-.sect-smuse {overflow:hidden; width:100%; border-top:1px solid #949494; border-bottom:1px solid #949494; height: 66px; padding-top: 22px;}
+.sect-smuse {padding-left:15px; overflow:hidden; width:100%; border-top:1px solid #949494; border-bottom:1px solid #949494; height: 66px; padding-top: 22px;}
 .sect-smuse > ul {width:980px; margin:0 auto; }
 .sect-smuse li {height: 66px;}
 .sect-smuse li, .sect-cinfo li {display:block; float:left;}
@@ -40,27 +40,28 @@ body {
 .sect-cinfo {padding-top:28px; width:980px; height: 116px; margin: 0 auto;}
 .foot .sect-cinfo{}
 /* Common Css : sect-cinfo */
-.sect-cinfo .familysite, .sect-cinfo .share, .sect-cinfo .logo {position:absolute;}
+.sect-cinfo .familysite, .sect-cinfo .share, .sect-cinfo .logo{position:absolute;}
+
+
 
 .sect-cinfo .policy {width: 1080px; height:20px; letter-spacing:0px; }
 .sect-cinfo .policy ul {width: 1080px; height: 20px; margin: 0 auto;}
-.sect-cinfo .policy li {margin:0 auto; text-align:center;}
-/* background:url(https://img.cgv.co.kr/r2014/images/common/bg/bg_li_vline2.gif) no-repeat 0 1px; */
+.sect-cinfo .policy li {margin:0 auto; text-align:center; background:url(https://img.cgv.co.kr/r2014/images/common/bg/bg_li_vline2.gif) no-repeat 0 1px;}
 .sect-cinfo .policy li:first-child {background-image:none;}
 /* .sect-cinfo .policy li:first-child > a:first-child {padding-left:170px;} */
 .sect-cinfo .policy li > a {padding:0 6px; height: 14px; font-weight:500; font-size:13px; color:#444444; text-decoration:none; vertical-align:middle;letter-spacing:-1px}
 .sect-cinfo .policy li > a.empha-red {color:#e7612e;}
 
-.sect-cinfo .familysite {bottom:22px; right:0;}
+/* .sect-cinfo .familysite {bottom:22px; right:0;}
 .sect-cinfo .familysite select {width:140px; background:transparent; border:1px solid #999;}
 .sect-cinfo .familysite button[type='button'] {width:29px; height:29px; background-color:#666; color:#fdfcf0; font-family:verdana, sans-serif; font-size:10px; font-weight:bold; text-align:center;}
-
-.sect-cinfo .share {position:absolute; display:inline-block; right:182px; top:63px;}
+ */
+/* .sect-cinfo .share {position:absolute; display:inline-block; right:182px; top:63px;}
 .sect-cinfo .share a {float:left; width:34px; height:34px; margin-left:2px;}
 .sect-cinfo .share a:first-child {margin-left:0;}
 .sect-cinfo .share a.facebook {background-position:-509px -429px;}
 .sect-cinfo .share a.twitter {background-position:-551px -429px;}
-.sect-cinfo .share a.instagram {background-position:-593px -429px;}
+.sect-cinfo .share a.instagram {background-position:-593px -429px;} */
 
 .sect-cinfo .logo {top:65px; left:0; width:90px; height:43px; background-position:-145px -319px;}
 
@@ -92,6 +93,14 @@ a {
 
 .sect-service > .util li > a, .sect-service > .gnb li > a, .sect-service a.showtimes, .im-wrap .lnb > ul > li > a, .im-wrap > h2 > a, .im-wrap .ad-partner > a, .sect-booking > a, .sect-phototicket > a, .sect-person li > a, .sect-common li > a, .ciols-movie li > a, .sect-smuse li > a, .policy li a, .sect-cinfo .share a, .sect-bcrumb li > a, .sect-ad-external > a, .cols-banner .col-hd > a, .sect-showtimes .info-timetable a, .sect-aside-banner .aside-content-btm > a, .sect-aside-banner > .btn-top > a {
     display: block;
+}
+
+.sect-cinfo .logo {
+    top: 1300px;
+    left: 0;
+    width: 90px;
+    height: 43px;
+    background-position: -145px -319px;
 }
 
 
@@ -141,7 +150,8 @@ a {
             </ul>
          </div>
          <div class="sect-cinfo">
-            
+         
+            <p class="logo">CJ CGV 로고</p>
             
             <div class="policy">
                <ul>
@@ -172,11 +182,11 @@ a {
                      target="_blank">윤리경영</a></li>
                   <li class="li_zip"><a href="http://www.cgv.co.kr/company/cyberAudit.aspx"
                      class="empha-red">사이버감사실</a></li>
-                  <li class="li_zip"><a href="http://www.cgv.co.kr/guide/sitemap.aspx"></a></li>
+                  <li class="li_zip"><a href="http://www.cgv.co.kr/guide/sitemap.aspx">사이트맵</a></li>
                </ul>
             </div>
             
-            <!-- <div class="address">
+            <div class="address">           
                <address>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
                <p class="vl">
                   <span>대표이사 : 허민회</span><span>사업자등록번호 : 104-81-45690</span><span>통신판매업신고번호
@@ -186,13 +196,13 @@ a {
                      alt="사업자정보확인"></a><a> </a>
                </p>
                <a>
-                  
+                  <p>
                      <span>호스팅사업자 : CJ올리브네트웍스</span><span>개인정보보호 책임자 : 심준범</span><span>대표이메일
                         : cjcgvmaster@cj.net</span><span>CGV고객센터 : 1544-1122</span>
                   
-                  
+                  </p>
                </a>
-            </div>  -->
+            </div>
             
          </div>
          

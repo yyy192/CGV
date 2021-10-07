@@ -108,21 +108,7 @@ a {
 	background-color: yellow;
 	line-height: 100px; /*글자나 이미지 위치 정렬*/
 }
-#section {
-	width: 100%;
-	height: 600px;
-	background-color: red;
-	line-height: 600px;
-	float: left;
-}
-#footer {
-	width: 100%;
-	height: 100px;
-	background-color: black;
-	line-height: 100px; /*글자나 이미지 위치 정렬*/
-	color: white;
-	float: left;
-}
+
 .heaberService {
 	margin-left: 22px;
 	margin-right: 22px;
