@@ -171,16 +171,13 @@ a {
 	width: 500px;
 	padding: 20px 0 0 0px;
 } */
-ul li {
+.middle ul li {
 	list-style-type: none;
 	float: left;
 	margin-top: 5px;
 	margin-left: 50px;
 }
-body
-{
-  background-color: #F7F6EF;
-}
+
 </style>
 </head>
 <body>
@@ -233,47 +230,6 @@ body
 			</div>
 		</div>
 		<div class="right"></div>
-	</div>
+	</div>	
 </body>
 </html>
-<%-- <div id="header">
-	<div class="headerService">
-		<ul class="nav1">
-			<c:choose>
-				<c:when test="${not empty member}">
-					<li class="nav-item"><a class="nav-link text"
-						href="${pageContext.request.contextPath}/member/mypage">MY CGV</a></li>
-					<li class="nav-item"><a class="nav-link text"
-						href="${pageContext.request.contextPath}/member/memberLogout">로그아웃</a>
-					</li>
-				</c:when>
-				<c:otherwise>
-					<li class="nav-item"><a class="nav-link text"
-						href="${pageContext.request.contextPath}/member/memberLogin">로그인</a>
-					</li>
-					<li class="nav-item"><a class="nav-link text"
-						href="${pageContext.request.contextPath}/member/check">회원가입</a></li>
-				</c:otherwise>
-			</c:choose>
-		</ul>
-	</div>
-	<div class="headerCenter">
-		<h1>
-			<a href="${pageContext.request.contextPath}/"> <img
-				src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a>
-		</h1>
-		<h2>
-			<a href="./"> <img
-				src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png"
-				alt="CGV"></a>
-		</h2>
-		<div class="menu">
-			<ul class="nav2">
-				<li><a class="text" href="#">영화</a></li>
-				<li><a class="text" href="#">예매</a></li>
-				<li><a class="text" href="#">극장</a></li>
-				<li><a class="text" href="#">고객센터</a></li>
-			</ul>
-		</div>
-	</div>
-</div> --%>
