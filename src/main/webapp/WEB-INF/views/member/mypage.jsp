@@ -7,10 +7,21 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<style type="text/css">
+
+.cs{
+width: 300px;
+height: 300px;
+background-image: url('/s5/resources/images/007.jpg');
+}
+</style>
+
 </head>
 <body>
 
-   
+   <div class="cs">
+   		
+   </div>
    <h1>My CGV</h1>
    <div align=center>
    <div class="name"><h1>${member.name} 님</h1></div>
