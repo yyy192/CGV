@@ -86,11 +86,11 @@ public class TicketController {
 			ticketDTO.setId(m.getId());
 			
 			if(checkBirth >= 20 ) {
-				ticketDTO.setPrice("10,000");
+				ticketDTO.setPrice("10000");
 			} else {
-				ticketDTO.setPrice("7,000");
-
+				ticketDTO.setPrice("7000");
 			}
+			
 
 			List<TicketDTO> ar = ticketService.checkTicket(ticketDTO);
 

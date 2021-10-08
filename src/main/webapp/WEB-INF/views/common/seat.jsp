@@ -458,7 +458,10 @@
 	    margin-top: 14px;
 	    display: none;
 	}
-
+	
+	.tnb.step2 .btn-right {
+    background-position: 0 -330px;
+}
 	
 	
 	

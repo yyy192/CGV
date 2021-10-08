@@ -26,38 +26,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 </head>
 <body>
 	<c:import url="../temp/mainHome.jsp"></c:import>
-		
-		<div class="size" style="display:none">${test2 + 1}</div>
 
-	<c:forEach items="${test}" var="dto" varStatus="loop">
-		<div class="${loop.count}">${dto}</div>
+	<c:forEach items="${list}" var="dto">
+			<button>${dto.movieName}</button>
 	</c:forEach>
-
-	<div>
-		<button class="btn2">ㅁㄴㅇㄻㄴㅇㄹ</button>
-		
-		<button class="A1">지워져야함</button>
-		<button class="A2">dfadfasdfasd</button>
-		<button class="B5">지워져야함2</button>
-		
-	</div>
-
-	<script type="text/javascript">
-		
-		x();
-		
-		function x () {
-			
-			var p = $('.size').html();
-			console.log(p);
-			
-			for(var i=1; i<p; i++) {
-				let t = $('.'+i).html();  // .1   .2
-				console.log(t);
-				$('.'+t).attr('disabled', true);
-			}
-
-		};
-	</script>
 </body>
 </html>

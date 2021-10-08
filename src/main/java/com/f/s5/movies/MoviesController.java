@@ -19,13 +19,6 @@ public class MoviesController {
 		ModelAndView mv = new ModelAndView();
 		List<MoviesDTO> ar = moviesService.getMoviesList(moviesDTO);
 
-		String[] x = new String[2];
-		x[0] = "A1";
-		x[1] = "B5";
-
-		mv.addObject("test", x);
-		
-		mv.addObject("test2", x.length);
 
 		mv.addObject("list", ar);
 
