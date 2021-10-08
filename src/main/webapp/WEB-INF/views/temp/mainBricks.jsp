@@ -122,7 +122,7 @@ button, input[type='submit'], input[type='reset'] {
 					style="left: 528px; display: block;">일시멈춤</button>
 				<!-- 고혜진님 요청으로 인한 삭제 -->
 
-				<div class="item-wrap">
+				<div class="item-wrap vip">
 					<button type="button" class="" style="left: 438px; display: block;">VIP
 						익스프레스</button>
 					<a class="item" style="width: 980px; height: 450px; display: none;">
@@ -132,8 +132,8 @@ button, input[type='submit'], input[type='reset'] {
 					</a>
 				</div>
 
-				<div class="item-wrap on">
-					<button type="button" class="on"
+				<div class="item-wrap 007">
+					<button type="button" class=""
 						style="left: 456px; display: block;" title="선택됨.">007 스탠딩
 						포스터 팩</button>
 					<a class="item"
@@ -145,7 +145,7 @@ button, input[type='submit'], input[type='reset'] {
 					</a>
 				</div>
 
-				<div class="item-wrap">
+				<div class="item-wrap venom">
 					<button type="button" style="left: 474px; display: block;" class="">베놈2
 						필름마크</button>
 					<a class="item" style="width: 980px; height: 450px; display: none;">
@@ -155,7 +155,7 @@ button, input[type='submit'], input[type='reset'] {
 					</a>
 				</div>
 
-				<div class="item-wrap">
+				<div class="item-wrap venom2">
 					<button type="button" style="left: 492px; display: block;" class="">베놈2
 						SCREENX 포스터 팩</button>
 					<a class="item" style="width: 980px; height: 450px; display: none;">
@@ -165,7 +165,7 @@ button, input[type='submit'], input[type='reset'] {
 					</a>
 				</div>
 
-				<div class="item-wrap">
+				<div class="item-wrap venom4DX">
 					<button type="button" style="left: 510px; display: block;" class="">베놈2
 						4DX 포스터 팩</button>
 					<a class="item" style="width: 980px; height: 450px; display: none;">
@@ -174,9 +174,9 @@ button, input[type='submit'], input[type='reset'] {
 						alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">
 					</a>
 				</div>
-				<div class="item-wrap on">
+				<div class="item-wrap venomPoster">
 					<button type="button" style="left: 510px; display: block;"
-						class="on" title="선택됨.">베놈2 4DX 포스터 팩</button>
+						class="" title="선택됨.">베놈2 4DX 포스터 팩</button>
 					<a class="item"
 						style="width: 980px; height: 450px; display: block;"
 						href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">
@@ -195,6 +195,31 @@ button, input[type='submit'], input[type='reset'] {
 </div>
 
 	<script type="text/javascript">
+	
+	$('.btn-next').click(function(){
+		alert('hi');
+		let ta = '<a class="item" style="width: 980px; height: 450px; display: none;"
+		href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">';
+		ta = ta + '</a>';
+		ta = ta + '<img src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg" alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">';
+			
+		</a>';
+		
+		<a class="item"
+			style="width: 980px; height: 450px; display: block;"
+			href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">
+			<img
+			src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"
+			alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">
+		
+		
+		
+		let ta = '<textarea class="form-control" cols=""  name="contents" id="contents" rows="6">';
+		ta = ta+content.trim() +'</textarea>';
+		ta = ta +'<button type="submit" class="btn btn-success up" id="">UPDATE</button>';
+		ta = ta +'<button type="submit" class="btn btn-danger can" id="">CANCEL</button>';
+		
+	})
     //<![CDATA[
      //CGV 공지 팝업 주석처리
     //function getCookie(name) {
@@ -454,9 +479,7 @@ button, input[type='submit'], input[type='reset'] {
                 showItems: 1
             });
        
-         
-
-         
+       
            
 
        
