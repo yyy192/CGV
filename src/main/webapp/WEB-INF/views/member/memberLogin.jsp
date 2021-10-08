@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,7 @@
 <title>Insert title here</title>
 
 <style type="text/css">
+
 
 
 body, input, textarea, select, button, table {
@@ -19,12 +21,12 @@ body, input, textarea, select, button, table {
     background-color: #FDFCF0;
 }
 
-ol, ul {
+ol, ul, li{
     list-style: none;
 }
 
 .linemap-wrap {
-    width: 1062px;
+    width: auto;
     
     height: 28px;
     margin : 0 auto;

@@ -276,7 +276,6 @@ ul li {
          console.log(timeTable);
          $.ajax({
             type : "GET",
-            url : "./select4",
             data : {
                theater : theater,
                watchDate : watchDate,
@@ -284,8 +283,7 @@ ul li {
                timeTable : timeTable
             },
             success : function(result) {
-               result = result.trim();
-               $("#seatList").html(result);
+               location.href="./select4?movieName="+movieName+"&theater="+theater+"&watchDate="+watchDate+"&timeTable="+timeTable;
             },
             error : function(xhr, status, error) {
                console.log('error');

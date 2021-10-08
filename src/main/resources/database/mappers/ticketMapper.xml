@@ -32,10 +32,23 @@
    	</select>
 
    <insert id="setTicket" parameterType="TicketDTO">
-      INSERT INTO TICKET (TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE)
-      VALUES (TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate},
+      INSERT INTO TICKET (ID, TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE)
+      VALUES (#{id}, TICKET_SEQ.NEXTVAL, #{movieName}, #{theater}, #{watchDate},
       #{timeTable})
    </insert>
+   
+   <select id="checkTicket" resultType="TicketDTO"
+		parameterType="TicketDTO">
+		SELECT SEAT FROM TICKET WHERE MOVIENAME=#{movieName} AND
+		THEATER=#{theater}
+		AND WATCHDATE=#{watchDate} AND
+		TIMETABLE=#{timeTable}
+	</select>
+	
+	<update id="updateInfo" parameterType="TicketDTO">
+		UPDATE TICKET SET SEAT =
+		#{seat} WHERE TICKETNUM = (SELECT MAX(TICKETNUM) FROM TICKET)
+	</update>  
 
 
 

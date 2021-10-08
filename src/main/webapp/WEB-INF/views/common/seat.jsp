@@ -482,8 +482,14 @@
 	<div class="person_screen">
 		<div class="col-body">
 			<div class="section section-numberofpeople">
-							<span>&nbsp;&nbsp;회원님의 나이는 23세 입니다.</span><br><br>
-							<span>&nbsp;&nbsp;가격은 일반 요금이 적용됩니다.</span>		
+							<span>&nbsp;&nbsp;회원님의 나이는 ${age}세 입니다. </span><br><br>
+							<c:if test="${age >= 20}">
+								<span>&nbsp;&nbsp;가격은 일반 요금이 적용됩니다. </span>
+							</c:if>
+						
+							<c:if test="${age < 20}">
+								<span>&nbsp;&nbsp;가격은 청소년 요금이 적용됩니다. </span>
+							</c:if>
 			</div>
 		</div>
 	<div class="section section-screen-select">
