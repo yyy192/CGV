@@ -44,7 +44,7 @@ ol, ul, li{
 	line-height: 48px;
 }
 .linemap-wrap {
-	width: 85%;
+	width: auto;
 	height: 28px;
 	margin: 0 auto;
 	background-color: #f1f0e5;
