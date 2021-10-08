@@ -359,6 +359,6 @@ strong {
         </div>
 	</div>
 
-
+	<c:import url="../temp/mainFooter.jsp"></c:import>	
 </body>
 </html>
