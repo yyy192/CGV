@@ -8,9 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-   background-color: #FDFCF0;
-}
+
 
 #footer {
    background:
@@ -134,10 +132,6 @@ body {
    width: 980px;
    height: 116px;
    margin: 0 auto;
-}
-
-.foot .sect-cinfo {
-   
 }
 
 .sect-cinfo .familysite, .sect-cinfo .share, .sect-cinfo .logo {

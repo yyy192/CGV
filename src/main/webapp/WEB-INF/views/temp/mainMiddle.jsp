@@ -13,6 +13,7 @@
 
 body {
 	background-color: #FDFCF0;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
 }
 
 h3 {
@@ -135,10 +136,10 @@ h3>img {
 
 		<div id="Selection_R" class="col-ad">
 			<iframe
-				src="https://ad.cgv.co.kr/NetInsight/text/CGV/CGV_201401/main@Selection_R_02"
-				width="240" height="388" title="" frameborder="0" scrolling="no"
-				marginwidth="0" marginheight="0" name="Movie_Selection_R"
-				id="Movie_Selection_R"></iframe>
+				src="https://ad.cgv.co.kr/NetInsight/text/CGV/CGV_201401/main@Selection_R_05"
+				width="240" height="388" title="영화광고-듄" frameborder="0"
+				scrolling="no" marginwidth="0" marginheight="0"
+				name="Movie_Selection_R" id="Movie_Selection_R"></iframe>
 		</div>
 	</div>
 </body>
