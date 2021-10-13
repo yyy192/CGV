@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
@@ -21,9 +21,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	font: inherit;
 	vertical-align: baseline;
 }
+
 a {
 	text-decoration: none;
 }
+
 #wrap {
 	width: 100%;
 	height: 150px;
@@ -36,31 +38,36 @@ a {
 	font-size: 20px;
 	text-align: center; */
 }
+
 .m_top {
 	width: 100%;
 	height: 30px;
 }
+
 .m_bottom {
 	width: 100%;
 	height: 119px;
 }
+
 .cgvLogo {
 	float: left;
 	padding: 15px;
 }
+
 .cultureLogo {
 	width: 240px;
 	height: 20px;
 	padding: 15px;
 	margin: 0 auto;
 	padding-top: 29.5px;
-	
 }
-.menu{
-	width:400px;
-	height:30px;	
+
+.menu {
+	width: 400px;
+	height: 30px;
 	margin: 0 auto;
 }
+
 .left {
 	width: 10%;
 	height: 149px;
@@ -72,6 +79,7 @@ a {
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
 }
+
 .middle {
 	width: 80%;
 	height: 149px;
@@ -82,6 +90,7 @@ a {
 	float: left;
 	background-size: 11px, 149px;
 }
+
 .right {
 	width: 10%;
 	height: 149px;
@@ -117,6 +126,7 @@ a {
 	position: relative;
 	position: absolute;
 }
+
 .headerCenter {
 	margin-left: 22px;
 	margin-right: 22px;
@@ -126,48 +136,76 @@ a {
 	padding-top: 69px;
 	position: absolute;
 }
-/* .menu {
-	position: absolute;
-	margin: 0 400px;
-	width: 376px;
-	height: 35px;
-	width: 376px;
-}
- */
-#header>.headerCenter h1 {
-	top: 19px;
-	left: 77px;
-	width: 223px;
-	height: 85px;
-	padding: 38px 0 0 22px;
-	z-index: 110;
-	position: absolute;
-}
-#header>.headerCenter h2 {
-	position: absolute;
-	top: 36px;
-	left: 50%;
-	width: 428px;
-	height: 31px;
-	padding: 21px 0 0 400px;
-	text-align: center;
-}
+
 .nav1 {
-	float: right;	
+	float: right;
 }
-/* .nav2 {
-	width: 500px;
-	padding: 20px 0 0 0px;
-} */
-.middle ul li {
+
+.menu ul li {
 	list-style-type: none;
 	float: left;
 	margin-top: 5px;
-	margin-left: 50px;
+	margin-left: 30px;
+}
+
+.m_top ul li {
+	list-style-type: none;
+	float: left;
+	margin-left: 10px;
 }
 
 li {
 	list-style: none;
+}
+
+.menu>ul>li.movie {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: 13px -27px;
+	width: 60px;
+}
+
+.menu>ul>li.booking {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -77px -28px;
+	width: 60px;
+}
+
+.menu>ul>li.theaters {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -166px -28px;
+	width: 60px;
+}
+
+.menu>ul>li.customer {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -517px -28px;
+	width: 90px;
+}
+
+.m_top>ul>li.nav-item-in {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: 10px 9px;
+	width: 40px;
+
+}
+
+.m_top>ul>li.nav-item-join {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -42px 9px;
+	width: 50px;
+}
+
+.m_top>ul>li.nav-item-customer {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -328px 9px;
+	width: 50px;
 }
 
 </style>
@@ -180,21 +218,23 @@ li {
 				<ul class="nav1">
 					<c:choose>
 						<c:when test="${not empty member}">
-							<li class="nav-item"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/mypage">MY
-									CGV</a></li>
-							<li class="nav-item"><a class="nav-link text"
+							<li class="nav-item-out"><a class="nav-link text"
 								href="${pageContext.request.contextPath}/member/memberLogout">로그아웃</a>
 							</li>
+							<li class="nav-item-mypage"><a class="nav-link text"
+								href="${pageContext.request.contextPath}/member/mypage">MY
+									CGV</a></li>
 						</c:when>
 
 						<c:otherwise>
-							<li class="nav-item"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/memberLogin">로그인</a>
-							</li>
-							<li class="nav-item"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/check">회원가입</a>
-							</li>
+							<li class="nav-item-in"><a class="nav-link text"
+								href="${pageContext.request.contextPath}/member/memberLogin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							</li>							
+							<li class="nav-item-join"><a class="nav-link text"
+								href="${pageContext.request.contextPath}/member/check">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							</li>							
+							<li class="nav-item-customer"><a class="nav-link text"
+								href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -213,15 +253,15 @@ li {
 				</div>
 				<div class="menu">
 					<ul>
-						<li><a class="text" href="#">영화</a></li>
-						<li><a class="text" href="#">예매</a></li>
-						<li><a class="text" href="#">극장</a></li>
-						<li><a class="text" href="#">고객센터</a></li>
+						<li class="movie"><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
+						<li class="booking"><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
+						<li class="theaters"><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
+						<li class="customer"><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="right"></div>
-	</div>	
+	</div>
 </body>
 </html>
