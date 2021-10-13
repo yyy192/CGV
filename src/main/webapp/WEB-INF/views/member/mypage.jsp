@@ -86,7 +86,6 @@ body {
 .my_info_1>em {
 	font-size: 14px;
 	line-height: 14px;
-	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
 	margin-left: 20px;
 }
 
@@ -102,6 +101,10 @@ body {
 	font-size: 20px;
 	font-weight: bolder;
 	line-height: 20px;
+}
+
+.my_grade>p {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
 }
 
 .empty_2 {
@@ -151,6 +154,7 @@ body {
 	display: inline-block;
 	height: 40px;
 	margin: 0 0 14px;
+	margin-left: 30px;
 	background:
 		url("https://img.cgv.co.kr/R2014/images/sprite/sprite_text.png")
 		no-repeat 0 0;
@@ -158,8 +162,9 @@ body {
 	font: 0/0 a;
 	vertical-align: middle;
 	zoom: 1;
-	width: 280px;
+	width: 216px;
 	background-position: 9px -27px;
+	
 }
 
 .mypage_content_2 ul>li>span {
@@ -170,6 +175,9 @@ body {
 	border-bottom: 2px solid;
 	border-color: #8c7651;
 	margin-top: 10px;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 12px;
+	line-height: 30px;
 }
 
 .detail_content {
@@ -186,6 +194,40 @@ body {
 	width: 798px;
 	height: 120px;
 	margin-bottom: 30px;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+
+.box-inner.preegg  a>h3 {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 16px;
+}
+
+.box-inner.preegg a>span {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+
+.box-inner.watched  a>h3 {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 16px;
+}
+
+.box-inner.watched a>span {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+
+.box-inner.mvdiary  a>h3 {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 16px;
+}
+
+.box-inner.mvdiary a>span {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
 }
 
 .box-inner {
@@ -235,6 +277,12 @@ body {
 	height: 34px;
 }
 
+.tit-mycgv em {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+
 .tit-mycgv p {
 	float: left;
 	margin-left: 5px;
@@ -248,6 +296,9 @@ body {
 	color: #666;
 	text-align: left;
 	line-height: 1.2;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
 }
 
 .tit-mycgv>h3 {
@@ -260,6 +311,9 @@ body {
 	font-size: 17px;
 	line-height: 34px;
 	text-align: left;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 17px;
+	color: #222222;
 }
 
 .tit-mycgv p>a {
@@ -283,13 +337,123 @@ body {
 
 .mybooking_inner {
 	width: 746px;
-	height:170px;
+	height: 170px;
 	padding: 26px;
 }
 
-.qwer{
- width: 800px;
- height: 100px;
+.box-number {
+	width: 90px;
+	float: left;
+}
+
+.box-number>em {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+
+.box-number>span {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+
+.box-image {
+	margin: 0 13px 0 19px;
+	float: left;
+	width: 55px;
+	height: 70px;
+}
+
+.box-image>a {
+	width: 55px;
+	height: 70px;
+}
+
+.thumb-image {
+	display: block;
+	position: relative;
+	width: 55px;
+	height: 70px;
+}
+
+.thumb-image>img {
+	width: 55px;
+	height: 70px;
+}
+
+.qwer {
+	width: 800px;
+	height: 100px;
+}
+
+.box-contents {
+	width: 210px;
+	height: 90px;
+	float: left;
+}
+
+.box-contents>dl>dt>a {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #222222;
+}
+
+.box-contents>dl>dd>a {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #222222;
+}
+
+.box-contents>dl>dd>em {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #666666;
+	margin: 0 10px 0 0;
+}
+
+.box-contents>dl>dd>strong {
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+.price-n-btns {
+	clear: both;
+	padding-top: 24px;
+	padding-left: 109px;
+}
+
+.price-n-btns .bd-wrap {
+	position: relative;
+	border-top: 1px solid #d6d4ca;
+	min-height: 48px;
+}
+
+.price-n-btns .bd-wrap>dl {
+	position: absolute;
+	left: 0;
+	top: 27px;
+	width: 160px;
+	height: 17px;
+}
+
+.price-n-btns .bd-wrap> dl >dt {
+	float: left;	
+	height: 17px;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 14px;
+	color: #222222;
+}
+
+.price-n-btns .bd-wrap dl > dd  {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0px;
+    margin-left: 6px;    
+    font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 14px;
+    color: #2275a4
 }
 </style>
 </head>
@@ -384,7 +548,54 @@ body {
 			<span>예매번호로만 티켓을 찾을 수 있으니 반드시 확인 부탁드립니다.</span>
 		</div>
 		<div class="mybooking">
-			<div class="mybooking_inner"></div>
+			<div class="mybooking_inner">
+				<div class="box-number">
+					<em>예매번호</em> <strong>0074-<i>0917-4137-991</i></strong> <span>(2021.09.17)</span>
+				</div>
+				<div class="box-image">
+					<a href="/movies/detail-view/?midx=84617"> <span
+						class="thumb-image"> <img
+							src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_126.jpg"
+							alt="기적 포스터" onerror="errorImage(this)">
+					</span>
+					</a>
+				</div>
+				<div class="box-contents has_not_storeitem">
+					<dl>
+						<dt>
+							<a href="/movies/detail-view/?midx=84617">기적</a>
+
+						</dt>
+						<dd>
+							<em>관람극장</em> <strong>CGV 왕십리</strong> <a
+								href="javascript:theaterMove('0074');">[극장정보]</a>
+						</dd>
+						<dd>
+							<em>관람일시</em> <strong>2021.09.19(일) 19:30</strong>
+						</dd>
+						<dd>
+							<em>관람좌석</em> <strong>D 08,D 07</strong>
+						</dd>
+					</dl>
+				</div>
+				<div class="price-n-btns">
+					<div class="bd-wrap">
+						<dl>
+							<dt>총 결제금액</dt>
+							<dd>
+								<strong class="txt-lightblue"> 40,000원</strong>
+							</dd>
+						</dl>
+						<div class="set-btn">
+							<input type="hidden" class="reserve-no" name="reserve-no"
+								value="jDIBiIjEpwLc75nVRkwLNCSrfhchDvL0sRm55EztTi8=">
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="qwer"></div>
