@@ -6,7 +6,7 @@
 <mapper namespace="com.f.s5.ticket.TicketDAO">
 
 	<select id="getMovieList" resultType="MoviesDTO">
-      SELECT MOVIENAME FROM MOVIES
+      SELECT * FROM MOVIES
   	</select>
 
    	<select id="getMovieSelect" parameterType="MothDTO"

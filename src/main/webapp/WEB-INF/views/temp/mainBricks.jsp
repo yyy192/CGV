@@ -5,6 +5,8 @@
 <html>
 <head>
 <style type="text/css">
+
+
 #cgvwrap .cgv-ad-wrap .sect-head-ad, .head, .im-wrap, #contents, .foot,
 	.sect-smuse, .sect-cinfo {
 	position: relative;
@@ -115,111 +117,485 @@ button, input[type='submit'], input[type='reset'] {
 </head>
 <body>
 	<div class="bricks">
-		<div id="contents">
-		<div class="sect-common">
-			<div class="slider" id="slider">
-				<button type="button" class="btn-pause"
-					style="left: 528px; display: block;">일시멈춤</button>
-				<!-- 고혜진님 요청으로 인한 삭제 -->
-
-				<div class="item-wrap vip">
-					<button type="button" class="" style="left: 438px; display: block;">VIP
-						익스프레스</button>
-					<a class="item" style="width: 980px; height: 450px; display: none;">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/0913/16315036396800.jpg"
-						alt="VIP 익스프레스" style="width: 100%; height: 100%;">
-					</a>
-				</div>
-
-				<div class="item-wrap 007">
-					<button type="button" class=""
-						style="left: 456px; display: block;" title="선택됨.">007 스탠딩
-						포스터 팩</button>
-					<a class="item"
-						style="width: 980px; height: 450px; display: block;"
-						href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33194">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/1004/16333547813370.jpg"
-						alt="007 스탠딩 포스터 팩" style="width: 100%; height: 100%;">
-					</a>
-				</div>
-
-				<div class="item-wrap venom">
-					<button type="button" style="left: 474px; display: block;" class="">베놈2
-						필름마크</button>
-					<a class="item" style="width: 980px; height: 450px; display: none;">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/1006/16335097273370.jpg"
-						alt="베놈2 필름마크" style="width: 100%; height: 100%;">
-					</a>
-				</div>
-
-				<div class="item-wrap venom2">
-					<button type="button" style="left: 492px; display: block;" class="">베놈2
-						SCREENX 포스터 팩</button>
-					<a class="item" style="width: 980px; height: 450px; display: none;">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084410.jpg"
-						alt="베놈2 SCREENX 포스터 팩" style="width: 100%; height: 100%;">
-					</a>
-				</div>
-
-				<div class="item-wrap venom4DX">
-					<button type="button" style="left: 510px; display: block;" class="">베놈2
-						4DX 포스터 팩</button>
-					<a class="item" style="width: 980px; height: 450px; display: none;">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"
-						alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">
-					</a>
-				</div>
-				<div class="item-wrap venomPoster">
-					<button type="button" style="left: 510px; display: block;"
-						class="" title="선택됨.">베놈2 4DX 포스터 팩</button>
-					<a class="item"
-						style="width: 980px; height: 450px; display: block;"
-						href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">
-						<img
-						src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"
-						alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">
-					</a>
-				</div>
+      <div id="contents">
+         <div class="sect-common">
+            <div class="slider" id="slider">
+               <button type="button" class="btn-pause stop"
+                  style="left: 528px; display: block;">일시멈춤</button>
+               <!-- 고혜진님 요청으로 인한 삭제 -->
 
 
-				<button type="button" class="btn-prev">이전 페이지 이동</button>
-				<button type="button" class="btn-next">다음 페이지 이동</button>
-			</div>
-		</div>
-	</div>
-</div>
+               <div class="item-wrap on sb" id="hi">
+                  <button type="button" style="left: 438px; display: block;"
+                     class="1">VIP 익스프레스</button>
+
+                  <button type="button" class="on"
+                     style="left: 456px; display: block;" title="선택됨.">007
+                     스탠딩 포스터 팩</button>
+
+                  <button type="button" style="left: 474px; display: block;"
+                     class="3">베놈2 필름마크</button>
+
+                  <button type="button" style="left: 492px; display: block;"
+                     class="4">베놈2 SCREENX 포스터 팩</button>
+
+                  <button type="button" style="left: 510px; display: block;"
+                     class="5">베놈2 4DX 포스터 팩</button>
+
+                  <a class="item"
+                     style="width: 980px; height: 450px; display: block;"
+                     href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33194">
+                     <img
+                     src="https://img.cgv.co.kr/Front/Main/2021/1004/16333547813370.jpg"
+                     alt="007 스탠딩 포스터 팩" style="width: 100%; height: 100%;">
+                  </a>
+               </div>
+
+               <button type="button" class="btn-prev">이전 페이지 이동</button>
+               <button type="button" class="btn-next">다음 페이지 이동</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
 
 	<script type="text/javascript">
 	
-	$('.btn-next').click(function(){
-		alert('hi');
-		let ta = '<a class="item" style="width: 980px; height: 450px; display: none;"
-		href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">';
-		ta = ta + '</a>';
-		ta = ta + '<img src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg" alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">';
-			
-		</a>';
-		
-		<a class="item"
-			style="width: 980px; height: 450px; display: block;"
-			href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211">
-			<img
-			src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"
-			alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;">
-		
-		
-		
-		let ta = '<textarea class="form-control" cols=""  name="contents" id="contents" rows="6">';
-		ta = ta+content.trim() +'</textarea>';
-		ta = ta +'<button type="submit" class="btn btn-success up" id="">UPDATE</button>';
-		ta = ta +'<button type="submit" class="btn btn-danger can" id="">CANCEL</button>';
-		
-	})
+	 let a = 0;
+     
+     var play = setInterval(function() {
+            $('.btn-next').trigger('click');
+      }, 3000);
+
+     
+     let check = 0;
+     
+     $('.stop').click(function() {
+        if(check == 0) {
+           clearInterval(play);
+           $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+           check = 1;
+        } else if (check == 1) {
+           play = setInterval(function() {
+                $('.btn-next').trigger('click');
+            }, 3000);
+           $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -48px -90px");
+           check = 0;
+        }
+        
+     });
+
+     let flag = 0;
+
+     
+     $('.sb').on("click", ".1", function() {
+        
+        let tt = '<button type="button" class="on"  style="left: 438px; display: block;" title="선택됨.">VIP 익스프레스</button>';
+        tt = tt
+              + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+        tt = tt
+              + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+        tt = tt
+              + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+        tt = tt
+              + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=32998"> <img ';
+        tt = tt
+              + 'src="https://img.cgv.co.kr/Front/Main/2021/0913/16315036396800.jpg"';
+        tt = tt
+              + 'alt="VIP 익스프레스" style="width: 100%; height: 100%;"> </a>';
+
+        document.getElementById("hi").innerHTML = tt;
+        flag = 4;
+        
+        clearInterval(play);
+        $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+        check = 1;
+     });
+     
+     $('.sb').on("click", ".2", function() {
+        
+        let tt = '<button type="button" class="on"  style="left: 456px; display: block;" title="선택됨.">007 스탠딩 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+        tt = tt
+              + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+        tt = tt
+              + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+        tt = tt
+              + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33194"> <img ';
+        tt = tt
+              + 'src="https://img.cgv.co.kr/Front/Main/2021/1004/16333547813370.jpg"';
+        tt = tt
+              + 'alt="007 스탠딩 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+        document.getElementById("hi").innerHTML = tt;
+        flag = 5;
+        
+        clearInterval(play);
+        $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+        check = 1;
+     });
+     
+     $('.sb').on("click", ".3", function() {
+        
+        let tt = '<button type="button" class="on" style="left: 474px; display: block;" title="선택됨.">베놈2 필름마크</button>';
+        tt = tt
+              + '<button type="button" style="left: 492px; display: block;" class="4" onclick="4_click();">베놈2 SCREENX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 510px; display: block;" class="5" onclick="5_click();">베놈2 4DX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 438px; display: block;" class="1" onclick="1_click();">VIP 익스프레스</button>';
+        tt = tt
+              + '<button type="button" style="left: 456px; display: block;" class="2" onclick="2_click();">007 스탠딩 포스터 팩</button>';
+        tt = tt
+              + '<a class="item" style="width: 980px; height: 450px; display: block;" ';
+        tt = tt
+              + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33210&menu=001"> <img ';
+        tt = tt
+              + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335097273370.jpg"';
+        tt = tt
+              + 'alt="베놈2 필름마크" style="width: 100%; height: 100%;"> </a>';
+
+        document.getElementById("hi").innerHTML = tt;
+        flag = 1;
+        
+        clearInterval(play);
+        $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+        check = 1;
+     });
+     
+     $('.sb').on("click", ".4", function() {
+        
+        let tt = '<button type="button" class="on" style="left: 492px; display: block;" title="선택됨.">베놈2 SCREENX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+        tt = tt
+              + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+        tt = tt
+              + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+        tt = tt
+              + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33212"> <img ';
+        tt = tt
+              + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084410.jpg"';
+        tt = tt
+              + 'alt="베놈2 SCREENX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+
+        document.getElementById("hi").innerHTML = tt;
+        flag = 2;
+        
+        clearInterval(play);
+        $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+        check = 1;
+     });
+     
+     $('.sb').on("click", ".5", function() {
+        
+        let tt = '<button type="button" class="on" style="left: 510px; display: block;" title="선택됨.">베놈2 4DX 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+        tt = tt
+              + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+        tt = tt
+              + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+        tt = tt
+              + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+        tt = tt
+              + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+        tt = tt
+              + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211"> <img ';
+        tt = tt
+              + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"';
+        tt = tt
+              + 'alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+        document.getElementById("hi").innerHTML = tt;
+        flag = 3;
+        
+        clearInterval(play);
+        $('.stop').css("background","url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png) no-repeat -32px -90px");
+        check = 1;
+     });
+     
+     
+     $('.btn-next')
+           .click(
+                 function() {
+                    
+                    flag++;
+
+                    if (flag == 5) {
+                       flag = 0;
+                    }
+
+                    if (flag % 5 == 1) {
+
+                       let tt = '<button type="button" class="on" style="left: 474px; display: block;" title="선택됨.">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4" onclick="4_click();">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5" onclick="5_click();">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1" onclick="1_click();">VIP 익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2" onclick="2_click();">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" ';
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33210&menu=001"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335097273370.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 필름마크" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 2) {
+                       let tt = '<button type="button" class="on" style="left: 492px; display: block;" title="선택됨.">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33212"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084410.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 SCREENX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 3) {
+                       let tt = '<button type="button" class="on" style="left: 510px; display: block;" title="선택됨.">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class=3"">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 4) {
+                       let tt = '<button type="button" class="on"  style="left: 438px; display: block;" title="선택됨.">VIP 익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=32998"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/0913/16315036396800.jpg"';
+                       tt = tt
+                             + 'alt="VIP 익스프레스" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 0) {
+                       let tt = '<button type="button" class="on"  style="left: 456px; display: block;" title="선택됨.">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33194"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1004/16333547813370.jpg"';
+                       tt = tt
+                             + 'alt="007 스탠딩 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                 });
+
+     $('.btn-prev')
+           .click(
+                 function() {
+
+                    flag--;
+
+                    if (flag < 0) {
+                       flag = 4;
+                    }
+
+                    if (flag % 5 == 1) {
+
+                       let tt = '<button type="button" class="on" style="left: 474px; display: block;" title="선택됨.">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" ';
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33210&menu=001"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335097273370.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 필름마크" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 2) {
+                       let tt = '<button type="button" class="on" style="left: 492px; display: block;" title="선택됨.">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33212"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084410.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 SCREENX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 3) {
+                       let tt = '<button type="button" class="on" style="left: 510px; display: block;" title="선택됨.">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33211"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1006/16335195084880.jpg"';
+                       tt = tt
+                             + 'alt="베놈2 4DX 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 4) {
+                       let tt = '<button type="button" class="on"  style="left: 438px; display: block;" title="선택됨.">VIP 익스프레스</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 456px; display: block;" class="2">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=32998"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/0913/16315036396800.jpg"';
+                       tt = tt
+                             + 'alt="VIP 익스프레스" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                    if (flag % 5 == 0) {
+                       let tt = '<button type="button" class="on"  style="left: 456px; display: block;" title="선택됨.">007 스탠딩 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 474px; display: block;" class="3">베놈2 필름마크</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 492px; display: block;" class="4">베놈2 SCREENX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 510px; display: block;" class="5">베놈2 4DX 포스터 팩</button>';
+                       tt = tt
+                             + '<button type="button" style="left: 438px; display: block;" class="1">VIP   익스프레스</button>';
+                       tt = tt
+                             + '<a class="item" style="width: 980px; height: 450px; display: block;" '
+                       tt = tt
+                             + 'href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=33194"> <img ';
+                       tt = tt
+                             + 'src="https://img.cgv.co.kr/Front/Main/2021/1004/16333547813370.jpg"';
+                       tt = tt
+                             + 'alt="007 스탠딩 포스터 팩" style="width: 100%; height: 100%;"> </a>';
+
+                       document.getElementById("hi").innerHTML = tt;
+                       console.log(flag);
+
+                    }
+
+                 });
+
     //<![CDATA[
      //CGV 공지 팝업 주석처리
     //function getCookie(name) {

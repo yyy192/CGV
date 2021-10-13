@@ -7,6 +7,8 @@
 <head>
 <title>CGV</title>
 <style type="text/css">
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
 	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
@@ -21,6 +23,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	font: inherit;
 	vertical-align: baseline;
 }
+
 a {
 	text-decoration: none;
 }
