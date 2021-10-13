@@ -64,6 +64,10 @@ public class MemberController {
 		ModelAndView mv = new ModelAndView();
 		
 		MemberDTO memberDTO =  (MemberDTO) session.getAttribute("member");
+		System.out.println(memberDTO.getId());
+		List<TicketDTO> ar = memberService.getTicket(memberDTO);
+		
+		mv.addObject("list", ar);
 		mv.setViewName("member/mypage");
 		return mv;
 	}

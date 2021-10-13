@@ -11,14 +11,21 @@
      
      <resultMap type="TheatersDTO" id="getInfoResult">
         <id column="theater" property="theater"/>
+        <result column="theaterimage" property="theaterimage"/>
+        <result column="address" property="address"/>
+        <result column="theaternumber" property="theaternumber"/>
+        <result column="theaterinfo" property="theaterinfo"/>
+         <result column="seatinfo" property="seatinfo"/>
         <result column="timeTable1" property="timeTable1"/>
         <result column="timeTable2" property="timeTable2"/>
         <result column="timeTable3" property="timeTable3"/>
-        <result column="timeTable4" property="timeTable4"/>
         
         <collection property="moths" javaType="List" ofType="MothDTO">
            <result column="movieName" property="movieName"/>
            <result column="watchDate" property="watchDate"/>
+           <result column="runTime" property="runTime"/>
+           <result column="genre" property="genre"/>
+           <result column="openDate" property="openDate"/>
         </collection>
      </resultMap>
      
