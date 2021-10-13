@@ -208,6 +208,19 @@ li {
 	width: 50px;
 }
 
+.m_top>ul>li.nav-item-out {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -521px 9px;
+	width: 50px;
+}
+
+.m_top>ul>li.nav-item-mypage {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	background-position: -103px 9px;
+	width: 50px;
+}
 </style>
 </head>
 <body>
@@ -219,11 +232,11 @@ li {
 					<c:choose>
 						<c:when test="${not empty member}">
 							<li class="nav-item-out"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/memberLogout">로그아웃</a>
+								href="${pageContext.request.contextPath}/member/memberLogout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 							</li>
 							<li class="nav-item-mypage"><a class="nav-link text"
-								href="${pageContext.request.contextPath}/member/mypage">MY
-									CGV</a></li>
+								href="${pageContext.request.contextPath}/member/mypage">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									</a></li>
 						</c:when>
 
 						<c:otherwise>
