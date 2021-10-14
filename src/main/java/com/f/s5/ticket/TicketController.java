@@ -128,5 +128,5 @@ public class TicketController {
 		mv.setViewName("common/ajaxResult");
 		return mv;
 	}
-
+	
 }

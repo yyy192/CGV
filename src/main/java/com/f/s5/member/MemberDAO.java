@@ -14,7 +14,12 @@ public class MemberDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	private final String NAMESPACE = "com.f.s5.member.MemberDAO.";
-
+	
+	public List<TicketDTO> getMyPage(MemberDTO memberDTO) throws Exception{
+		return sqlSession.selectList(NAMESPACE+"getMyPage", memberDTO);
+		
+	}
+		
 	public List<TicketDTO> getTicket(MemberDTO memberDTO) throws Exception {
 		return sqlSession.selectList(NAMESPACE+"getTicket", memberDTO);
 	}

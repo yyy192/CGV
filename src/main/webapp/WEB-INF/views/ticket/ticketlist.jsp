@@ -275,7 +275,7 @@ ul li {
 			<div class="info_3"></div>
 		</div>
 	</div>
-
+	<c:import url="../temp/mainFooter.jsp"></c:import>
 
 
 	<script type="text/javascript">

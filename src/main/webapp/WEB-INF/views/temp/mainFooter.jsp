@@ -8,13 +8,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-   background-color: #FDFCF0;
-}
+body{
+	background-color: #FDFCF0;
+} 
 
 #footer {
    background:
-      url(https://img.cgv.co.kr/r2014/images/common/bg/bg_footer_com.gif)
+      url('https://img.cgv.co.kr/r2014/images/common/bg/bg_footer_com.gif')
       repeat-x 0 100%;
    width: auto;
    height: auto;
@@ -35,7 +35,7 @@ body {
 #footer .foot {
    padding: 0 0 147px;
    width: 100%;
-   height: 220px;
+   height: 220px;   
 }
 
 .sect-smuse {
