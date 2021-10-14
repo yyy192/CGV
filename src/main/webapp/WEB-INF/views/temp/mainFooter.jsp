@@ -8,9 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-   background-color: #FDFCF0;
-}
+
 
 #footer {
    background:
@@ -18,6 +16,7 @@ body {
       repeat-x 0 100%;
    width: auto;
    height: auto;
+   background-color: #FDFCF0;
 }
 
 #footer .sect-ad {
@@ -36,6 +35,8 @@ body {
    padding: 0 0 147px;
    width: 100%;
    height: 220px;
+   
+    
 }
 
 .sect-smuse {
