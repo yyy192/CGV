@@ -395,6 +395,9 @@
       </div>
    </div><!-- class="list-right" 끝 -->
 </div>
+
+<c:import url="../temp/mainFooter.jsp"></c:import>
+
 <script type="text/javascript">
    start();
    

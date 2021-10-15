@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.f.s5.movies.MoviesDTO;
 import com.f.s5.ticket.MothDTO;
 import com.f.s5.ticket.TicketDTO;
 
@@ -25,15 +26,19 @@ public class TheatersDAO {
       return sqlSession.selectOne(NAMESPACE+"getInfo", theatersDTO);
    }
    
+   public Long setCount(TicketDTO ticketDTO) throws Exception {
+      return sqlSession.selectOne(NAMESPACE+"setCount", ticketDTO);
+   }
+   
    public int setTicketInfo(TicketDTO ticketDTO) throws Exception {
       return sqlSession.insert(NAMESPACE+"setTicketInfo", ticketDTO);
    }
    
    public List<TicketDTO> checkTicket(TicketDTO ticketDTO) throws Exception{
-	   return sqlSession.selectList(NAMESPACE+"checkTicket", ticketDTO);	   
+      return sqlSession.selectList(NAMESPACE+"checkTicket", ticketDTO);      
    }
    
    public int updateInfo(TicketDTO ticketDTO)throws Exception{
-	   return sqlSession.update(NAMESPACE+"updateInfo", ticketDTO);	   
+      return sqlSession.update(NAMESPACE+"updateInfo", ticketDTO);      
    }
 }

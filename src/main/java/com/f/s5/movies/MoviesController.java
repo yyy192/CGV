@@ -19,8 +19,6 @@ public class MoviesController {
 		ModelAndView mv = new ModelAndView();
 		List<MoviesDTO> ar = moviesService.getMoviesList(moviesDTO);
 
-		
-
 		mv.addObject("list", ar);
 
 		mv.setViewName("movies/moviesList");
@@ -28,14 +26,86 @@ public class MoviesController {
 		return mv;
 	}
 
-	@RequestMapping("select")
-	public ModelAndView getMoviesSelect(MoviesDTO moviesDTO) throws Exception {
+	@RequestMapping("select1")
+	public ModelAndView getMoviesSelect1(MoviesDTO moviesDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 
 		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
 
 		mv.addObject("dto", moviesDTO);
-		mv.setViewName("movies/moviesSelect");
+		mv.setViewName("movies/moviesSelect1");
+
+		return mv;
+	}
+
+	@RequestMapping("select2")
+	public ModelAndView getMoviesSelect2(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect2");
+
+		return mv;
+	}
+
+	@RequestMapping("select3")
+	public ModelAndView getMoviesSelect3(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect3");
+
+		return mv;
+	}
+
+	@RequestMapping("select4")
+	public ModelAndView getMoviesSelect4(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect4");
+
+		return mv;
+	}
+	
+	@RequestMapping("select5")
+	public ModelAndView getMoviesSelect5(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect5");
+
+		return mv;
+	}
+
+	@RequestMapping("select6")
+	public ModelAndView getMoviesSelect6(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect6");
+
+		return mv;
+	}
+
+	@RequestMapping("select7")
+	public ModelAndView getMoviesSelect7(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect7");
 
 		return mv;
 	}

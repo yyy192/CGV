@@ -304,6 +304,8 @@
    </div><!-- class="list-right" 끝 -->   
 </div><!-- list-main 끝 -->
 
+<c:import url="../temp/mainFooter.jsp"></c:import>
+
 <script type="text/javascript">
    $(".board-btn").on('click', '.btn', function(){
       location.href="../${board}/list";

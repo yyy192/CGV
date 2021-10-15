@@ -15,10 +15,13 @@
         <result column="address" property="address"/>
         <result column="theaternumber" property="theaternumber"/>
         <result column="theaterinfo" property="theaterinfo"/>
-         <result column="seatinfo" property="seatinfo"/>
+        <result column="seatinfo" property="seatinfo"/>
+        <result column="subway" property="subway"/>
+        <result column="parking" property="parking"/>
         <result column="timeTable1" property="timeTable1"/>
         <result column="timeTable2" property="timeTable2"/>
         <result column="timeTable3" property="timeTable3"/>
+        <result column="timeTable4" property="timeTable4"/>
         
         <collection property="moths" javaType="List" ofType="MothDTO">
            <result column="movieName" property="movieName"/>
@@ -26,13 +29,20 @@
            <result column="runTime" property="runTime"/>
            <result column="genre" property="genre"/>
            <result column="openDate" property="openDate"/>
+           <result column="ageCut" property="ageCut"/>
         </collection>
      </resultMap>
-     
-     <select id="getInfo" parameterType="TheatersDTO" resultMap="getInfoResult">
+	
+	<select id="getInfo" parameterType="TheatersDTO" resultMap="getInfoResult">
            select * from theaters t inner join moth m
          using(theater) where theater=#{theater}
      </select>
+   
+   
+   <select id="setCount" parameterType="TicketDTO" resultType="Long">
+         SELECT COUNT(SEAT) FROM TICKET WHERE THEATER=#{theater} AND WATCHDATE=#{watchDate}
+         AND MOVIENAME=#{movieName} AND TIMETABLE=#{timeTable}
+   </select>
    
    <insert id="setTicketInfo" parameterType="TicketDTO">
       INSERT INTO TICKET (ID, TICKETNUM, MOVIENAME, THEATER, WATCHDATE, TIMETABLE) VALUES

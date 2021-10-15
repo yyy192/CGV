@@ -497,7 +497,7 @@
 										<p class="theater-info">
 											<span class="theaterName">${ticketDTO.theater }</span>
 											<span class="movieName">${ticketDTO.movieName }</span>
-											<span class="seatNum">남은좌석  <b class="restNum">34</b>/<b class="totalNum">34</b></span>
+											<span class="seatNum">남은좌석  <b class="restNum">${40-count}</b>/<b class="totalNum">40</b></span>
 										</p>
 										<p class="watchDate"><b>${ticketDTO.watchDate}</b><b> &nbsp;&nbsp;/&nbsp;&nbsp; </b><b>${ticketDTO.timeTable}</b></p>
 									</div>

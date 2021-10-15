@@ -11,12 +11,31 @@ public class TheatersDTO {
    private String address;
    private String theaternumber;
    private String theaterinfo;
+   private String subway;
+   private String parking;
    private String seatinfo;
    private String timeTable1;
    private String timeTable2;
    private String timeTable3;
    private String timeTable4;
    private List<MothDTO> moths;
+
+   
+   public String getSubway() {
+      return subway;
+   }
+
+   public void setSubway(String subway) {
+      this.subway = subway;
+   }
+
+   public String getParking() {
+      return parking;
+   }
+
+   public void setParking(String parking) {
+      this.parking = parking;
+   }
 
    public String getTheaterimage() {
       return theaterimage;

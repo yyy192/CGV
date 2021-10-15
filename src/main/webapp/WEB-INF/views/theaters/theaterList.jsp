@@ -10,8 +10,6 @@
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <style type="text/css">
-
-
    body, input, textarea, select, button, table {
        font-size: 13px;
        line-height: 1.2;
@@ -20,7 +18,8 @@
        font-weight: 300;
    }
    body {
-      height:100%;
+      height: 100%;
+      background-color: #fdfcf0;
    }
    a {
       display:inline-block;
@@ -35,18 +34,35 @@
     font-weight:600;
    }
    
+   ul {
+      list-style:none;
+   }
+   
+   .linemap-wrap {
+       /* width: 1062px; */
+       
+       height: 28px;
+       margin : 0 auto;
+       background-color: #f1f0e5;
+       border-bottom: 1px solid #cacac0;
+      display: block;
+   }
+   
+   .sec-wrap {
+      margin: 0 200px;   
+   }
    
    #theater > .tabMenu > li > a:focus, #theater > .tabMenu > li > a:hover {
        text-decoration: none;
    }
    
    .tsMain {
-      width: 982.9px;
+      width: 983px;
       padding-bottom: 50px;
       margin: 0 auto;
    }
    
-   .tsMain >    h3 {
+   .tsMain > h3 {
       height: 41px;
        margin: 30px 0 15px 0;
        background: url(https://img.cgv.co.kr/r2014/images/common/bg/bg_h3_line.jpg) repeat-x 0 50%;
@@ -64,7 +80,7 @@
    
    .blackbox {
       margin: 0 auto;
-      width: 55%;
+      width: 874px;
       height:390px;
       padding: 60px 53px 0;
        background: url(https://img.cgv.co.kr/r2014/images/common/bg/bg_showtimes_favorite.gif); 
@@ -74,17 +90,18 @@
    #clickEvent {
       display: inline-block;
       position:absolute;
-       left:50%;
-       top:50%;
-       margin-left:-150px;
-       margin-top:-150px;
-      text-align: left;
+      margin: 130px 0 0 160px;
+       /* padding: 150px 0 0 275px; */
+      text-align: center;
    }
-   #clickEvent > a.white{
-      color: white;
-      font-weight:600;
+   #clickEvent > a {
+      display: inline-block;
+      font-size:30px;
    }
    
+   #theater {
+      display: inline-block;
+   }
    #theater > h4 {
       padding-bottom: 6px;
       color: #333333;
@@ -106,13 +123,13 @@
           display: inline-block;
        margin: 0;
        list-style: none;
+       float: left;
     }
    #theater > .tabMenu > li > a.theatertimes {
-       display: inline-block;
        position: relative;
        height: 39px;
        padding: 0 15px;
-       background: #e71a0f 0 12px no-repeat;
+       background: #e71a0f;
        color: #ffffff;
        font-size: 15px;
        font-weight: 600;
@@ -177,28 +194,61 @@
        width: 280px;
    }
    
-   .tableMenu {
-      margin-top: 25px;
+   .imgMenu > .box-contents > .notice-info > h5 {
+      padding-bottom: 10px;
+       font-size: 13px;
+       font-weight: 600;
+      
+   }
+   .imgMenu > .box-contents > .notice-info > a {
+      background-image: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_btn.png);
+       background-position-x: -50px;
+       background-position-y: -62px;
+       background-repeat-x: no-repeat;
+       background-repeat-y: no-repeat;
+       display: inline-block;
+       width: 20px;
+       height: 19px;
+       position: absolute;
+       top:30px;
+       right: 230px;
    }
    
+   .tableMenu {
+      margin-top: 25px;
+      width: 800px;
+      float: left;
+   }
+   
+   .sideMenu {
+      margin-top: 25px;
+      width: 160px;
+      float: right;
+   }
+   
+   .sideMenu > .smm {
+      margin-top: 10px;
+   }
    .tableMenu > .mn {
        border-top: 3px solid #241d1e;
        position: relative;
        height: 37px;
        padding: 0 0 0 13px;
-       border-bottom: 1px solid #474746;
+       border-bottom: 2px solid #474746;
        line-height: 37px;
    }
    
-   .tableMenu > .mn > ul {
+   .tableMenu > .mn > .sun {
       list-style: none;
    }
-   .tableMenu > .mn > ul > li {
+   .tableMenu > .mn > .sun > li {
       margin: 0 0 0 15px;
       font-size: 13px;
       font-weight: 600;
+      float: left;
+      position: relative;
    }
-   .tableMenu > .mn > ul > li:first-child {
+   .tableMenu > .mn > .sun > li:first-child {
       margin-left: 0;
    }
    .tableMenu > .mn > p {
@@ -208,7 +258,230 @@
        color: #794624;
    }
    
+   .tableMenu > .mn > .moon > li {
+      float: right;
+      margin: 0 0 0 15px;
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      padding-right: 10px;
+      
+   }
+   .tableMenu > .mn > .moon > li > a {
+      text-decoration: none;
+      color: #333333;
+      
+       
+   }
+   .tableMenu > .mn > .moon > li > span {
+      display: inline-block;
+      background-position: 0 -158px;
+      width: 13px;
+      height: 13px;
+       line-height: 13px;
+       background-image: url(https://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png);
+       background-repeat: no-repeat;
+   }
    
+   .showtimes > ul {
+      display: inline-block;
+   }
+   
+   .showtimes > ul > li {
+      width: 100%;
+      padding: 40px 0;
+       border-top: 1px solid #474746;
+       margin: 0;
+       display: inline-block;
+   }
+   .showtimes > ul > li:first-child {
+       border-top: 0 none;
+   }
+   
+   .info-times {
+      position: relative;
+       margin-left: 14px;
+       padding-left: 26px;
+       float: left;
+   }
+   
+   .info-times > .movie-info > p {
+      font-weight:800;
+      font-size: 19px;
+      margin-bottom: 15px;
+   }
+   .info-times > .movie-info > a {
+      font-weight: 700;
+      font-size: 16px;
+      color: black;
+      margin-right: 5px;
+   }
+   .info-times > .movie-info > .blueRound {
+      display: inline-block;
+      border: 2px solid #3e82a4;
+       border-radius: 4px;
+       padding: 0 5px;
+       text-align: center;
+       line-height: 16px;
+    }
+    .info-times > .movie-info > .blueRound > em {
+      font-size:12px;
+      color: #3e82a4;
+      font-weight: 600;
+    }
+    .info-times > .movie-info > i {
+       font-size: 13px;
+    }
+   
+   .iconAll {
+      display: inline-block;
+       zoom: 1;
+       width:21px;
+       height:21px;
+       background-position: 0 0;
+       background-repeat: no-repeat;
+       background-image: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_icon.png);
+       background-position: -30px 0;
+   }
+   
+   .icon12 {
+      display: inline-block;
+       zoom: 1;
+       width:21px;
+       height:21px;
+       background-position: 0 0;
+       background-repeat: no-repeat;
+       background-image: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_icon.png);
+       background-position: -51px 0;
+   }
+   .icon15 {
+      display: inline-block;
+       zoom: 1;
+       width:21px;
+       height:21px;
+       background-position: 0 0;
+       background-repeat: no-repeat;
+       background-image: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_icon.png);
+       background-position: -72px 0;
+   }
+   .thse-info {
+      margin-top: 10px;
+      padding-top:10px;
+   }
+   .thse-info > ul {
+      display: inline-block;
+   }
+   .thse-info > ul > li:first-child {
+      padding-left: 0;
+    }
+    .thse-info > ul > li:last-child {
+      background-image: url(https://img.cgv.co.kr/r2014/images/common/bg/bg_li_vline.gif);
+       background-position-x: 0px;
+       background-position-y: 50%;
+       background-repeat-x: no-repeat;
+       background-repeat-y: no-repeat;
+    }
+   .thse-info > ul > li {
+      margin: 0;
+      padding: 0 8px;
+      color: #333;
+       font-weight: 540;
+       font-size: 11px;
+       line-height: 17px;
+   }
+   
+   .four-info {
+      margin-top: 3px;
+   }
+   .four-info > ul {
+      display: inline-block;
+   }
+   .four-info > ul > li {
+      margin: 0;
+      float: left;
+       position: relative;
+       width: 70px;
+       height: 36px;
+       margin-right: -1px;
+       padding-top: 5px;
+       border: 1px solid #cbcabe;
+       line-height: 1.4;
+       text-align: center;
+   }
+   .four-info > ul > li > a {
+      font-size: 12px;
+       font-weight: 900;
+       text-decoration: none;
+       color: #333333;
+   }
+   .four-info > ul > li > a > em {
+      display: block;
+   } 
+   .four-info > ul > li > a > span {
+      color: #2275a4;
+      font-size:11px;
+      font-weight: 500;
+   }
+   
+   .tableMenu > .subus {
+      margin-top: 10px;
+      position: relative;
+   }
+   .tableMenu > .subus > h4 {
+      margin-bottom: 20px;
+       padding-bottom: 5px;
+       border-bottom: 2px solid #222222;
+       color: #222222;
+       font-size: 17px;
+       font-weight: 700;
+   }
+   .tableMenu > .subus > p {
+      line-height: 1.6;
+         color: #222222;
+       font-size: 13px;
+   }
+   
+   .icon-bus {
+      display: inline-block;
+       width: 50px;
+       height: 27px;
+       background: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_icon.png) -200px -130px no-repeat;
+       vertical-align: middle;
+       font: 0/0 a;
+       zoom: 1;
+   }
+   
+   .tableMenu > .carp {
+      margin-top: 30px;
+      position: relative;
+   }
+   .tableMenu > .carp > h4 {
+      margin-bottom: 20px;
+       padding-bottom: 5px;
+       border-bottom: 2px solid #222222;
+       color: #222222;
+       font-size: 17px;
+       font-weight: 700;
+   }
+   .tableMenu > .carp > p {
+      line-height: 1.6;
+         color: #222222;
+       font-size: 13px;
+   }
+   
+   .icon-parking {
+      display: inline-block;
+       width: 50px;
+       height: 27px;
+       background: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_icon.png) -200px -158px no-repeat;
+       vertical-align: middle;
+       font: 0/0 a;
+       zoom: 1;
+   }
+   
+   .adMenu {
+      margin-top: 20px;
+   }
    
    .endend {
       padding: 12px 0 0 0;
@@ -220,6 +493,15 @@
 </head>
 <body>
 <c:import url="../temp/mainHome.jsp"></c:import>
+<div class="linemap-wrap">
+   <div class="sec-wrap">
+      <ul>
+         <li><a href="http://localhost/s5/">
+            <img alt="home" src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png">
+         </a></li>                                             
+      </ul>
+   </div>
+</div>
 
    <div class="bricks"> 
       <div class="blackbox">
@@ -231,17 +513,19 @@
       </div>        
     </div>
     
-    <!-- main start -->
+    <!-- tsMain start -->
     <div class="tsMain">
-    <h3><img src="https://img.cgv.co.kr/R2014/images/title/h3_theater.gif" alt="THEATER"></h3>
-  
-   
-   <!-- 극장 클릭했을 경우 ajax -->
-   <div id="theater">
+      <h3><img src="https://img.cgv.co.kr/R2014/images/title/h3_theater.gif" alt="THEATER"></h3>
+     
       
-   </div>
+      <!-- 극장 클릭했을 경우 ajax -->
+      <div id="theater">
+         
+      </div>
    </div><!-- tsMain end -->
-  
+   
+   <c:import url="../temp/mainFooter.jsp"></c:import>
+
    <script type="text/javascript">
       getTheaters("구로CGV");
       
@@ -294,17 +578,54 @@
          console.log($(this).attr('data-th-table'));
          let timeTable=$(this).attr('data-th-table');
          
-         console.log($(this).parent().prev().children('#movie').attr('data-th-movie'));
-         let movieName=$(this).parent().prev().children('#movie').attr('data-th-movie');
+         console.log($(this).parents('.timeTable-info').prev().children('#movie').attr('data-th-movie'));
+         let movieName=$(this).parents('.timeTable-info').prev().children('#movie').attr('data-th-movie');
          
-         console.log($(this).parent().prev().children('#watch').attr('data-th-watch'));
-         let watchDate=$(this).parent().prev().children('#watch').attr('data-th-watch');
+         console.log($(this).parents('.timeTable-info').prev().children('#watch').attr('data-th-watch'));
+         let watchDate=$(this).parents('.timeTable-info').prev().children('#watch').attr('data-th-watch');
          
          console.log($(this).parents('.table').attr('data-th-theater'));
          let theater=$(this).parents('.table').attr('data-th-theater');
    
          location.href="./ticketInfo?movieName="+movieName+"&theater="+theater+"&watchDate="+watchDate+"&timeTable="+timeTable;
          
+      });
+      
+      $('#theater').on('click', '.theatertimes', function(){
+         //location.href="./list";
+         let tClick = $(this).attr('data-th-theater');
+          console.log(tClick);
+          $.ajax({
+             type:"GET",
+             url:"./info",
+             data:{
+                theater:tClick
+             }
+             ,success:function(result){
+                result=result.trim();
+                $("#theater").html(result);
+             }
+             ,error:function(xhr, status, error){
+                console.log('error');
+                getTheaters("구로CGV");
+             }
+          });
+      });
+      
+      $('#theater').on('click', '.parking', function(){
+         let tClick = $(this).attr('data-th-theater');
+          console.log(tClick);
+        $.ajax({
+           type:"GET",
+             url:"./parking",
+             data:{
+                 theater:tClick
+              },
+             success:function(result){
+                result=result.trim();
+                 $(".tableMenu").html(result);
+             }
+        });
       });
    </script>
 </body>

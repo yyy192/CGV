@@ -150,7 +150,7 @@ ol, ul, li{
 					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
 		</ul>
 	</div>
-	<h1 class="h1_tit">CJV 회원가입</h1>
+	<h1 class="h1_tit">CGV 회원가입</h1>
 
 	<div class="container-fluid">
 

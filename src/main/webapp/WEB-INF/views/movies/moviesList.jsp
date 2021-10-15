@@ -888,7 +888,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.2</strong> <a
-									href="/movies/detail-view/?midx=84872"> <span
+									href="/movies/select"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84872/84872_320.jpg"
 										alt="보이스 포스터" onerror="errorImage(this)"> <span

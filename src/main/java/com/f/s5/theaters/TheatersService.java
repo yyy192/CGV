@@ -25,6 +25,10 @@ public class TheatersService {
       return theatersDAO.getInfo(theatersDTO);
    }
    
+   public Long setCount(TicketDTO ticketDTO) throws Exception {
+      return theatersDAO.setCount(ticketDTO);
+   }
+   
    public int setTicketInfo(HttpServletRequest request, TicketDTO ticketDTO) throws Exception {
       String watchDate = request.getParameter("watchDate");
       SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -41,11 +45,11 @@ public class TheatersService {
    }
    
    public List<TicketDTO> checkTicket(TicketDTO ticketDTO) throws Exception{
-	   return theatersDAO.checkTicket(ticketDTO);
+      return theatersDAO.checkTicket(ticketDTO);
    }
    
    public int updateInfo(TicketDTO ticketDTO) throws Exception{
-	   return theatersDAO.updateInfo(ticketDTO);
+      return theatersDAO.updateInfo(ticketDTO);
    }
 
 }

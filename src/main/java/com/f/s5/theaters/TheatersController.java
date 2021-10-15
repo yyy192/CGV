@@ -54,6 +54,24 @@ public class TheatersController {
 		return mv;
 	}
 
+	@GetMapping("parking")
+	public ModelAndView getParking(TheatersDTO theatersDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		System.out.println(theatersDTO.getTheater());
+		theatersDTO = theatersService.getInfo(theatersDTO);
+		mv.addObject("dto", theatersDTO);
+		mv.setViewName("common/parking");
+		return mv;
+	}
+
+	@GetMapping("theaterPrice")
+	public ModelAndView getTheaterPrice() throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		mv.setViewName("theaters/theaterPrice");
+		return mv;
+	}
+
 	// 정보 받아오기
 
 	@GetMapping("ticketInfo")
@@ -63,29 +81,33 @@ public class TheatersController {
 
 		if (session.getAttribute("member") != null) {
 			MemberDTO m = (MemberDTO) session.getAttribute("member");
-			
 			String birth = Integer.toString(m.getBirth()).substring(0, 4);
 			int checkBirth = 2022 - Integer.parseInt(birth);
 
 			ticketDTO.setId(m.getId());
-			
-			if(checkBirth >= 20 ) {
+
+			if (checkBirth >= 20) {
 				ticketDTO.setPrice("10,000");
 			} else {
 				ticketDTO.setPrice("7,000");
 
 			}
 
+			ticketDTO.setId(m.getId());
+
 			List<TicketDTO> ar = theatersService.checkTicket(ticketDTO);
+
+			Long count = theatersService.setCount(ticketDTO);
 
 			int result = theatersService.setTicketInfo(request, ticketDTO);
 
 			if (result > 0) {
 				System.out.println("ticket Insert 성공");
-				mv.addObject("age", checkBirth);
+				mv.addObject("count", count);
 				mv.addObject("ticketDTO", ticketDTO);
 				mv.addObject("seat", ar);
 				mv.addObject("size", ar.size());
+				mv.addObject("age", checkBirth);
 				mv.setViewName("common/seat");
 
 			} else {
