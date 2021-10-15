@@ -39,5 +39,17 @@ public class MoviesController {
 
 		return mv;
 	}
+	
+	@RequestMapping("select5")
+	public ModelAndView getMoviesSelect5(MoviesDTO moviesDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		moviesDTO = moviesService.getMoviesSelect(moviesDTO);
+
+		mv.addObject("dto", moviesDTO);
+		mv.setViewName("movies/moviesSelect5");
+
+		return mv;
+	}
 
 }

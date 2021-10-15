@@ -13,6 +13,10 @@ public class MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 	
+	public List<TicketDTO> getMyBooking(MemberDTO memberDTO) throws Exception {
+		return memberDAO.getMyBooking(memberDTO);
+	}
+	
 	public List<TicketDTO> getMyPage(MemberDTO memberDTO) throws Exception {
 		return memberDAO.getMyPage(memberDTO);
 	}

@@ -5,6 +5,11 @@
   
   <mapper namespace="com.f.s5.member.MemberDAO">
   	
+  	<select id="getMyBooking" parameterType="MemberDTO" resultType="TicketDTO">
+  		SELECT * FROM TICKET WHERE ID = #{id} AND TICKETNUM =
+    (SELECT MAX(TICKETNUM) FROM TICKET WHERE ID = #{id})
+  	</select>
+  	
   	<select id="getMyPage" parameterType="MemberDTO" resultType="TicketDTO">
   		SELECT * FROM TICKET WHERE ID = #{id} AND TICKETNUM =
     (SELECT MAX(TICKETNUM) FROM TICKET WHERE ID = #{id})

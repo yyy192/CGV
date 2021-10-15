@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>CGV</title>
 <style type="text/css">
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
@@ -151,7 +153,7 @@ a {
 .m_top ul li {
 	list-style-type: none;
 	float: left;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 li {
@@ -205,12 +207,13 @@ li {
 		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
 	background-position: -328px 9px;
 	width: 50px;
+	margin-left: 0;
 }
 
 .m_top>ul>li.nav-item-out {
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
-	background-position: -521px 9px;
+	background-position: -523px 9px;
 	width: 50px;
 }
 
@@ -221,74 +224,24 @@ li {
 	width: 50px;
 }
 
-.ad-partner {
-	position: absolute;
-	top: 45px;
-	left: 900px;
+.m_top>ul>li.nav-item-vip {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	width: 62px;
+	height: 21.33px;
+	background-position: -180px 10px;
 }
 
-.ad-partner>a, .ad-partner>a>img {
-	width: 133px;
-	height: 42px;
-	display: block;
-	background: #FEF8DC;
+.m_top>ul>li.nav-item-club {
+	background-image:
+		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
+	width: 53px;
+    background-position: -265px 9px;
+	height: 21.33px;	
 }
 
-.sect-srh {
-	top: 95px;
-	left: 885px;
-	width: 141px;
-	height: 24px;
-	position: absolute;
-	z-index: 1;
-	left: 885px;
-}
-
-.sect-srh>fieldset {
-	position: relative;	
-}
-
-.sect-srh h2 {
-	font: 0px/0 a;
-}
-
-legend {
-	font: 0/0 a;
-	position: absolute;
-	right: -999em;
-	top: -999em;
-	zoom: 1;
-}
-
-.sect-srh  input[type='text'] {
-	width: 100px;
-	height: 22px;
-	padding: 0 34px 0 5px;
-	margin-left: 5px;
-}
-
-input[type='text'], input[type='password'] {
-	display: inline-block;
-	height: 25px;
-	line-height: 22px;
-	padding-left: 10px;
-	border: 1px solid #b5b5b5;
-}
-
-.sect-srh>fieldset button {
-	position: absolute;
-	top: 1.8;
-	right: 0;
-	width: 31px;
-	height: 23px;
-	background-color: #e71a0f;
-	background-image: none;
-	color: #fff;
-	font-weight: 500;
-	font-size: 11px;
-	line-height: 24px;
-	text-align: center;
-	width: 31px;
+.m_top>ul>li>a>h1 {
+	display: none;
 }
 </style>
 </head>
@@ -305,6 +258,11 @@ input[type='text'], input[type='password'] {
 							</li>
 							<li class="nav-item-mypage"><a class="nav-link text"
 								href="${pageContext.request.contextPath}/member/mypage">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>							
+							<li class="nav-item-vip"><a
+								href="http://www.cgv.co.kr/user/vip-lounge/" class="vip"></a></li>
+							<li class="nav-item-club"><a
+								href="https://www.cgv.co.kr/user/memberShip/ClubService.aspx"
+								title="새창" class="club specialclub"></a></li>
 							<li class="nav-item-customer"><a class="nav-link text"
 								href="./notice/list">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 						</c:when>
@@ -316,6 +274,15 @@ input[type='text'], input[type='password'] {
 							<li class="nav-item-join"><a class="nav-link text"
 								href="${pageContext.request.contextPath}/member/check">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 							</li>
+							<li class="nav-item-mypage"><a
+								class="nav-link text mypagekey"
+								href="${pageContext.request.contextPath}/member/memberLogin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>							
+							<li class="nav-item-vip"><a
+								href="${pageContext.request.contextPath}/member/memberLogin"
+								class="vip"></a></li>
+							<li class="nav-item-club"><a
+								href="https://www.cgv.co.kr/user/memberShip/ClubService.aspx"
+								title="새창" class="club specialclub"></a></li>
 							<li class="nav-item-customer"><a class="nav-link text"
 								href="${pageContext.request.contextPath}/notice/list">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 						</c:otherwise>
@@ -333,34 +300,7 @@ input[type='text'], input[type='password'] {
 					<a href="#"> <img
 						src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png"
 						alt="CGV"></a>
-				</div>
-				<div class="ad-partner">
-					<a
-						href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=30008">
-						<img
-						src="https://img.cgv.co.kr/WingBanner/2020/1015/16027565478490.png"
-						alt="간편결제 차이">
-					</a>
-				</div>
-				<div class="sect-srh">
-					<h2>통합검색서비스</h2>
-					<fieldset>
-						<legend>통합검색</legend>
-						<input type="text" title="통합검색" id="header_keyword"
-							name="header_keyword" minlength="2" maxlength="20"> <input
-							type="hidden" id="header_ad_keyword" name="header_ad_keyword">
-						<button type="button" class="btn-go-search" id="btn_header_search">검색</button>
-						<iframe
-							src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt"
-							width="0" height="0" title="" frameborder="0" scrolling="no"
-							marginwidth="0" marginheight="0"
-							allowfullscreen="allowfullscreen"
-							mozallowfullscreen="mozallowfullscreen"
-							msallowfullscreen="msallowfullscreen"
-							oallowfullscreen="oallowfullscreen"
-							webkitallowfullscreen="webkitallowfullscreen"></iframe>
-					</fieldset>
-				</div>
+				</div>			
 				<div class="menu">
 					<ul>
 						<li class="movie"><a
@@ -375,9 +315,11 @@ input[type='text'], input[type='password'] {
 			</div>
 		</div>
 		<div class="right"></div>
-		<script type="text/javascript">
-			
-		</script>
 	</div>
+	<script type="text/javascript">
+		$('.mypagekey').click(function() {
+			alert('로그인이 필요한 서비스입니다.\n로그인 페이지로 이동하시겠습니까?');
+		})
+	</script>
 </body>
 </html>

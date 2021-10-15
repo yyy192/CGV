@@ -5,7 +5,7 @@
 <html>
 <head>
 <script
-   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
@@ -181,11 +181,19 @@ body {
 	line-height: 30px;
 }
 
+.detail_content_pa {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 980px;
+	height: 400px;
+}
+
 .detail_content {
 	margin: 0 auto;
 	margin-top: 10px;
 	width: 800px;
 	height: 400px;
+	float: right;
 }
 
 .box-polaroid {
@@ -460,6 +468,60 @@ body {
 	font-size: 14px;
 	color: #2275a4
 }
+
+.snb>ul {
+	margin-bottom: 10px;
+	float: left;
+	margin-top: 10px;
+	width: 160px;
+	font-family: 'cj_onlyone_new_medium', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-size: 14px;
+}
+
+.snb>ul>li.on {
+	background-color: #e71a0f;
+	width: 142px;
+	height: 34px;
+	float: left;
+}
+
+.snb>ul>li.on_2 {
+	margin-top: 3px;
+	width: 142px;
+	height: 34px;
+	float: left;
+}
+
+.snb>ul>li.on>a {
+	background-color: #e71a0f;
+	color: #fdfcf0;	
+	width: 160px;
+	height: 34px;
+}
+
+.snb>ul>li>a {
+	width: 160px;
+	height: 34px;
+	padding-left: 5px;
+	color: #222;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 34px;
+}
+
+.side_1{
+	width: 18px;
+	height: 34px;
+	background: url('https://img.cgv.co.kr/R2014/images/common/bg/ribon_left.png') no-repeat 0 0;
+	float: left;	
+}
+
+.side_2{
+	width: 18px;
+	height: 34px;	
+	float: left;
+	margin-top: 3px;
+}
 </style>
 </head>
 <body>
@@ -521,92 +583,111 @@ body {
 			</div>
 		</div>
 	</div>
-
-	<div class="detail_content" id="mycgv_contents">
-		<div class="box-polaroid">
-			<div class="box-inner preegg">
-				<a href="http://www.cgv.co.kr/user/movielog/" title="기대되는 영화">
-					<h3>기대되는 영화</h3> <span>보고 싶은 영화들을 미리 <br>담아두고 싶다면?
-				</span>
-				</a>
-			</div>
-			<div class="box-inner watched">
-				<a href="http://www.cgv.co.kr/user/movielog/watched.aspx"
-					title="내가 본 영화">
-					<h3>내가 본 영화</h3> <span>관람한 영화들을 한번에 <br>모아 보고 싶다면?
-				</span>
-				</a>
-			</div>
-			<div class="box-inner mvdiary">
-				<a href="http://www.cgv.co.kr/user/movielog/diary.aspx"
-					title="무비다이어리">
-					<h3>무비다이어리</h3> <span>관람 후 내 감상평을 적어 <br>추억하고 싶다면?
-				</span>
-				</a>
-			</div>
+	<div class="detail_content_pa">
+		<div class="snb">
+			<ul>
+				<li class="side_1"><div></div></li>
+				<li class="on"><a href="./mypage" title="현재 선택">MY
+						CGV HOME <i></i>
+				</a></li>						
+				<li class="side_2"><div></div></li>
+				<li class="on_2"><a href="./mybookingpage" class="on_2_1">나의 예매내역 </a></li>								
+			</ul>
 		</div>
-		<div class="tit-mycgv">
-			<h3>MY 예매내역</h3>
-			<p>
-				<em>1건</em> <a href="/user/mycgv/reserve/">예매내역 더보기</a>
-			</p>
-			<span>예매번호로만 티켓을 찾을 수 있으니 반드시 확인 부탁드립니다.</span>
-		</div>
-		<div class="mybooking">
-			<div class="mybooking_inner">
-				<c:forEach items="${list}" var="dto">
-					<div class="box-number">
-						<em>예매번호</em> <strong>${dto.ticketNum}</strong> <span>(${dto.watchDate})</span>
-					</div>
-					<div class="box-image">
-						<a href="/movies/detail-view/?midx=84617"> <span
-							class="thumb-image"> 
-							<img class="0" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_320.jpg" alt="007 포스터" onerror="errorImage(this)">
-							<img class="1" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84872/84872_320.jpg" alt="보이스 포스터" onerror="errorImage(this)">
-							<img class="2" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85019/85019_320.jpg" alt="F20 포스터" onerror="errorImage(this)">
-							<img class="3" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84998/84998_320.jpg" alt="쁘띠마망 포스터" onerror="errorImage(this)">
-							<img class="4" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_320.jpg" alt="기적 포스터" onerror="errorImage(this)">
-							<img class="5" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85014/85014_320.jpg" alt="스틸워터 포스터" onerror="errorImage(this)">
-							<img class="6" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84834/84834_320.jpg" alt="샹치 포스터" onerror="errorImage(this)">
-						</span>
-						</a>
-					</div>
-					<div class="box-contents has_not_storeitem">
-						<dl>
-							<dt>
-								<a href="/movies/detail-view/?midx=84617" class="movieName">${dto.movieName}</a>
-
-							</dt>
-							<dd>
-								<em>관람극장</em> <strong>${dto.theater}</strong> <a
-									href="javascript:theaterMove('0074');">[극장정보]</a>
-							</dd>
-							<dd>
-								<em>관람일시</em> <strong>${dto.watchDate} ${dto.timeTable}</strong>
-							</dd>
-							<dd>
-								<em>관람좌석</em> <strong>${dto.seat}</strong>
-							</dd>
-						</dl>
-					</div>
-					<div class="price-n-btns">
-						<div class="bd-wrap">
+		<div class="detail_content" id="mycgv_contents">
+			<div class="box-polaroid">
+				<div class="box-inner preegg">
+					<a href="http://www.cgv.co.kr/user/movielog/" title="기대되는 영화">
+						<h3>기대되는 영화</h3> <span>보고 싶은 영화들을 미리 <br>담아두고 싶다면?
+					</span>
+					</a>
+				</div>
+				<div class="box-inner watched">
+					<a href="http://www.cgv.co.kr/user/movielog/watched.aspx"
+						title="내가 본 영화">
+						<h3>내가 본 영화</h3> <span>관람한 영화들을 한번에 <br>모아 보고 싶다면?
+					</span>
+					</a>
+				</div>
+				<div class="box-inner mvdiary">
+					<a href="http://www.cgv.co.kr/user/movielog/diary.aspx"
+						title="무비다이어리">
+						<h3>무비다이어리</h3> <span>관람 후 내 감상평을 적어 <br>추억하고 싶다면?
+					</span>
+					</a>
+				</div>
+			</div>
+			<div class="tit-mycgv">
+				<h3>MY 예매내역</h3>
+				<p>
+					<em>1건</em> <a href="/user/mycgv/reserve/">예매내역 더보기</a>
+				</p>
+				<span>예매번호로만 티켓을 찾을 수 있으니 반드시 확인 부탁드립니다.</span>
+			</div>
+			<div class="mybooking">
+				<div class="mybooking_inner">
+					<c:forEach items="${list}" var="dto">
+						<div class="box-number">
+							<em>예매번호</em> <strong>${dto.ticketNum}</strong> <span>(${dto.watchDate})</span>
+						</div>
+						<div class="box-image">
+							<a href="/movies/detail-view/?midx=84617"> <span
+								class="thumb-image"> <img class="0"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_320.jpg"
+									alt="007 포스터" onerror="errorImage(this)"> <img class="1"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84872/84872_320.jpg"
+									alt="보이스 포스터" onerror="errorImage(this)"> <img class="2"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85019/85019_320.jpg"
+									alt="F20 포스터" onerror="errorImage(this)"> <img class="3"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84998/84998_320.jpg"
+									alt="쁘띠마망 포스터" onerror="errorImage(this)"> <img class="4"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_320.jpg"
+									alt="기적 포스터" onerror="errorImage(this)"> <img class="5"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85014/85014_320.jpg"
+									alt="스틸워터 포스터" onerror="errorImage(this)"> <img class="6"
+									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84834/84834_320.jpg"
+									alt="샹치 포스터" onerror="errorImage(this)">
+							</span>
+							</a>
+						</div>
+						<div class="box-contents has_not_storeitem">
 							<dl>
-								<dt>총 결제금액</dt>
+								<dt>
+									<a href="/movies/detail-view/?midx=84617" class="movieName">${dto.movieName}</a>
+
+								</dt>
 								<dd>
-									<strong class="txt-lightblue">${dto.price}원</strong>
+									<em>관람극장</em> <strong>${dto.theater}</strong> <a
+										href="javascript:theaterMove('0074');">[극장정보]</a>
+								</dd>
+								<dd>
+									<em>관람일시</em> <strong>${dto.watchDate}
+										${dto.timeTable}</strong>
+								</dd>
+								<dd>
+									<em>관람좌석</em> <strong>${dto.seat}</strong>
 								</dd>
 							</dl>
-							<div class="set-btn">
-								<input type="hidden" class="reserve-no" name="reserve-no"
-									value="jDIBiIjEpwLc75nVRkwLNCSrfhchDvL0sRm55EztTi8=">
+						</div>
+						<div class="price-n-btns">
+							<div class="bd-wrap">
+								<dl>
+									<dt>총 결제금액</dt>
+									<dd>
+										<strong class="txt-lightblue">${dto.price}원</strong>
+									</dd>
+								</dl>
+								<div class="set-btn">
+									<input type="hidden" class="reserve-no" name="reserve-no"
+										value="jDIBiIjEpwLc75nVRkwLNCSrfhchDvL0sRm55EztTi8=">
 
 
 
+								</div>
 							</div>
 						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -622,75 +703,86 @@ body {
 	</c:if>
 
 	<c:import url="../temp/mainFooter.jsp"></c:import>
-	
+
 	<script type="text/javascript">
-	i();
-    
-    function i () {
-       let name = $('.movieName').html();
-       
-       console.log(name);
-       
-       if(name == '007 노 타임 투 다이'){                     
-          $('.0').show();
-          $('.1').hide();
-          $('.2').hide();
-          $('.3').hide();
-          $('.4').hide();
-          $('.5').hide();
-          $('.6').hide();          
-          console.log('0');
-       }else if(name == '보이스'){            
-          $('.1').show();
-          $('.0').hide();
-          $('.2').hide();
-          $('.3').hide();
-          $('.4').hide();
-          $('.5').hide();
-          $('.6').hide();          
-       }else if(name == 'F20'){            
-           $('.2').show();
-           $('.0').hide();
-           $('.1').hide();
-           $('.3').hide();
-           $('.4').hide();
-           $('.5').hide();
-           $('.6').hide();          
-        }else if(name == '쁘띠마망'){            
-            $('.3').show();
-            $('.0').hide();
-            $('.1').hide();
-            $('.2').hide();
-            $('.4').hide();
-            $('.5').hide();
-            $('.6').hide();          
-         }else if(name == '기적'){            
-             $('.4').show();
-             $('.0').hide();
-             $('.1').hide();
-             $('.2').hide();
-             $('.3').hide();
-             $('.5').hide();
-             $('.6').hide();          
-          }else if(name == '스틸워터'){            
-              $('.5').show();
-              $('.0').hide();
-              $('.1').hide();
-              $('.2').hide();
-              $('.3').hide();
-              $('.4').hide();
-              $('.6').hide();          
-           }else if(name == '샹치와 텐 링즈의 전설'){            
-               $('.6').show();
-               $('.0').hide();
-               $('.1').hide();
-               $('.2').hide();
-               $('.3').hide();
-               $('.4').hide();
-               $('.5').hide();          
-            }
-       
-    };
+		i();
+
+		function i() {
+			let name = $('.movieName').html();
+
+			console.log(name);
+
+			if (name == '007 노 타임 투 다이') {
+				$('.0').show();
+				$('.1').hide();
+				$('.2').hide();
+				$('.3').hide();
+				$('.4').hide();
+				$('.5').hide();
+				$('.6').hide();
+				console.log('0');
+			} else if (name == '보이스') {
+				$('.1').show();
+				$('.0').hide();
+				$('.2').hide();
+				$('.3').hide();
+				$('.4').hide();
+				$('.5').hide();
+				$('.6').hide();
+			} else if (name == 'F20') {
+				$('.2').show();
+				$('.0').hide();
+				$('.1').hide();
+				$('.3').hide();
+				$('.4').hide();
+				$('.5').hide();
+				$('.6').hide();
+			} else if (name == '쁘띠마망') {
+				$('.3').show();
+				$('.0').hide();
+				$('.1').hide();
+				$('.2').hide();
+				$('.4').hide();
+				$('.5').hide();
+				$('.6').hide();
+			} else if (name == '기적') {
+				$('.4').show();
+				$('.0').hide();
+				$('.1').hide();
+				$('.2').hide();
+				$('.3').hide();
+				$('.5').hide();
+				$('.6').hide();
+			} else if (name == '스틸워터') {
+				$('.5').show();
+				$('.0').hide();
+				$('.1').hide();
+				$('.2').hide();
+				$('.3').hide();
+				$('.4').hide();
+				$('.6').hide();
+			} else if (name == '샹치와 텐 링즈의 전설') {
+				$('.6').show();
+				$('.0').hide();
+				$('.1').hide();
+				$('.2').hide();
+				$('.3').hide();
+				$('.4').hide();
+				$('.5').hide();
+			}
+
+		};
+		
+		$('.on_2').mouseover(function () {
+			$('.on_2').css('background-color', '#e71a0f');
+			$('.on_2_1').css('color', '#fdfcf0');
+			$('.side_2').css('color', '#fdfcf0');
+		});
+		
+		$('.on_2').mouseout(function () {
+			$('.on_2').css('background-color', 'transparent');
+			$('.on_2_1').css('color', '#222222');
+		});
 	</script>
 </body>
 </html>
