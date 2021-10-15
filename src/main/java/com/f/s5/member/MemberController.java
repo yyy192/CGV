@@ -28,6 +28,20 @@ public class MemberController {
 		return mv;
 	}
 	
+	@GetMapping("mybookingpage")
+	   public ModelAndView getMyBooking(HttpSession session) throws Exception {
+	      ModelAndView mv = new ModelAndView();
+
+	      MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
+	      System.out.println(memberDTO.getId());
+	      List<TicketDTO> ar = memberService.getMyPage(memberDTO); 
+	      /* List<TicketDTO> ar = memberService.getTicket(memberDTO); */
+
+	      mv.addObject("list", ar);
+	      mv.setViewName("member/mybookingpage");
+	      return mv;
+	   }
+	
 	@PostMapping("memberLogin")
 	public ModelAndView getLogin(MemberDTO memberDTO, HttpSession session) throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -60,17 +74,18 @@ public class MemberController {
 	}
 	
 	@GetMapping("mypage")
-	public ModelAndView getMyPage(HttpSession session) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		
-		MemberDTO memberDTO =  (MemberDTO) session.getAttribute("member");
-		System.out.println(memberDTO.getId());
-		List<TicketDTO> ar = memberService.getTicket(memberDTO);
-		
-		mv.addObject("list", ar);
-		mv.setViewName("member/mypage");
-		return mv;
-	}
+	   public ModelAndView getMyPage(HttpSession session) throws Exception {
+	      ModelAndView mv = new ModelAndView();
+
+	      MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
+	      System.out.println(memberDTO.getId());
+	      List<TicketDTO> ar = memberService.getMyPage(memberDTO); 
+	      /* List<TicketDTO> ar = memberService.getTicket(memberDTO); */
+
+	      mv.addObject("list", ar);
+	      mv.setViewName("member/mypage");
+	      return mv;
+	   }
 	
 	//회원정보 수정
 	@GetMapping("memberUpdate")

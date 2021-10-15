@@ -38,5 +38,10 @@ public class MemberDAO {
 	public MemberDTO getIdCheck(MemberDTO memberDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE + "getIdCheck", memberDTO);
 	}
+	
+	public List<TicketDTO> getMyPage(MemberDTO memberDTO) throws Exception{
+	      return sqlSession.selectList(NAMESPACE+"getMyPage", memberDTO);      
+	   }
+	
 
 }
