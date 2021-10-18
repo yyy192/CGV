@@ -1087,21 +1087,21 @@ button, input[type='submit'], input[type='reset'] {
 }
 
 .ico-trailer.hd {
-    border-color: #2a6fb6;
-    color: #2a6fb6;
+	border-color: #2a6fb6;
+	color: #2a6fb6;
 }
 
 .ico-trailer {
-    display: inline-block;
-    height: 13px;
-    margin-right: 5px;
-    padding: 0 3px;
-    border: 1px solid #c62424;
-    font-size: 10px;
-    font-family: Dotum,'돋움';
-    text-align: center;
-    font-weight: bold;
-    line-height: 13px;
+	display: inline-block;
+	height: 13px;
+	margin-right: 5px;
+	padding: 0 3px;
+	border: 1px solid #c62424;
+	font-size: 10px;
+	font-family: Dotum, '돋움';
+	text-align: center;
+	font-weight: bold;
+	line-height: 13px;
 }
 
 .btn-next {
@@ -1111,6 +1111,47 @@ button, input[type='submit'], input[type='reset'] {
 .btn-prev {
 	cursor: pointer;
 }
+
+#lay_pop {
+	width: 1030px;
+	height: 720px;
+	display: none;
+	z-index: 200;
+	margin-left: -515px;
+	margin-top: -360px;
+	background-color: #333;
+	text-align: left;
+	line-height: 1.2; color : #666; font-family : 'CJONLYONENEW', '맑은 고딕',
+	'돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: #666;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+
+#all_body {
+	position: absolute;
+	z-index: 9;
+	display: block;
+	-moz-opacity: 0.5;
+	background-color: rgba(0, 0, 0, 0.8);
+	left: 0;
+	top: 0
+}
+
+.layer-wrap .popwrap {
+    position: relative;
+    padding: 5px;
+    background-color: #333333;
+}
+
+.sect-layerplayer .cols-pop-player > .title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #cccccc;
+    
+}
+
 </style>
 
 <meta charset="UTF-8">
@@ -1120,7 +1161,93 @@ button, input[type='submit'], input[type='reset'] {
 
 </head>
 <body>
+
+
+
+
 	<c:import url="../temp/mainHome.jsp"></c:import>
+
+	<!-- ====================================================================================================== -->
+
+
+	<div id="lay_pop" style="position: fixed;" tabindex="0">
+		<div class="popwrap">
+
+			<div class="sect-layerplayer">
+
+				<div class="cols-pop-player">
+
+					<h1 class="title" id="movie_player_popup_title">
+						<span class="ico-trailer hd">HD</span>[007 노 타임 투 다이]레거시 영상
+					</h1>
+
+					<div class="col-pop-player">
+
+						<div class="warp-pop-player" style="position: relative;">
+
+							<video width="800px" height="450px"
+								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
+								controls="" autoplay="">
+								<source
+									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
+									deletecommandtype="video/mp4">
+							</video>
+
+							<div class="sect-replay" style="display: none"
+								id="pop_player_relation_wrap">
+
+								<button class="btn-replay movie_player_inner_popup"
+									type="button" data-gallery-idx="195437" id="btn_movie_replay">다시보기</button>
+							</div>
+							<!-- .sect-replay -->
+
+						</div>
+						<!-- .warp-pop-player -->
+						<div class="descri-trailer">
+							<strong class="title">영상설명</strong>
+							<textarea readonly="readonly" id="movie_player_popup_caption"></textarea>
+						</div>
+					</div>
+					<!-- .col-player -->
+					<div class="col-pop-playerinfo">
+						<div id="movie_player_popup_movie_info">
+							<div class="box-image">
+								<a href="/movies/detail-view/?midx=83003"
+									title="007 노 타임 투 다이 상세보기 새창"> <span class="thumb-image">
+										<img
+										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_185.jpg"
+										alt="007 노 타임 투 다이 포스터"> <span
+										class="ico-grade grade-12">12세 이상</span>
+								</span>
+								</a>
+							</div>
+							<div class="box-contents">
+								<a href="/movies/detail-view/?midx=83003"
+									title="007 노 타임 투 다이 상세보기 새창"> <strong class="title">007
+										노 타임 투 다이</strong>
+								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
+									class="genre">액션</em> <span> <i>2021.09.29</i> <strong>개봉</strong>
+								</span>
+								</span> <a class="link-reservation"
+									href="/ticket/?MOVIE_CD=20027751&amp;MOVIE_CD_GROUP=20027751">예매</a>
+							</div>
+						</div>
+						<div class="sect-trailer">
+							<strong class="title">신규영상</strong>
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<!-- .col-playerinfo -->
+				</div>
+				<!-- .cols-player -->
+				<button type="button" class="btn-close">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="all_body"></div>
 
 	<!-- LineMap -->
 	<div class="linemap-wrap">
@@ -1282,9 +1409,9 @@ button, input[type='submit'], input[type='reset'] {
 							<li>
 								<div class="box-image">
 									<!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
-									<a href="#" title="새창" class="movie_player_popup"
-										data-gallery-idx="195437"> <span class="thumb-image">
-											<img
+									<a href="#" title="새창" class="movie_player_popup add"
+										data-gallery-idx="195437" onclick="pushLayer()"> <span
+										class="thumb-image"> <img
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/83003/83003195437_1024.jpg"
 											alt="[007 노 타임 투 다이]레거시 영상"
 											onerror="errorImage(this, {'type':'landscape'})"> <span
@@ -2178,8 +2305,6 @@ button, input[type='submit'], input[type='reset'] {
 	</div>
 
 
-
-
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 </body>
 
@@ -2225,6 +2350,25 @@ button, input[type='submit'], input[type='reset'] {
 
 		console.log(flag);
 	});
+
+	function pushLayer() {
+		var $width = parseInt($("#lay_pop").css("width"));
+		var $height = parseInt($("#lay_pop").css("height"));
+		var sctop = $(window).scrollTop() * 2;
+		var height = document.getElementsByTagName("body")[0].scrollHeight;
+		$("#lay_pop").css("left", "50%");
+		$("#lay_pop").css("top", "50%");
+		$("#lay_pop").css("display", "block");
+		$("#lay_pop").css("z-index", "555");
+		$("#all_body").css("display", "block");
+		$("#all_body").css("width", $(window).width());
+		$("#all_body").css("height", height);
+
+	}
+	function layerClose(lay1, lay2) {
+		$("#" + lay1).css("display", "none");
+		$("#" + lay2).css("display", "none");
+	}
 </script>
 </html>
 
