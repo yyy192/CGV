@@ -273,10 +273,8 @@
     
 </style>
 </head>
-<body>
 <c:import url="../temp/mainHome.jsp"></c:import>
-
-
+<body>
    <div class="linemap-wrap">
       <div class="sec-wrap">
          <ul>

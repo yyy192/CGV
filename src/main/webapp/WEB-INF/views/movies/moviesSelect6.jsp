@@ -1133,6 +1133,222 @@ button, input[type='submit'], input[type='reset'] {
 .btn-prev {
 	cursor: pointer;
 }
+
+/* ------------------------------------------------------------- */
+element.style {
+	margin-top: 765px;
+	margin-left: -510px;
+	position: absolute;
+}
+
+#lay_pop_1 {
+	width: 1030px;
+	height: 720px;
+	display: none;
+	z-index: 200;
+	margin-left: -515px;
+	margin-top: -360px;
+	background-color: #333;
+	text-align: left;
+	line-height: 1.2;
+	color: #666;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: #666;
+}
+
+#lay_pop_2 {
+	width: 1030px;
+	height: 720px;
+	display: none;
+	z-index: 200;
+	margin-left: -515px;
+	margin-top: -360px;
+	background-color: #333;
+	text-align: left;
+	line-height: 1.2;
+	color: #666;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: #666;
+}
+
+#lay_pop_3 {
+	width: 1030px;
+	height: 720px;
+	display: none;
+	z-index: 200;
+	margin-left: -515px;
+	margin-top: -360px;
+	background-color: #333;
+	text-align: left;
+	line-height: 1.2;
+	color: #666;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: #666;
+}
+
+#all_body {
+	position: absolute;
+	z-index: 9;
+	display: block;
+	-moz-opacity: 0.5;
+	background-color: rgba(0, 0, 0, 0.8);
+	left: 0;
+	top: 0
+}
+
+.layer-wrap .popwrap {
+	position: relative;
+	padding: 5px;
+	background-color: #333333;
+}
+
+.col-pop-player {
+	float: left;
+	width: 800px;
+}
+
+.sect-layerplayer .cols-pop-player>.title {
+	margin-bottom: 20px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #cccccc;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+
+.sect-layerplayer {
+	position: relative;
+	width: 980px;
+	height: 670px;
+	padding: 20px;
+	background:
+		url('https://img.cgv.co.kr/R2014/images/common/bg/bg_pop_dim.png') 0 0
+		repeat;
+}
+
+.warp-pop-player {
+	position: relative;
+	width: 800px;
+	height: 450px;
+}
+
+.descri-trailer {
+	width: 800px;
+	height: 157px;
+}
+
+.sect-layerplayer .col-pop-player .descri-trailer .title {
+	margin: 17px 0 10px;
+}
+
+.sect-layerplayer .cols-pop-player .title {
+	color: #cccccc;
+}
+
+.title {
+	display: block;
+	color: #333333;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+strong {
+	font-weight: 500;
+}
+
+.sect-layerplayer .col-pop-player textarea {
+	width: 780px;
+	height: 110px;
+	border-color: #4d4d4d;
+	background: none;
+}
+
+textarea {
+	border: 1px solid #ddd;
+	line-height: 1.7;
+	padding: 10px;
+}
+
+textarea {
+	resize: none;
+}
+
+.sect-layerplayer .col-pop-playerinfo {
+	float: right;
+	width: 140px;
+}
+
+.sect-layerplayer .col-pop-playerinfo .box-image {
+	float: none;
+	width: 140px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+
+.box-image a {
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.thumb-image {
+	display: block;
+	position: relative;
+}
+
+.box-image img {
+	width: 100%;
+}
+
+.sect-layerplayer .col-pop-playerinfo .box-contents {
+	float: none;
+	width: 140px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.sect-layerplayer .col-pop-playerinfo .box-contents .title {
+	margin-bottom: 4px;
+}
+
+.txt-info {
+	display: block;
+	color: #999999;
+	font-size: 12px;
+}
+
+.txt-info>em {
+	display: block;
+}
+
+em {
+	font-style: normal;
+}
+
+.btn-close, .layer-wrap .popwrap button[type='button'].btn-close {
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: auto;
+	right: 20px;
+	width: 18px;
+	height: 18px;
+	background:
+		url('https://img.cgv.co.kr/R2014/images/sprite/sprite_btn.png')
+		no-repeat -72px -62px;
+	border: none;
+	font-size: 0px;
+	line-height: 0;
+	zoom: 1;
+	cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
 </style>
 
 <meta charset="UTF-8">
@@ -1143,7 +1359,175 @@ button, input[type='submit'], input[type='reset'] {
 </head>
 <body>
 	<c:import url="../temp/mainHome.jsp"></c:import>
+	
+	<!-- ================================================트레일러 1============================================ -->
+	
+	<div id="lay_pop_1" style="position: fixed;" tabindex="0">	
+		<div class="popwrap">
 
+			<div class="sect-layerplayer">
+
+				<div class="cols-pop-player">
+
+					<h1 class="title" id="movie_player_popup_title">
+						<span class="ico-trailer hd">HD</span>[스틸워터]30초 예고편
+					</h1>
+
+					<div class="col-pop-player">
+
+						<div class="warp-pop-player" style="position: relative;">
+
+							<video width="800px" height="450px"
+								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/85014/85014195149_1024.jpg"
+								controls="" autoplay="">
+								<source
+									src="http://h.vod.cgv.co.kr:80/vodCGVa/85014/85014_195149_1200_128_960_540.mp4"
+									deletecommandtype="video/mp4">
+							</video>
+
+							<div class="sect-replay" style="display: none"
+								id="pop_player_relation_wrap">
+
+								<button class="btn-replay movie_player_inner_popup"
+									type="button" data-gallery-idx="195437" id="btn_movie_replay">다시보기</button>
+							</div>
+							<!-- .sect-replay -->
+
+						</div>
+						<!-- .warp-pop-player -->
+						<div class="descri-trailer">
+							<strong class="title">영상설명</strong>
+							<textarea readonly="readonly" id="movie_player_popup_caption">컨텐츠 준비 중 입니다.</textarea>
+						</div>
+					</div>
+					<!-- .col-player -->
+					<div class="col-pop-playerinfo">
+						<div id="movie_player_popup_movie_info">
+							<div class="box-image">
+								<a href="/movies/detail-view/?midx=85014"
+									title="스틸워터 새창"> <span class="thumb-image">
+										<img
+										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_185.jpg"
+										alt="스틸워터 새창"> <span
+										class="ico-grade grade-12">15세 이상</span>
+								</span>
+								</a>
+							</div>
+							<div class="box-contents">
+								<a href="/movies/detail-view/?midx=85014"
+									title="스틸워터 상세보기 새창"> <strong class="title">스틸워터</strong>
+								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
+									class="genre">범죄,&nbsp;드라마,&nbsp;스릴러</em> <span> <i>2021.10.06</i> <strong>개봉</strong>
+								</span>
+								</span> <a class="link-reservation"
+									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+							</div>
+						</div>
+						<div class="sect-trailer">
+							<strong class="title">신규영상</strong>
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<!-- .col-playerinfo -->
+				</div>
+				<!-- .cols-player -->
+				<button type="button" class="btn-close"
+               onclick="layerClose('lay_pop_1','all_body')">닫기</button>
+         </div>
+      </div>
+   </div>
+
+   <div id="all_body"></div>
+
+	<!-- -----------------------------------------------------------------------------------  -->
+	
+	<!-- ================================================트레일러 2============================================ -->
+	
+	<div id="lay_pop_2" style="position: fixed;" tabindex="0">	
+		<div class="popwrap">
+
+			<div class="sect-layerplayer">
+
+				<div class="cols-pop-player">
+
+					<h1 class="title" id="movie_player_popup_title">
+						<span class="ico-trailer hd">HD</span>[스틸워터]메인 예고편
+					</h1>
+
+					<div class="col-pop-player">
+
+						<div class="warp-pop-player" style="position: relative;">
+
+							<video width="800px" height="450px"
+								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/85014/85014195012_1024.jpg"
+								controls="" autoplay="">
+								<source
+									src="http://h.vod.cgv.co.kr:80/vodCGVa/85014/85014_195012_1200_128_960_540.mp4"
+									deletecommandtype="video/mp4">
+							</video>
+
+							<div class="sect-replay" style="display: none"
+								id="pop_player_relation_wrap">
+
+								<button class="btn-replay movie_player_inner_popup"
+									type="button" data-gallery-idx="195437" id="btn_movie_replay">다시보기</button>
+							</div>
+							<!-- .sect-replay -->
+
+						</div>
+						<!-- .warp-pop-player -->
+						<div class="descri-trailer">
+							<strong class="title">영상설명</strong>
+							<textarea readonly="readonly" id="movie_player_popup_caption">컨텐츠 준비 중 입니다.</textarea>
+						</div>
+					</div>
+					<!-- .col-player -->
+					<div class="col-pop-playerinfo">
+						<div id="movie_player_popup_movie_info">
+							<div class="box-image">
+								<a href="/movies/detail-view/?midx=85014"
+									title="스틸워터 새창"> <span class="thumb-image">
+										<img
+										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_185.jpg"
+										alt="스틸워터 새창"> <span
+										class="ico-grade grade-12">15세 이상</span>
+								</span>
+								</a>
+							</div>
+							<div class="box-contents">
+								<a href="/movies/detail-view/?midx=85014"
+									title="스틸워터 상세보기 새창"> <strong class="title">스틸워터</strong>
+								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
+									class="genre">범죄,&nbsp;드라마,&nbsp;스릴러</em> <span> <i>2021.10.06</i> <strong>개봉</strong>
+								</span>
+								</span> <a class="link-reservation"
+									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+							</div>
+						</div>
+						<div class="sect-trailer">
+							<strong class="title">신규영상</strong>
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<!-- .col-playerinfo -->
+				</div>
+				<!-- .cols-player -->
+				<button type="button" class="btn-close"
+               onclick="layerClose('lay_pop_2','all_body')">닫기</button>
+         </div>
+      </div>
+   </div>
+
+   <div id="all_body"></div>
+
+	<!-- -----------------------------------------------------------------------------------  -->
+	
+	
+	
 	<!-- LineMap -->
 	<div class="linemap-wrap">
 		<ul>
@@ -1306,7 +1690,7 @@ button, input[type='submit'], input[type='reset'] {
 								<div class="box-image">
 									<!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
 									<a href="#" title="새창" class="movie_player_popup"
-										data-gallery-idx="195149"> <span class="thumb-image">
+										data-gallery-idx="195149" onclick="pushLayer_1()"> <span class="thumb-image">
 											<img
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85014/85014195149_1024.jpg"
 											alt="[스틸워터]30초 예고편"
@@ -1329,7 +1713,7 @@ button, input[type='submit'], input[type='reset'] {
 								<div class="box-image">
 									<!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
 									<a href="#" title="새창" class="movie_player_popup"
-										data-gallery-idx="195012"> <span class="thumb-image">
+										data-gallery-idx="195012" onclick="pushLayer_2()"> <span class="thumb-image">
 											<img
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85014/85014195012_1024.jpg"
 											alt="[스틸워터]메인 예고편"
@@ -2160,6 +2544,43 @@ button, input[type='submit'], input[type='reset'] {
 
 		console.log(flag);
 	});
+	
+	function pushLayer_1() {
+		var $width = parseInt($("#lay_pop_1").css("width"));
+		var $height = parseInt($("#lay_pop_1").css("height"));
+		var sctop = $(window).scrollTop() * 2;
+		var height = document.getElementsByTagName("body")[0].scrollHeight;
+		$("#lay_pop_1").css("left", "50%");
+		$("#lay_pop_1").css("top", "50%");
+		$("#lay_pop_1").css("display", "block");
+		$("#lay_pop_1").css("z-index", "555");
+		$("#all_body").css("display", "block");
+		$("#all_body").css("width", $(window).width());
+		$("#all_body").css("height", height);
+
+	} 
+	
+	function pushLayer_2() {
+		var $width = parseInt($("#lay_pop_2").css("width"));
+		var $height = parseInt($("#lay_pop_2").css("height"));
+		var sctop = $(window).scrollTop() * 2;
+		var height = document.getElementsByTagName("body")[0].scrollHeight;
+		$("#lay_pop_2").css("left", "50%");
+		$("#lay_pop_2").css("top", "50%");
+		$("#lay_pop_2").css("display", "block");
+		$("#lay_pop_2").css("z-index", "555");
+		$("#all_body").css("display", "block");
+		$("#all_body").css("width", $(window).width());
+		$("#all_body").css("height", height);
+
+	} 
+	
+		
+	
+	function layerClose(lay1, lay2) {
+		$("#" + lay1).css("display", "none");
+		$("#" + lay2).css("display", "none");
+	}
 </script>
 
 </html>
