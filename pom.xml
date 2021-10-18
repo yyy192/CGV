@@ -16,6 +16,12 @@
 	</properties>
 	<dependencies>
 	
+	<dependency>
+            <groupId>com.oracle.ojdbc</groupId>
+            <artifactId>orai18n</artifactId>
+            <version>19.3.0.0</version>
+        </dependency>
+	
 
 		<!-- mybatis 추가 -->
 		<dependency>
