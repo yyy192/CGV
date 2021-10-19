@@ -32,6 +32,7 @@ a {
 	min-width: 1024px;
 	text-align: center;
 	margin: 0px auto;
+	background: #fdfcf0 url(https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif) repeat-x 0 0;
 	/* width: auto;
    height: 900px;
    
@@ -40,13 +41,15 @@ a {
 }
 
 .m_top {
-	width: 100%;
+	width: 980px;
 	height: 30px;
+	margin: 0 auto;
 }
 
 .m_bottom {
 	width: 100%;
 	height: 119px;
+	margin: 0 auto;
 }
 
 .cgvLogo {
@@ -71,8 +74,8 @@ a {
 .left {
 	width: 10%;
 	height: 149px;
-	background-image:
-		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	/* background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif"); */
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
 	float: left;
@@ -83,8 +86,8 @@ a {
 .middle {
 	width: 80%;
 	height: 149px;
-	background-image:
-		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	/* background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif"); */
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
 	float: left;
@@ -94,8 +97,8 @@ a {
 .right {
 	width: 10%;
 	height: 149px;
-	background-image:
-		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif");
+	/* background-image:
+		url("https://img.cgv.co.kr/r2014/images/common/bg/bg_header.gif"); */
 	background-repeat: repeat-x;
 	background-size: 11px, 149px;
 	float: left;

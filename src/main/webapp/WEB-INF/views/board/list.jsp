@@ -264,7 +264,7 @@
        font-weight: bold;
     }
     
-    ul li {
+  .sec-wrap > ul li {
     list-style-type: none;
     float: left;
     margin-top: 5px;
