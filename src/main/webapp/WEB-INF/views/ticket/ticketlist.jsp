@@ -1029,7 +1029,7 @@ button.timeTable {
 
 </head>
 <body>
-	<c:import url="../temp/mainHome.jsp"></c:import>
+	<c:import url="../temp/mainHome2.jsp"></c:import>
 
 	<div class="linemap-wrap">
 		<div class="sec-wrap">
