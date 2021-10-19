@@ -1446,18 +1446,7 @@ button.timeTable {
 					});
 				});
 		
-		$('.tnb.step1 .btn-right .change').on("click",".tnb.step1 .btn-right .change", function() {
-			let theater = ${fuck.theater};
-			let watchDate = ${fuck.watchDate};
-			let movieName = ${fuck.movieName};
-			let timeTable = ${fuck.timeTable};
-			
-			console.log(theater);
-			console.log(watchDate);
-			console.log(movieName);
-			console.log(timeTable);
-			
-		});
+		
 		
 	</script>
 
