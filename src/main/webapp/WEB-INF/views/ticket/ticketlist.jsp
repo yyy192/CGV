@@ -1408,9 +1408,11 @@ button.timeTable {
 							timeTable : timeTable
 						},
 						success : function(result) {
-							location.href = "./select4?movieName=" + movieName
-									+ "&theater=" + theater + "&watchDate="
-									+ watchDate + "&timeTable=" + timeTable;
+							let a = "./select4?movieName=" + movieName
+							+ "&theater=" + theater + "&watchDate="
+							+ watchDate + "&timeTable=" + timeTable;
+							
+							$('.btn-right') = attr("href","a" );												
 						},
 						error : function(xhr, status, error) {
 							console.log('error');
