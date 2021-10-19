@@ -1282,11 +1282,6 @@ button.timeTable {
 	        $('.movie-select > li > a.selected').css("line-height", "29px");
 	        $('.movie-select > li > a.selected').css("margin", "1px");
 	        
-	        
-	        
-	        
-	        
-	        
 			console.log(movieName);
 			$.ajax({
 				type : "GET",
@@ -1399,6 +1394,39 @@ button.timeTable {
 					console.log(watchDate);
 					console.log(movieName);
 					console.log(timeTable);
+					$('.tnb.step1 .btn-right').css("background-position", "-150px -220px");
+					$('.tnb.step1 .btn-right').attr('class','.tnb.step1 .btn-right .change');
+					
+					$.ajax({
+						type : "GET",
+						url : "./select99",
+						data : {
+							theater : theater,
+							watchDate : watchDate,
+							movieName : movieName,
+							timeTable : timeTable
+						},
+						success : function(result) {
+							result = result.trim();
+						},
+						error : function(xhr, status, error) {
+							console.log('error');
+						}
+					});
+				});
+		
+		$('#timetableList').on(
+				"click",
+				".timeTable",
+				function() {
+					let theater = $(this).attr("data-board-theater");
+					let watchDate = $(this).attr("data-board-watchDate");
+					let movieName = $(this).attr("data-board-movieName");
+					let timeTable = $(this).attr("data-board-timeTable");
+					console.log(theater);
+					console.log(watchDate);
+					console.log(movieName);
+					console.log(timeTable);
 					$.ajax({
 						type : "GET",
 						data : {
@@ -1417,6 +1445,20 @@ button.timeTable {
 						}
 					});
 				});
+		
+		$('.tnb.step1 .btn-right .change').on("click",".tnb.step1 .btn-right .change", function() {
+			let theater = ${fuck.theater};
+			let watchDate = ${fuck.watchDate};
+			let movieName = ${fuck.movieName};
+			let timeTable = ${fuck.timeTable};
+			
+			console.log(theater);
+			console.log(watchDate);
+			console.log(movieName);
+			console.log(timeTable);
+			
+		});
+		
 	</script>
 
 </body>

@@ -71,6 +71,17 @@ public class TicketController {
 
 		return mv;
 	}
+	
+	@GetMapping("select99")
+	public ModelAndView getdd(TicketDTO ticketDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("fuck", ticketDTO);
+		mv.setViewName("common/ajaxList4");
+
+		return mv;
+	}
+
 
 	@GetMapping("select4")
 	public ModelAndView setTicket(HttpSession session, TicketDTO ticketDTO) throws Exception {
