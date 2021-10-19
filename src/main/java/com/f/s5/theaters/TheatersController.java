@@ -115,7 +115,7 @@ public class TheatersController {
 				System.out.println("오류");
 			}
 		} else {
-			String msg = "로그인이 필요한 서비스입니다.\n로그인 페이지로 이동하시겠습니까?";
+			String msg = "로그인이 필요한 서비스입니다." + "\\n" +"로그인 페이지로 이동하시겠습니까?";
 			mv.addObject("msg", msg);
 			mv.addObject("url", "http://localhost/s5/member/memberLogin");
 			mv.setViewName("common/ajaxResult");

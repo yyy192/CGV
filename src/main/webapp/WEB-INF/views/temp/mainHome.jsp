@@ -43,10 +43,11 @@ a {
 	margin: 0 auto;
 }
 .m_bottom {
-	width: 100%;
+	width: 980px;
 	height: 119px;
 	margin: 0 auto;
 }
+
 .cgvLogo {
 	float: left;
 	padding: 15px;
@@ -334,11 +335,13 @@ li {
 				</ul>
 			</div>
 			<div class="m_bottom">
+				<div class="cgvLogo_m">
 				<div class="cgvLogo">
 					<a href="${pageContext.request.contextPath}/" class="cgvLogo">
 						<img src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png"
 						alt="CGV">
 					</a>
+				</div>
 				</div>
 				<div class="cultureLogo">
 					<a href="#"> <img
