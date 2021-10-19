@@ -177,21 +177,21 @@ li {
 .menu>ul>li.booking {
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
-	background-position: -77px -28px;
+	background-position: -77px -27px;
 	width: 60px;
 }
 
 .menu>ul>li.theaters {
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
-	background-position: -166px -28px;
+	background-position: -166px -27px;
 	width: 60px;
 }
 
 .menu>ul>li.customer {
 	background-image:
 		url("https://img.cgv.co.kr/r2014/images/sprite/common_sprite_area_v4_2016.png");
-	background-position: -517px -28px;
+	background-position: -517px -27px;
 	width: 90px;
 }
 
