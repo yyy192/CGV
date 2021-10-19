@@ -406,6 +406,7 @@ a:link, a:active {
 	margin-right: 24px;
 }
 
+
 .tnb .info.movie {
 	width: 210px;
 }
@@ -998,7 +999,14 @@ button.timeTable {
 	width: 103px;
 	height: 28.5px;
 }
-
+.tnb .btn-right.on {
+	background:
+		url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/tnb/tnb_buttons.png)
+		no-repeat;
+	background-position: -150px -220px;
+	overflow: hidden;
+	text-indent: -1000px;
+}
 
 </style>
 
@@ -1399,7 +1407,13 @@ button.timeTable {
 					console.log(watchDate);
 					console.log(movieName);
 					console.log(timeTable);
-					$.ajax({
+					$('.btn-right').addClass('on');
+					$('.btn-right').click(function(){
+						location.href = "./select4?movieName=" + movieName
+						+ "&theater=" + theater + "&watchDate="
+						+ watchDate + "&timeTable=" + timeTable;
+					});
+					/* $.ajax({
 						type : "GET",
 						data : {
 							theater : theater,
@@ -1415,7 +1429,7 @@ button.timeTable {
 						error : function(xhr, status, error) {
 							console.log('error');
 						}
-					});
+					}); */
 				});
 	</script>
 
