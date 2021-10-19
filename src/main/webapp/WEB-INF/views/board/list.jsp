@@ -275,8 +275,7 @@
     
     ul li {
        list-style-type: none;
-       float: left;
-       margin-top: 5px;
+       float: left;       
        margin-left: 50px;
    }
 

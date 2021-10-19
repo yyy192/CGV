@@ -859,7 +859,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.1</strong> <a
-									href="/movies/detail-view/?midx=83003"> <span
+									href="${pageContext.request.contextPath}/movies/select1"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_320.jpg"
 										alt="007 노 타임 투 다이 포스터" onerror="errorImage(this)"> <span
@@ -875,7 +875,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=83003"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select1"> <strong
 									class="title">007 노 타임 투 다이</strong>
 								</a>
 
@@ -899,7 +899,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.2</strong> <a
-									href="/movies/select"> <span
+									href="${pageContext.request.contextPath}/movies/select2"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84872/84872_320.jpg"
 										alt="보이스 포스터" onerror="errorImage(this)"> <span
@@ -910,7 +910,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=84872"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select2"> <strong
 									class="title">보이스</strong>
 								</a>
 
@@ -934,7 +934,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.3</strong> <a
-									href="/movies/detail-view/?midx=85019"> <span
+									href="${pageContext.request.contextPath}/movies/select3"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85019/85019_320.jpg"
 										alt="F20 포스터" onerror="errorImage(this)"> <span
@@ -945,7 +945,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=85019"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select3"> <strong
 									class="title">F20</strong>
 								</a>
 
@@ -973,7 +973,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.4</strong> <a
-									href="/movies/detail-view/?midx=84998"> <span
+									href="${pageContext.request.contextPath}/movies/select4"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84998/84998_320.jpg"
 										alt="쁘띠 마망 포스터" onerror="errorImage(this)"> <span
@@ -986,7 +986,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=84998"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select4"> <strong
 									class="title">쁘띠 마망</strong>
 								</a>
 
@@ -1010,7 +1010,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.5</strong> <a
-									href="/movies/detail-view/?midx=84617"> <span
+									href="${pageContext.request.contextPath}/movies/select5"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84617/84617_320.jpg"
 										alt="기적 포스터" onerror="errorImage(this)"> <span
@@ -1020,7 +1020,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=84617"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select5"> <strong
 									class="title">기적</strong>
 								</a>
 
@@ -1044,7 +1044,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.6</strong> <a
-									href="/movies/detail-view/?midx=85014"> <span
+									href="${pageContext.request.contextPath}/movies/select6"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85014/85014_320.jpg"
 										alt="스틸워터 포스터" onerror="errorImage(this)"> <span
@@ -1054,7 +1054,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=85014"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select6"> <strong
 									class="title">스틸워터</strong>
 								</a>
 
@@ -1078,7 +1078,7 @@ i {
 						<li>
 							<div class="box-image">
 								<strong class="rank">No.7</strong> <a
-									href="/movies/detail-view/?midx=84834"> <span
+									href="${pageContext.request.contextPath}/movies/select7"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84834/84834_320.jpg"
 										alt="샹치와 텐 링즈의 전설 포스터" onerror="errorImage(this)"> <span
@@ -1088,7 +1088,7 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=84834"> <strong
+								<a href="${pageContext.request.contextPath}/movies/select7"> <strong
 									class="title">샹치와 텐 링즈의 전설</strong>
 								</a>
 

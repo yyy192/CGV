@@ -15,8 +15,6 @@ public class MoviesService {
 		return moviesDAO.getMoviesList(moviesDTO);	
 	}
 	
-	public MoviesDTO getMoviesSelect(MoviesDTO moviesDTO) throws Exception {
-		return moviesDAO.getMoviesSelect(moviesDTO);
-	}
+	
 
 }

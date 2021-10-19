@@ -95,7 +95,8 @@ public class TicketController {
          List<TicketDTO> ar = ticketService.checkTicket(ticketDTO);
 
          int result = ticketService.setTicket(ticketDTO);
-
+                  
+         
          if (result > 0) {
             System.out.println("ticket Insert 성공");
             mv.addObject("age", checkBirth);
@@ -109,7 +110,10 @@ public class TicketController {
          }
 
       } else {
-         mv.setViewName("redirect:../member/memberLogin");
+    	  String msg= "로그인이 필요한 서비스입니다.\n로그인 페이지로 이동하시겠습니까?";
+          mv.addObject("msg", msg);
+          mv.addObject("url", "http://localhost/s5/member/memberLogin");
+          mv.setViewName("common/ajaxResult");
       }
 
       return mv;

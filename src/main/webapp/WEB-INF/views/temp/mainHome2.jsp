@@ -342,7 +342,7 @@ li {
 				</div>
 				<div class="cultureLogo">
 					<a href="#"> <img
-						src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png"
+						src="https://img.cgv.co.kr/R2014/images/title/h2_ticket.png"
 						alt="CGV"></a>
 				</div>
 				<div class="menu">

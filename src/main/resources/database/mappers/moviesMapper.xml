@@ -7,10 +7,5 @@
   
   <select id="getMoviesList" resultType="MoviesDTO">
   	SELECT * FROM MOVIES
-  </select>
-  
-  <select id="getMoviesSelect" parameterType="MoviesDTO" resultType="MoviesDTO">
-  	SELECT * FROM MOVIES WHERE MOVIENAME=#{movieName}
-  </select>
-
+  </select>   
   </mapper>
