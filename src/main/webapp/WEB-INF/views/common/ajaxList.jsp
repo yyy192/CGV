@@ -5,7 +5,9 @@
 
 <c:forEach items="${theater}" var="dto">
 
-	<tr align=center>
-		<td><button class="theater" type="button" data-board-theater="${dto.theater}" data-board-movieName="${dto.movieName}">${dto.theater}</button></td>
+	<tr align="left" >
+		<td id="theaterTd">
+			<button class="theater" type="button" data-board-theater="${dto.theater}" data-board-movieName="${dto.movieName}">${dto.theater}</button>
+		</td>
 	</tr>
 </c:forEach>

@@ -22,8 +22,37 @@
 	margin: 0 auto;
 	background-color: #f1f0e5;
 	border-bottom: 1px solid #cacac0;
+	line-height: 28px;
 	display: block;
 	padding-left: 200px;
+}
+
+.linemap-wrap > ul > li {
+    margin-left: 12px;
+    padding-left: 20px;
+    line-height: 28px;
+    background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow.png) no-repeat 0 50%;
+    font-size: 12px;
+}
+
+.linemap-wrap > ul > li:first-child {
+
+	margin-left: 12px;
+    padding-left: 20px;
+    line-height: 28px;
+    background : none;
+    font-size: 12px;
+
+}
+
+
+
+li.last {
+    color: #222;
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: 28px;
+    font-weight: 500;
 }
 
 .navi {
@@ -503,6 +532,7 @@ a:link, a:active {
 }
 
 .tnb .info .row .header {
+	width : 40px;
 	float: left;
 	padding-left: 10px;
 }
@@ -621,7 +651,7 @@ span.dayweek {
 	float: left;
 	color: #333;
 	font-size: 12px;
-	padding-top: 2px;
+	
 	cursor: pointer;
 	color: #333;
 	font-family: 'Tahoma', '돋움', dotum, Nanum Gothic, sans-serif;
@@ -637,6 +667,7 @@ li.day {
 	height: 35px;
 	line-height: 35px;
 	margin-bottom: 1px;
+	text-align: center;
 }
 
 span.day {
@@ -828,6 +859,7 @@ button.theater {
 	background-color: #F2F0E4;
 	border: none;
 	cursor: pointer;
+	text-align: left;
 }
 
 #ticket .step1 .section-time .col-body .time-option {
@@ -922,6 +954,52 @@ button.timeTable {
     position: relative;
 }
 
+
+.movie_posterName {
+	width : 74px;
+	height : 104px;
+	background-image: url(/s5/resources/images/voicePoster.jpg);
+	margin-right: 11px;
+	
+}
+
+.movie_little_title {
+	margin-top: 15px;
+	color: #cccccc;
+	letter-spacing: -0.5px;
+	font-weight: bold;
+}
+
+#ticket .section-date .col-body .date-list li.day a {
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    padding-left: 8px;
+    padding-right: 7px;
+    margin-left: 13px;
+}
+
+#ticket .section-date .col-body .date-list li.day a {
+    margin-left: 0;
+}
+
+#ticket .section-movie .col-body .movie-select > li > a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 240px;
+    height: 31px;
+    
+}
+
+#theaterTd {
+	width: 103px;
+	height: 28.5px;
+}
+
+
 </style>
 
 </head>
@@ -932,6 +1010,8 @@ button.timeTable {
 		<ul>
 			<li><a href="http://localhost/s5/"><img alt="home"
 					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
+					<li><a href="/ticket/list">예매</a></li>
+					<li class="last">빠른예매</li>
 		</ul>
 	</div>
 
@@ -966,17 +1046,16 @@ button.timeTable {
 
 								<c:forEach items="${list}" var="dto">
 
-									<li class="rating-12 press selected" movie_cd_group="20027588"
-										movie_idx="84945" selectedmovietype="ALL"><a href="#"
-										onclick="return false;" title="${dto.movieName}"
-										alt="${dto.movieName}"> <c:if
-												test="${dto.ageCut eq '15세'}">
+									<li class="rating-12 press selected" movie_cd_group="20027588" movie_idx="84945" selectedmovietype="ALL">
+										<a href="#" id="fuck" onclick="return false;" title="${dto.movieName}" alt="${dto.movieName}">
+											<c:if test="${dto.ageCut eq '15세'}">
 												<span class="icon15">&nbsp;</span>
-											</c:if> <c:if test="${dto.ageCut eq '12세'}">
+											</c:if>
+											<c:if test="${dto.ageCut eq '12세'}">
 												<span class="icon12">&nbsp;</span>
-											</c:if> <span class="movie11"
-											data-board-movieName="${dto.movieName}">${dto.movieName}</span><span
-											class="sreader"></span></a></li>
+											</c:if>
+											<span class="movie11" data-board-movieName="${dto.movieName}">${dto.movieName}</span>
+											<span class="sreader"></span></a></li>
 
 								</c:forEach>
 
@@ -1088,31 +1167,18 @@ button.timeTable {
 			<a class="btn-left" href="#"
 				onclick="OnTnbLeftClick(); return false;" title="영화선택">이전단계로 이동</a>
 			<div class="info movie">
-				<span class="movie_poster"><img src="" alt="영화 포스터"
-					style="display: none;"></span>
-				<div class="row movie_title colspan2" style="display: none;">
-					<span class="data letter-spacing-min ellipsis-line2"><a
-						href="#" target="_blank"
-						onmousedown="javascript:logClick('SUMMARY/영화상세보기');">영화정보 상세보기</a></span>
-				</div>
-				<div class="row movie_type" style="display: none;">
-					<span class="data ellipsis-line1"></span>
-				</div>
-				<div class="row movie_rating" style="display: none;">
-					<span class="data" title=""></span>
-				</div>
-				<div class="placeholder" title="영화선택"></div>
+				
+				
+				<div class="placeholder mph" title="영화선택"></div>
+				<div class="movie_posterName" style="display: none;"></div>
+				<div id="movie_little_title" class="movie_little_title" style="display: none;"></div>
 			</div>
 			<div class="info theater">
 				<div class="row name" style="display: none;">
-					<span class="header">극장</span> <span
-						class="data letter-spacing-min ellipsis-line1"><a href="#"
-						target="_blank"
-						onmousedown="javascript:logClick('SUMMARY/극장상세보기');"><span
-							class="sreader">극장정보 상세보기</span></a></span>
+					<span class="header">극장</span> <span id="theater-check"></span>
 				</div>
 				<div class="row date" style="display: none;">
-					<span class="header">일시</span> <span class="data"></span>
+					<span class="header">일시</span> <span id="theater-day"></span>
 				</div>
 				<div class="row screen" style="display: none;">
 					<span class="header">상영관</span> <span class="data"></span>
@@ -1120,7 +1186,7 @@ button.timeTable {
 				<div class="row number" style="display: none;">
 					<span class="header">인원</span> <span class="data"></span>
 				</div>
-				<div class="placeholder" title="극장선택"></div>
+				<div class="placeholder tph" title="극장선택"></div>
 			</div>
 			<div class="info seat">
 				<div class="row seat_name">
@@ -1129,7 +1195,7 @@ button.timeTable {
 				<div class="row seat_no colspan3">
 					<span class="header">좌석번호</span> <span class="data ellipsis-line3"></span>
 				</div>
-				<div class="placeholder" title="좌석선택"></div>
+				<div class="placeholder sph" title="좌석선택"></div>
 			</div>
 			<div class="info payment-ticket">
 				<div class="row payment-millitary">
@@ -1196,11 +1262,31 @@ button.timeTable {
 
 	<script type="text/javascript">
 		$(".movie11").click(function() {
+			let tt = "";
 			let movieName = $(this).attr("data-board-movieName");
 			$(this).parent().parent().css("background-color", "#333");
+			
+			
 	        $(this).parent().parent().siblings().css("background-color", "#F2F0E4");
 	        $(this).css("color", "white");
 	        $(this).parent().parent().siblings().children().children().css("color", "black");
+	        document.getElementById("movie_little_title").innerText = movieName;
+	        $('.mph').css("display", "none");
+	        $('.movie_posterName').css("display", "block");
+	        $('.movie_posterName').css("float", "left");
+	        $('.movie_little_title').css("display", "block");
+	        $('.movie_little_title').css("float", "left");
+	        $(this).parent().attr('class', 'selected');
+
+	        $('.movie-select > li > a.selected').css("border", "1px solid #5c5c5c");
+	        $('.movie-select > li > a.selected').css("line-height", "29px");
+	        $('.movie-select > li > a.selected').css("margin", "1px");
+	        
+	        
+	        
+	        
+	        
+	        
 			console.log(movieName);
 			$.ajax({
 				type : "GET",
@@ -1220,10 +1306,31 @@ button.timeTable {
 		$('#theaterList').on("click", ".theater", function() {
 			let theater = $(this).attr("data-board-theater");
 			let movieName = $(this).attr("data-board-movieName");
-			$(this).parent().parent().css("background-color", "#333");
-	        $(this).siblings().css("background-color", "#F2F0E4");
-	        $(this).css("color", "white");
-	        $(this).parent().siblings().children().children().css("color", "black");
+			$(this).css("color", "white");
+	        $(this).css("background-color", "#333");
+	        $(this).css("width", "107px");
+	        $('.movie_little_title').css("float", "left");
+	        
+	        $(this).parent().parent().css("background-color", "#333");	        
+	         
+	        $(this).parent().parent().siblings().children().children().css("color", "black");
+	        $(this).parent().parent().siblings().css("background-color", "#F2F0E4");
+	        $(this).parent().parent().siblings().children().children().css("background-color", "#F2F0E4");
+
+
+	        $('.tnb .info .row').css("display", "block");
+	        $('.tnb .info.theater .placeholder').css("display", "none");
+	        document.getElementById("theater-check").innerText = theater;
+	        
+	        $(this).parent().attr('class', 'selected');
+
+	        $('#theaterList > tr > td.selected').css("border", "1px solid #5c5c5c");
+	        $('#theaterList > tr > td.selected').css("line-height", "29px");
+	        $('#theaterList > tr > td.selected').css("margin", "1px");
+	        $('#theaterList > tr > td.selected').css("width", "103px");
+	        $('#theaterList > tr > td.selected').css("height", "28.5px");
+	        
+	        
 			console.log(theater);
 			console.log(movieName);
 			$.ajax({
@@ -1247,6 +1354,18 @@ button.timeTable {
 			let theater = $(this).attr("data-board-theater");
 			let watchDate = $(this).attr("data-board-watchDate");
 			let movieName = $(this).attr("data-board-movieName");
+			$(this).children().css("color", "white");
+	        $(this).parent().css("background-color", "#333");
+	         
+	        $(this).parent().siblings().css("background-color", "#F2F0E4");
+	        $(this).parent().siblings().children().children().css("color", "black");
+	        document.getElementById("theater-day").innerText = watchDate;
+	        
+	        $('#theaterList > tr > td.selected').css("border", "1px solid #5c5c5c");
+	        $('#theaterList > tr > td.selected').css("line-height", "29px");
+	        $('#theaterList > tr > td.selected').css("margin", "1px");
+	        
+	        
 			console.log(theater);
 			console.log(watchDate);
 			console.log(movieName);
