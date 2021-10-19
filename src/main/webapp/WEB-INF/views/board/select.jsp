@@ -20,9 +20,9 @@
    background-color: #FDFCF0;
    }
    
-   a:link { color: #666; text-decoration: none;}
-    a:visited { color: #666; text-decoration: none;}
-    a:hover { border: 2px solid #FFA07A;
+   .title > a:link { color: #666; text-decoration: none;}
+   .title > a:visited { color: #666; text-decoration: none;}
+   .title > a:hover { border: 2px solid #FFA07A;
             border-radius: 2px;
           }
    
@@ -36,25 +36,35 @@
    }
    .linemap-wrap {
        height: 28px;
-       margin : 0 auto;
        background-color: #f1f0e5;
        border-bottom: 1px solid #cacac0;
       display: block;
    }
    .sec-wrap {
-      margin: 0 200px;   
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
    }
    
+   
    .list-main {
-   width:1112px;
-   margin: 27px auto 0 auto;
-   height:1270px;
-   padding-bottom : 70px;
+      width:1112px;
+      margin: 27px auto 0 auto;
+      height: 1270px;
+      padding-bottom : 70px;
+      
    }
    
    .list-left {
         width: 202px;
-        height: 245px;
+        display: inline-block;
         float:left;
         margin: 0 20px 0 0;
     }
@@ -72,10 +82,19 @@
        margin : 5px 0 0 0;
        font-weight: bold;
     }
+    .list-left > ul > li :hover {
+       display:inline-block;
+       background-color:#ea1400;
+       height:40px;
+       width:202px;
+       text-decoration: none;
+       color: white;
+       border: none;
+    }   
+    
     .list-right {
         width: 880px;
-        height: 1270px;
-        /* background: red; */
+        display: inline-block;
         float:right;
         margin: 0 0 0 10px;
     }

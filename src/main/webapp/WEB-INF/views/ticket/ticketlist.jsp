@@ -17,42 +17,51 @@
 }
 
 .linemap-wrap {
-	width: auto;
 	height: 28px;
-	margin: 0 auto;
 	background-color: #f1f0e5;
 	border-bottom: 1px solid #cacac0;
-	line-height: 28px;
 	display: block;
-	padding-left: 200px;
 }
 
-.linemap-wrap > ul > li {
-    margin-left: 12px;
-    padding-left: 20px;
-    line-height: 28px;
-    background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow.png) no-repeat 0 50%;
-    font-size: 12px;
+.sec-wrap {
+	margin: 0 auto;
+	width: 1112px;
+	height: 100%;
 }
 
-.linemap-wrap > ul > li:first-child {
+.sec-wrap>ul {
+	display: inline-block;
+}
 
+.sec-wrap>ul>li {
+	margin-left: 0;
+	margin-top: 3px;
+}
+
+.linemap-wrap>ul>li {
 	margin-left: 12px;
-    padding-left: 20px;
-    line-height: 28px;
-    background : none;
-    font-size: 12px;
-
+	padding-left: 20px;
+	line-height: 28px;
+	background:
+		url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow.png)
+		no-repeat 0 50%;
+	font-size: 12px;
 }
 
-
+.linemap-wrap>ul>li:first-child {
+	margin-left: 12px;
+	padding-left: 20px;
+	line-height: 28px;
+	background: none;
+	font-size: 12px;
+}
 
 li.last {
-    color: #222;
-    font-size: 12px;
-    text-decoration: underline;
-    line-height: 28px;
-    font-weight: 500;
+	color: #222;
+	font-size: 12px;
+	text-decoration: underline;
+	line-height: 28px;
+	font-weight: 500;
 }
 
 .navi {
@@ -306,6 +315,19 @@ ul li {
 	background-position: 5px -29px;
 }
 
+.iconAll {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 32px;
+	height: 35px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-image:
+		url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/icon/icon_ratings2.png);
+	background-position: 5px 6px;
+}
+
 .icon15 {
 	display: inline-block;
 	*display: inline;
@@ -405,7 +427,6 @@ a:link, a:active {
 	height: 108px;
 	margin-right: 24px;
 }
-
 
 .tnb .info.movie {
 	width: 210px;
@@ -533,7 +554,7 @@ a:link, a:active {
 }
 
 .tnb .info .row .header {
-	width : 40px;
+	width: 40px;
 	float: left;
 	padding-left: 10px;
 }
@@ -652,7 +673,6 @@ span.dayweek {
 	float: left;
 	color: #333;
 	font-size: 12px;
-	
 	cursor: pointer;
 	color: #333;
 	font-family: 'Tahoma', '돋움', dotum, Nanum Gothic, sans-serif;
@@ -920,48 +940,46 @@ button.timeTable {
 }
 
 .title span.name {
-    color: #b54d15;
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 6px;
+	color: #b54d15;
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 6px;
 }
 
 .title span.floor {
-    color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 5px;
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 5px;
 }
 
 .title span.seatcount {
-    color: #666;
-    font-size: 12px;
+	color: #666;
+	font-size: 12px;
 }
 
-#timetableList{
-    width: 309px;
-    margin-top: 10px;
-    margin-bottom: 6px;
-    overflow: hidden;
+#timetableList {
+	width: 309px;
+	margin-top: 10px;
+	margin-bottom: 6px;
+	overflow: hidden;
 }
 
-#ticket .section-movie .col-body .movie-select > li {
-    clear: both;
-    float: left;
-    width: 244px;
-    height: 35px;
-    line-height: 35px;
-    margin-bottom: 1px;
-    position: relative;
+#ticket .section-movie .col-body .movie-select>li {
+	clear: both;
+	float: left;
+	width: 244px;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 1px;
+	position: relative;
 }
-
 
 .movie_posterName {
-	width : 74px;
-	height : 104px;
+	width: 74px;
+	height: 104px;
 	background-image: url(/s5/resources/images/voicePoster.jpg);
 	margin-right: 11px;
-	
 }
 
 .movie_little_title {
@@ -972,33 +990,33 @@ button.timeTable {
 }
 
 #ticket .section-date .col-body .date-list li.day a {
-    display: block;
-    height: 100%;
-    vertical-align: middle;
-    padding-left: 8px;
-    padding-right: 7px;
-    margin-left: 13px;
+	display: block;
+	height: 100%;
+	vertical-align: middle;
+	padding-left: 8px;
+	padding-right: 7px;
+	margin-left: 13px;
 }
 
 #ticket .section-date .col-body .date-list li.day a {
-    margin-left: 0;
+	margin-left: 0;
 }
 
-#ticket .section-movie .col-body .movie-select > li > a {
-    display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    vertical-align: middle;
-    width: 240px;
-    height: 31px;
-    
+#ticket .section-movie .col-body .movie-select>li>a {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 240px;
+	height: 31px;
 }
 
 #theaterTd {
 	width: 103px;
 	height: 28.5px;
 }
+
 .tnb .btn-right.on {
 	background:
 		url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/tnb/tnb_buttons.png)
@@ -1007,7 +1025,6 @@ button.timeTable {
 	overflow: hidden;
 	text-indent: -1000px;
 }
-
 </style>
 
 </head>
@@ -1015,12 +1032,12 @@ button.timeTable {
 	<c:import url="../temp/mainHome.jsp"></c:import>
 
 	<div class="linemap-wrap">
-		<ul>
-			<li><a href="http://localhost/s5/"><img alt="home"
-					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-					<li><a href="/ticket/list">예매</a></li>
-					<li class="last">빠른예매</li>
-		</ul>
+		<div class="sec-wrap">
+			<ul>
+				<li><a href="http://localhost/s5/"><img alt="home"
+						src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
+			</ul>
+		</div>
 	</div>
 
 	<div id="container">
@@ -1050,19 +1067,22 @@ button.timeTable {
 										href="#" onclick="return false;" class="button menu3">특별관</a>
 									<span class="side"></span>
 								</div>
-							
+
 
 								<c:forEach items="${list}" var="dto">
 
-									<li class="rating-12 press selected" movie_cd_group="20027588" movie_idx="84945" selectedmovietype="ALL">
-										<a href="#" id="fuck" onclick="return false;" title="${dto.movieName}" alt="${dto.movieName}">
-											<c:if test="${dto.ageCut eq '15세'}">
+									<li class="rating-12 press selected" movie_cd_group="20027588"
+										movie_idx="84945" selectedmovietype="ALL"><a href="#"
+										id="fuck" onclick="return false;" title="${dto.movieName}"
+										alt="${dto.movieName}"> <c:if
+												test="${dto.ageCut eq '15세'}">
 												<span class="icon15">&nbsp;</span>
-											</c:if>
-											<c:if test="${dto.ageCut eq '12세'}">
+											</c:if> <c:if test="${dto.ageCut eq '12세'}">
 												<span class="icon12">&nbsp;</span>
-											</c:if>
-											<span class="movie11" data-board-movieName="${dto.movieName}">${dto.movieName}</span>
+											</c:if> <c:if test="${dto.ageCut eq '전체'}">
+												<span class="iconAll">&nbsp;</span>
+											</c:if> <span class="movie11"
+											data-board-movieName="${dto.movieName}">${dto.movieName}</span>
 											<span class="sreader"></span></a></li>
 
 								</c:forEach>
@@ -1147,13 +1167,13 @@ button.timeTable {
 							<div class="time-option">
 								<span class="morning">조조</span><span class="night">심야</span>
 							</div>
-							
+
 
 							<div class="time-list">
-							
+
 								<span class="title"><span class="name">2D</span><span
-								class="floor">6관 10층</span><span class="seatcount">(총40석)</span></span>
-								
+									class="floor">6관 10층</span><span class="seatcount">(총40석)</span></span>
+
 								<div id="timetableList"
 									data-board-timetable1="${dto.timetable1}"
 									data-board-timetable2="${dto.timetable2}"
@@ -1175,11 +1195,12 @@ button.timeTable {
 			<a class="btn-left" href="#"
 				onclick="OnTnbLeftClick(); return false;" title="영화선택">이전단계로 이동</a>
 			<div class="info movie">
-				
-				
+
+
 				<div class="placeholder mph" title="영화선택"></div>
 				<div class="movie_posterName" style="display: none;"></div>
-				<div id="movie_little_title" class="movie_little_title" style="display: none;"></div>
+				<div id="movie_little_title" class="movie_little_title"
+					style="display: none;"></div>
 			</div>
 			<div class="info theater">
 				<div class="row name" style="display: none;">
@@ -1269,131 +1290,158 @@ button.timeTable {
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 
 	<script type="text/javascript">
-		$(".movie11").click(function() {
-			let tt = "";
-			let movieName = $(this).attr("data-board-movieName");
-			$(this).parent().parent().css("background-color", "#333");
-			
-			
-	        $(this).parent().parent().siblings().css("background-color", "#F2F0E4");
-	        $(this).css("color", "white");
-	        $(this).parent().parent().siblings().children().children().css("color", "black");
-	        document.getElementById("movie_little_title").innerText = movieName;
-	        $('.mph').css("display", "none");
-	        $('.movie_posterName').css("display", "block");
-	        $('.movie_posterName').css("float", "left");
-	        $('.movie_little_title').css("display", "block");
-	        $('.movie_little_title').css("float", "left");
-	        $(this).parent().attr('class', 'selected');
+		$(".movie11")
+				.click(
+						function() {
+							let tt = "";
+							let movieName = $(this)
+									.attr("data-board-movieName");
+							$(this).parent().parent().css("background-color",
+									"#333");
 
-	        $('.movie-select > li > a.selected').css("border", "1px solid #5c5c5c");
-	        $('.movie-select > li > a.selected').css("line-height", "29px");
-	        $('.movie-select > li > a.selected').css("margin", "1px");
-	        
-	        
-	        
-	        
-	        
-	        
-			console.log(movieName);
-			$.ajax({
-				type : "GET",
-				url : "./select",
-				data : {
-					movieName : movieName
-				},
-				success : function(result) {
-					result = result.trim();
-					$("#theaterList").html(result);
-				},
-				error : function(xhr, status, error) {
-					console.log('error');
-				}
-			});
-		});
-		$('#theaterList').on("click", ".theater", function() {
-			let theater = $(this).attr("data-board-theater");
-			let movieName = $(this).attr("data-board-movieName");
-			$(this).css("color", "white");
-	        $(this).css("background-color", "#333");
-	        $(this).css("width", "107px");
-	        $('.movie_little_title').css("float", "left");
-	        
-	        $(this).parent().parent().css("background-color", "#333");	        
-	         
-	        $(this).parent().parent().siblings().children().children().css("color", "black");
-	        $(this).parent().parent().siblings().css("background-color", "#F2F0E4");
-	        $(this).parent().parent().siblings().children().children().css("background-color", "#F2F0E4");
+							$(this).parent().parent().siblings().css(
+									"background-color", "#F2F0E4");
+							$(this).css("color", "white");
+							$(this).parent().parent().siblings().children()
+									.children().css("color", "black");
+							document.getElementById("movie_little_title").innerText = movieName;
+							$('.mph').css("display", "none");
+							$('.movie_posterName').css("display", "block");
+							$('.movie_posterName').css("float", "left");
+							$('.movie_little_title').css("display", "block");
+							$('.movie_little_title').css("float", "left");
+							$(this).parent().attr('class', 'selected');
 
+							$('.movie-select > li > a.selected').css("border",
+									"1px solid #5c5c5c");
+							$('.movie-select > li > a.selected').css(
+									"line-height", "29px");
+							$('.movie-select > li > a.selected').css("margin",
+									"1px");
 
-	        $('.tnb .info .row').css("display", "block");
-	        $('.tnb .info.theater .placeholder').css("display", "none");
-	        document.getElementById("theater-check").innerText = theater;
-	        
-	        $(this).parent().attr('class', 'selected');
+							console.log(movieName);
+							$.ajax({
+								type : "GET",
+								url : "./select",
+								data : {
+									movieName : movieName
+								},
+								success : function(result) {
+									result = result.trim();
+									$("#theaterList").html(result);
+								},
+								error : function(xhr, status, error) {
+									console.log('error');
+								}
+							});
+						});
+		$('#theaterList')
+				.on(
+						"click",
+						".theater",
+						function() {
+							let theater = $(this).attr("data-board-theater");
+							let movieName = $(this)
+									.attr("data-board-movieName");
+							$(this).css("color", "white");
+							$(this).css("background-color", "#333");
+							$(this).css("width", "107px");
+							$('.movie_little_title').css("float", "left");
 
-	        $('#theaterList > tr > td.selected').css("border", "1px solid #5c5c5c");
-	        $('#theaterList > tr > td.selected').css("line-height", "29px");
-	        $('#theaterList > tr > td.selected').css("margin", "1px");
-	        $('#theaterList > tr > td.selected').css("width", "103px");
-	        $('#theaterList > tr > td.selected').css("height", "28.5px");
-	        
-	        
-			console.log(theater);
-			console.log(movieName);
-			$.ajax({
-				type : "GET",
-				url : "./select2",
-				data : {
-					theater : theater,
-					movieName : movieName
-				},
-				success : function(result) {
-					result = result.trim();
-					$("#watchdateList").html(result);
-				},
-				error : function(xhr, status, error) {
-					console.log('error');
-				}
-			});
-		});
+							$(this).parent().parent().css("background-color",
+									"#333");
 
-		$('#watchdateList').on("click", ".watchDate", function() {
-			let theater = $(this).attr("data-board-theater");
-			let watchDate = $(this).attr("data-board-watchDate");
-			let movieName = $(this).attr("data-board-movieName");
-			$(this).children().css("color", "white");
-	        $(this).parent().css("background-color", "#333");
-	         
-	        $(this).parent().siblings().css("background-color", "#F2F0E4");
-	        $(this).parent().siblings().children().children().css("color", "black");
-	        document.getElementById("theater-day").innerText = watchDate;
-	        
-	        $('#theaterList > tr > td.selected').css("border", "1px solid #5c5c5c");
-	        $('#theaterList > tr > td.selected').css("line-height", "29px");
-	        $('#theaterList > tr > td.selected').css("margin", "1px");
-	        
-	        
-			console.log(theater);
-			console.log(watchDate);
-			console.log(movieName);
-			$.ajax({
-				type : "GET",
-				url : "./select3",
-				data : {
-					theater : theater,
-					watchDate : watchDate,
-					movieName : movieName
-				},
-				success : function(result) {
-					result = result.trim();
-					$("#timetableList").html(result);
-				},
-				error : function(xhr, status, error) {
-					console.log('error');
-				}
-			});
-		});
+							$(this).parent().parent().siblings().children()
+									.children().css("color", "black");
+							$(this).parent().parent().siblings().css(
+									"background-color", "#F2F0E4");
+							$(this).parent().parent().siblings().children()
+									.children().css("background-color",
+											"#F2F0E4");
+
+							$('.tnb .info .row').css("display", "block");
+							$('.tnb .info.theater .placeholder').css("display",
+									"none");
+							document.getElementById("theater-check").innerText = theater;
+
+							$(this).parent().attr('class', 'selected');
+
+							$('#theaterList > tr > td.selected').css("border",
+									"1px solid #5c5c5c");
+							$('#theaterList > tr > td.selected').css(
+									"line-height", "29px");
+							$('#theaterList > tr > td.selected').css("margin",
+									"1px");
+							$('#theaterList > tr > td.selected').css("width",
+									"103px");
+							$('#theaterList > tr > td.selected').css("height",
+									"28.5px");
+
+							console.log(theater);
+							console.log(movieName);
+							$.ajax({
+								type : "GET",
+								url : "./select2",
+								data : {
+									theater : theater,
+									movieName : movieName
+								},
+								success : function(result) {
+									result = result.trim();
+									$("#watchdateList").html(result);
+								},
+								error : function(xhr, status, error) {
+									console.log('error');
+								}
+							});
+						});
+
+		$('#watchdateList')
+				.on(
+						"click",
+						".watchDate",
+						function() {
+							let theater = $(this).attr("data-board-theater");
+							let watchDate = $(this)
+									.attr("data-board-watchDate");
+							let movieName = $(this)
+									.attr("data-board-movieName");
+							$(this).children().css("color", "white");
+							$(this).parent().css("background-color", "#333");
+
+							$(this).parent().siblings().css("background-color",
+									"#F2F0E4");
+							$(this).parent().siblings().children().children()
+									.css("color", "black");
+							document.getElementById("theater-day").innerText = watchDate;
+
+							$('#theaterList > tr > td.selected').css("border",
+									"1px solid #5c5c5c");
+							$('#theaterList > tr > td.selected').css(
+									"line-height", "29px");
+							$('#theaterList > tr > td.selected').css("margin",
+									"1px");
+
+							console.log(theater);
+							console.log(watchDate);
+							console.log(movieName);
+							$.ajax({
+								type : "GET",
+								url : "./select3",
+								data : {
+									theater : theater,
+									watchDate : watchDate,
+									movieName : movieName
+								},
+								success : function(result) {
+									result = result.trim();
+									$("#timetableList").html(result);
+								},
+								error : function(xhr, status, error) {
+									console.log('error');
+								}
+							});
+						});
 
 		$('#timetableList').on(
 				"click",
@@ -1408,11 +1456,13 @@ button.timeTable {
 					console.log(movieName);
 					console.log(timeTable);
 					$('.btn-right').addClass('on');
-					$('.btn-right').click(function(){
-						location.href = "./select4?movieName=" + movieName
-						+ "&theater=" + theater + "&watchDate="
-						+ watchDate + "&timeTable=" + timeTable;
-					});
+					$('.btn-right').click(
+							function() {
+								location.href = "./select4?movieName="
+										+ movieName + "&theater=" + theater
+										+ "&watchDate=" + watchDate
+										+ "&timeTable=" + timeTable;
+							});
 					/* $.ajax({
 						type : "GET",
 						data : {

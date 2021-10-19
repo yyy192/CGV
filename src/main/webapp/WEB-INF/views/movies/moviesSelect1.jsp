@@ -1073,14 +1073,14 @@ button, input[type='submit'], input[type='reset'] {
 }
 
 #jqplot_sex {
-	background-image: url('/s5/resources/images/jqplot_sex1.PNG');
+	background-image: url('/s5/resources/images/jqplot_sex.PNG');
 	background-size: 260px 138px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #jqplot_age {
-	background-image: url('/s5/resources/images/jqplot_age1.PNG');
+	background-image: url('/s5/resources/images/jqplot_age.PNG');
 	background-size: 360px 168px;
 	background-repeat: no-repeat;
 	background-position: center;

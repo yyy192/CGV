@@ -53,7 +53,27 @@
             <div class="info-times">
                <div class="movie-info">
                   <p id="watch" data-th-watch='${d.watchDate}'>☞ ${d.watchDate}</p>
-                  <a href="../movies/select?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>   
+                  <c:if test="${d.movieName eq '007 노 타임 투 다이'}">
+                     <a href="../movies/select1?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq '보이스'}">
+                     <a href="../movies/select2?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq 'F20'}">
+                     <a href="../movies/select3?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq '쁘띠 마망'}">
+                     <a href="../movies/select4?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq '기적'}">
+                     <a href="../movies/select5?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq '스틸워터'}">
+                     <a href="../movies/select6?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
+                  <c:if test="${d.movieName eq '샹치와 텐 링즈의 전설'}">
+                     <a href="../movies/select7?movieName=${d.movieName}" id="movie" data-th-movie='${d.movieName}'>
+                  </c:if>
                      <c:if test="${d.ageCut eq '15세'}">
                      <span
                      class="icon15">&nbsp;</span>

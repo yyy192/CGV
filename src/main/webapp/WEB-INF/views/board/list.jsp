@@ -46,8 +46,17 @@
    }
    
    .sec-wrap {
-      margin: 0 200px;   
+      margin: 0 auto;
+      width: 1112px;   
    }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
+   
    
    .list-main {
    width:1112px;
@@ -265,11 +274,19 @@
     }
     
     ul li {
-    list-style-type: none;
-    float: left;
-    margin-top: 5px;
-    margin-left: 50px;
-}
+       list-style-type: none;
+       float: left;
+       margin-top: 5px;
+       margin-left: 50px;
+   }
+
+   .sh-cc {
+      display: inline-block;
+       margin: 6px 0px 0px 15px;   
+       width: 400px;
+       font-weight: 550;
+       font-size: 12px;
+   } 
     
 </style>
 </head>
@@ -339,10 +356,12 @@
                <div class="input-group mb-3">
                 <input value="${pager.search}" id="search" type="text" name="search" placeholder="검색어를 입력해 주세요." class="form-control" aria-label="Text input with dropdown button">
                 <button type="submit" class="search-btn">검색하기</button>
-               추천검색어 : <a href="./list?search=관람권">관람권</a> |
-               <a href="./list?search=홈페이지">홈페이지</a> |
-               <a href="./list?search=예매">예매</a> |
-               <a href="./list?search=환불">환불</a>
+                  <div class="sh-cc">
+                     추천검색어 : <a href="./list?search=관람권">관람권</a> |
+                     <a href="./list?search=홈페이지">홈페이지</a> |
+                     <a href="./list?search=예매">예매</a> |
+                     <a href="./list?search=환불">환불</a>
+                  </div>
                </div>
                
             </form>
@@ -371,7 +390,7 @@
          <button class="a before" type="button" data-board-cord="VIP관련">VIP관련</button>
          <button class="a before" type="button" data-board-cord="할인혜택">할인혜택</button>
          <button class="a before" type="button" data-board-cord="영화관이용">영화관이용</button>
-         <button class="a before" type="button" data-board-cord="기프티콘">기프티콘</button>
+         <button class="a before" type="button" data-board-cord="기프트샵">기프트샵</button>
          <button class="a before" type="button" data-board-cord="홈페이지/모바일">홈페이지/모바일</button>
       </div>
       </c:if>

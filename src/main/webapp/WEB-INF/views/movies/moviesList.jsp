@@ -86,14 +86,23 @@
 }
 
 .linemap-wrap {
-	width: auto;
-	height: 28px;
-	margin: 0 auto;
-	background-color: #f1f0e5;
-	border-bottom: 1px solid #cacac0;
-	display: block;
-	padding-left: 200px;
-}
+       height: 28px;
+       background-color: #f1f0e5;
+       border-bottom: 1px solid #cacac0;
+      display: block;
+   }
+   .sec-wrap {
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
 
 .sect-sorting {
 	position: relative;
@@ -793,11 +802,13 @@ i {
 		<!-- LineMap -->
 
 		<div class="linemap-wrap">
-			<ul>
-				<li><a href="http://localhost/s5/"><img alt="home"
-						src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-			</ul>
-		</div>
+      <div class="sec-wrap">
+         <ul>
+            <li><a href="http://localhost/s5/"><img alt="home"
+                  src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
+         </ul>
+      </div>
+      </div>
 		<!-- //LineMap -->
 
 		<!-- Contents Area -->

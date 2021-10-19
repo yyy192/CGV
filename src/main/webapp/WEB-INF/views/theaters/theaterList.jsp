@@ -42,14 +42,22 @@
        /* width: 1062px; */
        
        height: 28px;
-       margin : 0 auto;
        background-color: #f1f0e5;
        border-bottom: 1px solid #cacac0;
       display: block;
    }
    
    .sec-wrap {
-      margin: 0 200px;   
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
    }
    
    #theater > .tabMenu > li > a:focus, #theater > .tabMenu > li > a:hover {
@@ -388,6 +396,7 @@
        font-weight: 540;
        font-size: 11px;
        line-height: 17px;
+       float: left;
    }
    
    .four-info {

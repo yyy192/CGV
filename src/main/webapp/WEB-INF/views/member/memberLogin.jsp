@@ -26,15 +26,23 @@ ol, ul, li{
 }
 
 .linemap-wrap {
-    width: auto;
-    
-    height: 28px;
+       height: 28px;
+       background-color: #f1f0e5;
+       border-bottom: 1px solid #cacac0;
+      display: block;
+   }
+   .sec-wrap {
     margin : 0 auto;
-    background-color: #f1f0e5;
-    border-bottom: 1px solid #cacac0;
-	display: block;
-	padding-left: 200px;
-}
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
 
 .wrap-login {	
 	width: 1062px;
@@ -314,10 +322,13 @@ strong {
 <c:import url="../temp/mainHome.jsp"></c:import>
 
 	<div class="linemap-wrap">
-		<ul>
-			<li><a href="http://localhost/s5/"><img alt="home" src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>                                             
-		</ul>
-	</div>
+      <div class="sec-wrap">
+         <ul>
+            <li><a href="http://localhost/s5/"><img alt="home"
+                  src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
+         </ul>
+      </div>
+      </div>
 	
 	<div class="wrap-login">
 		<div class="sect-login">
@@ -350,7 +361,7 @@ strong {
             <strong>CGV 회원이 아니신가요?</strong>
             <span>회원가입하시고 다양한 혜택을 누리세요!</span>
             <strong>
-                <a2 title="새창" target="_blank" href="http://localhost/s5/member/memberJoin" class="round red"><span>CGV 회원가입하기</span></a2>
+                <a title="새창" href="http://localhost/s5/member/check" class="round red"><span>CGV 회원가입하기</span></a>
             </strong>
             <em>
                 

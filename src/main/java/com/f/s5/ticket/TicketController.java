@@ -20,113 +20,113 @@ import com.f.s5.theaters.TheatersDTO;
 @RequestMapping("/ticket/**")
 public class TicketController {
 
-	@Autowired
-	private TicketService ticketService;
+   @Autowired
+   private TicketService ticketService;
 
-	@RequestMapping("list")
-	public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
+   @RequestMapping("list")
+   public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
 
-		List<MoviesDTO> movielist = ticketService.getMovieList(moviesDTO);
-		mv.addObject("list", movielist);
+      List<MoviesDTO> movielist = ticketService.getMovieList(moviesDTO);
+      mv.addObject("list", movielist);
 
-		mv.setViewName("ticket/ticketlist");
+      mv.setViewName("ticket/ticketlist");
 
-		return mv;
-	}
+      return mv;
+   }
 
-	@GetMapping("select")
-	public ModelAndView getMovieSelect(MothDTO mothDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
+   @GetMapping("select")
+   public ModelAndView getMovieSelect(MothDTO mothDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
 
-		List<MothDTO> ar = ticketService.getMovieSelect(mothDTO);
-		mv.addObject("theater", ar);
+      List<MothDTO> ar = ticketService.getMovieSelect(mothDTO);
+      mv.addObject("theater", ar);
 
-		mv.setViewName("common/ajaxList");
+      mv.setViewName("common/ajaxList");
 
-		return mv;
-	}
+      return mv;
+   }
 
-	@GetMapping("select2")
-	public ModelAndView getTheaterSelect(MothDTO mothDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		List<MothDTO> ar = ticketService.getTheaterSelect(mothDTO);
-		mv.addObject("watchDate", ar);
+   @GetMapping("select2")
+   public ModelAndView getTheaterSelect(MothDTO mothDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
+      List<MothDTO> ar = ticketService.getTheaterSelect(mothDTO);
+      mv.addObject("watchDate", ar);
 
-		mv.setViewName("common/ajaxList2");
+      mv.setViewName("common/ajaxList2");
 
-		return mv;
-	}
+      return mv;
+   }
 
-	@GetMapping("select3")
-	public ModelAndView getWatchDateSelect(MothDTO mothDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		List<TheatersDTO> ar = ticketService.getWatchDateSelect(mothDTO);
-		MothDTO mothDTO2 = ticketService.getMothSelect(mothDTO);
+   @GetMapping("select3")
+   public ModelAndView getWatchDateSelect(MothDTO mothDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
+      List<TheatersDTO> ar = ticketService.getWatchDateSelect(mothDTO);
+      MothDTO mothDTO2 = ticketService.getMothSelect(mothDTO);
 
-		mv.addObject("timeTable", ar);
-		mv.addObject("mothDTO2", mothDTO2);
+      mv.addObject("timeTable", ar);
+      mv.addObject("mothDTO2", mothDTO2);
 
-		mv.setViewName("common/ajaxList3");
+      mv.setViewName("common/ajaxList3");
 
-		return mv;
-	}
+      return mv;
+   }
 
-	@GetMapping("select4")
-	public ModelAndView setTicket(HttpSession session, TicketDTO ticketDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
+   @GetMapping("select4")
+   public ModelAndView setTicket(HttpSession session, TicketDTO ticketDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
 
-		if (session.getAttribute("member") != null) {
-			MemberDTO m = (MemberDTO) session.getAttribute("member");
+      if (session.getAttribute("member") != null) {
+         MemberDTO m = (MemberDTO) session.getAttribute("member");
 
 
-			String birth = Integer.toString(m.getBirth()).substring(0, 4);
-			int checkBirth = 2022 - Integer.parseInt(birth);
+         String birth = Integer.toString(m.getBirth()).substring(0, 4);
+         int checkBirth = 2022 - Integer.parseInt(birth);
+         
+         if(checkBirth >= 20 ) {
+            ticketDTO.setPrice("10,000");
+         } else {
+            ticketDTO.setPrice("7,000");
 
-			ticketDTO.setId(m.getId());
-			
-			if(checkBirth >= 20 ) {
-				ticketDTO.setPrice("10,000");
-			} else {
-				ticketDTO.setPrice("7,000");
+         }
 
-			}
+         ticketDTO.setId(m.getId());
+         
+         List<TicketDTO> ar = ticketService.checkTicket(ticketDTO);
 
-			List<TicketDTO> ar = ticketService.checkTicket(ticketDTO);
+         int result = ticketService.setTicket(ticketDTO);
 
-			int result = ticketService.setTicket(ticketDTO);
+         if (result > 0) {
+            System.out.println("ticket Insert 성공");
+            mv.addObject("age", checkBirth);
+            mv.addObject("ticketDTO", ticketDTO);
+            mv.addObject("seat", ar);
+            mv.addObject("size", ar.size());
+            mv.setViewName("common/seat");
 
-			if (result > 0) {
-				System.out.println("ticket Insert 성공");
-				mv.addObject("age", checkBirth);
-				mv.addObject("ticketDTO", ticketDTO);
-				mv.addObject("seat", ar);
-				mv.addObject("size", ar.size());
-				mv.setViewName("common/seat");
+         } else {
+            System.out.println("오류");
+         }
 
-			} else {
-				System.out.println("오류");
-			}
+      } else {
+         mv.setViewName("redirect:../member/memberLogin");
+      }
 
-		} else {
-			mv.setViewName("redirect:../member/memberLogin");
-		}
+      return mv;
+   }
 
-		return mv;
-	}
-
-	@PostMapping("updateInfo")
-	public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		int result = ticketService.updateInfo(ticketDTO);
-		String msg = "업데이트 실패했습니다";
-		if (result > 0) {
-			msg = "업데이트 완료";
-		}
-		mv.addObject("msg", msg);
-		mv.addObject("url", "redirect ../");
-		mv.setViewName("common/ajaxResult");
-		return mv;
-	}
+   @PostMapping("updateInfo")
+   public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception {
+      ModelAndView mv = new ModelAndView();
+      int result = ticketService.updateInfo(ticketDTO);
+      String msg = "업데이트 실패했습니다";
+      if (result > 0) {
+         msg = "업데이트 완료";
+      }
+      mv.addObject("msg", msg);
+      mv.addObject("url", "redirect ../");
+      mv.setViewName("common/ajaxResult");
+      return mv;
+   }
 
 }

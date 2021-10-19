@@ -179,7 +179,7 @@ h3 {
                CGV 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br>CGV의 다양한 서비스를
                이용하실 수 있습니다.
             </p>
-<a href="http://localhost/s5/member/memberJoin" target="_blank" title="새창" class="link-join"><span>CGV 회원 가입</span></a>
+<a href="http://localhost/s5/member/memberJoin" title="새창" class="link-join"><span>CGV 회원 가입</span></a>
 
          </div>
 
