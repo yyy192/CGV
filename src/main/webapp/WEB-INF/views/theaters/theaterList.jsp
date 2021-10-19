@@ -95,16 +95,15 @@
        backgroung-repeat: no-repeat;
    }
    
-   #clickEvent {
-      display: inline-block;
-      position:absolute;
-      margin: 130px 0 0 160px;
-       /* padding: 150px 0 0 275px; */
+  #clickEvent {
+        display: block;
+      margin: 0 auto;
+      margin-top: 10%;
       text-align: center;
    }
    #clickEvent > a {
       display: inline-block;
-      font-size:30px;
+      font-size:25px;
    }
    
    #theater {

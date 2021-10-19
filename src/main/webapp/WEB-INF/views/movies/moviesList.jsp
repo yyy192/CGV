@@ -790,6 +790,10 @@ i {
 	margin: 0 auto;
 	border-bottom: 3px solid #241d1e;
 }
+
+body{
+	background-color: #FDFCF0;
+}
 </style>
 <meta charset="UTF-8">
 </head>
