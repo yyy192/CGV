@@ -1073,14 +1073,14 @@ button, input[type='submit'], input[type='reset'] {
 }
 
 #jqplot_sex {
-	background-image: url('/s5/resources/images/jqplot_sex1.PNG');
+	background-image: url('/s5/resources/images/jqplot_sex.PNG');
 	background-size: 260px 138px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #jqplot_age {
-	background-image: url('/s5/resources/images/jqplot_age1.PNG');
+	background-image: url('/s5/resources/images/jqplot_age.PNG');
 	background-size: 360px 168px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1356,7 +1356,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1439,7 +1439,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195317_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195317_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1523,7 +1523,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195038_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195038_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
