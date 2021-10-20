@@ -43,7 +43,7 @@ a {
 	margin: 0 auto;
 }
 .m_bottom {
-	width: 100%;
+	width: 980px;
 	height: 119px;
 	margin: 0 auto;
 }

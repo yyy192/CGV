@@ -64,8 +64,7 @@
 	margin-left: 15px;
 }
 
-.tit-heading-wrap>.submenu>ul>li.on>a, .tit-heading-wrap>.submenu>ul>li>a:hover,
-	.tit-heading-wrap>.submenu>ul>li>a:focus {
+.redlight{
 	background:
 		url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow07.png)
 		no-repeat 0 3px;
@@ -86,23 +85,26 @@
 }
 
 .linemap-wrap {
-       height: 28px;
-       background-color: #f1f0e5;
-       border-bottom: 1px solid #cacac0;
-      display: block;
-   }
-   .sec-wrap {
-    margin : 0 auto;
-   width: 1112px;
-   height: 100%;   
-   }
-   .sec-wrap>ul {
-   display: inline-block;
-   }
-   .sec-wrap>ul>li {
-   margin-left: 0;
-   margin-top: 3px;
-   }
+	height: 28px;
+	background-color: #f1f0e5;
+	border-bottom: 1px solid #cacac0;
+	display: block;
+}
+
+.sec-wrap {
+	margin: 0 auto;
+	width: 1112px;
+	height: 100%;
+}
+
+.sec-wrap>ul {
+	display: inline-block;
+}
+
+.sec-wrap>ul>li {
+	margin-left: 0;
+	margin-top: 3px;
+}
 
 .sect-sorting {
 	position: relative;
@@ -567,6 +569,14 @@ body, input, textarea, select, button, table {
 	font-size: 12px;
 }
 
+.wrap-info-trailer .box-contents .title {
+    color: #999999;
+    margin-bottom: 3px;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
 [class|="sect"][class*="chart"] .btn-more-fontbold {
 	float: right;
 	margin-top: 10px;
@@ -785,10 +795,14 @@ i {
 	background-position: -121px -21px;
 }
 
-.black-border{
+.black-border {
 	width: 980px;
 	margin: 0 auto;
 	border-bottom: 3px solid #241d1e;
+}
+
+body {
+	background-color: #FDFCF0;
 }
 </style>
 <meta charset="UTF-8">
@@ -802,13 +816,13 @@ i {
 		<!-- LineMap -->
 
 		<div class="linemap-wrap">
-      <div class="sec-wrap">
-         <ul>
-            <li><a href="http://localhost/s5/"><img alt="home"
-                  src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-         </ul>
-      </div>
-      </div>
+			<div class="sec-wrap">
+				<ul>
+					<li><a href="http://localhost/s5/"><img alt="home"
+							src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
+				</ul>
+			</div>
+		</div>
 		<!-- //LineMap -->
 
 		<!-- Contents Area -->
@@ -826,9 +840,9 @@ i {
 
 					<div class="submenu">
 						<ul>
-							<li class="on"><a href="/movies/" title="선택">무비차트</a></li>
-							<li><a href="/movies/pre-movies.aspx">상영예정작</a></li>
-							<li><a href="/movies/?lt=3">CGV아트하우스</a></li>
+							<li class="on redlight"><a href="#" title="선택">무비차트</a></li>
+							<li><a href="#">상영예정작</a></li>
+							<li><a href="#">CGV아트하우스</a></li>
 						</ul>
 					</div>
 				</div>
@@ -836,9 +850,9 @@ i {
 				<!-- Sorting -->
 				<div class="sect-sorting">
 					<div class="nowshow">
-						<input type="checkbox" id="chk_nowshow" title="현재 선택됨" checked="">
-
-						<label for="chk_nowshow">현재 상영작만 보기</label>
+						<input type="checkbox" id="chk_nowshow" title="현재 선택됨"
+							checked="checked" onclick="return false"> <label
+							for="chk_nowshow">현재 상영작만 보기</label>
 					</div>
 					<label for="order_type" class="hidden">정렬</label> <select
 						id="order_type" name="order-type">
@@ -875,8 +889,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select1"> <strong
-									class="title">007 노 타임 투 다이</strong>
+								<a href="${pageContext.request.contextPath}/movies/select1">
+									<strong class="title">007 노 타임 투 다이</strong>
 								</a>
 
 								<div class="score">
@@ -910,8 +924,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select2"> <strong
-									class="title">보이스</strong>
+								<a href="${pageContext.request.contextPath}/movies/select2">
+									<strong class="title">보이스</strong>
 								</a>
 
 								<div class="score">
@@ -945,8 +959,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select3"> <strong
-									class="title">F20</strong>
+								<a href="${pageContext.request.contextPath}/movies/select3">
+									<strong class="title">F20</strong>
 								</a>
 
 								<div class="score">
@@ -986,8 +1000,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select4"> <strong
-									class="title">쁘띠 마망</strong>
+								<a href="${pageContext.request.contextPath}/movies/select4">
+									<strong class="title">쁘띠 마망</strong>
 								</a>
 
 								<div class="score">
@@ -1020,8 +1034,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select5"> <strong
-									class="title">기적</strong>
+								<a href="${pageContext.request.contextPath}/movies/select5">
+									<strong class="title">기적</strong>
 								</a>
 
 								<div class="score">
@@ -1054,8 +1068,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select6"> <strong
-									class="title">스틸워터</strong>
+								<a href="${pageContext.request.contextPath}/movies/select6">
+									<strong class="title">스틸워터</strong>
 								</a>
 
 								<div class="score">
@@ -1088,8 +1102,8 @@ i {
 							</div>
 
 							<div class="box-contents">
-								<a href="${pageContext.request.contextPath}/movies/select7"> <strong
-									class="title">샹치와 텐 링즈의 전설</strong>
+								<a href="${pageContext.request.contextPath}/movies/select7">
+									<strong class="title">샹치와 텐 링즈의 전설</strong>
 								</a>
 
 								<div class="score">
@@ -1148,57 +1162,6 @@ i {
 				</div>
 			</div>
 			<!-- .sect-moviechart -->
-			<script type="text/javascript">
-				//<![CDATA[
-				(function($) {
-					$(function() {
-
-						$('.sect-sorting button').click(function() {
-							var val = $('#order_type').val();
-							if (val) {
-								location.href = "/movies/?lt=1&ot=" + val;
-							}
-						});
-						//[2015-12-15] 무비 파인더 페이지 인 경우 정렬 버튼 처리. : add_mwpark
-						$("#sect-finder button")
-								.click(
-										function() {
-											var val = $('#order_type').val();
-											if (val) {
-												location.href = "/movies/finder.aspx?lt=1&ot="
-														+ val;
-											}
-										});
-
-						$('#chk_nowshow').click(
-								function() {
-									if ($("input:checkbox[id='chk_nowshow']")
-											.is(":checked")) {
-										location.href = "/movies/?lt=1&ft=1";
-									} else {
-										location.href = "/movies/?lt=1&ft=0";
-									}
-								});
-
-						//[2015-12-15] 무비 파인더 페이지 인 경우 현재 상영작만 보기 체크 박스 처리. : add_mwpark
-						$("#chk_finder_nowshow")
-								.on(
-										"click",
-										function() {
-											if ($(
-													"input:checkbox[id='chk_nowshow']")
-													.is(":checked")) {
-												location.href = "/movies/finder.aspx?lt=1&ft=1";
-											} else {
-												location.href = "/movies/finder.aspx?lt=1&ft=0";
-											}
-										});
-
-					});
-
-				})(jQuery);
-				//]]>
-			</script>
 
 			<div class="chart-ad-bottom">
 				<iframe
@@ -1345,53 +1308,53 @@ i {
 						<h3>실시간 인기 검색어</h3>
 						<ol>
 
-							<li><a href="/search/?query=%eb%b6%80%ed%99%9c">1. <strong>부활</strong></a>
+							<li><a>1. <strong>부활</strong></a>
 								<em> <span class="new">NEW</span>
 							</em></li>
 
 							<li><a
-								href="/search/?query=%ea%b0%95%ec%b2%a0%eb%b9%842+%ec%a0%95%ec%83%81%ed%9a%8c%eb%8b%b4">2.
+								>2.
 									<strong>강철비2 정상회담</strong>
 							</a> <em> <span class="new">NEW</span>
 							</em></li>
 
-							<li><a href="/search/?query=%eb%b0%98%eb%8f%84">3. <strong>반도</strong></a>
+							<li><a >3. <strong>반도</strong></a>
 								<em> <span class="new">NEW</span>
 							</em></li>
 
 							<li><a
-								href="/search/?query=%ec%82%b4%ec%95%84%ec%9e%88%eb%8b%a4">4.
+								>4.
 									<strong>살아있다</strong>
 							</a> <em> <span class="new">NEW</span>
 							</em></li>
 
-							<li><a href="/search/?query=%ec%bd%94%eb%82%9c">5. <strong>코난</strong></a>
+							<li><a >5. <strong>코난</strong></a>
 								<em> 3 <span class="up">상승</span>
 							</em></li>
 
-							<li><a href="/search/?query=%ec%95%8c%eb%9d%bc%eb%94%98">6.
+							<li><a >6.
 									<strong>알라딘</strong>
 							</a> <em> 1 <span class="down">하락</span>
 							</em></li>
 
-							<li><a href="/search/?query=%ed%8c%ac%eb%8d%b0%eb%af%b9">7.
+							<li><a >7.
 									<strong>팬데믹</strong>
 							</a> <em> <span class="new">NEW</span>
 							</em></li>
 
 							<li><a
-								href="/search/?query=%ed%95%b4%eb%a6%ac%ed%8f%ac%ed%84%b0">8.
+								>8.
 									<strong>해리포터</strong>
 							</a> <em> 2 <span class="down">하락</span>
 							</em></li>
 
-							<li><a href="/search/?query=%eb%b1%85%eb%93%9c%eb%a6%bc">9.
+							<li><a >9.
 									<strong>뱅드림</strong>
 							</a> <em> <span class="new">NEW</span>
 							</em></li>
 
 							<li><a
-								href="/search/?query=%eb%aa%85%ed%83%90%ec%a0%95%ec%bd%94%eb%82%9c">10.
+								>10.
 									<strong>명탐정코난</strong>
 							</a> <em> 302 <span class="up">상승</span>
 							</em></li>
@@ -1407,89 +1370,8 @@ i {
 - Good :  70 ~ 84
 - Great : 85 ~ 100  
 //-->
-			<script id="temp_movie" type="text/x-jquery-tmpl">
-    <li>
-        <div class="box-image" >
-            <a href="/movies/detail-view/?midx=${MovieIdx}">
-                <span class="thumb-image">
-                    <img src="${PosterImage.LargeImage}" alt="${Title}" onerror="errorImage(this)"/>
-                    <span class="ico-grade ${MovieGrade.StyleClassName}">${MovieGrade.GradeText}</span>
-                </span>
-            </a>
-            <span class="screentype">
-                {{each MovieKindList}}
-                <a class="${StyleClassName}" href="#" data-regioncode="${RegionCode}">${KindName}</a>
-                {{/each}}
-            </span>
-        </div>
-                    
-        <div class="box-contents">
-            <a href="/movies/detail-view/?midx=${MovieIdx}">
-                <strong class="title">${Title}</strong>
-            </a>
 
-            <div class="score">
-                <strong class="percent">예매율<span>${TicketRate}%</span></strong>
-                <!--2020.05.07 개봉일 12시 30분전 프리에그, 개봉일 12시 30분후 골든에그지수 노출 기준변경-->
-                <div class="egg-gage small">
-                    <span class="${StarPoint}"></span>
-                    <span class="percent">${EggPoint}</span>
-                </div>
-            </div>
 
-            <span class="txt-info">
-                <strong>
-                    ${OpenDate}
-                    <span>${OpenText}</span>
-                    {{if D_Day > 0}}
-                        <em class="dday">D-${D_Day}</em>
-                    {{/if}}
-                </strong>
-            </span>
-            <span class="like"> 
-                {{if (IsTicketing)}}<a class="link-reservation" href="http://www.cgv.co.kr/ticket/?MOVIE_CD=${CGVCode}&MOVIE_CD_GROUP=${MovieGroupCode}">예매</a>{{/if}}
-            </span>
-        </div>    
-    </li>
-</script>
-
-			<script type="text/javascript">
-				//<![CDATA[
-
-				(function($) {
-					$(function() {
-
-						$(".btn-more-fontbold").click(function() {
-							$(this).remove();
-							app.movie().getList({
-								listType : '1',
-								orderType : '1',
-								filterType : '1'
-							}, setMovieListBuild);
-						});
-
-						function setMovieListBuild(result) {
-
-							$("#movie_more_container").empty();
-							$("#movie_more_container").show();
-
-							for (var i = 0; i < result.List.length; i++) {
-								var str = result.List[i].JointCount;
-								result.List[i].JointCount = str.split(",")
-										.join("");
-							}
-
-							$("#temp_movie").tmpl(result.List).appendTo(
-									"#movie_more_container");
-
-							//$('.point').point();        //평점 별 표시
-							$('.btn-like').like(); //wish list동작 처리
-							$('span.screentype a').specialTheater(); //특별관 링크
-						}
-					});
-				})(jQuery);
-				//]]>
-			</script>
 
 
 			<!--/ Contents End -->
