@@ -72,20 +72,19 @@ public class TicketController {
 		return mv;
 	}
 
-	@GetMapping("select4")
-	public ModelAndView setTicket(HttpSession session, TicketDTO ticketDTO) throws Exception {
+	@GetMapping("select99")
+	public ModelAndView dddd(HttpSession session, TicketDTO ticketDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 
 		if (session.getAttribute("member") != null) {
 			MemberDTO m = (MemberDTO) session.getAttribute("member");
 
-
 			String birth = Integer.toString(m.getBirth()).substring(0, 4);
 			int checkBirth = 2022 - Integer.parseInt(birth);
 
 			ticketDTO.setId(m.getId());
-			
-			if(checkBirth >= 20 ) {
+
+			if (checkBirth >= 20) {
 				ticketDTO.setPrice("10,000");
 			} else {
 				ticketDTO.setPrice("7,000");
@@ -102,7 +101,7 @@ public class TicketController {
 				mv.addObject("ticketDTO", ticketDTO);
 				mv.addObject("seat", ar);
 				mv.addObject("size", ar.size());
-				mv.setViewName("common/seat");
+				mv.setViewName("common/ajaxList4");
 
 			} else {
 				System.out.println("오류");
@@ -114,6 +113,39 @@ public class TicketController {
 
 		return mv;
 	}
+
+	/*
+	 * @GetMapping("select4") public ModelAndView setTicket(HttpSession session,
+	 * TicketDTO ticketDTO) throws Exception { ModelAndView mv = new ModelAndView();
+	 * 
+	 * if (session.getAttribute("member") != null) { MemberDTO m = (MemberDTO)
+	 * session.getAttribute("member");
+	 * 
+	 * 
+	 * String birth = Integer.toString(m.getBirth()).substring(0, 4); int checkBirth
+	 * = 2022 - Integer.parseInt(birth);
+	 * 
+	 * ticketDTO.setId(m.getId());
+	 * 
+	 * if(checkBirth >= 20 ) { ticketDTO.setPrice("10,000"); } else {
+	 * ticketDTO.setPrice("7,000");
+	 * 
+	 * }
+	 * 
+	 * List<TicketDTO> ar = ticketService.checkTicket(ticketDTO);
+	 * 
+	 * int result = ticketService.setTicket(ticketDTO);
+	 * 
+	 * if (result > 0) { System.out.println("ticket Insert 성공"); mv.addObject("age",
+	 * checkBirth); mv.addObject("ticketDTO", ticketDTO); mv.addObject("seat", ar);
+	 * mv.addObject("size", ar.size()); mv.setViewName("common/seat");
+	 * 
+	 * } else { System.out.println("오류"); }
+	 * 
+	 * } else { mv.setViewName("redirect:../member/memberLogin"); }
+	 * 
+	 * return mv; }
+	 */
 
 	@PostMapping("updateInfo")
 	public ModelAndView updateInfo(TicketDTO ticketDTO) throws Exception {

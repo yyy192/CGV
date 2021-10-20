@@ -1121,11 +1121,11 @@ button, input[type='submit'], input[type='reset'] {
 	margin-top: -360px;
 	background-color: #333;
 	text-align: left;
-	line-height: 1.2; color : #666; font-family : 'CJONLYONENEW', '맑은 고딕',
-	'돋움', Dotum, sans-serif;
-	font-weight: 300;
+	line-height: 1.2;
 	color: #666;
 	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+	font-weight: 300;
+	color: #666;
 }
 
 #all_body {
@@ -1139,19 +1139,18 @@ button, input[type='submit'], input[type='reset'] {
 }
 
 .layer-wrap .popwrap {
-    position: relative;
-    padding: 5px;
-    background-color: #333333;
+	position: relative;
+	padding: 5px;
+	background-color: #333333;
 }
 
-.sect-layerplayer .cols-pop-player > .title {
-    margin-bottom: 20px;
-    font-size: 17px;
-    font-weight: 500;
-    color: #cccccc;
-    
+.sect-layerplayer .cols-pop-player>.title {
+	margin-bottom: 20px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #cccccc;
+	font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
 }
-
 </style>
 
 <meta charset="UTF-8">
@@ -1184,7 +1183,6 @@ button, input[type='submit'], input[type='reset'] {
 					<div class="col-pop-player">
 
 						<div class="warp-pop-player" style="position: relative;">
-
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
 								controls="" autoplay="">
@@ -1242,7 +1240,8 @@ button, input[type='submit'], input[type='reset'] {
 					<!-- .col-playerinfo -->
 				</div>
 				<!-- .cols-player -->
-				<button type="button" class="btn-close">닫기</button>
+				<button type="button" class="btn-close"
+					onclick="layerClose('lay_pop','all_body')">닫기</button>
 			</div>
 		</div>
 	</div>
