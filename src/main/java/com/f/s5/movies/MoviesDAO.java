@@ -16,6 +16,7 @@ public class MoviesDAO {
 	public List<MoviesDTO> getMoviesList(MoviesDTO moviesDTO) throws Exception {
 		return sqlSession.selectList(NAMESPACE + "getMoviesList", moviesDTO);
 	}
+		
 
 	
 

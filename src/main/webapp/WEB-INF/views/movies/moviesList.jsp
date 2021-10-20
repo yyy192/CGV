@@ -1384,6 +1384,11 @@ body {
 
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 
+	<script type="text/javascript">
+		
+		
+	
+	</script>
 
 
 

@@ -14,7 +14,7 @@ public class MoviesService {
 	public List<MoviesDTO> getMoviesList(MoviesDTO moviesDTO) throws Exception {
 		return moviesDAO.getMoviesList(moviesDTO);	
 	}
-	
-	
+		
+
 
 }

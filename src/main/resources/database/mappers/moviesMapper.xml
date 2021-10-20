@@ -8,4 +8,5 @@
   <select id="getMoviesList" resultType="MoviesDTO">
   	SELECT * FROM MOVIES
   </select>   
+   
   </mapper>

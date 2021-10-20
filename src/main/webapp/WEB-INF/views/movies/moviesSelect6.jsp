@@ -1379,7 +1379,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/85014/85014195149_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/85014/85014_195149_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1462,7 +1462,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/85014/85014195012_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/85014/85014_195012_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">

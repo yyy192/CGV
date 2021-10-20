@@ -1353,7 +1353,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617195169_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1436,7 +1436,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194855_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_194855_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1519,7 +1519,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194796_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">

@@ -1025,6 +1025,10 @@ button.timeTable {
 	overflow: hidden;
 	text-indent: -1000px;
 }
+
+.p_m{
+	display: none;
+}
 </style>
 
 </head>
@@ -1067,8 +1071,8 @@ button.timeTable {
 										href="#" onclick="return false;" class="button menu3">특별관</a>
 									<span class="side"></span>
 								</div>
-
-
+								<h1 class="p_m">${movieName}</h1>
+								<div class="mvn">${dto.movieName}</div>
 								<c:forEach items="${list}" var="dto">
 
 									<li class="rating-12 press selected" movie_cd_group="20027588"
@@ -1290,9 +1294,28 @@ button.timeTable {
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 
 	<script type="text/javascript">
+		x();
+
+		function x() {
+			let m = $('.p_m').text();
+			
+			let t = $('.movie11').filter(":contains('보이스')").css("background", "red");
+			
+			/* if (m != "") {
+				document.getElementById("movie_little_title").innerText = m;
+				$('.mph').css("display", "none");
+				$('.movie_posterName').css("display", "block");
+				$('.movie_posterName').css("float", "left");
+				$('.movie_little_title').css("display", "block");
+				$('.movie_little_title').css("float", "left");
+				console.log(m);
+				a(m); */
+			}
+		}
+
 		$(".movie11")
 				.click(
-						function() {
+						function () {
 							let tt = "";
 							let movieName = $(this)
 									.attr("data-board-movieName");
@@ -1480,7 +1503,7 @@ button.timeTable {
 							console.log('error');
 						}
 					}); */
-				});		
+				});
 	</script>
 
 </body>

@@ -24,11 +24,12 @@ public class TicketController {
    private TicketService ticketService;
 
    @RequestMapping("list")
-   public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO) throws Exception {
+   public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO, String movieName) throws Exception {
       ModelAndView mv = new ModelAndView();
 
       List<MoviesDTO> movielist = ticketService.getMovieList(moviesDTO);
       mv.addObject("list", movielist);
+      mv.addObject("movieName", movieName);
 
       mv.setViewName("ticket/ticketlist");
 

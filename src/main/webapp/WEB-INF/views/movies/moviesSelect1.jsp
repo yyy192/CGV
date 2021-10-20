@@ -1338,8 +1338,8 @@ em {
 <body>
 	<c:import url="../temp/mainHome.jsp"></c:import>
 	<!-- ================================================트레일러 1============================================ -->
-	
-	<div id="lay_pop_1" style="position: fixed;" tabindex="0">	
+
+	<div id="lay_pop_1" style="position: fixed;" tabindex="0">
 		<div class="popwrap">
 
 			<div class="sect-layerplayer">
@@ -1356,7 +1356,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1412,17 +1412,17 @@ em {
 				</div>
 				<!-- .cols-player -->
 				<button type="button" class="btn-close"
-               onclick="layerClose('lay_pop_1','all_body')">닫기</button>
-         </div>
-      </div>
-   </div>
+					onclick="layerClose('lay_pop_1','all_body')">닫기</button>
+			</div>
+		</div>
+	</div>
 
-   <div id="all_body"></div>
+	<div id="all_body"></div>
 
 	<!-- -----------------------------------------------------------------------------------  -->
 	<!-- ================================================트레일러 2============================================ -->
-	
-	<div id="lay_pop_2" style="position: fixed;" tabindex="0">	
+
+	<div id="lay_pop_2" style="position: fixed;" tabindex="0">
 		<div class="popwrap">
 
 			<div class="sect-layerplayer">
@@ -1439,7 +1439,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195317_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195317_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1495,18 +1495,18 @@ em {
 				</div>
 				<!-- .cols-player -->
 				<button type="button" class="btn-close"
-               onclick="layerClose('lay_pop_2','all_body')">닫기</button>
-         </div>
-      </div>
-   </div>
+					onclick="layerClose('lay_pop_2','all_body')">닫기</button>
+			</div>
+		</div>
+	</div>
 
-   <div id="all_body"></div>
+	<div id="all_body"></div>
 
 	<!-- -----------------------------------------------------------------------------------  -->
-	
+
 	<!-- ================================================트레일러 3============================================ -->
-	
-	<div id="lay_pop_3" style="position: fixed;" tabindex="0">	
+
+	<div id="lay_pop_3" style="position: fixed;" tabindex="0">
 		<div class="popwrap">
 
 			<div class="sect-layerplayer">
@@ -1523,7 +1523,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195038_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195038_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1579,17 +1579,17 @@ em {
 				</div>
 				<!-- .cols-player -->
 				<button type="button" class="btn-close"
-               onclick="layerClose('lay_pop_3','all_body')">닫기</button>
-         </div>
-      </div>
-   </div>
+					onclick="layerClose('lay_pop_3','all_body')">닫기</button>
+			</div>
+		</div>
+	</div>
 
-   <div id="all_body"></div>
+	<div id="all_body"></div>
 	<!-- -----------------------------------------------------------------------------------  -->
-	
+
 	<!-- ================================================트레일러 3============================================ -->
-	
-	<div id="lay_pop_3" style="position: fixed;" tabindex="0">	
+
+	<div id="lay_pop_3" style="position: fixed;" tabindex="0">
 		<div class="popwrap">
 
 			<div class="sect-layerplayer">
@@ -1606,7 +1606,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1662,14 +1662,14 @@ em {
 				</div>
 				<!-- .cols-player -->
 				<button type="button" class="btn-close"
-               onclick="layerClose('lay_pop_3','all_body')">닫기</button>
-         </div>
-      </div>
-   </div>
+					onclick="layerClose('lay_pop_3','all_body')">닫기</button>
+			</div>
+		</div>
+	</div>
 
-   <div id="all_body"></div>
+	<div id="all_body"></div>
 	<!-- -----------------------------------------------------------------------------------  -->
-	
+
 	<!-- LineMap -->
 	<div class="linemap-wrap">
 		<ul>
@@ -1854,8 +1854,8 @@ em {
 								<div class="box-image">
 									<!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
 									<a href="#" title="새창" class="movie_player_popup"
-										data-gallery-idx="195317" onclick="pushLayer_2()"> <span class="thumb-image">
-											<img
+										data-gallery-idx="195317" onclick="pushLayer_2()"> <span
+										class="thumb-image"> <img
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/83003/83003195317_1024.jpg"
 											alt="[007 노 타임 투 다이]파이널 예고편"
 											onerror="errorImage(this, {'type':'landscape'})"> <span
@@ -1877,8 +1877,8 @@ em {
 								<div class="box-image">
 									<!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
 									<a href="#" title="새창" class="movie_player_popup"
-										data-gallery-idx="195038" onclick="pushLayer_3()"> <span class="thumb-image">
-											<img
+										data-gallery-idx="195038" onclick="pushLayer_3()"> <span
+										class="thumb-image"> <img
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/83003/83003195038_1024.jpg"
 											alt="[007 노 타임 투 다이]운명의 적 사핀 영상"
 											onerror="errorImage(this, {'type':'landscape'})"> <span
@@ -2731,7 +2731,7 @@ em {
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 </body>
 
-<script type="text/javascript">
+<script type="text/javascript">		
 	let flag = 0;
 
 	$('.btn-next').click(function() {
@@ -2787,8 +2787,8 @@ em {
 		$("#all_body").css("width", $(window).width());
 		$("#all_body").css("height", height);
 
-	} 
-	
+	}
+
 	function pushLayer_2() {
 		var $width = parseInt($("#lay_pop_2").css("width"));
 		var $height = parseInt($("#lay_pop_2").css("height"));
@@ -2802,8 +2802,8 @@ em {
 		$("#all_body").css("width", $(window).width());
 		$("#all_body").css("height", height);
 
-	} 
-	
+	}
+
 	function pushLayer_3() {
 		var $width = parseInt($("#lay_pop_3").css("width"));
 		var $height = parseInt($("#lay_pop_3").css("height"));
@@ -2818,12 +2818,12 @@ em {
 		$("#all_body").css("height", height);
 
 	}
-		
-	
+
 	function layerClose(lay1, lay2) {
 		$("#" + lay1).css("display", "none");
 		$("#" + lay2).css("display", "none");
 	}
+		
 </script>
 </html>
 

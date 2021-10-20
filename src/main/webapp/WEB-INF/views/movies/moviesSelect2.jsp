@@ -467,7 +467,7 @@ dd {
 	background-color: #fdfcf0;
 }
 
-.link-reservation {
+.link-vation {
 	display: inline-block;
 	width: 91px;
 	height: 35px;
@@ -1354,7 +1354,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84872/84872195401_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84872/84872_195401_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1394,7 +1394,7 @@ em {
 								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
 									class="genre">범죄, &nbsp;액션</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
-								</span> <a class="link-reservation"
+								</span> <a class="link-vation"
 									href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
 							</div>
 						</div>
@@ -1436,7 +1436,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84872/84872194852_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84872/84872_194852_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1476,7 +1476,7 @@ em {
 								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
 									class="genre">범죄, &nbsp;액션</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
-								</span> <a class="link-reservation"
+								</span> <a class="link-vation"
 									href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
 							</div>
 						</div>
@@ -1519,7 +1519,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84872/84872194660_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84872/84872_194660_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1559,7 +1559,7 @@ em {
 								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
 									class="genre">범죄, &nbsp;액션</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
-								</span> <a class="link-reservation"
+								</span> <a class="link-vation"
 									href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
 							</div>
 						</div>
@@ -1605,7 +1605,7 @@ em {
 			<!-- ----------------------------------------------------------------------------------------------------------------------- -->
 			<div class="sect-base-movie">
 				<h3>
-					<strong class="st">보이스</strong>기본정보
+					<strong class="st">${dto.movieName}</strong>기본정보
 				</h3>
 				<div class="box-image">
 					<a
@@ -1675,8 +1675,8 @@ em {
 						<!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
 						<a class="link-count" href="javascript:void (0);"><i
 							class="sprite_preegg btn_md default"></i>프리에그</a> <a
-							class="link-reservation"
-							href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+							class="link-vation"
+							href="#">예매</a>
 
 					</p>
 
@@ -2746,6 +2746,12 @@ em {
 		$("#" + lay1).css("display", "none");
 		$("#" + lay2).css("display", "none");
 	}
+	
+	$('.link-vation').click(function () {
+		let moviename = $('.title > strong').html();		
+		console.log(moviename);
+		location.href='../ticket/list?movieName='+moviename;
+	});
 </script>
 </html>
 

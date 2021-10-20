@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -40,11 +41,12 @@ public class MoviesController {
 	public ModelAndView getMoviesSelect2( ) throws Exception {
 		ModelAndView mv = new ModelAndView();
 
-		
+
 		mv.setViewName("movies/moviesSelect2");
 
 		return mv;
 	}
+	
 
 	@RequestMapping("select3")
 	public ModelAndView getMoviesSelect3( ) throws Exception {
