@@ -529,7 +529,7 @@ dd {
 
 .tab-menu li {
 	display: inline-block;
-	margin-left: -4px;
+	margin-left: -5px;
 }
 
 .tab-menu li a {

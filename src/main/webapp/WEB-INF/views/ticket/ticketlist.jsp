@@ -1309,8 +1309,8 @@ button.timeTable {
 				$('.movie_little_title').css("display", "block");
 				$('.movie_little_title').css("float", "left");
 				console.log(m);
-				a(m); */
-			}
+				a(m); 
+			}*/
 		}
 
 		$(".movie11")
@@ -1429,6 +1429,8 @@ button.timeTable {
 									.attr("data-board-watchDate");
 							let movieName = $(this)
 									.attr("data-board-movieName");
+							let timeTable = $(this).attr("data-board-timeTable");
+							let dayweek = $('.dayweek').html();
 							$(this).children().css("color", "white");
 							$(this).parent().css("background-color", "#333");
 
@@ -1436,7 +1438,7 @@ button.timeTable {
 									"#F2F0E4");
 							$(this).parent().siblings().children().children()
 									.css("color", "black");
-							document.getElementById("theater-day").innerText = watchDate;
+							document.getElementById("theater-day").innerText = watchDate + " " + dayweek;
 
 							$('#theaterList > tr > td.selected').css("border",
 									"1px solid #5c5c5c");
@@ -1472,12 +1474,14 @@ button.timeTable {
 				function() {
 					let theater = $(this).attr("data-board-theater");
 					let watchDate = $(this).attr("data-board-watchDate");
-					let movieName = $(this).attr("data-board-movieName");
+					let movieName = $(this).attr("data-board-movieName");					
 					let timeTable = $(this).attr("data-board-timeTable");
+					let timeTable2 = $(this).attr("data-board-timeTable").substring(0,5);					
 					console.log(theater);
 					console.log(watchDate);
 					console.log(movieName);
 					console.log(timeTable);
+					document.getElementById("theater-day").innerText = watchDate + " " + timeTable2;
 					$('.btn-right').addClass('on');
 					$('.btn-right').click(
 							function() {
