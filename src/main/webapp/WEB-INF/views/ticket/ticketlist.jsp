@@ -9,6 +9,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="UTF-8">
 <style type="text/css">
+#theater-tt {
+   padding-left: 3px;
+}
+
 #container {
 	position: relative;
 	margin: 0 auto;
