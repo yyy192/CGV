@@ -1353,7 +1353,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617195169_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1394,7 +1394,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1436,7 +1436,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194855_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_194855_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1477,7 +1477,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1519,7 +1519,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194796_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1560,7 +1560,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1675,7 +1675,7 @@ em {
 						<a class="link-count" href="javascript:void (0);"><i
 							class="sprite_preegg btn_md default"></i>프리에그</a> <a
 							class="link-reservation"
-							href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+							href="/s5/ticket/list?hi=기적">예매</a>
 
 					</p>
 

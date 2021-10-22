@@ -1364,7 +1364,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84834/84834195067_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84834/84834_195067_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1405,7 +1405,7 @@ em {
 									class="genre">액션</em> <span> <i>2021.09.01</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=샹치와 텐 링즈의 전설">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1447,7 +1447,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84834/84834194763_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84834/84834_194763_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1488,7 +1488,7 @@ em {
 									class="genre">액션</em> <span> <i>2021.09.01</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=샹치와 텐 링즈의 전설">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1531,7 +1531,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84834/84834194724_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84834/84834_194724_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1572,7 +1572,7 @@ em {
 									class="genre">액션</em> <span> <i>2021.09.01</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=샹치와 텐 링즈의 전설">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1699,7 +1699,7 @@ em {
 						<!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
 						<a class="link-count" href="javascript:void (0);"><i
 							class="sprite_preegg btn_md default"></i>프리에그</a> <a
-							class="link-reservation" href="#">예매</a>
+							class="link-reservation" href="/s5/ticket/list?hi=샹치와 텐 링즈의 전설">예매</a>
 
 					</p>
 

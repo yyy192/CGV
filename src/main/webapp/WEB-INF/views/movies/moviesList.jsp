@@ -905,7 +905,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027752&amp;MOVIE_CD_GROUP=20022209">예매</a>
+									href="/s5/ticket/list?hi=007 노 타임 투 다이">예매</a>
 								</span>
 							</div>
 						</li>
@@ -940,7 +940,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+									href="/s5/ticket/list?hi=보이스">예매</a>
 								</span>
 							</div>
 						</li>
@@ -975,7 +975,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027789&amp;MOVIE_CD_GROUP=20027711">예매</a>
+									href="/s5/ticket/list?hi=F20">예매</a>
 								</span>
 							</div>
 						</li>
@@ -1016,7 +1016,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=쁘띠 마망">예매</a>
 								</span>
 							</div>
 						</li>
@@ -1050,7 +1050,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20026739&amp;MOVIE_CD_GROUP=20026739">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 								</span>
 							</div>
 						</li>
@@ -1084,7 +1084,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027818&amp;MOVIE_CD_GROUP=20027695">예매</a>
+									href="/s5/ticket/list?hi=스틸워터">예매</a>
 								</span>
 							</div>
 						</li>
@@ -1118,7 +1118,7 @@ body {
 
 								</strong>
 								</span> <span class="like"> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027330&amp;MOVIE_CD_GROUP=20027330">예매</a>
+									href="/s5/ticket/list?hi=샹치와 텐 링즈의 전설">예매</a>
 								</span>
 							</div>
 						</li>
