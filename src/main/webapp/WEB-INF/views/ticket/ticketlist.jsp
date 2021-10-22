@@ -989,6 +989,10 @@ button.timeTable {
 	font-weight: bold;
 }
 
+#theater-tt {
+   padding-left: 3px;
+}
+
 #ticket .section-date .col-body .date-list li.day a {
 	display: block;
 	height: 100%;
@@ -1184,7 +1188,7 @@ button.timeTable {
 							<div class="time-list">
 
 								<span class="title"><span class="name">2D</span><span
-									class="floor">6관 10층</span><span class="seatcount">(총40석)</span></span>
+									class="floor" data-board-tt="6관 10층">6관 10층</span><span class="seatcount">(총40석)</span></span>
 
 								<div id="timetableList"
 									data-board-timetable1="${dto.timetable1}"
@@ -1222,7 +1226,7 @@ button.timeTable {
 					<span class="header">일시</span> <span id="theater-day"></span>
 				</div>
 				<div class="row screen" style="display: none;">
-					<span class="header">상영관</span> <span class="data"></span>
+					<span class="header">상영관</span> <span id="theater-tt"></span>
 				</div>
 				<div class="row number" style="display: none;">
 					<span class="header">인원</span> <span class="data"></span>
@@ -1548,6 +1552,7 @@ button.timeTable {
 					let watchDate = $(this).attr("data-board-watchDate");
 					let movieName = $(this).attr("data-board-movieName");
 					let timeTable = $(this).attr("data-board-timeTable");
+					let tt = $('.floor').attr("data-board-tt");
 					
 					$(this).parent().siblings().children().removeClass('ttselected');
 					$(this).parent().siblings().children().css("color", "black");
@@ -1568,6 +1573,8 @@ button.timeTable {
 					console.log(watchDate);
 					console.log(movieName);
 					console.log(timeTable);
+					document.getElementById("theater-tt").innerText = tt;
+					
 					$('.btn-right').addClass('on');
 					$('.btn-right').click(
 							function() {

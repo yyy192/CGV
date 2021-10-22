@@ -915,7 +915,7 @@ input {
 				$('.5').hide();
 				$('.6').hide();
 				$('.7').hide();
-			} else if (name == '쁘띠마망') {
+			} else if (name == '쁘띠 마망') {
 				$('.3').show();
 				$('.0').hide();
 				$('.1').hide();

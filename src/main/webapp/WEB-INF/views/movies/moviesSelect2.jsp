@@ -1715,14 +1715,14 @@ em {
 					<!-- 메뉴가 선택되면 a 에 title="선택" 이라고 넣는다 -->
 					<ul class="tab-menu">
 						<li class="on"><a title="현재 선택됨"
-							href="/movies/detail-view/?midx=84872#menu">주요정보 </a></li>
+							href="#">주요정보 </a></li>
 						<li><a
-							href="/movies/detail-view/trailer.aspx?midx=84872#menu">트레일러</a></li>
+							href="#">트레일러</a></li>
 						<li><a
-							href="/movies/detail-view/still-cut.aspx?midx=84872#menu">스틸컷</a></li>
-						<li><a href="/movies/detail-view/?midx=84872#commentReg">평점/리뷰</a></li>
+							href="#">스틸컷</a></li>
+						<li><a href="#">평점/리뷰</a></li>
 						<li class="last"><a
-							href="/movies/detail-view/show-times.aspx?midx=84872#menu">상영시간표</a></li>
+							href="#">상영시간표</a></li>
 					</ul>
 					<div class="sect-story-movie">
 						단 한 통의 전화!<br> 걸려오는 순간 걸려들었다!<br> <br> 부산 건설현장 직원들을
