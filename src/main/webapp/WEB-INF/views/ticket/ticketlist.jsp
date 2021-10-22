@@ -1128,7 +1128,7 @@ button.timeTable {
 										<ul>
 											<li class="selected"><a href="#"
 												onclick="theaterAreaClickListener(event);return false;"><span
-													class="name">서울</span><span class="count">(3)</span></a>
+													class="name">수도권</span><span class="count">(4)</span></a>
 												<div
 													class="area_theater_list nano has-scrollbar has-scrollbar-y">
 													<ul class="content scroll-y" tabindex="-1"
