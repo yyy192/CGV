@@ -24,12 +24,13 @@ public class TicketController {
    private TicketService ticketService;
 
    @RequestMapping("list")
-   public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO) throws Exception {
+   public ModelAndView getMovieList(MoviesDTO moviesDTO, MothDTO mothDTO, String hi) throws Exception {
       ModelAndView mv = new ModelAndView();
 
       List<MoviesDTO> movielist = ticketService.getMovieList(moviesDTO);
       mv.addObject("list", movielist);
 
+      mv.addObject("hi", hi);
       mv.setViewName("ticket/ticketlist");
 
       return mv;
@@ -83,6 +84,8 @@ public class TicketController {
          String birth = Integer.toString(m.getBirth()).substring(0, 4);
          int checkBirth = 2022 - Integer.parseInt(birth);
          
+         Long count = ticketService.setCount(ticketDTO);
+         
          if(checkBirth >= 20 ) {
             ticketDTO.setPrice("10,000");
          } else {
@@ -99,6 +102,7 @@ public class TicketController {
          
          if (result > 0) {
             System.out.println("ticket Insert 성공");
+            mv.addObject("count", count);
             mv.addObject("age", checkBirth);
             mv.addObject("ticketDTO", ticketDTO);
             mv.addObject("seat", ar);
@@ -110,7 +114,7 @@ public class TicketController {
          }
 
       } else {
-    	  String msg= "로그인이 필요한 서비스입니다.\\n로그인 페이지로 이동하시겠습니까?";
+         String msg= "로그인이 필요한 서비스입니다.\\n로그인 페이지로 이동하시겠습니까?";
           mv.addObject("msg", msg);
           mv.addObject("url", "http://localhost/s5/member/memberLogin");
           mv.setViewName("common/ajaxResult");

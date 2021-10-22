@@ -15,14 +15,25 @@
 }
 
 .linemap-wrap {
-	width: auto;
-	height: 28px;
-	margin: 0 auto;
-	background-color: #f1f0e5;
-	border-bottom: 1px solid #cacac0;
-	display: block;
-	padding-left: 200px;
+    width: auto;
+    height: 28px;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #cacac0;
+   display: block;
+   /* padding-left: 200px; */
 }
+.sec-wrap {
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
 
 #contents {
 	clear: both;
@@ -1361,7 +1372,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84998/84998195551_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84998/84998_195551_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1402,7 +1413,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.10.07</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=쁘띠 마망">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1443,7 +1454,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84998/84998195200_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84998/84998_195200_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1484,7 +1495,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.10.07</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=쁘띠 마망">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1525,7 +1536,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84998/84998194851_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84998/84998_194851_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1566,7 +1577,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.10.07</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=쁘띠 마망">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1590,11 +1601,12 @@ em {
 	<!-- -----------------------------------------------------------------------------------  -->
 	<!-- LineMap -->
 	<div class="linemap-wrap">
-		<ul>
-			<li><a href="http://localhost/s5/"><img alt="home"
-					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-		</ul>
-	</div>
+   <div class="sec-wrap">
+      <ul>
+         <li><a href="http://localhost/s5/"><img alt="home" src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>                                             
+      </ul>
+   </div>
+   </div>
 
 	<div id="contents" class="">
 
@@ -1642,23 +1654,23 @@ em {
 					<div class="spec">
 						<dl>
 							<dt>감독 :&nbsp;</dt>
-							<dd>
+                     <dd>
 
 
-								<a href="/movies/persons/?pidx=105436">셀린 시아마</a>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=120103">셀린 시아마</a>
 
-							</dd>
+                     </dd>
 
-							<dd></dd>
+                     <dd></dd>
 
-							<dt>&nbsp;/ 배우 :&nbsp;</dt>
-							<dd class="on">
+                     <dt>&nbsp;/ 배우 :&nbsp;</dt>
+                     <dd class="on">
 
 
-								<a href="/movies/persons/?pidx=115000">조세핀 산스</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=105796">가브리엘 산스</a>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=122360">조세핀 산스</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=122361">가브리엘 산스</a>
 
-							</dd>
+                     </dd>
 
 							<dt>장르 :&nbsp;드라마</dt>
 							<dd></dd>
@@ -1678,7 +1690,7 @@ em {
 						<a class="link-count" href="javascript:void (0);"><i
 							class="sprite_preegg btn_md default"></i>프리에그</a> <a
 							class="link-reservation"
-							href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+							href="/s5/ticket/list?hi=쁘띠 마망">예매</a>
 
 					</p>
 

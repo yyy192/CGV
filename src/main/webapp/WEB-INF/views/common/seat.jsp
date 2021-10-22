@@ -28,6 +28,11 @@
       background-color: red;
       color: white;
    }
+   
+   .spacing {
+   letter-spacing: -1px;
+} 
+
    .at:active {
       color: white;
       background-color: red;
@@ -742,9 +747,10 @@
                <span class="header">극장</span>
                <span class="data letter-spacing-min ellipsis-line1">${ticketDTO.theater}</span>
             </div>
+	
             <div class="row date" style="display: block;">
                <span class="header">일시</span>
-               <span class="data">${ticketDTO.watchDate}</span>
+               <span class="data spacing">${ticketDTO.watchDate} ${ticketDTO.timeTable}</span>
             </div>
             
             <div class="row number" style="display: block;">

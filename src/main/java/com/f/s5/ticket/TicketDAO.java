@@ -47,5 +47,11 @@ public class TicketDAO {
 	public int updateInfo(TicketDTO ticketDTO) throws Exception {
 		return sqlSession.update(NAMESPACE + "updateInfo", ticketDTO);
 	}
+	
+	public Long setCount(TicketDTO ticketDTO) throws Exception {
+	      return sqlSession.selectOne(NAMESPACE+"setCount", ticketDTO);
+	   }
+	
+	
 
 }

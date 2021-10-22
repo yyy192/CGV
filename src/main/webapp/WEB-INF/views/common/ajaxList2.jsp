@@ -20,7 +20,7 @@
          <a href="#"   class="watchDate" onclick="return false;" data-board-theater="${dto.theater}"
             data-board-watchDate="${dto.watchDate}"
             data-board-movieName="${dto.movieName}">
-            <span class="dayweek"><fmt:formatDate pattern="E" value="${dto.watchDate}" /></span>
+            <span id="dayweek" class="dayweek"><fmt:formatDate pattern="E" value="${dto.watchDate}" /></span>
             <span class="day"><fmt:formatDate pattern="dd" value="${dto.watchDate}" /></span>
             <span class="sreader"></span>
          </a>

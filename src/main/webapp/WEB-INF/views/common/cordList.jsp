@@ -60,8 +60,8 @@
                <a href="#" aria-label="Next">다음 &gt;</a>
              </li>
              
-             <li class="pn">
-               <a href="./list?pn=${pager.totalPage}&keyword=${pager.keyword}&search=${pager.search}" aria-label="Next">&raquo;</a>
+             <li data-pn-num="${pager.totalPage}" class="pn">
+               <a href="#" aria-label="Next">&raquo;</a>
              </li>
            </ul>
 

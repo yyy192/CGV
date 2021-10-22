@@ -49,7 +49,11 @@
 		UPDATE TICKET SET SEAT =
 		#{seat} WHERE TICKETNUM = (SELECT MAX(TICKETNUM) FROM TICKET)
 	</update>  
-
-
+	
+	<select id="setCount" parameterType="TicketDTO" resultType="Long">
+         SELECT COUNT(SEAT) FROM TICKET WHERE THEATER=#{theater} AND WATCHDATE=#{watchDate}
+         AND MOVIENAME=#{movieName} AND TIMETABLE=#{timeTable}
+   </select>
+	
 
 </mapper>

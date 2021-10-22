@@ -15,14 +15,25 @@
 }
 
 .linemap-wrap {
-	width: auto;
-	height: 28px;
-	margin: 0 auto;
-	background-color: #f1f0e5;
-	border-bottom: 1px solid #cacac0;
-	display: block;
-	padding-left: 200px;
+    width: auto;
+    height: 28px;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #cacac0;
+   display: block;
+   /* padding-left: 200px; */
 }
+.sec-wrap {
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
 
 #contents {
 	clear: both;
@@ -1073,14 +1084,14 @@ button, input[type='submit'], input[type='reset'] {
 }
 
 #jqplot_sex {
-	background-image: url('/s5/resources/images/jqplot_sex1.PNG');
+	background-image: url('/s5/resources/images/jqplot_sex.PNG');
 	background-size: 260px 138px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #jqplot_age {
-	background-image: url('/s5/resources/images/jqplot_age1.PNG');
+	background-image: url('/s5/resources/images/jqplot_age.PNG');
 	background-size: 360px 168px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1356,7 +1367,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1398,7 +1409,7 @@ em {
 									class="genre">액션</em> <span> <i>2021.09.29</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027751&amp;MOVIE_CD_GROUP=20027751">예매</a>
+									href="/s5/ticket/list?hi=007 노 타임 투 다이">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1439,7 +1450,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195317_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195317_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1481,7 +1492,7 @@ em {
 									class="genre">액션</em> <span> <i>2021.09.29</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027751&amp;MOVIE_CD_GROUP=20027751">예매</a>
+									href="/s5/ticket/list?hi=007 노 타임 투 다이">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1514,89 +1525,6 @@ em {
 				<div class="cols-pop-player">
 
 					<h1 class="title" id="movie_player_popup_title">
-						<span class="ico-trailer hd">HD</span>[007 노 타임 투 다이]운명의 적 사핀 영상
-					</h1>
-
-					<div class="col-pop-player">
-
-						<div class="warp-pop-player" style="position: relative;">
-
-							<video width="800px" height="450px"
-								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195038_1024.jpg"
-								controls="" autoplay="">
-								<source
-									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195038_1200_128_960_540.mp4"
-									deletecommandtype="video/mp4">
-							</video>
-
-							<div class="sect-replay" style="display: none"
-								id="pop_player_relation_wrap">
-
-								<button class="btn-replay movie_player_inner_popup"
-									type="button" data-gallery-idx="195437" id="btn_movie_replay">다시보기</button>
-							</div>
-							<!-- .sect-replay -->
-
-						</div>
-						<!-- .warp-pop-player -->
-						<div class="descri-trailer">
-							<strong class="title">영상설명</strong>
-							<textarea readonly="readonly" id="movie_player_popup_caption">컨텐츠 준비 중 입니다.</textarea>
-						</div>
-					</div>
-					<!-- .col-player -->
-					<div class="col-pop-playerinfo">
-						<div id="movie_player_popup_movie_info">
-							<div class="box-image">
-								<a href="/movies/detail-view/?midx=83003"
-									title="007 노 타임 투 다이 상세보기 새창"> <span class="thumb-image">
-										<img
-										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_185.jpg"
-										alt="007 노 타임 투 다이 포스터"> <span
-										class="ico-grade grade-12">12세 이상</span>
-								</span>
-								</a>
-							</div>
-							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=83003"
-									title="007 노 타임 투 다이 상세보기 새창"> <strong class="title">007
-										노 타임 투 다이</strong>
-								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
-									class="genre">액션</em> <span> <i>2021.09.29</i> <strong>개봉</strong>
-								</span>
-								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027751&amp;MOVIE_CD_GROUP=20027751">예매</a>
-							</div>
-						</div>
-						<div class="sect-trailer">
-							<strong class="title">신규영상</strong>
-							<ul>
-
-							</ul>
-						</div>
-					</div>
-					<!-- .col-playerinfo -->
-				</div>
-				<!-- .cols-player -->
-				<button type="button" class="btn-close"
-               onclick="layerClose('lay_pop_3','all_body')">닫기</button>
-         </div>
-      </div>
-   </div>
-
-   <div id="all_body"></div>
-	<!-- -----------------------------------------------------------------------------------  -->
-	
-	<!-- ================================================트레일러 3============================================ -->
-	
-	<div id="lay_pop_3" style="position: fixed;" tabindex="0">	
-		<div class="popwrap">
-
-			<div class="sect-layerplayer">
-
-				<div class="cols-pop-player">
-
-					<h1 class="title" id="movie_player_popup_title">
 						<span class="ico-trailer hd">HD</span>[007 노 타임 투 다이]레거시 영상
 					</h1>
 
@@ -1606,7 +1534,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/83003/83003195437_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/83003/83003_195437_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1642,13 +1570,13 @@ em {
 							</div>
 							<div class="box-contents">
 								<a href="/movies/detail-view/?midx=83003"
-									title="007 노 타임 투 다이 상세보기 새창"> <strong class="title">007
+									title="007 노 타임 투 다이 상세보기 새창"> <strong class="title movietitle">007
 										노 타임 투 다이</strong>
 								</a> <span class="txt-info" style="margin-bottom: 2px;"> <em
 									class="genre">액션</em> <span> <i>2021.09.29</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027751&amp;MOVIE_CD_GROUP=20027751">예매</a>
+									href="/s5/ticket/list?hi=007 노 타임 투 다이">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1672,11 +1600,12 @@ em {
 	
 	<!-- LineMap -->
 	<div class="linemap-wrap">
-		<ul>
-			<li><a href="http://localhost/s5/"><img alt="home"
-					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-		</ul>
-	</div>
+   <div class="sec-wrap">
+      <ul>
+         <li><a href="http://localhost/s5/"><img alt="home" src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>                                             
+      </ul>
+   </div>
+   </div>
 
 	<div id="contents" class="">
 
@@ -1725,25 +1654,25 @@ em {
 					<div class="spec">
 						<dl>
 							<dt>감독 :&nbsp;</dt>
-							<dd>
+                     <dd>
 
 
-								<a href="/movies/persons/?pidx=105436">캐리 후쿠나가</a>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=75750">캐리 후쿠나가</a>
 
-							</dd>
+                     </dd>
 
-							<dd></dd>
+                     <dd></dd>
 
-							<dt>&nbsp;/ 배우 :&nbsp;</dt>
-							<dd class="on">
+                     <dt>&nbsp;/ 배우 :&nbsp;</dt>
+                     <dd class="on">
 
 
-								<a href="/movies/persons/?pidx=115000">다니엘 크레이그</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=105796">라미 말렉</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=115100">라샤나 린치</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=106256">레아 세이두</a>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=32872">다니엘 크레이그</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=118320">라미 말렉</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=119202">라샤나 린치</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=106822">레아 세이두</a>
 
-							</dd>
+                     </dd>
 
 							<dt>장르 :&nbsp;액션</dt>
 							<dd></dd>
@@ -1759,13 +1688,13 @@ em {
 					</div>
 					<span class="screentype"> </span>
 					<p class="like">
-						<!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
-						<a class="link-count" href="javascript:void (0);"><i
-							class="sprite_preegg btn_md default"></i>프리에그</a> <a
-							class="link-reservation"
-							href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+                  <!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
+                  <a class="link-count" href="javascript:void (0);"><i
+                     class="sprite_preegg btn_md default"></i>프리에그</a> <a
+                     class="link-reservation"
+                     href="/s5/ticket/list?hi=007 노 타임 투 다이">예매</a>
 
-					</p>
+               </p>
 
 				</div>
 			</div>
@@ -2824,6 +2753,7 @@ em {
 		$("#" + lay1).css("display", "none");
 		$("#" + lay2).css("display", "none");
 	}
+	
 </script>
 </html>
 

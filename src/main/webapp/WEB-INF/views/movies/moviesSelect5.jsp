@@ -15,14 +15,25 @@
 }
 
 .linemap-wrap {
-	width: auto;
-	height: 28px;
-	margin: 0 auto;
-	background-color: #f1f0e5;
-	border-bottom: 1px solid #cacac0;
-	display: block;
-	padding-left: 200px;
+    width: auto;
+    height: 28px;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #cacac0;
+   display: block;
+   /* padding-left: 200px; */
 }
+.sec-wrap {
+    margin : 0 auto;
+   width: 1112px;
+   height: 100%;   
+   }
+   .sec-wrap>ul {
+   display: inline-block;
+   }
+   .sec-wrap>ul>li {
+   margin-left: 0;
+   margin-top: 3px;
+   }
 
 #contents {
 	clear: both;
@@ -1353,7 +1364,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617195169_1024.jpg"
-								controls="" autoplay="">
+								controls="" >
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1394,7 +1405,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1436,7 +1447,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194855_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_194855_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1477,7 +1488,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1519,7 +1530,7 @@ em {
 
 							<video width="800px" height="450px"
 								poster="https://img.cgv.co.kr/movie/thumbnail/trailer/84617/84617194796_1024.jpg"
-								controls="" autoplay="">
+								controls="">
 								<source
 									src="http://h.vod.cgv.co.kr:80/vodCGVa/84617/84617_195169_1200_128_960_540.mp4"
 									deletecommandtype="video/mp4">
@@ -1560,7 +1571,7 @@ em {
 									class="genre">드라마</em> <span> <i>2021.09.15</i> <strong>개봉</strong>
 								</span>
 								</span> <a class="link-reservation"
-									href="/ticket/?MOVIE_CD=20027655&amp;MOVIE_CD_GROUP=20027655">예매</a>
+									href="/s5/ticket/list?hi=기적">예매</a>
 							</div>
 						</div>
 						<div class="sect-trailer">
@@ -1585,11 +1596,12 @@ em {
 	
 	<!-- LineMap -->
 	<div class="linemap-wrap">
-		<ul>
-			<li><a href="http://localhost/s5/"><img alt="home"
-					src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>
-		</ul>
-	</div>
+   <div class="sec-wrap">
+      <ul>
+         <li><a href="http://localhost/s5/"><img alt="home" src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"></a></li>                                             
+      </ul>
+   </div>
+   </div>
 
 	<div id="contents" class="">
 
@@ -1638,24 +1650,24 @@ em {
 					<div class="spec">
 						<dl>
 							<dt>감독 :&nbsp;</dt>
-							<dd>
+                     <dd>
 
 
-								<a href="/movies/persons/?pidx=105436">이장훈</a>
-							</dd>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=117926">이장훈</a>
+                     </dd>
 
-							<dd></dd>
+                     <dd></dd>
 
-							<dt>&nbsp;/ 배우 :&nbsp;</dt>
-							<dd class="on">
+                     <dt>&nbsp;/ 배우 :&nbsp;</dt>
+                     <dd class="on">
 
 
-								<a href="/movies/persons/?pidx=115000">박정민</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=105796">이성민</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=115100">임윤아</a> ,&nbsp; <a
-									href="/movies/persons/?pidx=106256">이수경</a>
+                        <a href="http://www.cgv.co.kr/movies/persons/?pidx=52609">박정민</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=52580">이성민</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=116879">임윤아</a> ,&nbsp; <a
+                           href="http://www.cgv.co.kr/movies/persons/?pidx=37151">이수경</a>
 
-							</dd>
+                     </dd>
 
 							<dt>장르 :&nbsp;드라마</dt>
 							<dd></dd>
@@ -1675,7 +1687,7 @@ em {
 						<a class="link-count" href="javascript:void (0);"><i
 							class="sprite_preegg btn_md default"></i>프리에그</a> <a
 							class="link-reservation"
-							href="/ticket/?MOVIE_CD=20027456&amp;MOVIE_CD_GROUP=20027456">예매</a>
+							href="/s5/ticket/list?hi=기적">예매</a>
 
 					</p>
 

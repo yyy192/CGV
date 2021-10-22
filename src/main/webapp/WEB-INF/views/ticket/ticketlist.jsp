@@ -685,7 +685,7 @@ li.day {
 	clear: both;
 	float: left;
 	width: 64px;
-	height: 35px;
+	
 	line-height: 35px;
 	margin-bottom: 1px;
 	text-align: center;
@@ -978,7 +978,7 @@ button.timeTable {
 .movie_posterName {
 	width: 74px;
 	height: 104px;
-	background-image: url(/s5/resources/images/voicePoster.jpg);
+	background-image: url(/s5/resources/images/poster.jpg);
 	margin-right: 11px;
 }
 
@@ -1025,10 +1025,22 @@ button.timeTable {
 	overflow: hidden;
 	text-indent: -1000px;
 }
+
+#theater-day {
+    letter-spacing: -1px;
+}
+
+.blankArea {
+	width: 48px;
+	height: 20px;
+}
+
 </style>
 
 </head>
 <body>
+
+  <div class="p_m" style="display: none">${hi}</div>
 	<c:import url="../temp/mainHome2.jsp"></c:import>
 
 	<div class="linemap-wrap">
@@ -1260,8 +1272,7 @@ button.timeTable {
 			href="http://ad.cgv.co.kr/click/CGV/CGV_201401/RIA@B_ticketing?ads_id=46040&amp;creative_id=65154&amp;click_id=85380&amp;maid=&amp;event="
 			style="background-color: rgb(255, 255, 255);"><span style=""></span><img
 			src="https://adimg.cgv.co.kr/images/202110/DUNE/1011_996x140.jpg"
-			alt="? " onload="ticketNeedResize();"
-			style="width: 996px; height: 140px"></a>
+			alt="? " style="width: 996px; height: 140px"></a>
 	</div>
 
 	<div id="ticket_banner" class="ticket_banner">
@@ -1290,6 +1301,46 @@ button.timeTable {
 	<c:import url="../temp/mainFooter.jsp"></c:import>
 
 	<script type="text/javascript">
+	
+	let rd = "";
+	
+	x();
+
+    function x() {
+
+       if ($('.p_m').text() != "") {
+
+          $('.movie11').filter(":contains('" + $('.p_m').text() + "')")
+                .parent().parent().css("background-color", "#333");
+          $('.movie11').filter(":contains('" + $('.p_m').text() + "')")
+                .css("color", "white");
+          document.getElementById("movie_little_title").innerText = $(
+                '.p_m').text();
+          $('.mph').css("display", "none");
+          $('.movie_posterName').css("display", "block");
+          $('.movie_posterName').css("float", "left");
+          $('.movie_little_title').css("display", "block");
+          $('.movie_little_title').css("float", "left");
+
+          $.ajax({
+             type : "GET",
+             url : "./select",
+             data : {
+                movieName : $('.p_m').text()
+             },
+             success : function(result) {
+                result = result.trim();
+                $("#theaterList").html(result);
+             },
+             error : function(xhr, status, error) {
+                console.log('error');
+             }
+          });
+
+       }
+
+    }
+	
 		$(".movie11")
 				.click(
 						function() {
@@ -1308,9 +1359,42 @@ button.timeTable {
 							$('.mph').css("display", "none");
 							$('.movie_posterName').css("display", "block");
 							$('.movie_posterName').css("float", "left");
+							
+							if(movieName == '007 노 타임 투 다이') {
+		                        $('.movie_posterName').css('background-position','0px 0px');
+		                     }
+		                     
+		                     if(movieName == '보이스') {
+		                        $('.movie_posterName').css('background-position','-73px 0px');
+		                     }
+		                     
+		                     if(movieName == 'F20') {
+		                        $('.movie_posterName').css('background-position','-146px 0px');
+		                     }
+		                     
+		                     if(movieName == '쁘띠 마망') {
+		                        $('.movie_posterName').css('background-position','-219px 0px');
+		                     }
+		                     
+		                     if(movieName == '기적') {
+		                        $('.movie_posterName').css('background-position','-292px 0px');
+		                     }
+		                     
+		                     if(movieName == '스틸워터') {
+		                        $('.movie_posterName').css('background-position','-365px 0px');
+		                     }
+		                     
+		                     if(movieName == '샹치와 텐 링즈의 전설') {
+		                        $('.movie_posterName').css('background-position','-437px 0px');
+		                     }
+							
 							$('.movie_little_title').css("display", "block");
 							$('.movie_little_title').css("float", "left");
-							$(this).parent().attr('class', 'selected');
+							
+							$(this).addClass('selected');
+							$(this).parent().parent().siblings().children().css("border", "0px");
+		                    $(this).parent().parent().siblings().children().removeClass("selected");
+							
 
 							$('.movie-select > li > a.selected').css("border",
 									"1px solid #5c5c5c");
@@ -1364,14 +1448,16 @@ button.timeTable {
 									"none");
 							document.getElementById("theater-check").innerText = theater;
 
-							$(this).parent().attr('class', 'selected');
+							$(this).addClass('selected');
+							$(this).parent().parent().siblings().children().css("border", "0px");
+		                    $(this).parent().parent().siblings().children().removeClass("selected");
 
 							$('#theaterList > tr > td.selected').css("border",
 									"1px solid #5c5c5c");
 							$('#theaterList > tr > td.selected').css(
 									"line-height", "29px");
 							$('#theaterList > tr > td.selected').css("margin",
-									"1px");
+									"2px");
 							$('#theaterList > tr > td.selected').css("width",
 									"103px");
 							$('#theaterList > tr > td.selected').css("height",
@@ -1413,13 +1499,22 @@ button.timeTable {
 									"#F2F0E4");
 							$(this).parent().siblings().children().children()
 									.css("color", "black");
-							document.getElementById("theater-day").innerText = watchDate;
-
-							$('#theaterList > tr > td.selected').css("border",
+							document.getElementById("theater-day").innerText = watchDate + "(" + $(this).find('.dayweek').text() + ")";
+							
+							rd = $('#theater-day').text();
+							
+							$(this).parent().siblings().children().css("border", "0px");
+		                    $(this).parent().siblings().children().removeClass("selected");
+		                    $(this).addClass('selected');
+							
+							$('.date-list > li.day > a.selected').css("border",
 									"1px solid #5c5c5c");
-							$('#theaterList > tr > td.selected').css(
+							$('.date-list > li.day > a.selected').css(
 									"line-height", "29px");
-							$('#theaterList > tr > td.selected').css("margin",
+							$('.date-list > li.day > a.selected').css(
+									"height", "29px");
+							
+							$('.date-list > li.day > a.selected').css("margin",
 									"1px");
 
 							console.log(theater);
@@ -1447,10 +1542,28 @@ button.timeTable {
 				"click",
 				".timeTable",
 				function() {
+					
+				
 					let theater = $(this).attr("data-board-theater");
 					let watchDate = $(this).attr("data-board-watchDate");
 					let movieName = $(this).attr("data-board-movieName");
 					let timeTable = $(this).attr("data-board-timeTable");
+					
+					$(this).parent().siblings().children().removeClass('ttselected');
+					$(this).parent().siblings().children().css("color", "black");
+					$(this).parent().siblings().children().css("background-color", "#F2F0E4");
+					$(this).parent().siblings().children().css("font-weight", "normal");
+					$(this).addClass('ttselected');
+					
+					$('.ttselected').css("color",
+					"white");
+					$('.ttselected').css("background-color",
+					"#333");
+					$('.ttselected').css("font-weight",
+					"bold");
+					
+					document.getElementById("theater-day").innerText = rd + timeTable;
+					
 					console.log(theater);
 					console.log(watchDate);
 					console.log(movieName);

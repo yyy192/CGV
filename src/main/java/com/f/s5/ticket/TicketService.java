@@ -45,5 +45,11 @@ public class TicketService {
 	public int updateInfo(TicketDTO ticketDTO) throws Exception {
 		return ticketDAO.updateInfo(ticketDTO);
 	}
+	
+	public Long setCount(TicketDTO ticketDTO) throws Exception {
+	      return ticketDAO.setCount(ticketDTO);
+	   }
+	
+	
 
 }
