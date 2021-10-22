@@ -494,7 +494,9 @@
    margin-top: 3px;
    }
    
-   
+   .watchDate > b {
+   	font-weight: bold;
+   }
    
 </style>
 <c:import url="../temp/mainHome.jsp"></c:import>

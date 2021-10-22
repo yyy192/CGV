@@ -624,7 +624,7 @@ body {
 			<div class="tit-mycgv">
 				<h3>MY 예매내역</h3>
 				<p>
-					<em class="bookingNum">1건</em> <a href="/user/mycgv/reserve/">예매내역 더보기</a>
+					<em class="bookingNum">1건</em> <a href="#">예매내역 더보기</a>
 				</p>
 				<span>예매번호로만 티켓을 찾을 수 있으니 반드시 확인 부탁드립니다.</span>
 			</div>
@@ -638,7 +638,7 @@ body {
 							<em>예매번호</em> <strong>${dto.ticketNum}</strong> <span>(${dto.watchDate})</span>
 						</div>
 						<div class="box-image">
-							<a href="/movies/detail-view/?midx=84617"> <span
+							<a href="#"> <span
 								class="thumb-image"> <img class="0"
 									src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_320.jpg"
 									alt="007 포스터" onerror="errorImage(this)"> <img class="1"
@@ -660,7 +660,7 @@ body {
 						<div class="box-contents has_not_storeitem">
 							<dl>
 								<dt>
-									<a href="/movies/detail-view/?midx=84617" class="movieName">${dto.movieName}</a>
+									<a href="#" class="movieName">${dto.movieName}</a>
 
 								</dt>
 								<dd>
@@ -747,7 +747,7 @@ body {
 				$('.5').hide();
 				$('.6').hide();
 				$('.7').hide();
-			} else if (name == '쁘띠마망') {
+			} else if (name == '쁘띠 마망') {
 				$('.3').show();
 				$('.0').hide();
 				$('.1').hide();

@@ -11,7 +11,7 @@
                data-board-theater="${mothDTO2.theater}"
                data-board-watchDate="${mothDTO2.watchDate}"
                data-board-movieName="${mothDTO2.movieName}"
-               data-board-timeTable="09:00">09:00</button></td>
+               data-board-timeTable="09:00" data-board-timeLong="09:00~12:00">09:00</button></td>
           <td class="blankArea"></td>     
                
                
@@ -24,7 +24,7 @@
                data-board-theater="${mothDTO2.theater}"
                data-board-watchDate="${mothDTO2.watchDate}"
                data-board-movieName="${mothDTO2.movieName}"
-               data-board-timeTable="12:00">12:00</button></td>
+               data-board-timeTable="12:00" data-board-timeLong="12:00~15:00">12:00</button></td>
          <td class="blankArea"></td>      
       
    </c:if>
@@ -35,7 +35,7 @@
                data-board-theater="${mothDTO2.theater}"
                data-board-watchDate="${mothDTO2.watchDate}"
                data-board-movieName="${mothDTO2.movieName}"
-               data-board-timeTable="15:00">15:00</button></td>
+               data-board-timeTable="15:00" data-board-timeLong="15:00~18:00">15:00</button></td>
           <td class="blankArea"></td>
       
    </c:if>
@@ -46,7 +46,7 @@
                data-board-theater="${mothDTO2.theater}"
                data-board-watchDate="${mothDTO2.watchDate}"
                data-board-movieName="${mothDTO2.movieName}"
-               data-board-timeTable="18:00">18:00</button></td>
+               data-board-timeTable="18:00" data-board-timeLong="18:00~21:00">18:00</button></td>
          <td class="blankArea"></td>  
       
    </c:if>

@@ -104,6 +104,11 @@
    #clickEvent > a {
       display: inline-block;
       font-size:25px;
+      color: #b9b9b9;
+   }
+   #clickEvent > a:hover {
+      
+      color: #fff;
    }
    
    #theater {
@@ -497,6 +502,23 @@
        font-size: 13px;
    }
    
+   .box-city {
+  	height: 42px;
+    margin-top: 18px;
+    text-align: center;
+   }
+   .box-theater {
+   	border-top: 4px double #727171;
+    border-bottom: 4px double #727171;
+    display: inline-block;
+    color: #dbdbdb;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    
+   }
+   
 </style>
 </head>
 <body>
@@ -513,6 +535,9 @@
 
    <div class="bricks"> 
       <div class="blackbox">
+      	  <div class="box-city">
+      	   <div class="box-theater">╭ T H E A T E R ╮</div>
+      	  </div>
           <div id="clickEvent">
                <c:forEach items="${list}" var="dto">
                   <a class="tClick" data-th-theater="${dto.theater}" href="#">${dto.theater} | </a>

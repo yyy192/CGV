@@ -1715,14 +1715,14 @@ em {
 					<!-- 메뉴가 선택되면 a 에 title="선택" 이라고 넣는다 -->
 					<ul class="tab-menu">
 						<li class="on"><a title="현재 선택됨"
-							href="/movies/detail-view/?midx=84872#menu">주요정보 </a></li>
+							href="#">주요정보 </a></li>
 						<li><a
-							href="/movies/detail-view/trailer.aspx?midx=84872#menu">트레일러</a></li>
+							href="#">트레일러</a></li>
 						<li><a
-							href="/movies/detail-view/still-cut.aspx?midx=84872#menu">스틸컷</a></li>
-						<li><a href="/movies/detail-view/?midx=84872#commentReg">평점/리뷰</a></li>
+							href="#">스틸컷</a></li>
+						<li><a href="#">평점/리뷰</a></li>
 						<li class="last"><a
-							href="/movies/detail-view/show-times.aspx?midx=84872#menu">상영시간표</a></li>
+							href="#">상영시간표</a></li>
 					</ul>
 					<div class="sect-story-movie">
 						단 한 통의 전화!<br> 걸려오는 순간 걸려들었다!<br> <br> 부산 건설현장 직원들을
@@ -1768,7 +1768,7 @@ em {
 							<h4>트레일러</h4>
 							<span id="ctl00_PlaceHolderContent_TrailerTotalCount"
 								class="count">5건</span><a class="link-more"
-								href="trailer.aspx?midx=84872">더보기</a>
+								href="#">더보기</a>
 						</div>
 						<ul>
 							<!-- 사진 동영상 조회 -->
@@ -1851,7 +1851,7 @@ em {
 						<div class="heading">
 							<h4>스틸컷</h4>
 							<span class="count"><strong id="stillcut_current">1</strong>/17건</span><a
-								class="link-more" href="still-cut.aspx?midx=84872">더보기</a>
+								class="link-more" href="#">더보기</a>
 						</div>
 						<div class="slider-wrap">
 							<div class="slider" id="still_motion">
@@ -2621,44 +2621,44 @@ em {
 							<h3>인기 영화 검색어</h3>
 							<ol>
 
-								<li><a href="/search/?query=%eb%b6%80%ed%99%9c">1. <strong>부활</strong></a>
+								<li><a href="#">1. <strong>부활</strong></a>
 								</li>
 
 								<li><a
-									href="/search/?query=%ea%b0%95%ec%b2%a0%eb%b9%842+%ec%a0%95%ec%83%81%ed%9a%8c%eb%8b%b4">2.
+									href="#">2.
 										<strong>강철비2 정상회담</strong>
 								</a></li>
 
-								<li><a href="/search/?query=%eb%b0%98%eb%8f%84">3. <strong>반도</strong></a>
+								<li><a href="#">3. <strong>반도</strong></a>
 								</li>
 
 								<li><a
-									href="/search/?query=%ec%82%b4%ec%95%84%ec%9e%88%eb%8b%a4">4.
+									href="#">4.
 										<strong>살아있다</strong>
 								</a></li>
 
-								<li><a href="/search/?query=%ec%bd%94%eb%82%9c">5. <strong>코난</strong></a>
+								<li><a href="#">5. <strong>코난</strong></a>
 								</li>
 
-								<li><a href="/search/?query=%ec%95%8c%eb%9d%bc%eb%94%98">6.
+								<li><a href="#">6.
 										<strong>알라딘</strong>
 								</a></li>
 
-								<li><a href="/search/?query=%ed%8c%ac%eb%8d%b0%eb%af%b9">7.
+								<li><a href="#">7.
 										<strong>팬데믹</strong>
 								</a></li>
 
 								<li><a
-									href="/search/?query=%ed%95%b4%eb%a6%ac%ed%8f%ac%ed%84%b0">8.
+									href="#">8.
 										<strong>해리포터</strong>
 								</a></li>
 
-								<li><a href="/search/?query=%eb%b1%85%eb%93%9c%eb%a6%bc">9.
+								<li><a href="#">9.
 										<strong>뱅드림</strong>
 								</a></li>
 
 								<li><a
-									href="/search/?query=%eb%aa%85%ed%83%90%ec%a0%95%ec%bd%94%eb%82%9c">10.
+									href="#">10.
 										<strong>명탐정코난</strong>
 								</a></li>
 

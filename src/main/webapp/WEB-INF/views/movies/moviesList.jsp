@@ -756,7 +756,6 @@ i {
 
 .col-rank-search {
 	float: left;
-	width: 217px;
 	height: 348px;
 	padding: 39px 0 43px 34px;
 	border-left: 1px solid #3b3838;
@@ -1187,7 +1186,7 @@ body {
 								</a>
 							</div>
 							<div class="box-image">
-								<a href="/movies/detail-view/?midx=82175"> <span
+								<a href="#"> <span
 									class="thumb-image"> <img
 										src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82175/82175_185.jpg"
 										alt="[캣츠]No.1 퍼포먼스 영상"> <span class="ico-grade grade-12">12세
@@ -1196,7 +1195,7 @@ body {
 								</a>
 							</div>
 							<div class="box-contents">
-								<a href="/movies/detail-view/?midx=82175"> <strong
+								<a href="#"> <strong
 									class="title">캣츠</strong>
 								</a> <span class="txt-info"> <em class="genre">뮤지컬,&nbsp;드라마</em>
 									<span> <i>2019.12.24</i> <strong>개봉</strong>

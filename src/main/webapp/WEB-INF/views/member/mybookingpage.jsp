@@ -729,7 +729,7 @@ input {
 					지난 <em>1개월</em>까지의 예매내역을 확인하실 수 있으며, 영수증은 <em>신용카드 결제 내역</em>만 출력
 					가능합니다.
 				</p>
-				<a href="/user/movielog/watched.aspx" class="round inblack"><span>내가
+				<a href="#" class="round inblack"><span>내가
 						본 영화</span></a>
 			</div>
 			<div class="cols-mycgv-booking">
@@ -753,7 +753,7 @@ input {
 
 							<div class="box-info">
 								<div class="box-image">
-									<a href="/movies/detail-view/?midx=84617"> <span
+									<a href="#"> <span
 										class="thumb-image"> <img class="0"
 											src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83003/83003_320.jpg"
 											alt="007 포스터" onerror="errorImage(this)"> <img
@@ -781,7 +781,7 @@ input {
 								<div class="detail-area">
 									<div class="reservation-info-wrap">
 										<h2 class="box-contents artHouse">
-											<a href="/movies/detail-view/?midx=84617"
+											<a href="#"
 												class="res-title movieName">${dto.movieName}</a> <span
 												class="res-price_1">${dto.price}원</span>
 										</h2>
@@ -803,7 +803,7 @@ input {
 											<li>
 												<dl>
 													<dt>관람일시</dt>
-													<dd class="txt-red">${dto.watchDate}${dto.timeTable}</dd>
+													<dd class="txt-red">${dto.watchDate} / ${dto.timeTable}</dd>
 												</dl>
 											</li>
 											<li>
@@ -815,7 +815,7 @@ input {
 											<li>
 												<dl>
 													<dt>상영관</dt>
-													<dd>씨네앤리빙룸</dd>
+													<dd>6관 10층</dd>
 												</dl>
 											</li>
 											<li>
@@ -915,7 +915,7 @@ input {
 				$('.5').hide();
 				$('.6').hide();
 				$('.7').hide();
-			} else if (name == '쁘띠마망') {
+			} else if (name == '쁘띠 마망') {
 				$('.3').show();
 				$('.0').hide();
 				$('.1').hide();
