@@ -1035,6 +1035,10 @@ button.timeTable {
 	height: 20px;
 }
 
+#theater-tt {
+   padding-left: 3px;
+}
+
 </style>
 
 </head>
@@ -1184,7 +1188,7 @@ button.timeTable {
 							<div class="time-list">
 
 								<span class="title"><span class="name">2D</span><span
-									class="floor">6관 10층</span><span class="seatcount">(총40석)</span></span>
+									class="floor" data-board-tt="6관 10층">6관 10층</span><span class="seatcount">(총40석)</span></span>
 
 								<div id="timetableList"
 									data-board-timetable1="${dto.timetable1}"
@@ -1222,7 +1226,7 @@ button.timeTable {
 					<span class="header">일시</span> <span id="theater-day"></span>
 				</div>
 				<div class="row screen" style="display: none;">
-					<span class="header">상영관</span> <span class="data"></span>
+					<span class="header">상영관</span> <span id="theater-tt"></span>
 				</div>
 				<div class="row number" style="display: none;">
 					<span class="header">인원</span> <span class="data"></span>
@@ -1553,6 +1557,9 @@ button.timeTable {
 					$(this).parent().siblings().children().css("color", "black");
 					$(this).parent().siblings().children().css("background-color", "#F2F0E4");
 					$(this).parent().siblings().children().css("font-weight", "normal");
+					
+					let tt = $('.floor').attr("data-board-tt");
+					document.getElementById("theater-tt").innerText = tt;
 					$(this).addClass('ttselected');
 					
 					$('.ttselected').css("color",

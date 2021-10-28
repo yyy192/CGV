@@ -624,7 +624,7 @@ body {
 			<div class="tit-mycgv">
 				<h3>MY 예매내역</h3>
 				<p>
-					<em class="bookingNum">1건</em> <a href="/user/mycgv/reserve/">예매내역 더보기</a>
+					<em class="bookingNum">1건</em> <a href="#">예매내역 더보기</a>
 				</p>
 				<span>예매번호로만 티켓을 찾을 수 있으니 반드시 확인 부탁드립니다.</span>
 			</div>
@@ -747,7 +747,7 @@ body {
 				$('.5').hide();
 				$('.6').hide();
 				$('.7').hide();
-			} else if (name == '쁘띠마망') {
+			} else if (name == '쁘띠 마망') {
 				$('.3').show();
 				$('.0').hide();
 				$('.1').hide();
